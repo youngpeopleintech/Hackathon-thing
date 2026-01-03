@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy-900: #0a1628;
+  --navy-800: #1e3a5f;
+  --navy-700: #2d4a6f;
+  --navy-600: #3d5a80;
+  --cyan: #06b6d4;
+  --teal: #14b8a6;
+  --bg-light: #f8fafc;
+  --bg-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  background: var(--bg-white);
+  color: var(--navy-900);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  color: var(--navy-900);
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-navy-900 text-white font-semibold py-3 px-8 rounded-lg
+           transition-all duration-300 hover:bg-navy-800 hover:shadow-lg hover:shadow-navy-900/20 hover:scale-[1.02]
+           focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply border border-navy-900/30 text-navy-900 font-medium py-3 px-8 rounded-lg
+           transition-all duration-300 hover:bg-navy-900/5 hover:border-navy-900
+           focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2;
+  }
+
+  .input-field {
+    @apply w-full bg-white border border-gray-200 rounded-lg px-4 py-3
+           text-navy-900 placeholder-gray-400 transition-all duration-200
+           focus:outline-none focus:border-navy-900 focus:ring-1 focus:ring-navy-900
+           hover:border-gray-300;
+  }
+
+  .card {
+    @apply bg-white border border-gray-100 rounded-2xl p-6 shadow-sm;
+  }
+
+  .radio-option {
+    @apply flex items-center gap-3 p-3 rounded-lg border border-gray-200 cursor-pointer
+           transition-all duration-200 hover:border-navy-900/30 hover:bg-gray-50;
+  }
+
+  .radio-option.selected {
+    @apply border-navy-900 bg-navy-900/5;
+  }
+
+  .radio-dot {
+    @apply w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center
+           transition-all duration-200;
+  }
+
+  .radio-option.selected .radio-dot {
+    @apply border-navy-900;
+  }
+
+  .radio-option.selected .radio-dot::after {
+    content: '';
+    @apply w-2.5 h-2.5 rounded-full bg-navy-900;
+  }
+}
+
+/* Geometric pattern - inspired by Clear Street */
+.geometric-pattern {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.geometric-shape {
+  position: absolute;
+  background: linear-gradient(135deg, rgba(10, 22, 40, 0.08) 0%, rgba(30, 58, 95, 0.04) 100%);
+  border-radius: 8px;
+  transform-origin: center;
+}
+
+/* Glowing orb effect - lighter for white background */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--navy-800);
+}
+
+
