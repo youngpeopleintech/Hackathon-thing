@@ -7,10 +7,11 @@ export interface RegistrationData {
   cityCountry: string;
 
   // Step 2: Project Idea
-  problemStatement: string;
-  proposedSolution: string;
-  hackathonTrack: HackathonTrack;
-  uniqueImpact: string;
+  hasIdea: boolean;
+  problemStatement?: string;
+  proposedSolution?: string;
+  hackathonTrack?: HackathonTrack;
+  uniqueImpact?: string;
 
   // Step 3: Skills & Background
   primarySkill: PrimarySkill;
