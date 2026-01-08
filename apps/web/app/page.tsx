@@ -72,6 +72,7 @@ export default function HomePage() {
       </div>
 
       {/* Main Content */}
+      {/* Main Content */}
       <div className="relative z-10 text-center max-w-4xl px-6">
         
 
