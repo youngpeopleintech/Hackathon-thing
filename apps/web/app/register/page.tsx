@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { HeroSection } from '@/components/HeroSection';
 import { FormProgress } from '@/components/forms/FormProgress';
 import { StepOne } from '@/components/forms/StepOne';
@@ -18,6 +19,7 @@ const FORM_STEPS = [
 ];
 
 export default function RegisterPage() {
+  const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState<Partial<RegistrationData>>({});
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -27,6 +29,18 @@ export default function RegisterPage() {
     registrationId: string;
     name: string;
   } | null>(null);
+
+  // Redirect to home in production
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      router.replace('/');
+    }
+  }, [router]);
+
+  // Don't render the form in production
+  if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
 
   const handleChange = useCallback((field: keyof RegistrationData, value: string | boolean | number) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -196,4 +210,3 @@ export default function RegisterPage() {
     </div>
   );
 }
-
