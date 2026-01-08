@@ -4,8 +4,8 @@ import React from 'react';
 import { Input } from '@/components/ui/Input';
 import { RadioGroup } from '@/components/ui/RadioGroup';
 import { Button } from '@/components/ui/Button';
-import type { RegistrationData, AgeRange, Gender } from '@ypit/shared';
-import { AGE_RANGE_LABELS, GENDER_LABELS } from '@ypit/shared';
+import type { RegistrationData, AgeRange, Gender } from '@/lib/types';
+import { AGE_RANGE_LABELS, GENDER_LABELS } from '@/lib/types';
 
 interface StepOneProps {
   data: Partial<RegistrationData>;
@@ -89,4 +89,3 @@ export function StepOne({ data, errors, onChange, onNext }: StepOneProps) {
     </div>
   );
 }
-

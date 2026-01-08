@@ -5,8 +5,8 @@ import { Input } from '@/components/ui/Input';
 import { Textarea } from '@/components/ui/Textarea';
 import { RadioGroup } from '@/components/ui/RadioGroup';
 import { Button } from '@/components/ui/Button';
-import type { RegistrationData, PrimarySkill } from '@ypit/shared';
-import { PRIMARY_SKILL_LABELS } from '@ypit/shared';
+import type { RegistrationData, PrimarySkill } from '@/lib/types';
+import { PRIMARY_SKILL_LABELS } from '@/lib/types';
 
 interface StepThreeProps {
   data: Partial<RegistrationData>;
@@ -108,4 +108,3 @@ export function StepThree({ data, errors, onChange, onSubmit, onBack, isSubmitti
     </div>
   );
 }
-

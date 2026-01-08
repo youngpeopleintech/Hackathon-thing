@@ -1,4 +1,4 @@
-import type { RegistrationData, RegistrationResponse } from '@ypit/shared';
+import type { RegistrationData, RegistrationResponse } from './types';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
@@ -28,4 +28,3 @@ export async function getRegistrationStats(): Promise<{ total: number; byTrack: 
 
   return response.json();
 }
-

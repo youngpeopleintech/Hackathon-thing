@@ -4,8 +4,8 @@ import React from 'react';
 import { Textarea } from '@/components/ui/Textarea';
 import { RadioGroup } from '@/components/ui/RadioGroup';
 import { Button } from '@/components/ui/Button';
-import type { RegistrationData, HackathonTrack } from '@ypit/shared';
-import { HACKATHON_TRACK_LABELS } from '@ypit/shared';
+import type { RegistrationData, HackathonTrack } from '@/lib/types';
+import { HACKATHON_TRACK_LABELS } from '@/lib/types';
 
 interface StepTwoProps {
   data: Partial<RegistrationData>;
@@ -79,4 +79,3 @@ export function StepTwo({ data, errors, onChange, onNext, onBack }: StepTwoProps
     </div>
   );
 }
-

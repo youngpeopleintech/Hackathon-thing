@@ -1,7 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  transpilePackages: ['@ypit/shared'],
-};
+const nextConfig = {};
 
 module.exports = nextConfig;
-

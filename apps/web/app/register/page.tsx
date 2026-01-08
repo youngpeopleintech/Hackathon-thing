@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import React, { useState, useCallback } from 'react';
 import { HeroSection } from '@/components/HeroSection';
 import { FormProgress } from '@/components/forms/FormProgress';
 import { StepOne } from '@/components/forms/StepOne';
@@ -9,8 +8,8 @@ import { StepTwo } from '@/components/forms/StepTwo';
 import { StepThree } from '@/components/forms/StepThree';
 import { ConfirmationModal } from '@/components/ConfirmationModal';
 import { submitRegistration } from '@/lib/api';
-import { validateStep1, validateStep2, validateStep3 } from '@ypit/shared';
-import type { RegistrationData } from '@ypit/shared';
+import { validateStep1, validateStep2, validateStep3 } from '@/lib/validation';
+import type { RegistrationData } from '@/lib/types';
 
 const FORM_STEPS = [
   { title: 'Basic Info', subtitle: 'Basic Information' },
@@ -19,7 +18,6 @@ const FORM_STEPS = [
 ];
 
 export default function RegisterPage() {
-  const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState<Partial<RegistrationData>>({});
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -29,18 +27,6 @@ export default function RegisterPage() {
     registrationId: string;
     name: string;
   } | null>(null);
-
-  // Redirect to home in production
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
-      router.replace('/');
-    }
-  }, [router]);
-
-  // Don't render the form in production
-  if (process.env.NODE_ENV === 'production') {
-    return null;
-  }
 
   const handleChange = useCallback((field: keyof RegistrationData, value: string | boolean | number) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
