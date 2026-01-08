@@ -46,10 +46,15 @@ export function HeroSection() {
       
       {/* Content - Centered */}
       <div className="relative z-10 text-center max-w-2xl pointer-events-none">
-        {/* Main heading with mixed weights */}
-        <h1 className="text-5xl lg:text-6xl xl:text-7xl font-heading leading-tight mb-6">
-          <span className="font-light text-navy-900/80">YPIT's</span>
-          <span className="block font-bold text-navy-900">The Artificial Future</span>
+        {/* Main heading with subtle glow */}
+        <h1 
+          className="text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-navy-900 leading-tight mb-6"
+          style={{
+            textShadow: '0 0 40px rgba(6, 182, 212, 0.15)'
+          }}
+        >
+          YPIT's
+          <span className="block">The Artificial Future</span>
         </h1>
         
         {/* Tagline */}
