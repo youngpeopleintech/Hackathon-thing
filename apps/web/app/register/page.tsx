@@ -8,8 +8,8 @@ import { StepTwo } from "@/components/forms/StepTwo";
 import { StepThree } from "@/components/forms/StepThree";
 import { ConfirmationModal } from "@/components/ConfirmationModal";
 import { submitRegistration } from "@/lib/api";
-import { validateStep1, validateStep2, validateStep3 } from "@ypit/shared";
-import type { RegistrationData } from "@ypit/shared";
+import { validateStep1, validateStep2, validateStep3 } from "@/lib/validation";
+import type { RegistrationData } from "@/lib/types";
 
 const FORM_STEPS = [
   { title: "Basic Info", subtitle: "Basic Information" },
