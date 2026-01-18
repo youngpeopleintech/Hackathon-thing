@@ -1,8 +1,12 @@
-import { Injectable, ConflictException, InternalServerErrorException } from '@nestjs/common';
-import { SupabaseService } from '../supabase/supabase.service';
-import { EmailService } from '../email/email.service';
-import { CreateRegistrationDto } from './registration.dto';
-import { HACKATHON_TRACK_LABELS } from '@ypit/shared';
+import {
+  ConflictException,
+  Injectable,
+  InternalServerErrorException,
+} from "@nestjs/common";
+import { HACKATHON_TRACK_LABELS } from "@ypit/shared";
+import { EmailService } from "../email/email.service";
+import { SupabaseService } from "../supabase/supabase.service";
+import { CreateRegistrationDto } from "./registration.dto";
 
 interface RegistrationRecord {
   id: string;
@@ -31,23 +35,27 @@ export class RegistrationService {
     private emailService: EmailService,
   ) {}
 
-  async createRegistration(dto: CreateRegistrationDto): Promise<{ success: boolean; message: string; registrationId: string }> {
+  async createRegistration(
+    dto: CreateRegistrationDto,
+  ): Promise<{ success: boolean; message: string; registrationId: string }> {
     const supabase = this.supabaseService.getClient();
 
     // Check if email already exists
     const { data: existingUser } = await supabase
-      .from('registrations')
-      .select('id')
-      .eq('email', dto.email)
+      .from("registrations")
+      .select("id")
+      .eq("email", dto.email)
       .single();
 
     if (existingUser) {
-      throw new ConflictException('This email address is already registered for the hackathon.');
+      throw new ConflictException(
+        "This email address is already registered for the hackathon.",
+      );
     }
 
     // Insert new registration
     const { data, error } = await supabase
-      .from('registrations')
+      .from("registrations")
       .insert({
         full_name: dto.fullName,
         email: dto.email,
@@ -68,15 +76,20 @@ export class RegistrationService {
       .single();
 
     if (error) {
-      console.error('Database error:', error);
-      throw new InternalServerErrorException('Failed to create registration. Please try again.');
+      console.error("Database error:", error);
+      throw new InternalServerErrorException(
+        "Failed to create registration. Please try again.",
+      );
     }
 
     const registration = data as RegistrationRecord;
 
     // Send confirmation email
-    const trackLabel = HACKATHON_TRACK_LABELS[dto.hackathonTrack as keyof typeof HACKATHON_TRACK_LABELS] || dto.hackathonTrack;
-    
+    const trackLabel =
+      HACKATHON_TRACK_LABELS[
+        dto.hackathonTrack as keyof typeof HACKATHON_TRACK_LABELS
+      ] || dto.hackathonTrack;
+
     const emailSent = await this.emailService.sendConfirmationEmail({
       to: dto.email,
       name: dto.fullName,
@@ -88,27 +101,32 @@ export class RegistrationService {
     // Update confirmation status
     if (emailSent) {
       await supabase
-        .from('registrations')
+        .from("registrations")
         .update({ confirmation_sent: true })
-        .eq('id', registration.id);
+        .eq("id", registration.id);
     }
 
     return {
       success: true,
-      message: 'Registration successful! Check your email for confirmation.',
+      message: "Registration successful! Check your email for confirmation.",
       registrationId: registration.id,
     };
   }
 
-  async getRegistrationStats(): Promise<{ total: number; byTrack: Record<string, number> }> {
+  async getRegistrationStats(): Promise<{
+    total: number;
+    byTrack: Record<string, number>;
+  }> {
     const supabase = this.supabaseService.getClient();
 
     const { data, error } = await supabase
-      .from('registrations')
-      .select('hackathon_track');
+      .from("registrations")
+      .select("hackathon_track");
 
     if (error) {
-      throw new InternalServerErrorException('Failed to fetch registration stats.');
+      throw new InternalServerErrorException(
+        "Failed to fetch registration stats.",
+      );
     }
 
     const stats = {
@@ -124,4 +142,3 @@ export class RegistrationService {
     return stats;
   }
 }
-
