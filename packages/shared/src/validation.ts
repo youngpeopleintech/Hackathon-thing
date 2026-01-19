@@ -36,20 +36,26 @@ export function validateStep1(data: Partial<RegistrationData>): ValidationError[
 export function validateStep2(data: Partial<RegistrationData>): ValidationError[] {
   const errors: ValidationError[] = [];
 
-  if (!data.problemStatement?.trim()) {
-    errors.push({ field: 'problemStatement', message: 'Please describe the problem you want to solve' });
+  if (data.hasIdea === undefined) {
+    errors.push({ field: 'hasIdea', message: 'Please select if you have a project idea' });
   }
 
-  if (!data.proposedSolution?.trim()) {
-    errors.push({ field: 'proposedSolution', message: 'Please describe your proposed solution' });
-  }
+  if (data.hasIdea) {
+    if (!data.problemStatement?.trim()) {
+      errors.push({ field: 'problemStatement', message: 'Please describe the problem you want to solve' });
+    }
 
-  if (!data.hackathonTrack) {
-    errors.push({ field: 'hackathonTrack', message: 'Please select a hackathon track' });
-  }
+    if (!data.proposedSolution?.trim()) {
+      errors.push({ field: 'proposedSolution', message: 'Please describe your proposed solution' });
+    }
 
-  if (!data.uniqueImpact?.trim()) {
-    errors.push({ field: 'uniqueImpact', message: 'Please describe what makes your idea unique' });
+    if (!data.hackathonTrack) {
+      errors.push({ field: 'hackathonTrack', message: 'Please select a hackathon track' });
+    }
+
+    if (!data.uniqueImpact?.trim()) {
+      errors.push({ field: 'uniqueImpact', message: 'Please describe what makes your idea unique' });
+    }
   }
 
   return errors;

@@ -10,13 +10,36 @@ const step1Schema = z.object({
   cityCountry: z.string().min(2, 'Please enter your city and country').max(100, 'Location is too long'),
 });
 
-const step2Schema = z.object({
+
+
+const step2IdeaSchema = z.object({
+  hasIdea: z.literal(true),
   problemStatement: z.string().min(10, 'Please describe the problem in at least 10 characters').max(1000, 'Problem statement is too long'),
   proposedSolution: z.string().min(10, 'Please describe your solution in at least 10 characters').max(1000, 'Proposed solution is too long'),
   hackathonTrack: z.enum(['health-tech', 'fintech', 'ai-emerging-tech', 'edutech', 'climate-sustainability'], { 
     required_error: 'Please select a hackathon track' 
   }),
   uniqueImpact: z.string().min(10, 'Please explain the impact in at least 10 characters').max(1000, 'Impact description is too long'),
+});
+
+const step2NoIdeaSchema = z.object({
+  hasIdea: z.literal(false),
+  problemStatement: z.string().optional(),
+  proposedSolution: z.string().optional(),
+  hackathonTrack: z.enum(['health-tech', 'fintech', 'ai-emerging-tech', 'edutech', 'climate-sustainability']).optional(),
+  uniqueImpact: z.string().optional(),
+});
+
+const step2Schema = z.discriminatedUnion('hasIdea', [
+  step2IdeaSchema,
+  step2NoIdeaSchema,
+], {
+  errorMap: (issue, ctx) => {
+    if (issue.code === z.ZodIssueCode.invalid_union_discriminator) {
+      return { message: "Please select if you have a project idea" };
+    }
+    return { message: ctx.defaultError };
+  }
 });
 
 const step3Schema = z.object({
@@ -61,5 +84,5 @@ export function validateStep3(data: Partial<RegistrationData>): ValidationError[
   }));
 }
 
-export const fullRegistrationSchema = step1Schema.merge(step2Schema).merge(step3Schema);
+export const fullRegistrationSchema = step1Schema.and(step2Schema).and(step3Schema);
 
