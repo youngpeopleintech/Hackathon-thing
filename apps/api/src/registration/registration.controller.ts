@@ -1,8 +1,15 @@
-import { Controller, Post, Get, Body, HttpCode, HttpStatus } from '@nestjs/common';
-import { RegistrationService } from './registration.service';
-import { CreateRegistrationDto } from './registration.dto';
+import {
+  Body,
+  Controller,
+  Get,
+  HttpCode,
+  HttpStatus,
+  Post,
+} from "@nestjs/common";
+import { CreateRegistrationDto } from "./registration.dto";
+import { RegistrationService } from "./registration.service";
 
-@Controller('registration')
+@Controller("registration")
 export class RegistrationController {
   constructor(private readonly registrationService: RegistrationService) {}
 
@@ -12,14 +19,13 @@ export class RegistrationController {
     return this.registrationService.createRegistration(createRegistrationDto);
   }
 
-  @Get('stats')
+  @Get("stats")
   async getStats() {
     return this.registrationService.getRegistrationStats();
   }
 
-  @Get('health')
+  @Get("health")
   healthCheck() {
-    return { status: 'ok', timestamp: new Date().toISOString() };
+    return { status: "ok", timestamp: new Date().toISOString() };
   }
 }
-

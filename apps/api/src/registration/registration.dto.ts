@@ -1,14 +1,14 @@
 import {
-  IsString,
-  IsEmail,
-  IsNotEmpty,
   IsBoolean,
-  IsNumber,
+  IsEmail,
   IsIn,
-  Min,
-  Max,
+  IsNotEmpty,
+  IsNumber,
   IsOptional,
-} from 'class-validator';
+  IsString,
+  Max,
+  Min,
+} from "class-validator";
 
 export class CreateRegistrationDto {
   @IsString()
@@ -20,11 +20,11 @@ export class CreateRegistrationDto {
   email: string;
 
   @IsString()
-  @IsIn(['16-20', '21-25', '25+'])
+  @IsIn(["16-20", "21-25", "25+"])
   ageRange: string;
 
   @IsString()
-  @IsIn(['male', 'female', 'prefer-not-to-say'])
+  @IsIn(["male", "female", "prefer-not-to-say"])
   gender: string;
 
   @IsString()
@@ -40,7 +40,13 @@ export class CreateRegistrationDto {
   proposedSolution: string;
 
   @IsString()
-  @IsIn(['health-tech', 'fintech', 'ai-emerging-tech', 'edutech', 'climate-sustainability'])
+  @IsIn([
+    "health-tech",
+    "fintech",
+    "ai-emerging-tech",
+    "edutech",
+    "climate-sustainability",
+  ])
   hackathonTrack: string;
 
   @IsString()
@@ -48,7 +54,15 @@ export class CreateRegistrationDto {
   uniqueImpact: string;
 
   @IsString()
-  @IsIn(['frontend-developer', 'backend-developer', 'mobile-developer', 'ui-ux-designer', 'product-manager', 'data-analyst-ml', 'other'])
+  @IsIn([
+    "frontend-developer",
+    "backend-developer",
+    "mobile-developer",
+    "ui-ux-designer",
+    "product-manager",
+    "data-analyst-ml",
+    "other",
+  ])
   primarySkill: string;
 
   @IsBoolean()
@@ -67,4 +81,3 @@ export class CreateRegistrationDto {
   @IsOptional()
   teamMembers?: string;
 }
-
