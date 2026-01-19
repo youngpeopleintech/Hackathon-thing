@@ -6,8 +6,8 @@ import { CityCountryInput } from "@/components/ui/CityCountryInput";
 import { RadioGroup } from "@/components/ui/RadioGroup";
 import { CheckboxGroup } from "@/components/ui/CheckboxGroup";
 import { Button } from "@/components/ui/Button";
-import type { RegistrationData, AgeRange, Gender, InterestType } from "@ypit/shared";
-import { AGE_RANGE_LABELS, GENDER_LABELS, INTEREST_TYPE_LABELS } from "@ypit/shared";
+import type { RegistrationData, AgeRange, Gender, InterestType } from "@/lib/types";
+import { AGE_RANGE_LABELS, GENDER_LABELS, INTEREST_TYPE_LABELS } from "@/lib/types";
 
 interface StepOneProps {
   data: Partial<RegistrationData>;
