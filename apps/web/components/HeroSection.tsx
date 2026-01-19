@@ -45,16 +45,31 @@ export function HeroSection() {
       />
       
       {/* Content - Centered */}
-      <div className="relative z-10 text-center max-w-2xl pointer-events-none">
+      <div className="relative z-10 text-center max-w-2xl">
+        {/* YPIT Logo */}
+        <div className="mb-6">
+          <a 
+            href="https://www.youngpeopleintech.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block hover:opacity-80 transition-opacity pointer-events-auto"
+          >
+            <img 
+              src="/ypit-logo.png" 
+              alt="YPIT - Young People In Tech" 
+              className="h-10 md:h-12 w-auto mx-auto"
+            />
+          </a>
+        </div>
+
         {/* Main heading with subtle glow */}
         <h1 
-          className="text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-navy-900 leading-tight mb-6"
+          className="text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-navy-900 leading-tight mb-6 pointer-events-none"
           style={{
             textShadow: '0 0 40px rgba(6, 182, 212, 0.15)'
           }}
         >
-          YPIT's
-          <span className="block">The Artificial Future</span>
+          The Artificial Future
         </h1>
         
         {/* Tagline */}

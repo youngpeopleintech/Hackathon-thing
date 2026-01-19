@@ -1,4 +1,5 @@
 import {
+  IsArray,
   IsBoolean,
   IsEmail,
   IsIn,
@@ -8,9 +9,23 @@ import {
   IsString,
   Max,
   Min,
+  ArrayMinSize,
 } from "class-validator";
 
 export class CreateRegistrationDto {
+  @IsArray()
+  @ArrayMinSize(1)
+  @IsString({ each: true })
+  @IsIn([
+    "hackathon-participant",
+    "conference-attendee",
+    "mentor-speaker",
+    "volunteer",
+    "sponsor-partner",
+    "just-exploring",
+  ], { each: true })
+  interests: string[];
+
   @IsString()
   @IsNotEmpty()
   fullName: string;
@@ -31,13 +46,18 @@ export class CreateRegistrationDto {
   @IsNotEmpty()
   cityCountry: string;
 
-  @IsString()
-  @IsNotEmpty()
-  problemStatement: string;
+  // Hackathon-specific fields (optional, only required if hackathon-participant)
+  @IsBoolean()
+  @IsOptional()
+  hasIdea?: boolean;
 
   @IsString()
-  @IsNotEmpty()
-  proposedSolution: string;
+  @IsOptional()
+  problemStatement?: string;
+
+  @IsString()
+  @IsOptional()
+  proposedSolution?: string;
 
   @IsString()
   @IsIn([
@@ -47,12 +67,14 @@ export class CreateRegistrationDto {
     "edutech",
     "climate-sustainability",
   ])
-  hackathonTrack: string;
+  @IsOptional()
+  hackathonTrack?: string;
 
   @IsString()
-  @IsNotEmpty()
-  uniqueImpact: string;
+  @IsOptional()
+  uniqueImpact?: string;
 
+  // Skills & Background
   @IsString()
   @IsIn([
     "frontend-developer",
@@ -65,8 +87,19 @@ export class CreateRegistrationDto {
   ])
   primarySkill: string;
 
+  @IsString()
+  @IsIn([
+    "curious-beginner",
+    "beginner",
+    "intermediate",
+    "advanced",
+    "non-technical",
+  ])
+  aiSkillLevel: string;
+
   @IsBoolean()
-  hasHackathonExperience: boolean;
+  @IsOptional()
+  hasHackathonExperience?: boolean;
 
   @IsString()
   @IsOptional()
@@ -75,7 +108,8 @@ export class CreateRegistrationDto {
   @IsNumber()
   @Min(1)
   @Max(7)
-  teamSize: number;
+  @IsOptional()
+  teamSize?: number;
 
   @IsString()
   @IsOptional()

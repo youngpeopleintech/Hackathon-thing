@@ -1,12 +1,11 @@
 'use client';
 
 import React from 'react';
-import { Input } from '@/components/ui/Input';
-import { Textarea } from '@/components/ui/Textarea';
 import { RadioGroup } from '@/components/ui/RadioGroup';
 import { Button } from '@/components/ui/Button';
-import type { RegistrationData, PrimarySkill } from '@/lib/types';
-import { PRIMARY_SKILL_LABELS } from '@/lib/types';
+import { TagInput } from '@/components/ui/TagInput';
+import type { RegistrationData, PrimarySkill, AISkillLevel } from '@/lib/types';
+import { PRIMARY_SKILL_LABELS, AI_SKILL_LEVEL_LABELS } from '@/lib/types';
 
 interface StepThreeProps {
   data: Partial<RegistrationData>;
@@ -18,7 +17,14 @@ interface StepThreeProps {
 }
 
 export function StepThree({ data, errors, onChange, onSubmit, onBack, isSubmitting }: StepThreeProps) {
+  const isHackathonParticipant = data.interests?.includes('hackathon-participant') ?? false;
+
   const skillOptions = Object.entries(PRIMARY_SKILL_LABELS).map(([value, label]) => ({
+    value,
+    label,
+  }));
+
+  const aiSkillLevelOptions = Object.entries(AI_SKILL_LEVEL_LABELS).map(([value, label]) => ({
     value,
     label,
   }));
@@ -45,53 +51,45 @@ export function StepThree({ data, errors, onChange, onSubmit, onBack, isSubmitti
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-navy-900 mb-3">
-          Have you participated in a hackathon before?
+        <label className="block text-sm font-medium text-navy-900 mb-1">
+          AI / Tech Skill Level
         </label>
+        <p className="text-xs text-navy-500 mb-3">
+          Be honest — this helps us design the experience
+        </p>
         <RadioGroup
-          name="hasHackathonExperience"
-          options={experienceOptions}
-          value={data.hasHackathonExperience !== undefined ? String(data.hasHackathonExperience) : ''}
-          onChange={(value) => onChange('hasHackathonExperience', value === 'true')}
-          columns={2}
-          error={errors.hasHackathonExperience}
+          name="aiSkillLevel"
+          options={aiSkillLevelOptions}
+          value={data.aiSkillLevel || ''}
+          onChange={(value) => onChange('aiSkillLevel', value as AISkillLevel)}
+          columns={1}
+          error={errors.aiSkillLevel}
         />
       </div>
 
-      <Input
+      {isHackathonParticipant && (
+        <div>
+          <label className="block text-sm font-medium text-navy-900 mb-3">
+            Have you participated in a hackathon before?
+          </label>
+          <RadioGroup
+            name="hasHackathonExperience"
+            options={experienceOptions}
+            value={data.hasHackathonExperience !== undefined ? String(data.hasHackathonExperience) : ''}
+            onChange={(value) => onChange('hasHackathonExperience', value === 'true')}
+            columns={2}
+            error={errors.hasHackathonExperience}
+          />
+        </div>
+      )}
+
+      <TagInput
         label="What tools or technologies are you most comfortable with?"
         placeholder="e.g., React, Python, TensorFlow, Figma..."
         value={data.toolsTechnologies || ''}
-        onChange={(e) => onChange('toolsTechnologies', e.target.value)}
+        onChange={(value) => onChange('toolsTechnologies', value)}
         error={errors.toolsTechnologies}
-      />
-
-      <div>
-        <label className="block text-sm font-medium text-navy-900 mb-1">
-          Number of team members
-        </label>
-        <p className="text-xs text-navy-500 mb-3">
-          Each team is expected to have at least 1 and max 7 members
-        </p>
-        <Input
-          label=""
-          type="number"
-          min={1}
-          max={7}
-          placeholder="Enter team size (1-7)"
-          value={data.teamSize || ''}
-          onChange={(e) => onChange('teamSize', parseInt(e.target.value) || 1)}
-          error={errors.teamSize}
-        />
-      </div>
-
-      <Textarea
-        label="Team members' names and roles"
-        hint="e.g., Developer, Designer, Product Manager"
-        placeholder="List your team members and their roles..."
-        value={data.teamMembers || ''}
-        onChange={(e) => onChange('teamMembers', e.target.value)}
-        error={errors.teamMembers}
+        maxTags={10}
       />
 
       <div className="flex justify-between pt-4">

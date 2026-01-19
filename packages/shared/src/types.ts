@@ -1,13 +1,14 @@
 export interface RegistrationData {
-  // Step 1: Basic Information
+  // Step 1: Basic Information & Interest
+  interests: InterestType[];
   fullName: string;
   email: string;
   ageRange: AgeRange;
   gender: Gender;
   cityCountry: string;
 
-  // Step 2: Project Idea
-  hasIdea: boolean;
+  // Step 2: Project Idea (only if hackathon participant)
+  hasIdea?: boolean;
   problemStatement?: string;
   proposedSolution?: string;
   hackathonTrack?: HackathonTrack;
@@ -15,11 +16,20 @@ export interface RegistrationData {
 
   // Step 3: Skills & Background
   primarySkill: PrimarySkill;
-  hasHackathonExperience: boolean;
-  toolsTechnologies: string;
-  teamSize: number;
-  teamMembers: string;
+  aiSkillLevel: AISkillLevel;
+  hasHackathonExperience?: boolean; // Only for hackathon participants
+  toolsTechnologies?: string;
+  teamSize?: number;
+  teamMembers?: string;
 }
+
+export type InterestType =
+  | 'hackathon-participant'
+  | 'conference-attendee'
+  | 'mentor-speaker'
+  | 'volunteer'
+  | 'sponsor-partner'
+  | 'just-exploring';
 
 export type AgeRange = '16-20' | '21-25' | '25+';
 
@@ -40,6 +50,13 @@ export type PrimarySkill =
   | 'product-manager'
   | 'data-analyst-ml'
   | 'other';
+
+export type AISkillLevel =
+  | 'curious-beginner'
+  | 'beginner'
+  | 'intermediate'
+  | 'advanced'
+  | 'non-technical';
 
 export interface RegistrationResponse {
   success: boolean;
@@ -75,5 +92,22 @@ export const PRIMARY_SKILL_LABELS: Record<PrimarySkill, string> = {
   'product-manager': 'Product Manager',
   'data-analyst-ml': 'Data Analyst/Machine Learning',
   'other': 'Other',
+};
+
+export const AI_SKILL_LEVEL_LABELS: Record<AISkillLevel, string> = {
+  'curious-beginner': 'Curious Beginner (new to AI)',
+  'beginner': 'Beginner (learning the basics)',
+  'intermediate': 'Intermediate (some hands-on projects)',
+  'advanced': 'Advanced (building or deploying AI solutions)',
+  'non-technical': 'Non-Technical (product, design, business, ops)',
+};
+
+export const INTEREST_TYPE_LABELS: Record<InterestType, string> = {
+  'hackathon-participant': 'Hackathon Participant',
+  'conference-attendee': 'Conference Attendee',
+  'mentor-speaker': 'Mentor / Speaker',
+  'volunteer': 'Volunteer',
+  'sponsor-partner': 'Sponsor / Partner',
+  'just-exploring': 'Just exploring for now',
 };
 

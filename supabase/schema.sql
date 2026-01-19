@@ -6,7 +6,8 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 -- Create registrations table
 CREATE TABLE IF NOT EXISTS registrations (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  -- Step 1: Basic Information
+  -- Step 1: Basic Information & Interests
+  interests TEXT[] NOT NULL,
   full_name TEXT NOT NULL,
   email TEXT UNIQUE NOT NULL,
   age_range TEXT NOT NULL CHECK (age_range IN ('16-20', '21-25', '25+')),
@@ -14,11 +15,12 @@ CREATE TABLE IF NOT EXISTS registrations (
     gender IN ('male', 'female', 'prefer-not-to-say')
   ),
   city_country TEXT NOT NULL,
-  -- Step 2: Project Idea
-  problem_statement TEXT NOT NULL,
-  proposed_solution TEXT NOT NULL,
-  hackathon_track TEXT NOT NULL CHECK (
-    hackathon_track IN (
+  -- Step 2: Project Idea (optional, only for hackathon participants)
+  has_idea BOOLEAN,
+  problem_statement TEXT,
+  proposed_solution TEXT,
+  hackathon_track TEXT CHECK (
+    hackathon_track IS NULL OR hackathon_track IN (
       'health-tech',
       'fintech',
       'ai-emerging-tech',
@@ -26,7 +28,7 @@ CREATE TABLE IF NOT EXISTS registrations (
       'climate-sustainability'
     )
   ),
-  unique_impact TEXT NOT NULL,
+  unique_impact TEXT,
   -- Step 3: Skills & Background
   primary_skill TEXT NOT NULL CHECK (
     primary_skill IN (
@@ -39,11 +41,19 @@ CREATE TABLE IF NOT EXISTS registrations (
       'other'
     )
   ),
+  ai_skill_level TEXT NOT NULL CHECK (
+    ai_skill_level IN (
+      'curious-beginner',
+      'beginner',
+      'intermediate',
+      'advanced',
+      'non-technical'
+    )
+  ),
   has_hackathon_experience BOOLEAN NOT NULL DEFAULT FALSE,
   tools_technologies TEXT,
-  team_size INTEGER NOT NULL CHECK (
-    team_size >= 1
-    AND team_size <= 7
+  team_size INTEGER CHECK (
+    team_size IS NULL OR (team_size >= 1 AND team_size <= 7)
   ),
   team_members TEXT,
   -- Metadata
@@ -60,6 +70,9 @@ CREATE INDEX IF NOT EXISTS idx_registrations_track ON registrations(hackathon_tr
 
 -- Create index on created_at for sorting
 CREATE INDEX IF NOT EXISTS idx_registrations_created ON registrations(created_at DESC);
+
+-- Create index on interests for filtering by interest type
+CREATE INDEX IF NOT EXISTS idx_registrations_interests ON registrations USING GIN(interests);
 
 -- Create function to update updated_at timestamp
 CREATE OR REPLACE FUNCTION update_updated_at_column() RETURNS TRIGGER AS $$ BEGIN NEW.updated_at = NOW();
@@ -83,4 +96,4 @@ GRANT ALL ON registrations TO service_role;
 GRANT SELECT ON registrations TO anon;
 
 -- Comment on table
-COMMENT ON TABLE registrations IS 'YPIT Hackathon registration entries';
+COMMENT ON TABLE registrations IS 'YPIT AF registration entries - supports hackathon participants, conference attendees, mentors, volunteers, sponsors, and explorers';

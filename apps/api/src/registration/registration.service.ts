@@ -10,19 +10,22 @@ import { CreateRegistrationDto } from "./registration.dto";
 
 interface RegistrationRecord {
   id: string;
+  interests: string[];
   full_name: string;
   email: string;
   age_range: string;
   gender: string;
   city_country: string;
-  problem_statement: string;
-  proposed_solution: string;
-  hackathon_track: string;
-  unique_impact: string;
+  has_idea: boolean | null;
+  problem_statement: string | null;
+  proposed_solution: string | null;
+  hackathon_track: string | null;
+  unique_impact: string | null;
   primary_skill: string;
+  ai_skill_level: string;
   has_hackathon_experience: boolean;
   tools_technologies: string | null;
-  team_size: number;
+  team_size: number | null;
   team_members: string | null;
   created_at: string;
   confirmation_sent: boolean;
@@ -57,19 +60,22 @@ export class RegistrationService {
     const { data, error } = await supabase
       .from("registrations")
       .insert({
+        interests: dto.interests,
         full_name: dto.fullName,
         email: dto.email,
         age_range: dto.ageRange,
         gender: dto.gender,
         city_country: dto.cityCountry,
-        problem_statement: dto.problemStatement,
-        proposed_solution: dto.proposedSolution,
-        hackathon_track: dto.hackathonTrack,
-        unique_impact: dto.uniqueImpact,
+        has_idea: dto.hasIdea ?? null,
+        problem_statement: dto.problemStatement || null,
+        proposed_solution: dto.proposedSolution || null,
+        hackathon_track: dto.hackathonTrack || null,
+        unique_impact: dto.uniqueImpact || null,
         primary_skill: dto.primarySkill,
-        has_hackathon_experience: dto.hasHackathonExperience,
+        ai_skill_level: dto.aiSkillLevel,
+        has_hackathon_experience: dto.hasHackathonExperience ?? false,
         tools_technologies: dto.toolsTechnologies || null,
-        team_size: dto.teamSize,
+        team_size: dto.teamSize || null,
         team_members: dto.teamMembers || null,
       })
       .select()

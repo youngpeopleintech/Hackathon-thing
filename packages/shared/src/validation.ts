@@ -8,6 +8,10 @@ export interface ValidationError {
 export function validateStep1(data: Partial<RegistrationData>): ValidationError[] {
   const errors: ValidationError[] = [];
 
+  if (!data.interests || data.interests.length === 0) {
+    errors.push({ field: 'interests', message: 'Please select at least one interest' });
+  }
+
   if (!data.fullName?.trim()) {
     errors.push({ field: 'fullName', message: 'Full name is required' });
   }
@@ -33,8 +37,18 @@ export function validateStep1(data: Partial<RegistrationData>): ValidationError[
   return errors;
 }
 
+// Helper to check if user is a hackathon participant
+export function isHackathonParticipant(data: Partial<RegistrationData>): boolean {
+  return data.interests?.includes('hackathon-participant') ?? false;
+}
+
 export function validateStep2(data: Partial<RegistrationData>): ValidationError[] {
   const errors: ValidationError[] = [];
+
+  // Only validate if user is a hackathon participant
+  if (!isHackathonParticipant(data)) {
+    return errors;
+  }
 
   if (data.hasIdea === undefined) {
     errors.push({ field: 'hasIdea', message: 'Please select if you have a project idea' });
@@ -68,12 +82,13 @@ export function validateStep3(data: Partial<RegistrationData>): ValidationError[
     errors.push({ field: 'primarySkill', message: 'Please select your primary skill' });
   }
 
-  if (data.hasHackathonExperience === undefined) {
-    errors.push({ field: 'hasHackathonExperience', message: 'Please indicate your hackathon experience' });
+  if (!data.aiSkillLevel) {
+    errors.push({ field: 'aiSkillLevel', message: 'Please select your AI/Tech skill level' });
   }
 
-  if (!data.teamSize || data.teamSize < 1 || data.teamSize > 7) {
-    errors.push({ field: 'teamSize', message: 'Team size must be between 1 and 7' });
+  // Only require hackathon experience for hackathon participants
+  if (isHackathonParticipant(data) && data.hasHackathonExperience === undefined) {
+    errors.push({ field: 'hasHackathonExperience', message: 'Please indicate your hackathon experience' });
   }
 
   return errors;

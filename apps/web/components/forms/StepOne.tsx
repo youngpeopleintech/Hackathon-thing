@@ -4,21 +4,27 @@ import React from "react";
 import { Input } from "@/components/ui/Input";
 import { CityCountryInput } from "@/components/ui/CityCountryInput";
 import { RadioGroup } from "@/components/ui/RadioGroup";
+import { CheckboxGroup } from "@/components/ui/CheckboxGroup";
 import { Button } from "@/components/ui/Button";
-import type { RegistrationData, AgeRange, Gender } from "@ypit/shared";
-import { AGE_RANGE_LABELS, GENDER_LABELS } from "@ypit/shared";
+import type { RegistrationData, AgeRange, Gender, InterestType } from "@ypit/shared";
+import { AGE_RANGE_LABELS, GENDER_LABELS, INTEREST_TYPE_LABELS } from "@ypit/shared";
 
 interface StepOneProps {
   data: Partial<RegistrationData>;
   errors: Record<string, string>;
   onChange: (
     field: keyof RegistrationData,
-    value: string | boolean | number
+    value: string | boolean | number | string[]
   ) => void;
   onNext: () => void;
 }
 
 export function StepOne({ data, errors, onChange, onNext }: StepOneProps) {
+  const interestOptions = Object.entries(INTEREST_TYPE_LABELS).map(([value, label]) => ({
+    value,
+    label,
+  }));
+
   const ageOptions = Object.entries(AGE_RANGE_LABELS).map(([value, label]) => ({
     value,
     label,
@@ -31,6 +37,24 @@ export function StepOne({ data, errors, onChange, onNext }: StepOneProps) {
 
   return (
     <div className="space-y-6">
+      {/* Interest in YPIT AF - First Question */}
+      <div>
+        <label className="block text-sm font-medium text-navy-900 mb-1">
+          Interest in YPIT AF
+        </label>
+        <p className="text-xs text-navy-500 mb-3">
+          How do you plan to engage? (Select all that apply)
+        </p>
+        <CheckboxGroup
+          name="interests"
+          options={interestOptions}
+          values={(data.interests as InterestType[]) || []}
+          onChange={(values) => onChange("interests", values)}
+          columns={2}
+          error={errors.interests}
+        />
+      </div>
+
       <Input
         label="Full Name"
         placeholder="Enter your first and last name"
@@ -88,7 +112,7 @@ export function StepOne({ data, errors, onChange, onNext }: StepOneProps) {
 
       <div className="flex justify-end pt-4">
         <Button onClick={onNext}>
-          Continue to Project Idea
+          Continue
           <svg
             className="w-5 h-5 ml-2 inline"
             fill="none"

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { HeroSection } from "@/components/HeroSection";
 import { FormProgress } from "@/components/forms/FormProgress";
 import { StepOne } from "@/components/forms/StepOne";
@@ -10,12 +10,6 @@ import { ConfirmationModal } from "@/components/ConfirmationModal";
 import { submitRegistration } from "@/lib/api";
 import { validateStep1, validateStep2, validateStep3 } from "@/lib/validation";
 import type { RegistrationData } from "@/lib/types";
-
-const FORM_STEPS = [
-  { title: "Basic Info", subtitle: "Basic Information" },
-  { title: "Project Idea", subtitle: "Project Idea" },
-  { title: "Skills", subtitle: "Skills & Background" },
-];
 
 export default function RegisterPage() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -28,8 +22,30 @@ export default function RegisterPage() {
     name: string;
   } | null>(null);
 
+  // Check if user selected hackathon participant
+  const isHackathonParticipant = useMemo(() => {
+    return formData.interests?.includes('hackathon-participant') ?? false;
+  }, [formData.interests]);
+
+  // Dynamic form steps based on interests
+  const formSteps = useMemo(() => {
+    if (isHackathonParticipant) {
+      return [
+        { title: "Basic Info", subtitle: "Basic Information & Interests" },
+        { title: "Project Idea", subtitle: "Project Idea" },
+        { title: "Skills", subtitle: "Skills & Background" },
+      ];
+    }
+    return [
+      { title: "Basic Info", subtitle: "Basic Information & Interests" },
+      { title: "Skills", subtitle: "Skills & Background" },
+    ];
+  }, [isHackathonParticipant]);
+
+  const totalSteps = formSteps.length;
+
   const handleChange = useCallback(
-    (field: keyof RegistrationData, value: string | boolean | number) => {
+    (field: keyof RegistrationData, value: string | boolean | number | string[]) => {
       setFormData((prev) => ({ ...prev, [field]: value }));
       // Clear error when field is updated
       if (errors[field]) {
@@ -46,16 +62,20 @@ export default function RegisterPage() {
   const validateCurrentStep = useCallback((): boolean => {
     let validationErrors: { field: string; message: string }[] = [];
 
-    switch (currentStep) {
-      case 1:
-        validationErrors = validateStep1(formData);
-        break;
-      case 2:
+    if (currentStep === 1) {
+      validationErrors = validateStep1(formData);
+    } else if (isHackathonParticipant) {
+      // 3-step flow: 1 -> 2 (hackathon) -> 3
+      if (currentStep === 2) {
         validationErrors = validateStep2(formData);
-        break;
-      case 3:
+      } else if (currentStep === 3) {
         validationErrors = validateStep3(formData);
-        break;
+      }
+    } else {
+      // 2-step flow: 1 -> 2 (skills, skipping hackathon)
+      if (currentStep === 2) {
+        validationErrors = validateStep3(formData);
+      }
     }
 
     if (validationErrors.length > 0) {
@@ -69,14 +89,14 @@ export default function RegisterPage() {
 
     setErrors({});
     return true;
-  }, [currentStep, formData]);
+  }, [currentStep, formData, isHackathonParticipant]);
 
   const handleNext = useCallback(() => {
     if (validateCurrentStep()) {
-      setCurrentStep((prev) => Math.min(prev + 1, 3));
+      setCurrentStep((prev) => Math.min(prev + 1, totalSteps));
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }, [validateCurrentStep]);
+  }, [validateCurrentStep, totalSteps]);
 
   const handleBack = useCallback(() => {
     setCurrentStep((prev) => Math.max(prev - 1, 1));
@@ -117,6 +137,63 @@ export default function RegisterPage() {
     setRegistrationResult(null);
   };
 
+  // Determine which component to render based on step
+  const renderStepContent = () => {
+    if (currentStep === 1) {
+      return (
+        <StepOne
+          data={formData}
+          errors={errors}
+          onChange={handleChange}
+          onNext={handleNext}
+        />
+      );
+    }
+
+    if (isHackathonParticipant) {
+      // 3-step flow
+      if (currentStep === 2) {
+        return (
+          <StepTwo
+            data={formData}
+            errors={errors}
+            onChange={handleChange}
+            onNext={handleNext}
+            onBack={handleBack}
+          />
+        );
+      }
+      if (currentStep === 3) {
+        return (
+          <StepThree
+            data={formData}
+            errors={errors}
+            onChange={handleChange}
+            onSubmit={handleSubmit}
+            onBack={handleBack}
+            isSubmitting={isSubmitting}
+          />
+        );
+      }
+    } else {
+      // 2-step flow (skip hackathon step)
+      if (currentStep === 2) {
+        return (
+          <StepThree
+            data={formData}
+            errors={errors}
+            onChange={handleChange}
+            onSubmit={handleSubmit}
+            onBack={handleBack}
+            isSubmitting={isSubmitting}
+          />
+        );
+      }
+    }
+
+    return null;
+  };
+
   return (
     <div className="min-h-screen flex flex-col lg:flex-row">
       {/* Left side - Hero */}
@@ -130,16 +207,16 @@ export default function RegisterPage() {
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-3xl lg:text-4xl font-heading font-bold text-navy-900 mb-2">
-              Apply to Build Africa's AI Future
+              Join YPIT's The Artificial Future
             </h1>
-            <p className="text-navy-600">Innovate. Build. Impact.</p>
+            <p className="text-navy-600">Be part of Africa's AI revolution.</p>
           </div>
 
           {/* Progress indicator */}
           <FormProgress
             currentStep={currentStep}
-            totalSteps={3}
-            steps={FORM_STEPS}
+            totalSteps={totalSteps}
+            steps={formSteps}
           />
 
           {/* Form card */}
@@ -152,41 +229,12 @@ export default function RegisterPage() {
             )}
 
             {/* Step content */}
-            {currentStep === 1 && (
-              <StepOne
-                data={formData}
-                errors={errors}
-                onChange={handleChange}
-                onNext={handleNext}
-              />
-            )}
-
-            {currentStep === 2 && (
-              <StepTwo
-                data={formData}
-                errors={errors}
-                onChange={handleChange}
-                onNext={handleNext}
-                onBack={handleBack}
-              />
-            )}
-
-            {currentStep === 3 && (
-              <StepThree
-                data={formData}
-                errors={errors}
-                onChange={handleChange}
-                onSubmit={handleSubmit}
-                onBack={handleBack}
-                isSubmitting={isSubmitting}
-              />
-            )}
+            {renderStepContent()}
           </div>
 
           {/* Footer info */}
           <p className="mt-8 text-center text-sm text-navy-500">
-            By registering, you agree to participate in YPIT's hackathon and
-            receive event-related communications.
+            By registering, you agree to receive event-related communications from YPIT.
           </p>
         </div>
       </div>

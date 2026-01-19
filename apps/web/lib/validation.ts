@@ -3,14 +3,20 @@ import type { RegistrationData } from './types';
 
 // Validation schemas for each step
 const step1Schema = z.object({
+  interests: z.array(z.enum([
+    'hackathon-participant',
+    'conference-attendee',
+    'mentor-speaker',
+    'volunteer',
+    'sponsor-partner',
+    'just-exploring',
+  ])).min(1, 'Please select at least one interest'),
   fullName: z.string().min(2, 'Full name must be at least 2 characters').max(100, 'Full name is too long'),
   email: z.string().email('Please enter a valid email address'),
   ageRange: z.enum(['16-20', '21-25', '25+'], { required_error: 'Please select your age range' }),
   gender: z.enum(['male', 'female', 'prefer-not-to-say'], { required_error: 'Please select your gender' }),
   cityCountry: z.string().min(2, 'Please enter your city and country').max(100, 'Location is too long'),
 });
-
-
 
 const step2IdeaSchema = z.object({
   hasIdea: z.literal(true),
@@ -42,14 +48,18 @@ const step2Schema = z.discriminatedUnion('hasIdea', [
   }
 });
 
-const step3Schema = z.object({
+const step3BaseSchema = z.object({
   primarySkill: z.enum(['frontend-developer', 'backend-developer', 'mobile-developer', 'ui-ux-designer', 'product-manager', 'data-analyst-ml', 'other'], { 
     required_error: 'Please select your primary skill' 
   }),
+  aiSkillLevel: z.enum(['curious-beginner', 'beginner', 'intermediate', 'advanced', 'non-technical'], {
+    required_error: 'Please select your AI/Tech skill level'
+  }),
+  toolsTechnologies: z.string().max(500, 'Tools list is too long').optional(),
+});
+
+const step3HackathonSchema = step3BaseSchema.extend({
   hasHackathonExperience: z.boolean({ required_error: 'Please indicate your hackathon experience' }),
-  toolsTechnologies: z.string().min(2, 'Please list at least one tool or technology').max(500, 'Tools list is too long'),
-  teamSize: z.number().min(1, 'Team must have at least 1 member').max(7, 'Maximum team size is 7 members'),
-  teamMembers: z.string().max(1000, 'Team members description is too long').optional(),
 });
 
 type ValidationError = { field: string; message: string };
@@ -65,6 +75,11 @@ export function validateStep1(data: Partial<RegistrationData>): ValidationError[
 }
 
 export function validateStep2(data: Partial<RegistrationData>): ValidationError[] {
+  // Only validate if user is a hackathon participant
+  if (!data.interests?.includes('hackathon-participant')) {
+    return [];
+  }
+  
   const result = step2Schema.safeParse(data);
   if (result.success) return [];
   
@@ -75,7 +90,10 @@ export function validateStep2(data: Partial<RegistrationData>): ValidationError[
 }
 
 export function validateStep3(data: Partial<RegistrationData>): ValidationError[] {
-  const result = step3Schema.safeParse(data);
+  const isHackathonParticipant = data.interests?.includes('hackathon-participant') ?? false;
+  const schema = isHackathonParticipant ? step3HackathonSchema : step3BaseSchema;
+  
+  const result = schema.safeParse(data);
   if (result.success) return [];
   
   return result.error.errors.map(err => ({
@@ -84,5 +102,4 @@ export function validateStep3(data: Partial<RegistrationData>): ValidationError[
   }));
 }
 
-export const fullRegistrationSchema = step1Schema.and(step2Schema).and(step3Schema);
-
+export const fullRegistrationSchema = step1Schema.and(step3BaseSchema);
