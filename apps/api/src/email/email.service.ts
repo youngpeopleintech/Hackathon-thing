@@ -9,8 +9,8 @@ interface EmailData {
   to: string;
   name: string;
   registrationId: string;
-  hackathonTrack: string;
-  teamSize: number;
+  hackathonTrack?: string;
+  teamSize?: number;
 }
 
 @Injectable()
