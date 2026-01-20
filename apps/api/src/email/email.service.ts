@@ -1,5 +1,5 @@
 import * as Brevo from "@getbrevo/brevo";
-import { Injectable, OnModuleInit } from "@nestjs/common";
+import { Injectable, Logger, OnModuleInit } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import * as fs from "fs";
 import * as Handlebars from "handlebars";
@@ -15,6 +15,7 @@ interface EmailData {
 
 @Injectable()
 export class EmailService implements OnModuleInit {
+  private readonly logger = new Logger(EmailService.name);
   private apiInstance: Brevo.TransactionalEmailsApi;
   private isConfigured = false;
 
@@ -24,7 +25,7 @@ export class EmailService implements OnModuleInit {
     const apiKey = this.configService.get<string>("BREVO_API_KEY");
 
     if (!apiKey) {
-      console.warn(
+      this.logger.warn(
         "⚠️ Brevo API key not configured. Email sending will be disabled.",
       );
       return;
@@ -36,13 +37,13 @@ export class EmailService implements OnModuleInit {
       apiKey,
     );
     this.isConfigured = true;
-    console.log("✅ Brevo email service initialized");
+    this.logger.log("✅ Brevo email service initialized");
   }
 
   async sendConfirmationEmail(data: EmailData): Promise<boolean> {
     if (!this.isConfigured) {
-      console.log("📧 Email would be sent to:", data.to);
-      console.log("📧 Email content:", this.generateEmailHtml(data));
+      this.logger.log("📧 Email would be sent to:", data.to);
+      this.logger.log("📧 Email content:", this.generateEmailHtml(data));
       return true; // Return true for development without API key
     }
 
@@ -60,10 +61,10 @@ export class EmailService implements OnModuleInit {
       sendSmtpEmail.to = [{ email: data.to, name: data.name }];
 
       await this.apiInstance.sendTransacEmail(sendSmtpEmail);
-      console.log(`✅ Confirmation email sent to ${data.to}`);
+      this.logger.log(`✅ Confirmation email sent to ${data.to}`);
       return true;
     } catch (error) {
-      console.error("❌ Failed to send email:", error);
+      this.logger.error("❌ Failed to send email:", error);
       return false;
     }
   }

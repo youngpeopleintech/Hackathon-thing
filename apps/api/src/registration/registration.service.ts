@@ -2,6 +2,7 @@ import {
   ConflictException,
   Injectable,
   InternalServerErrorException,
+  Logger,
 } from "@nestjs/common";
 import { HACKATHON_TRACK_LABELS } from "@ypit/shared";
 import { EmailService } from "../email/email.service";
@@ -33,6 +34,8 @@ interface RegistrationRecord {
 
 @Injectable()
 export class RegistrationService {
+  private readonly logger = new Logger(RegistrationService.name);
+
   constructor(
     private supabaseService: SupabaseService,
     private emailService: EmailService,
@@ -82,7 +85,7 @@ export class RegistrationService {
       .single();
 
     if (error) {
-      console.error("Database error:", error);
+      this.logger.error("Database error:", error);
       throw new InternalServerErrorException(
         "Failed to create registration. Please try again.",
       );

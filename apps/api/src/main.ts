@@ -1,14 +1,14 @@
-import { NestFactory } from '@nestjs/core';
-import { ValidationPipe } from '@nestjs/common';
-import { AppModule } from './app.module';
+import { Logger, ValidationPipe } from "@nestjs/common";
+import { NestFactory } from "@nestjs/core";
+import { AppModule } from "./app.module";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  
+
   // Enable CORS for frontend
   app.enableCors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    origin: process.env.FRONTEND_URL || "http://localhost:3000",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   });
 
@@ -22,12 +22,14 @@ async function bootstrap() {
   );
 
   // Set global prefix
-  app.setGlobalPrefix('api');
+  app.setGlobalPrefix("api");
 
   const port = process.env.PORT || 3001;
   await app.listen(port);
-  console.log(`🚀 YPIT API is running on: http://localhost:${port}/api`);
+  Logger.log(
+    `🚀 YPIT API is running on: http://localhost:${port}/api`,
+    "Bootstrap",
+  );
 }
 
 bootstrap();
-
