@@ -5,7 +5,7 @@ import * as fs from "fs";
 import * as Handlebars from "handlebars";
 import * as path from "path";
 
-interface EmailData {
+export interface EmailData {
   to: string;
   name: string;
   registrationId: string;

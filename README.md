@@ -8,6 +8,7 @@ A modern hackathon registration system for YPIT's AI-focused event in Lagos, Nig
 - **Backend:** NestJS 10, TypeScript
 - **Database:** Supabase (PostgreSQL)
 - **Email:** Brevo (Transactional Emails)
+- **Queue:** BullMQ (Redis)
 - **Monorepo:** Turborepo
 
 ## Project Structure
@@ -30,6 +31,7 @@ A modern hackathon registration system for YPIT's AI-focused event in Lagos, Nig
 - npm 10+
 - Supabase account
 - Brevo account
+- Redis (running locally or remotely)
 
 ### 1. Install Dependencies
 
@@ -59,6 +61,9 @@ SENDER_EMAIL=hello@ypit.org
 # Application
 PORT=3001
 FRONTEND_URL=http://localhost:3000
+
+# Redis/BullMQ Configuration
+REDIS_URL=redis://localhost:6379
 ```
 
 Create a `.env.local` file in `apps/web/`:

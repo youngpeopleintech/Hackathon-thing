@@ -1,3 +1,4 @@
+import { InjectQueue } from "@nestjs/bullmq";
 import {
   ConflictException,
   Injectable,
@@ -5,7 +6,8 @@ import {
   Logger,
 } from "@nestjs/common";
 import { HACKATHON_TRACK_LABELS } from "@ypit/shared";
-import { EmailService } from "../email/email.service";
+import { Queue } from "bullmq";
+import { JobName, QueueName } from "../common/constants";
 import { SupabaseService } from "../supabase/supabase.service";
 import { CreateRegistrationDto } from "./registration.dto";
 
@@ -38,7 +40,7 @@ export class RegistrationService {
 
   constructor(
     private supabaseService: SupabaseService,
-    private emailService: EmailService,
+    @InjectQueue(QueueName.EMAIL) private emailQueue: Queue,
   ) {}
 
   async createRegistration(
@@ -93,27 +95,19 @@ export class RegistrationService {
 
     const registration = data as RegistrationRecord;
 
-    // Send confirmation email
+    // Send confirmation email via queue
     const trackLabel =
       HACKATHON_TRACK_LABELS[
         dto.hackathonTrack as keyof typeof HACKATHON_TRACK_LABELS
       ] || dto.hackathonTrack;
 
-    const emailSent = await this.emailService.sendConfirmationEmail({
+    await this.emailQueue.add(JobName.SEND_CONFIRMATION, {
       to: dto.email,
       name: dto.fullName,
       registrationId: registration.id,
       hackathonTrack: trackLabel,
       teamSize: dto.teamSize,
     });
-
-    // Update confirmation status
-    if (emailSent) {
-      await supabase
-        .from("registrations")
-        .update({ confirmation_sent: true })
-        .eq("id", registration.id);
-    }
 
     return {
       success: true,
