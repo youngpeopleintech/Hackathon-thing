@@ -83,7 +83,8 @@ export class EmailService implements OnModuleInit {
       formattedTeamSize: data.teamSize
         ? `${data.teamSize} member${data.teamSize === 1 ? "" : "s"}`
         : "Not Specified",
-      logoUrl: `https://www.youngpeopleintech.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FnavLogo.33f63a31.png&w=640&q=75`,
+      logoUrlLightBackground: "https://res.cloudinary.com/dt9qstedv/image/upload/v1769243850/YPIT_Logo_Black_Version_kmswnj.png",
+      logoUrlDarkBackground: "https://res.cloudinary.com/dt9qstedv/image/upload/v1769243849/YPIT_Logo_-_White_Version_pyyvfv.png",
       instagramIcon: "https://img.icons8.com/?size=100&id=32292&format=png&color=000000",
       linkedinIcon: "https://img.icons8.com/?size=100&id=8808&format=png&color=000000",
       xIcon: "https://img.icons8.com/?size=100&id=YfCbGWCWcuar&format=png&color=000000",
