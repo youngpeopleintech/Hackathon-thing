@@ -1,6 +1,6 @@
 import type { RegistrationData, RegistrationResponse } from './types';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://dev-api.theartificialfuture.com/api';
 
 export async function submitRegistration(data: RegistrationData): Promise<RegistrationResponse> {
   const response = await fetch(`${API_URL}/registration`, {
