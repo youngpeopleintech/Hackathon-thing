@@ -1,0 +1,460 @@
+/* Scrollbar when AF landing present */
+html:has(.ypitAfLanding) ::-webkit-scrollbar{width:6px}
+html:has(.ypitAfLanding) ::-webkit-scrollbar-track{background:#f0ede8}
+html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-radius:3px}
+
+.ypitAfLanding * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.ypitAfLanding {
+  --coral: #e8593a;
+  --coral-dim: #c4472b;
+  --gold: #c9a84c;
+  --dark: #1a1714;
+  --muted: #6b6259;
+  --light: #f7f4ef;
+  --border: #e8e3db;
+  --card: #f7f4ef;
+  --white: #ffffff;
+  --display: var(--font-syne), 'Syne', sans-serif;
+  font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
+  background: #ffffff;
+  color: #1a1714;
+  overflow-x: hidden;
+}
+
+/* NAV */
+.ypitAfLanding nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  padding:20px 56px;display:flex;align-items:center;justify-content:space-between;
+  transition:all 0.35s ease;
+}
+.ypitAfLanding nav.scrolled{
+  background:rgba(255,255,255,0.94);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  box-shadow:0 1px 24px rgba(26,23,20,0.05);
+}
+.ypitAfLanding .nav-logo{
+  font-family:var(--display);font-weight:800;font-size:15px;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--dark);text-decoration:none;
+}
+.ypitAfLanding .nav-logo span{color:var(--coral)}
+.ypitAfLanding .nav-links{display:flex;gap:36px;align-items:center}
+.ypitAfLanding .nav-links a{
+  font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;transition:color 0.2s;
+}
+.ypitAfLanding .nav-links a:hover{color:var(--dark)}
+.ypitAfLanding .nav-cta{
+  background:var(--coral)!important;color:#fff!important;
+  padding:10px 24px;border-radius:2px;
+}
+.ypitAfLanding .nav-cta:hover{background:var(--coral-dim)!important}
+
+/* HERO */
+.ypitAfLanding #hero{
+  min-height:100vh;display:flex;flex-direction:column;
+  justify-content:flex-end;padding:0 56px 88px;
+  overflow:hidden;position:relative;background:#ffffff;
+}
+.ypitAfLanding .hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 65% 55% at 62% 32%,rgba(232,89,58,0.07) 0%,transparent 60%),
+    radial-gradient(ellipse 45% 45% at 18% 72%,rgba(201,168,76,0.05) 0%,transparent 55%);
+}
+.ypitAfLanding .hero-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(26,23,20,0.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(26,23,20,0.04) 1px,transparent 1px);
+  background-size:72px 72px;
+  -webkit-mask-image:radial-gradient(ellipse 100% 100% at 50% 50%,black 20%,transparent 80%);
+  mask-image:radial-gradient(ellipse 100% 100% at 50% 50%,black 20%,transparent 80%);
+}
+.ypitAfLanding .hero-orb{
+  position:absolute;width:500px;height:500px;
+  right:-60px;top:50%;transform:translateY(-50%);
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(232,89,58,0.09) 0%,rgba(201,168,76,0.05) 40%,transparent 70%);
+  animation:orbPulse 9s ease-in-out infinite;pointer-events:none;
+}
+@keyframes orbPulse{
+  0%,100%{transform:translateY(-50%) scale(1);opacity:0.7}
+  50%{transform:translateY(-52%) scale(1.07);opacity:1}
+}
+.ypitAfLanding .hero-content{position:relative;z-index:2}
+.ypitAfLanding .hero-eyebrow{
+  display:flex;align-items:center;gap:12px;
+  font-family:var(--display);font-size:11px;font-weight:700;
+  letter-spacing:0.2em;text-transform:uppercase;color:var(--coral);
+  margin-bottom:28px;
+}
+.ypitAfLanding .hero-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--coral)}
+.ypitAfLanding .hero-headline{
+  font-family:var(--display);font-weight:800;line-height:0.93;
+  letter-spacing:-0.03em;margin-bottom:40px;
+}
+.ypitAfLanding .hero-headline .line{
+  display:block;font-size:clamp(64px,9.5vw,130px);color:var(--dark);
+}
+.ypitAfLanding .hero-headline .line.accent{color:var(--coral)}
+.ypitAfLanding .hero-sub{
+  max-width:580px;font-size:17px;font-weight:300;line-height:1.78;
+  color:var(--muted);margin-bottom:44px;
+}
+.ypitAfLanding .hero-actions{
+  display:flex;gap:12px;flex-wrap:wrap;margin-bottom:52px;
+}
+.ypitAfLanding .hero-chips{
+  display:flex;gap:10px;flex-wrap:wrap;
+}
+.ypitAfLanding .chip{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:7px 16px;border-radius:100px;
+  font-size:12px;font-weight:500;letter-spacing:0.02em;
+}
+.ypitAfLanding .chip-dot{width:6px;height:6px;border-radius:50%;display:inline-block;flex-shrink:0}
+.ypitAfLanding .chip.free{background:#edf7f0;border:1px solid rgba(26,122,66,0.2);color:#1a7a42}
+.ypitAfLanding .chip.free .chip-dot{background:#1a7a42}
+.ypitAfLanding .chip.paid{background:#fdf7e8;border:1px solid rgba(138,96,16,0.2);color:#8a6010}
+.ypitAfLanding .chip.paid .chip-dot{background:#c9a84c}
+
+/* SCROLL HINT */
+.ypitAfLanding .scroll-hint{
+  position:absolute;bottom:40px;right:56px;
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  opacity:0;animation:fadeIn 1s 1.5s forwards;
+}
+.ypitAfLanding .scroll-hint-text{font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#b0a89a;writing-mode:vertical-rl}
+.ypitAfLanding .scroll-line{width:1px;height:56px;background:linear-gradient(to bottom,var(--coral),transparent);animation:scrollAnim 2.2s ease-in-out infinite}
+@keyframes scrollAnim{
+  0%{transform:scaleY(0);transform-origin:top}
+  49%{transform:scaleY(1);transform-origin:top}
+  50%{transform:scaleY(1);transform-origin:bottom}
+  100%{transform:scaleY(0);transform-origin:bottom}
+}
+
+/* MARQUEE */
+.ypitAfLanding .marquee-wrap{
+  overflow:hidden;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:17px 0;background:#ffffff;
+}
+.ypitAfLanding .marquee-track{
+  display:flex;width:max-content;
+  animation:marquee 28s linear infinite;
+}
+.ypitAfLanding .marquee-item{
+  display:inline-flex;align-items:center;gap:18px;
+  padding:0 28px;
+  font-family:var(--display);font-size:10px;font-weight:700;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:#c8c2bb;white-space:nowrap;
+}
+.ypitAfLanding .marquee-dot{width:4px;height:4px;border-radius:50%;background:var(--coral);flex-shrink:0}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SECTIONS */
+.ypitAfLanding .section{padding:112px 56px}
+.ypitAfLanding .section-inner{max-width:1200px;margin:0 auto}
+.ypitAfLanding .section-white{background:#ffffff}
+.ypitAfLanding .section-cream{background:#f7f4ef}
+
+.ypitAfLanding .section-label{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--display);font-size:10px;font-weight:700;
+  letter-spacing:0.2em;text-transform:uppercase;color:var(--coral);
+  margin-bottom:20px;
+}
+.ypitAfLanding .section-label::after{content:'';display:block;width:22px;height:1px;background:var(--coral)}
+
+.ypitAfLanding .section-headline{
+  font-family:var(--display);
+  font-size:clamp(32px,4.5vw,60px);
+  font-weight:800;line-height:1.03;letter-spacing:-0.025em;
+  color:var(--dark);margin-bottom:24px;
+}
+.ypitAfLanding .section-sub{
+  font-size:17px;font-weight:300;color:var(--muted);
+  line-height:1.78;max-width:640px;
+}
+
+/* BUTTONS */
+.ypitAfLanding .btn-primary{
+  display:inline-block;background:var(--coral);color:#fff;
+  padding:15px 36px;font-family:var(--display);font-size:12px;
+  font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;border-radius:2px;border:none;cursor:pointer;
+  transition:background 0.2s,transform 0.15s;
+}
+.ypitAfLanding .btn-primary:hover{background:var(--coral-dim);transform:translateY(-2px)}
+.ypitAfLanding .btn-outline{
+  display:inline-block;background:transparent;color:var(--dark);
+  padding:14px 36px;font-family:var(--display);font-size:12px;
+  font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;border-radius:2px;border:1.5px solid var(--dark);
+  transition:border-color 0.2s,transform 0.15s;cursor:pointer;
+}
+.ypitAfLanding .btn-outline:hover{border-color:var(--coral);color:var(--coral);transform:translateY(-2px)}
+
+/* ABOUT */
+.ypitAfLanding .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:56px}
+.ypitAfLanding .about-body{font-size:17px;font-weight:300;color:var(--muted);line-height:1.8}
+.ypitAfLanding .about-body p+p{margin-top:20px}
+.ypitAfLanding .callout{
+  border-left:2px solid var(--coral);padding:22px 28px;
+  background:rgba(232,89,58,0.04);border-radius:0 6px 6px 0;margin-bottom:14px;
+}
+.ypitAfLanding .callout.gold{border-color:var(--gold);background:rgba(201,168,76,0.04)}
+.ypitAfLanding .callout h4{font-family:var(--display);font-size:17px;font-weight:700;color:var(--dark);margin-bottom:9px;line-height:1.35}
+.ypitAfLanding .callout p{font-size:14px;font-weight:300;color:var(--muted);line-height:1.7}
+
+/* PROGRAMME CARDS */
+.ypitAfLanding .prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px}
+.ypitAfLanding .prog-card{
+  padding:48px 40px;background:#ffffff;border:1px solid var(--border);
+  position:relative;overflow:hidden;transition:transform 0.2s,background 0.25s;
+}
+.ypitAfLanding .prog-card:hover{transform:translateY(-4px);background:#fdfcfa}
+.ypitAfLanding .prog-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--coral);transform:scaleX(0);transform-origin:left;
+  transition:transform 0.35s ease;
+}
+.ypitAfLanding .prog-card:hover::before{transform:scaleX(1)}
+.ypitAfLanding .prog-num{font-family:var(--display);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#c8c2bb;margin-bottom:32px}
+.ypitAfLanding .prog-card h3{font-family:var(--display);font-size:26px;font-weight:800;color:var(--dark);margin-bottom:10px;line-height:1.1}
+.ypitAfLanding .prog-date{font-size:12px;color:var(--coral);font-weight:500;letter-spacing:0.05em;margin-bottom:20px}
+.ypitAfLanding .prog-card p{font-size:15px;color:var(--muted);line-height:1.72;font-weight:300;margin-bottom:36px}
+.ypitAfLanding .prog-link{
+  font-family:var(--display);font-size:11px;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);
+  text-decoration:none;display:inline-flex;align-items:center;gap:6px;
+  transition:gap 0.2s;
+}
+.ypitAfLanding .prog-link:hover{gap:12px}
+
+/* TRACKS */
+.ypitAfLanding .tracks-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-bottom:72px;padding-bottom:72px;border-bottom:1px solid var(--border)}
+.ypitAfLanding .tracks-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.ypitAfLanding .track-card{
+  padding:48px;background:#f7f4ef;position:relative;overflow:hidden;
+  transition:background 0.25s;
+}
+.ypitAfLanding .track-card:hover{background:#f2ede5}
+.ypitAfLanding .track-bg-num{
+  font-family:var(--display);font-size:80px;font-weight:800;
+  color:rgba(26,23,20,0.04);position:absolute;top:14px;right:24px;
+  line-height:1;pointer-events:none;transition:color 0.3s;
+}
+.ypitAfLanding .track-card:hover .track-bg-num{color:rgba(232,89,58,0.06)}
+.ypitAfLanding .track-tag{
+  display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--coral);
+  border:1px solid rgba(232,89,58,0.3);padding:4px 12px;border-radius:100px;margin-bottom:22px;
+}
+.ypitAfLanding .track-card h3{font-family:var(--display);font-size:20px;font-weight:800;color:var(--dark);line-height:1.25;margin-bottom:14px}
+.ypitAfLanding .track-card p{font-size:14px;color:var(--muted);line-height:1.76;font-weight:300}
+
+/* SCHEDULE */
+.ypitAfLanding .schedule-table{border:1px solid var(--border);border-radius:4px;overflow:hidden;background:#ffffff;margin-top:56px}
+.ypitAfLanding .schedule-row{
+  display:grid;grid-template-columns:180px 1fr;
+  border-bottom:1px solid var(--border);transition:background 0.2s;
+}
+.ypitAfLanding .schedule-row:last-child{border-bottom:none}
+.ypitAfLanding .schedule-row:hover{background:#fdfcfa}
+.ypitAfLanding .schedule-date{
+  padding:28px;border-right:1px solid var(--border);
+  font-family:var(--display);font-size:13px;font-weight:700;
+  color:var(--coral);display:flex;align-items:center;
+}
+.ypitAfLanding .schedule-content{padding:28px 36px}
+.ypitAfLanding .schedule-tag{
+  display:inline-block;font-size:9px;font-weight:700;letter-spacing:0.13em;
+  text-transform:uppercase;background:rgba(232,89,58,0.08);color:var(--coral);
+  padding:3px 10px;border-radius:100px;margin-bottom:8px;
+}
+.ypitAfLanding .schedule-content h4{font-family:var(--display);font-size:15px;font-weight:700;color:var(--dark);margin-bottom:5px}
+.ypitAfLanding .schedule-content p{font-size:13px;color:var(--muted);font-weight:300;line-height:1.65}
+
+/* WORKSHOPS */
+.ypitAfLanding .workshop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px}
+.ypitAfLanding .workshop-card{
+  padding:36px;background:#f7f4ef;border:1px solid var(--border);
+  transition:transform 0.2s,background 0.25s;display:flex;flex-direction:column;
+}
+.ypitAfLanding .workshop-card:hover{transform:translateY(-3px);background:#f2ede5}
+.ypitAfLanding .workshop-card.soon{background:transparent;border-style:dashed;border-color:rgba(232,89,58,0.2)}
+.ypitAfLanding .workshop-icon{font-size:22px;margin-bottom:18px}
+.ypitAfLanding .workshop-card h3{font-family:var(--display);font-size:16px;font-weight:700;color:var(--dark);margin-bottom:12px;line-height:1.35;flex:1}
+.ypitAfLanding .workshop-card.soon h3{color:#c0b8ac}
+.ypitAfLanding .workshop-card p{font-size:13px;color:var(--muted);line-height:1.72;font-weight:300;margin-bottom:18px}
+.ypitAfLanding .workshop-meta{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:6px;margin-top:auto}
+.ypitAfLanding .workshop-meta .dot{width:6px;height:6px;border-radius:50%;display:inline-block}
+
+/* CONFERENCE */
+.ypitAfLanding .conf-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-top:56px}
+.ypitAfLanding .conf-card{background:#ffffff;border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.ypitAfLanding .conf-card-header{
+  padding:32px 36px;
+  background:linear-gradient(135deg,rgba(232,89,58,0.06),rgba(201,168,76,0.04));
+  border-bottom:1px solid var(--border);
+}
+.ypitAfLanding .conf-card-header h4{font-family:var(--display);font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.ypitAfLanding .conf-card-header p{font-family:var(--display);font-size:30px;font-weight:800;color:var(--dark);line-height:1.1}
+.ypitAfLanding .conf-detail{display:flex;gap:16px;align-items:flex-start;padding:15px 32px;border-bottom:1px solid var(--border)}
+.ypitAfLanding .conf-detail:last-child{border-bottom:none}
+.ypitAfLanding .conf-detail-icon{font-size:15px;flex-shrink:0;margin-top:3px}
+.ypitAfLanding .conf-detail h5{font-family:var(--display);font-size:13px;font-weight:700;color:var(--dark);margin-bottom:3px}
+.ypitAfLanding .conf-detail p{font-size:12px;color:var(--muted);font-weight:300}
+
+/* SPEAKERS PLACEHOLDER */
+.ypitAfLanding .speakers-box{
+  margin-top:56px;padding:72px;
+  border:1px dashed var(--border);border-radius:4px;
+  text-align:center;background:#fafaf8;
+}
+.ypitAfLanding .speakers-box h3{font-family:var(--display);font-size:22px;font-weight:700;color:var(--dark);margin-bottom:14px}
+.ypitAfLanding .speakers-box p{font-size:16px;color:var(--muted);font-weight:300;max-width:480px;margin:0 auto 32px;line-height:1.72}
+.ypitAfLanding .ghost-grid{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:48px}
+.ypitAfLanding .ghost-card{display:flex;flex-direction:column;align-items:center;gap:10px;width:100px}
+.ypitAfLanding .ghost-avatar{width:64px;height:64px;border-radius:50%;background:var(--border);border:1px dashed #d4cfc8;animation:ghostPulse 2.5s ease-in-out infinite}
+.ypitAfLanding .ghost-card:nth-child(2) .ghost-avatar{animation-delay:0.3s}
+.ypitAfLanding .ghost-card:nth-child(3) .ghost-avatar{animation-delay:0.6s}
+.ypitAfLanding .ghost-card:nth-child(4) .ghost-avatar{animation-delay:0.9s}
+.ypitAfLanding .ghost-card:nth-child(5) .ghost-avatar{animation-delay:1.2s}
+.ypitAfLanding .ghost-line{height:7px;background:#ece8e2;border-radius:4px;width:72px}
+.ypitAfLanding .ghost-line.short{width:52px}
+@keyframes ghostPulse{0%,100%{opacity:0.4}50%{opacity:0.75}}
+
+/* PATHS */
+.ypitAfLanding .paths-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px;margin-bottom:2px}
+.ypitAfLanding .path-card{
+  padding:44px 36px;background:#ffffff;border:1px solid var(--border);
+  position:relative;overflow:hidden;display:flex;flex-direction:column;
+}
+.ypitAfLanding .path-bg-num{
+  font-family:var(--display);font-size:88px;font-weight:800;
+  color:rgba(26,23,20,0.025);position:absolute;top:10px;right:18px;
+  line-height:1;pointer-events:none;
+}
+.ypitAfLanding .path-badge{
+  display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.14em;
+  text-transform:uppercase;padding:4px 12px;border-radius:100px;
+  margin-bottom:20px;align-self:flex-start;
+}
+.ypitAfLanding .path-badge.free{background:#edf7f0;color:#1a7a42}
+.ypitAfLanding .path-badge.paid{background:#fdf7e8;color:#8a6010}
+.ypitAfLanding .path-card h3{font-family:var(--display);font-size:22px;font-weight:800;color:var(--dark);margin-bottom:28px;line-height:1.15}
+.ypitAfLanding .path-steps{list-style:none;margin-bottom:36px;flex:1}
+.ypitAfLanding .path-steps li{
+  display:flex;gap:14px;font-size:13px;color:var(--muted);
+  line-height:1.65;font-weight:300;padding:9px 0;
+  border-bottom:1px solid rgba(232,227,219,0.7);
+}
+.ypitAfLanding .path-steps li:last-child{border-bottom:none}
+.ypitAfLanding .step-num{font-family:var(--display);font-size:10px;font-weight:700;color:var(--coral);flex-shrink:0;margin-top:4px}
+.ypitAfLanding .path-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.ypitAfLanding .path-info-card{padding:36px 40px;background:#f7f4ef;border:1px solid var(--border)}
+.ypitAfLanding .path-info-card h4{font-family:var(--display);font-size:17px;font-weight:700;color:var(--dark);margin-bottom:12px;line-height:1.3}
+.ypitAfLanding .path-info-card p{font-size:14px;color:var(--muted);font-weight:300;line-height:1.72}
+
+/* FAQ */
+.ypitAfLanding .faq-grid{display:grid;grid-template-columns:260px 1fr;gap:64px;margin-top:56px}
+.ypitAfLanding .faq-sidebar{position:sticky;top:100px;align-self:start}
+.ypitAfLanding .faq-cat{
+  font-family:var(--display);font-size:10px;font-weight:700;
+  letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--muted);padding:12px 0;cursor:pointer;
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:8px;transition:color 0.2s;
+}
+.ypitAfLanding .faq-cat.active{color:var(--coral)}
+.ypitAfLanding .faq-cat.active::before{content:'';display:block;width:16px;height:1px;background:var(--coral)}
+.ypitAfLanding .faq-cat:hover{color:var(--coral)}
+.ypitAfLanding .faq-item{background:#f7f4ef;border-radius:2px;overflow:hidden;margin-bottom:2px}
+.ypitAfLanding .faq-q{
+  padding:22px 26px;font-family:var(--display);font-size:14px;font-weight:700;
+  color:var(--dark);cursor:pointer;display:flex;justify-content:space-between;
+  align-items:center;gap:20px;user-select:none;transition:color 0.2s;
+}
+.ypitAfLanding .faq-q:hover{color:var(--coral)}
+.ypitAfLanding .faq-icon{
+  width:24px;height:24px;border:1px solid var(--border);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;color:var(--muted);flex-shrink:0;background:#fff;
+  transition:all 0.2s;
+}
+.ypitAfLanding .faq-item.open .faq-icon{background:var(--coral);border-color:var(--coral);color:#fff;transform:rotate(45deg)}
+.ypitAfLanding .faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+.ypitAfLanding .faq-item.open .faq-a{max-height:280px}
+.ypitAfLanding .faq-a-inner{padding:0 26px 22px;font-size:14px;color:var(--muted);font-weight:300;line-height:1.76}
+
+/* PARTNERS */
+.ypitAfLanding .partner-grid{display:flex;gap:2px;flex-wrap:wrap;margin-top:56px;margin-bottom:2px}
+.ypitAfLanding .partner-slot{
+  flex:1;min-width:140px;height:88px;background:#ffffff;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;transition:background 0.2s;
+}
+.ypitAfLanding .partner-slot:hover{background:#f7f4ef}
+.ypitAfLanding .partner-slot span{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#d4cfc8}
+.ypitAfLanding .partner-cta{
+  display:flex;align-items:center;justify-content:space-between;gap:40px;
+  padding:40px;border:1px solid var(--border);background:#ffffff;flex-wrap:wrap;
+}
+.ypitAfLanding .partner-cta h3{font-family:var(--display);font-size:19px;font-weight:800;color:var(--dark);margin-bottom:8px}
+.ypitAfLanding .partner-cta p{font-size:14px;color:var(--muted);font-weight:300}
+
+/* FOOTER CTA */
+.ypitAfLanding #footer-cta{
+  padding:120px 56px;text-align:center;
+  background:linear-gradient(135deg,rgba(232,89,58,0.06),rgba(201,168,76,0.03),#ffffff);
+  border-top:1px solid var(--border);
+}
+.ypitAfLanding #footer-cta h2{
+  font-family:var(--display);font-size:clamp(36px,6vw,80px);font-weight:800;
+  line-height:1.0;letter-spacing:-0.025em;color:var(--dark);margin-bottom:20px;
+}
+.ypitAfLanding #footer-cta h2 span{color:var(--coral)}
+.ypitAfLanding #footer-cta p{font-size:17px;color:var(--muted);font-weight:300;margin-bottom:44px}
+.ypitAfLanding .footer-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+.ypitAfLanding footer{
+  background:#ffffff;border-top:1px solid var(--border);
+  padding:36px 56px;display:flex;align-items:center;
+  justify-content:space-between;gap:24px;flex-wrap:wrap;
+}
+.ypitAfLanding .footer-logo{font-family:var(--display);font-weight:800;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dark)}
+.ypitAfLanding .footer-logo span{color:var(--coral)}
+.ypitAfLanding .footer-tagline{font-family:'DM Sans';font-weight:300;font-size:13px;color:var(--muted);letter-spacing:normal;text-transform:none;margin-left:8px}
+.ypitAfLanding .footer-links{display:flex;gap:28px;flex-wrap:wrap}
+.ypitAfLanding .footer-links a{font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.ypitAfLanding .footer-links a:hover{color:var(--dark)}
+.ypitAfLanding .footer-links a.email{text-transform:none}
+
+/* KEYFRAMES */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .ypitAfLanding nav{padding:18px 24px}
+  .ypitAfLanding .nav-links a:not(.nav-cta){display:none}
+  .ypitAfLanding #hero, .ypitAfLanding .section{padding-left:24px;padding-right:24px}
+  .ypitAfLanding #footer-cta{padding:80px 24px}
+  .ypitAfLanding footer{padding:32px 24px}
+  .ypitAfLanding .hero-orb{width:280px;height:280px}
+  .ypitAfLanding .about-grid, .ypitAfLanding .tracks-intro, .ypitAfLanding .conf-grid, .ypitAfLanding .faq-grid{grid-template-columns:1fr;gap:40px}
+  .ypitAfLanding .prog-grid, .ypitAfLanding .tracks-grid, .ypitAfLanding .workshop-grid, .ypitAfLanding .paths-grid, .ypitAfLanding .path-info-grid{grid-template-columns:1fr}
+  .ypitAfLanding .schedule-row{grid-template-columns:1fr}
+  .ypitAfLanding .schedule-date{border-right:none;border-bottom:1px solid var(--border)}
+  .ypitAfLanding .faq-sidebar{position:relative;top:0}
+  .ypitAfLanding .partner-cta{flex-direction:column}
+}
