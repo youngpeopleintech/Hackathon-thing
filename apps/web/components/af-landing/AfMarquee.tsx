@@ -1,14 +1,11 @@
 const MARQUEE_ITEMS = [
-  'Economic Access',
-  'Local Language & Culture',
-  'Education & Skill Building',
-  'Healthcare Access',
-  'Lagos Nigeria',
-  'AI Hackathon',
-  'We dey build the future',
-  'Full Day Conference',
-  'Demo & Showcase',
-  'Launchpad',
+  'Built for Africans',
+  'Built by Africans',
+  'Lagos, Nigeria',
+  'Workshops',
+  'Mentorships',
+  'Venture Launchpad',
+  'Full day Conference',
 ];
 
 export function AfMarquee() {

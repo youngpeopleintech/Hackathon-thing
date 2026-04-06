@@ -43,35 +43,35 @@ export function AfConference() {
               <p>June 13, 2026</p>
             </div>
             <div className="conf-detail">
-              <div className="conf-detail-icon">📍</div>
+              <div className="conf-detail-marker" aria-hidden />
               <div>
                 <h5>Venue</h5>
                 <p>The Civic Centre, Lagos Island, Nigeria</p>
               </div>
             </div>
             <div className="conf-detail">
-              <div className="conf-detail-icon">🎤</div>
+              <div className="conf-detail-marker" aria-hidden />
               <div>
                 <h5>Main Stage</h5>
                 <p>Keynotes from leading voices in African AI</p>
               </div>
             </div>
             <div className="conf-detail">
-              <div className="conf-detail-icon">💬</div>
+              <div className="conf-detail-marker" aria-hidden />
               <div>
                 <h5>Breakout Sessions</h5>
                 <p>Workshops, roundtables, and panels</p>
               </div>
             </div>
             <div className="conf-detail">
-              <div className="conf-detail-icon">🏆</div>
+              <div className="conf-detail-marker" aria-hidden />
               <div>
                 <h5>Demo Day</h5>
                 <p>Top hackathon teams pitch live — YC-style</p>
               </div>
             </div>
             <div className="conf-detail">
-              <div className="conf-detail-icon">🤝</div>
+              <div className="conf-detail-marker" aria-hidden />
               <div>
                 <h5>Networking</h5>
                 <p>Dedicated breaks and closing reception</p>

@@ -1,7 +1,15 @@
+@font-face {
+  font-family: 'Ypit';
+  src: url('/fonts/Ypit-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Scrollbar when AF landing present */
 html:has(.ypitAfLanding) ::-webkit-scrollbar{width:6px}
 html:has(.ypitAfLanding) ::-webkit-scrollbar-track{background:#f0ede8}
-html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-radius:3px}
+html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-radius:3px}
 
 .ypitAfLanding * {
   margin: 0;
@@ -9,8 +17,8 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-rad
   box-sizing: border-box;
 }
 .ypitAfLanding {
-  --coral: #e8593a;
-  --coral-dim: #c4472b;
+  --coral: #FF4600;
+  --coral-dim: #CC3800;
   --gold: #c9a84c;
   --dark: #1a1714;
   --muted: #6b6259;
@@ -18,7 +26,7 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-rad
   --border: #e8e3db;
   --card: #f7f4ef;
   --white: #ffffff;
-  --display: var(--font-syne), 'Syne', sans-serif;
+  --display: var(--font-dm-sans), 'DM Sans', sans-serif;
   font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
   background: #ffffff;
   color: #1a1714;
@@ -30,61 +38,57 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-rad
   position:fixed;top:0;left:0;right:0;z-index:500;
   padding:20px 56px;display:flex;align-items:center;justify-content:space-between;
   transition:all 0.35s ease;
+  background:var(--coral);
+  border-bottom:1px solid rgba(255,255,255,0.12);
 }
 .ypitAfLanding nav.scrolled{
-  background:rgba(255,255,255,0.94);
-  backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border);
-  box-shadow:0 1px 24px rgba(26,23,20,0.05);
+  background:rgba(255,70,0,0.92);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,0.18);
+  box-shadow:0 4px 24px rgba(0,0,0,0.12);
 }
 .ypitAfLanding .nav-logo{
   font-family:var(--display);font-weight:800;font-size:15px;
   letter-spacing:0.12em;text-transform:uppercase;
-  color:var(--dark);text-decoration:none;
+  color:#fff;text-decoration:none;
 }
-.ypitAfLanding .nav-logo span{color:var(--coral)}
-.ypitAfLanding .nav-links{display:flex;gap:36px;align-items:center}
-.ypitAfLanding .nav-links a{
-  font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;
-  color:var(--muted);text-decoration:none;transition:color 0.2s;
+.ypitAfLanding .nav-logo span{color:#fff;opacity:0.92}
+.ypitAfLanding .nav-links{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.ypitAfLanding .nav-pill{
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+  color:#fff!important;text-decoration:none;transition:background 0.2s,border-color 0.2s,transform 0.15s;
+  padding:10px 18px;border-radius:100px;
+  background:rgba(255,255,255,0.14);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.28);
 }
-.ypitAfLanding .nav-links a:hover{color:var(--dark)}
+.ypitAfLanding .nav-pill:hover{
+  background:rgba(255,255,255,0.26);
+  border-color:rgba(255,255,255,0.4);
+  color:#fff!important;
+}
 .ypitAfLanding .nav-cta{
-  background:var(--coral)!important;color:#fff!important;
-  padding:10px 24px;border-radius:2px;
+  background:rgba(255,255,255,0.22)!important;
+  border-color:rgba(255,255,255,0.35)!important;
 }
-.ypitAfLanding .nav-cta:hover{background:var(--coral-dim)!important}
+.ypitAfLanding .nav-cta:hover{
+  background:rgba(255,255,255,0.34)!important;
+  border-color:rgba(255,255,255,0.5)!important;
+}
 
 /* HERO */
 .ypitAfLanding #hero{
   min-height:100vh;display:flex;flex-direction:column;
-  justify-content:flex-end;padding:0 56px 88px;
-  overflow:hidden;position:relative;background:#ffffff;
+  justify-content:flex-end;padding:80px 56px 88px;
+  overflow:hidden;position:relative;background:#faf9f7;
 }
-.ypitAfLanding .hero-bg{
+.ypitAfLanding .hero-bg-image{
   position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 65% 55% at 62% 32%,rgba(232,89,58,0.07) 0%,transparent 60%),
-    radial-gradient(ellipse 45% 45% at 18% 72%,rgba(201,168,76,0.05) 0%,transparent 55%);
-}
-.ypitAfLanding .hero-grid{
-  position:absolute;inset:0;
-  background-image:linear-gradient(rgba(26,23,20,0.04) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(26,23,20,0.04) 1px,transparent 1px);
-  background-size:72px 72px;
-  -webkit-mask-image:radial-gradient(ellipse 100% 100% at 50% 50%,black 20%,transparent 80%);
-  mask-image:radial-gradient(ellipse 100% 100% at 50% 50%,black 20%,transparent 80%);
-}
-.ypitAfLanding .hero-orb{
-  position:absolute;width:500px;height:500px;
-  right:-60px;top:50%;transform:translateY(-50%);
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(232,89,58,0.09) 0%,rgba(201,168,76,0.05) 40%,transparent 70%);
-  animation:orbPulse 9s ease-in-out infinite;pointer-events:none;
-}
-@keyframes orbPulse{
-  0%,100%{transform:translateY(-50%) scale(1);opacity:0.7}
-  50%{transform:translateY(-52%) scale(1.07);opacity:1}
+  background:url('/images/af/hero-squared-white-bg.png') center center / cover no-repeat;
+  z-index:0;
 }
 .ypitAfLanding .hero-content{position:relative;z-index:2}
 .ypitAfLanding .hero-eyebrow{
@@ -95,7 +99,7 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-rad
 }
 .ypitAfLanding .hero-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--coral)}
 .ypitAfLanding .hero-headline{
-  font-family:var(--display);font-weight:800;line-height:0.93;
+  font-family:'Ypit', var(--display);font-weight:normal;line-height:0.93;
   letter-spacing:-0.03em;margin-bottom:40px;
 }
 .ypitAfLanding .hero-headline .line{
@@ -125,7 +129,7 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-rad
 
 /* SCROLL HINT */
 .ypitAfLanding .scroll-hint{
-  position:absolute;bottom:40px;right:56px;
+  position:absolute;bottom:40px;right:56px;z-index:2;
   display:flex;flex-direction:column;align-items:center;gap:8px;
   opacity:0;animation:fadeIn 1s 1.5s forwards;
 }
@@ -208,7 +212,7 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-rad
 .ypitAfLanding .about-body p+p{margin-top:20px}
 .ypitAfLanding .callout{
   border-left:2px solid var(--coral);padding:22px 28px;
-  background:rgba(232,89,58,0.04);border-radius:0 6px 6px 0;margin-bottom:14px;
+  background:rgba(255,70,0,0.04);border-radius:0 6px 6px 0;margin-bottom:14px;
 }
 .ypitAfLanding .callout.gold{border-color:var(--gold);background:rgba(201,168,76,0.04)}
 .ypitAfLanding .callout h4{font-family:var(--display);font-size:17px;font-weight:700;color:var(--dark);margin-bottom:9px;line-height:1.35}
@@ -239,6 +243,37 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-rad
 }
 .ypitAfLanding .prog-link:hover{gap:12px}
 
+/* Programme — fluted orange backdrop + frosted glass cards */
+.ypitAfLanding .section-programme-bg{
+  position:relative;
+  background-color:var(--coral);
+  background-image:url('/images/af/programme-fluted-orange-bg.png');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.ypitAfLanding .section-programme-bg .section-label{color:rgba(255,255,255,0.92);}
+.ypitAfLanding .section-programme-bg .section-label::after{background:#fff;}
+.ypitAfLanding .section-programme-bg .section-headline{color:#fff;}
+.ypitAfLanding .section-programme-bg .prog-card{
+  background:rgba(255,255,255,0.14);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,0.28);
+  box-shadow:0 8px 40px rgba(0,0,0,0.12);
+}
+.ypitAfLanding .section-programme-bg .prog-card:hover{
+  background:rgba(255,255,255,0.22);
+  border-color:rgba(255,255,255,0.38);
+}
+.ypitAfLanding .section-programme-bg .prog-card::before{background:#fff;}
+.ypitAfLanding .section-programme-bg .prog-num{color:rgba(255,255,255,0.45);}
+.ypitAfLanding .section-programme-bg .prog-card h3{color:#fff;}
+.ypitAfLanding .section-programme-bg .prog-date{color:rgba(255,255,255,0.88);}
+.ypitAfLanding .section-programme-bg .prog-card p{color:rgba(255,255,255,0.82);}
+.ypitAfLanding .section-programme-bg .prog-link{color:#fff;}
+.ypitAfLanding .section-programme-bg .prog-link:hover{opacity:0.9;gap:12px}
+
 /* TRACKS */
 .ypitAfLanding .tracks-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-bottom:72px;padding-bottom:72px;border-bottom:1px solid var(--border)}
 .ypitAfLanding .tracks-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
@@ -246,17 +281,26 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-rad
   padding:48px;background:#f7f4ef;position:relative;overflow:hidden;
   transition:background 0.25s;
 }
-.ypitAfLanding .track-card:hover{background:#f2ede5}
-.ypitAfLanding .track-bg-num{
-  font-family:var(--display);font-size:80px;font-weight:800;
-  color:rgba(26,23,20,0.04);position:absolute;top:14px;right:24px;
-  line-height:1;pointer-events:none;transition:color 0.3s;
+.ypitAfLanding .track-card:not(.track-card--squared):not(.track-card--fluted):hover{background:#f2ede5}
+.ypitAfLanding .track-card--squared{
+  background-image:url('/images/af/hero-squared-white-bg.png');
+  background-size:cover;background-position:center;
 }
-.ypitAfLanding .track-card:hover .track-bg-num{color:rgba(232,89,58,0.06)}
+.ypitAfLanding .track-card--fluted{
+  background-image:url('/images/af/workshops-fluted-white-bg.png');
+  background-size:cover;background-position:center;
+}
+.ypitAfLanding .track-bg-num{
+  font-family:var(--font-dm-sans),sans-serif;font-size:80px;font-weight:700;
+  color:transparent;-webkit-text-stroke:2px var(--coral);
+  opacity:0.75;position:absolute;top:14px;right:24px;
+  line-height:1;pointer-events:none;transition:opacity 0.3s;
+}
+.ypitAfLanding .track-card:hover .track-bg-num{opacity:1}
 .ypitAfLanding .track-tag{
   display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.16em;
   text-transform:uppercase;color:var(--coral);
-  border:1px solid rgba(232,89,58,0.3);padding:4px 12px;border-radius:100px;margin-bottom:22px;
+  border:1px solid rgba(255,70,0,0.3);padding:4px 12px;border-radius:100px;margin-bottom:22px;
 }
 .ypitAfLanding .track-card h3{font-family:var(--display);font-size:20px;font-weight:800;color:var(--dark);line-height:1.25;margin-bottom:14px}
 .ypitAfLanding .track-card p{font-size:14px;color:var(--muted);line-height:1.76;font-weight:300}
@@ -277,21 +321,36 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-rad
 .ypitAfLanding .schedule-content{padding:28px 36px}
 .ypitAfLanding .schedule-tag{
   display:inline-block;font-size:9px;font-weight:700;letter-spacing:0.13em;
-  text-transform:uppercase;background:rgba(232,89,58,0.08);color:var(--coral);
+  text-transform:uppercase;background:rgba(255,70,0,0.08);color:var(--coral);
   padding:3px 10px;border-radius:100px;margin-bottom:8px;
 }
 .ypitAfLanding .schedule-content h4{font-family:var(--display);font-size:15px;font-weight:700;color:var(--dark);margin-bottom:5px}
 .ypitAfLanding .schedule-content p{font-size:13px;color:var(--muted);font-weight:300;line-height:1.65}
 
 /* WORKSHOPS */
+.ypitAfLanding .section-workshops-bg{
+  position:relative;
+  background-color:#faf9f7;
+  background-image:url('/images/af/workshops-fluted-white-bg.png');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.ypitAfLanding .workshops-headline-accent{color:var(--coral);}
 .ypitAfLanding .workshop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px}
 .ypitAfLanding .workshop-card{
   padding:36px;background:#f7f4ef;border:1px solid var(--border);
   transition:transform 0.2s,background 0.25s;display:flex;flex-direction:column;
 }
 .ypitAfLanding .workshop-card:hover{transform:translateY(-3px);background:#f2ede5}
-.ypitAfLanding .workshop-card.soon{background:transparent;border-style:dashed;border-color:rgba(232,89,58,0.2)}
-.ypitAfLanding .workshop-icon{font-size:22px;margin-bottom:18px}
+.ypitAfLanding .workshop-card.soon{background:transparent;border-style:dashed;border-color:rgba(255,70,0,0.2)}
+.ypitAfLanding .workshop-soon-mark{
+  font-family:var(--display);
+  font-size:20px;font-weight:700;line-height:1;
+  color:var(--coral);
+  margin-bottom:14px;
+  opacity:0.85;
+}
 .ypitAfLanding .workshop-card h3{font-family:var(--display);font-size:16px;font-weight:700;color:var(--dark);margin-bottom:12px;line-height:1.35;flex:1}
 .ypitAfLanding .workshop-card.soon h3{color:#c0b8ac}
 .ypitAfLanding .workshop-card p{font-size:13px;color:var(--muted);line-height:1.72;font-weight:300;margin-bottom:18px}
@@ -303,14 +362,17 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-rad
 .ypitAfLanding .conf-card{background:#ffffff;border:1px solid var(--border);border-radius:4px;overflow:hidden}
 .ypitAfLanding .conf-card-header{
   padding:32px 36px;
-  background:linear-gradient(135deg,rgba(232,89,58,0.06),rgba(201,168,76,0.04));
+  background:linear-gradient(135deg,rgba(255,70,0,0.06),rgba(201,168,76,0.04));
   border-bottom:1px solid var(--border);
 }
 .ypitAfLanding .conf-card-header h4{font-family:var(--display);font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
 .ypitAfLanding .conf-card-header p{font-family:var(--display);font-size:30px;font-weight:800;color:var(--dark);line-height:1.1}
 .ypitAfLanding .conf-detail{display:flex;gap:16px;align-items:flex-start;padding:15px 32px;border-bottom:1px solid var(--border)}
 .ypitAfLanding .conf-detail:last-child{border-bottom:none}
-.ypitAfLanding .conf-detail-icon{font-size:15px;flex-shrink:0;margin-top:3px}
+.ypitAfLanding .conf-detail-marker{
+  width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:6px;
+  background:var(--coral);
+}
 .ypitAfLanding .conf-detail h5{font-family:var(--display);font-size:13px;font-weight:700;color:var(--dark);margin-bottom:3px}
 .ypitAfLanding .conf-detail p{font-size:12px;color:var(--muted);font-weight:300}
 
@@ -397,13 +459,19 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-rad
 .ypitAfLanding .faq-a-inner{padding:0 26px 22px;font-size:14px;color:var(--muted);font-weight:300;line-height:1.76}
 
 /* PARTNERS */
-.ypitAfLanding .partner-grid{display:flex;gap:2px;flex-wrap:wrap;margin-top:56px;margin-bottom:2px}
-.ypitAfLanding .partner-slot{
-  flex:1;min-width:140px;height:88px;background:#ffffff;border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;transition:background 0.2s;
+.ypitAfLanding .partner-marquee-wrap{
+  overflow:hidden;margin-top:56px;margin-bottom:2px;
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:24px 0;background:#ffffff;
 }
-.ypitAfLanding .partner-slot:hover{background:#f7f4ef}
-.ypitAfLanding .partner-slot span{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#d4cfc8}
+.ypitAfLanding .partner-marquee-track{
+  display:flex;align-items:center;width:max-content;
+  animation:marquee 30s linear infinite;
+}
+.ypitAfLanding .partner-marquee-item{
+  display:flex;align-items:center;justify-content:center;
+  padding:0 48px;border-right:1px solid var(--border);height:56px;
+}
 .ypitAfLanding .partner-cta{
   display:flex;align-items:center;justify-content:space-between;gap:40px;
   padding:40px;border:1px solid var(--border);background:#ffffff;flex-wrap:wrap;
@@ -414,7 +482,7 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-rad
 /* FOOTER CTA */
 .ypitAfLanding #footer-cta{
   padding:120px 56px;text-align:center;
-  background:linear-gradient(135deg,rgba(232,89,58,0.06),rgba(201,168,76,0.03),#ffffff);
+  background:linear-gradient(135deg,rgba(255,70,0,0.06),rgba(201,168,76,0.03),#ffffff);
   border-top:1px solid var(--border);
 }
 .ypitAfLanding #footer-cta h2{
@@ -450,7 +518,6 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#e8593a;border-rad
   .ypitAfLanding #hero, .ypitAfLanding .section{padding-left:24px;padding-right:24px}
   .ypitAfLanding #footer-cta{padding:80px 24px}
   .ypitAfLanding footer{padding:32px 24px}
-  .ypitAfLanding .hero-orb{width:280px;height:280px}
   .ypitAfLanding .about-grid, .ypitAfLanding .tracks-intro, .ypitAfLanding .conf-grid, .ypitAfLanding .faq-grid{grid-template-columns:1fr;gap:40px}
   .ypitAfLanding .prog-grid, .ypitAfLanding .tracks-grid, .ypitAfLanding .workshop-grid, .ypitAfLanding .paths-grid, .ypitAfLanding .path-info-grid{grid-template-columns:1fr}
   .ypitAfLanding .schedule-row{grid-template-columns:1fr}

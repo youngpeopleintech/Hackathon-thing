@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -16,15 +17,25 @@ export function AfNavbar() {
   return (
     <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
       <a href="#hero" className="nav-logo">
-        YPIT <span>AF</span>
+        <Image src="/ypit-logo-white.png" alt="YPIT" height={36} width={90} style={{ objectFit: 'contain', width: 'auto' }} />
       </a>
       <div className="nav-links">
-        <a href="#about">About</a>
-        <a href="#tracks">Tracks</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#conference">Conference</a>
-        <a href="#join">Join</a>
-        <Link href="/register" className="nav-cta">
+        <a href="#about" className="nav-pill">
+          About
+        </a>
+        <a href="#tracks" className="nav-pill">
+          Tracks
+        </a>
+        <a href="#schedule" className="nav-pill">
+          Schedule
+        </a>
+        <a href="#conference" className="nav-pill">
+          Conference
+        </a>
+        <a href="#join" className="nav-pill">
+          Join
+        </a>
+        <Link href="/register" className="nav-pill nav-cta">
           Register Free
         </Link>
       </div>

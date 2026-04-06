@@ -1,12 +1,11 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export function AfSiteFooter() {
   return (
     <footer>
       <div>
-        <span className="footer-logo">
-          YPIT <span>AF</span>
-        </span>
+        <Image src="/ypit-logo-white.png" alt="YPIT" height={36} width={90} style={{ objectFit: 'contain', width: 'auto' }} className="footer-logo" />
         <span className="footer-tagline">— Young People In Tech · 2026</span>
       </div>
       <div className="footer-links">

@@ -15,9 +15,7 @@ const lineVariants = {
 export function AfHero() {
   return (
     <section id="hero">
-      <div className="hero-bg" />
-      <div className="hero-grid" />
-      <div className="hero-orb" />
+      <div className="hero-bg-image" aria-hidden />
       <div className="scroll-hint">
         <div className="scroll-line" />
         <span className="scroll-hint-text">Scroll</span>

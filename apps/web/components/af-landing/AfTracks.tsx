@@ -53,14 +53,17 @@ export function AfTracks() {
           </Reveal>
         </div>
         <div className="tracks-grid">
-          {TRACKS.map((t, i) => (
-            <Reveal key={t.num} delay={0.05 * (i + 1)} className="track-card">
+          {TRACKS.map((t, i) => {
+            const variant = i === 0 || i === 3 ? 'track-card--squared' : 'track-card--fluted';
+            return (
+            <Reveal key={t.num} delay={0.05 * (i + 1)} className={`track-card ${variant}`}>
               <div className="track-bg-num">{t.num}</div>
               <div className="track-tag">{t.tag}</div>
               <h3>{t.title}</h3>
               <p>{t.body}</p>
             </Reveal>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 /* Registration flow — matches af-landing tokens (coral, cream, Syne display) */
 .ypitAfRegister {
-  --coral: #e8593a;
-  --coral-dim: #c4472b;
+  --coral: #FF4600;
+  --coral-dim: #CC3800;
   --gold: #c9a84c;
   --dark: #1a1714;
   --muted: #6b6259;
@@ -27,7 +27,7 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 65% 55% at 62% 32%, rgba(232, 89, 58, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 65% 55% at 62% 32%, rgba(255, 70, 0, 0.07) 0%, transparent 60%),
     radial-gradient(ellipse 45% 45% at 18% 72%, rgba(201, 168, 76, 0.05) 0%, transparent 55%);
   pointer-events: none;
 }
@@ -51,7 +51,7 @@
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(232, 89, 58, 0.09) 0%, rgba(201, 168, 76, 0.05) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 70, 0, 0.09) 0%, rgba(201, 168, 76, 0.05) 40%, transparent 70%);
   pointer-events: none;
   animation: afRegOrbPulse 9s ease-in-out infinite;
 }
@@ -218,8 +218,8 @@
 .ypitAfRegister .af-reg-error-banner {
   margin-bottom: 24px;
   padding: 16px 20px;
-  background: rgba(232, 89, 58, 0.08);
-  border: 1px solid rgba(232, 89, 58, 0.25);
+  background: rgba(255, 70, 0, 0.08);
+  border: 1px solid rgba(255, 70, 0, 0.25);
   border-radius: 4px;
 }
 
@@ -260,7 +260,7 @@
 .ypitAfRegister .af-reg-progress-circle.active {
   background: var(--coral);
   color: #fff;
-  box-shadow: 0 0 0 4px rgba(232, 89, 58, 0.2);
+  box-shadow: 0 0 0 4px rgba(255, 70, 0, 0.2);
 }
 
 .ypitAfRegister .af-reg-progress-circle.todo {
@@ -413,7 +413,7 @@
 .ypitAfRegister .input-field:focus {
   outline: none !important;
   border-color: var(--coral) !important;
-  box-shadow: 0 0 0 3px rgba(232, 89, 58, 0.12) !important;
+  box-shadow: 0 0 0 3px rgba(255, 70, 0, 0.12) !important;
   ring: none !important;
 }
 
@@ -428,13 +428,13 @@
 }
 
 .ypitAfRegister .radio-option:hover {
-  border-color: rgba(232, 89, 58, 0.35) !important;
-  background: rgba(232, 89, 58, 0.03) !important;
+  border-color: rgba(255, 70, 0, 0.35) !important;
+  background: rgba(255, 70, 0, 0.03) !important;
 }
 
 .ypitAfRegister .radio-option.selected {
   border-color: var(--coral) !important;
-  background: rgba(232, 89, 58, 0.06) !important;
+  background: rgba(255, 70, 0, 0.06) !important;
 }
 
 .ypitAfRegister .radio-option .radio-dot {
@@ -466,7 +466,7 @@
 }
 
 .ypitAfRegister .bg-cyan-50 {
-  background: rgba(232, 89, 58, 0.08) !important;
+  background: rgba(255, 70, 0, 0.08) !important;
 }
 
 .ypitAfRegister .border-navy-200,
@@ -475,11 +475,11 @@
 }
 
 .ypitAfRegister .hover\:border-navy-300:hover {
-  border-color: rgba(232, 89, 58, 0.35) !important;
+  border-color: rgba(255, 70, 0, 0.35) !important;
 }
 
 .ypitAfRegister .hover\:bg-navy-50:hover {
-  background: rgba(232, 89, 58, 0.04) !important;
+  background: rgba(255, 70, 0, 0.04) !important;
 }
 
 .ypitAfRegister .text-navy-700,
@@ -507,9 +507,9 @@
 }
 
 .ypitAfRegister span.inline-flex.items-center.gap-1.px-3.py-1.bg-cyan-50 {
-  background: rgba(232, 89, 58, 0.1) !important;
+  background: rgba(255, 70, 0, 0.1) !important;
   color: var(--coral-dim) !important;
-  border-color: rgba(232, 89, 58, 0.25) !important;
+  border-color: rgba(255, 70, 0, 0.25) !important;
 }
 
 .ypitAfRegister .text-cyan-700,
@@ -524,7 +524,7 @@
 }
 
 .ypitAfRegister .hover\:bg-navy-50:hover {
-  background: rgba(232, 89, 58, 0.06) !important;
+  background: rgba(255, 70, 0, 0.06) !important;
 }
 
 .ypitAfRegister .border-navy-900 {
@@ -549,7 +549,7 @@
 }
 
 .ypitAfRegister .text-red-500 {
-  color: #c4472b !important;
+  color: var(--coral-dim) !important;
 }
 
 /* ---------- Modal (AF) ---------- */
@@ -622,8 +622,8 @@
 
 .ypitAfRegister.af-reg-modal-root .af-reg-modal-next {
   text-align: left;
-  background: rgba(232, 89, 58, 0.06);
-  border: 1px solid rgba(232, 89, 58, 0.15);
+  background: rgba(255, 70, 0, 0.06);
+  border: 1px solid rgba(255, 70, 0, 0.15);
   border-radius: 2px;
   padding: 16px;
   margin-bottom: 24px;

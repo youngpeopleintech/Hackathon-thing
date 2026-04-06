@@ -1,4 +1,15 @@
+import Image from 'next/image';
 import { Reveal } from './Reveal';
+
+const PARTNERS = [
+  { name: 'Paystack', src: '/images/af/partners/paystack.png' },
+  { name: 'African Fintech Foundry', src: '/images/af/partners/african-fintech-foundry.png' },
+  { name: 'Oracle Academy', src: '/images/af/partners/oracle-academy.png' },
+  { name: 'FiberOne', src: '/images/af/partners/fiberone.jpg' },
+  { name: 'Dochase Digital', src: '/images/af/partners/dochase-digital.webp' },
+  { name: 'Cencori', src: '/images/af/partners/cencori.png' },
+  { name: 'Remostart', src: '/images/af/partners/remostart.png' },
+];
 
 export function AfPartners() {
   return (
@@ -19,13 +30,15 @@ export function AfPartners() {
             We are grateful to the partners who believe in what we are building. More announcements coming soon.
           </p>
         </Reveal>
-        <Reveal delay={0.2} className="partner-grid">
-          {[1, 2, 3, 4, 5].map((i) => (
-            <div key={i} className="partner-slot">
-              <span>Coming Soon</span>
-            </div>
-          ))}
-        </Reveal>
+        <div className="partner-marquee-wrap">
+          <div className="partner-marquee-track">
+            {[...PARTNERS, ...PARTNERS].map((p, i) => (
+              <div key={`${p.name}-${i}`} className="partner-marquee-item">
+                <Image src={p.src} alt={p.name} width={120} height={48} style={{ objectFit: 'contain', width: 'auto', height: 'auto', maxWidth: '120px', maxHeight: '44px' }} />
+              </div>
+            ))}
+          </div>
+        </div>
         <Reveal delay={0.25} className="partner-cta">
           <div>
             <h3>Interested in partnering with The Artificial Future?</h3>
