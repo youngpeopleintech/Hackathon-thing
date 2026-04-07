@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "web",
+      "runtimeExecutable": "/bin/sh",
+      "runtimeArgs": ["-c", "cd /Users/danieladewunmi/Hackathon-thing/apps/web && PATH=/usr/local/bin:$PATH /Users/danieladewunmi/Hackathon-thing/node_modules/.bin/next dev"],
+      "port": 3000,
+      "autoPort": true
+    },
+    {
+      "name": "api",
+      "runtimeExecutable": "/bin/sh",
+      "runtimeArgs": ["-c", "PATH=/usr/local/bin:$PATH npm run dev:api"],
+      "port": 3001
+    }
+  ]
+}
