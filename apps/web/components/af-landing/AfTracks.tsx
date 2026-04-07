@@ -3,9 +3,9 @@ import { Reveal } from './Reveal';
 const TRACKS = [
   {
     num: '01',
-    tag: 'Economic Access',
-    title: 'Money, and the people it has not reached yet.',
-    body: 'Fintech in Nigeria is not a solved problem. There are still people without bank accounts, informal traders outside financial infrastructure, and legacy institutions sitting on data AI could unlock at scale.',
+    tag: 'Economic & Financial Access',
+    title: 'Helping to make money reach more people.',
+    body: 'Fintech in Africa is not a solved problem. There are still processes that need to be optimised for scale, people without bank accounts, informal traders outside financial infrastructure, and legacy institutions sitting on data AI could help unlock.',
   },
   {
     num: '02',

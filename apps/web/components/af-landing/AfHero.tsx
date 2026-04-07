@@ -62,15 +62,15 @@ export function AfHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <div className="chip free">
-            <span className="chip-dot" />
-            Hackathon · May 30–June 6 · Free
-          </div>
-          <div className="chip free">
+          <div className="chip chip--1">
             <span className="chip-dot" />
             Workshops · April–June · Free
           </div>
-          <div className="chip paid">
+          <div className="chip chip--2">
+            <span className="chip-dot" />
+            Hackathon · May 30–June 6 · Free
+          </div>
+          <div className="chip chip--3">
             <span className="chip-dot" />
             Conference · June 13 · Paid
           </div>

@@ -9,23 +9,25 @@ export function AfAbout() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="section-headline">
-            A programme built to put young Africans at the centre of AI —
+            A programme built to put young Africans at the centre of AI.
             <br />
-            <span style={{ color: 'var(--coral)' }}>not as observers, but as builders.</span>
+            <span style={{ color: 'var(--coral)' }}>Not as observers, but as builders.</span>
           </h2>
         </Reveal>
         <div className="about-grid">
           <Reveal delay={0.15} className="about-body">
             <p>
-              There are a lot of young Africans paying close attention to AI right now. Curious people, ambitious
-              people, people already trying to figure out where they fit. And there are not nearly enough spaces built
-              to actually empower them.
+              There are a lot of young Africans paying close attention to AI right now. Some are curious, many are
+              ambitious, and a lot of people are already trying to figure out where they fit. However, there are not
+              nearly enough spaces built to actually empower them.
             </p>
-            <p>That is what The Artificial Future is trying to be.</p>
+            <p>
+              The Artificial Future is trying to be a space that empowers these people. If this resonates, join us.
+            </p>
             <p>
               Over several weeks, you will take part in workshops that build real skills, collaborate with others in a
               live hackathon, and join a conference where Africa&apos;s most ambitious thinkers share what they are
-              seeing and building. All of it is in Lagos. All of it is connected.
+              seeing and building. Active participation involves learning, building, and exposure. All of it is connected.
             </p>
           </Reveal>
           <Reveal delay={0.25}>
@@ -33,14 +35,9 @@ export function AfAbout() {
               <h4>Open to everyone.</h4>
               <p>
                 Students, developers, founders, researchers, and anyone genuinely curious about AI. You do not need to
-                arrive as an expert. You just need to show up and try.
-              </p>
-            </div>
-            <div className="callout gold">
-              <h4>If you are curious but not sure where to start — you belong here.</h4>
-              <p>
-                And if you are already building, you belong here too — because when you put that person in the same
-                room as the first two, something interesting tends to happen.
+                arrive as an expert. You just need to show up and try. If you are curious but not sure where to start,
+                you belong here. And if you are already building, you belong here too. We&apos;ve found that when you
+                put curious, hungry people in the same room, interesting things tend to happen.
               </p>
             </div>
           </Reveal>

@@ -53,22 +53,12 @@ export function AfWorkshops() {
           </p>
         </Reveal>
         <div className="workshop-grid">
-          {WORKSHOPS.map((w, i) => (
-            <Reveal key={w.title} delay={0.05 * (i + 1)} className="workshop-card">
-              <h3>{w.title}</h3>
-              <p>{w.desc}</p>
-              <div className="workshop-meta">
-                <span className="dot" style={{ background: w.dot }} />
-                {w.meta}
-              </div>
-            </Reveal>
-          ))}
-          <Reveal delay={0.35} className="workshop-card soon">
+          <Reveal delay={0.15} className="workshop-card soon">
             <span className="workshop-soon-mark" aria-hidden>
               +
             </span>
-            <h3>More workshops coming soon</h3>
-            <p>Full schedule published two weeks before the event. Register to be notified.</p>
+            <h3>Workshop schedule coming soon</h3>
+            <p>Full schedule published closer to the event. Register to be notified when it drops.</p>
             <div className="workshop-meta">
               <span className="dot" style={{ background: 'var(--coral)' }} />
               Register to stay updated
