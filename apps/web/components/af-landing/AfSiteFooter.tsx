@@ -5,7 +5,7 @@ export function AfSiteFooter() {
   return (
     <footer>
       <div>
-        <Image src="/ypit-logo-white.png" alt="YPIT" height={36} width={90} style={{ objectFit: 'contain', width: 'auto' }} className="footer-logo" />
+        <Image src="/ypit-logo-black.png" alt="YPIT" height={36} width={90} style={{ objectFit: 'contain', width: 'auto' }} className="footer-logo" />
         <span className="footer-tagline">— Young People In Tech · 2026</span>
       </div>
       <div className="footer-links">
