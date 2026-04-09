@@ -63,20 +63,20 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   background:rgba(255,255,255,0.14);
   backdrop-filter:blur(12px);
   -webkit-backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.28);
+  border:1px solid rgba(218,255,2,0.55);
 }
 .ypitAfLanding .nav-pill:hover{
   background:rgba(255,255,255,0.26);
-  border-color:rgba(255,255,255,0.4);
+  border-color:rgba(218,255,2,0.9);
   color:#fff!important;
 }
 .ypitAfLanding .nav-cta{
   background:rgba(255,255,255,0.22)!important;
-  border-color:rgba(255,255,255,0.35)!important;
+  border-color:rgba(218,255,2,0.7)!important;
 }
 .ypitAfLanding .nav-cta:hover{
   background:rgba(255,255,255,0.34)!important;
-  border-color:rgba(255,255,255,0.5)!important;
+  border-color:#DAFF02!important;
 }
 
 /* HERO */
@@ -118,16 +118,52 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 }
 .ypitAfLanding .chip{
   display:inline-flex;align-items:center;gap:7px;
-  padding:7px 16px;border-radius:100px;
-  font-size:12px;font-weight:500;letter-spacing:0.02em;
+  padding:8px 18px;border-radius:100px;
+  font-size:12px;font-weight:500;letter-spacing:0.04em;
+  transition:transform 0.2s ease;
 }
-.ypitAfLanding .chip-dot{width:6px;height:6px;border-radius:50%;display:inline-block;flex-shrink:0}
-.ypitAfLanding .chip--1{background:rgba(255,255,255,0.55);border:1px solid rgba(255,70,0,0.25);color:var(--coral)}
-.ypitAfLanding .chip--1 .chip-dot{background:var(--coral)}
-.ypitAfLanding .chip--2{background:rgba(255,70,0,0.18);border:1px solid rgba(255,70,0,0.55);color:#7a1a00}
-.ypitAfLanding .chip--2 .chip-dot{background:#7a1a00}
-.ypitAfLanding .chip--3{background:rgba(255,70,0,0.72);border:1px solid rgba(255,70,0,0.85);color:#ffffff}
-.ypitAfLanding .chip--3 .chip-dot{background:#ffffff}
+.ypitAfLanding .chip:hover{transform:translateY(-2px)}
+.ypitAfLanding .chip-dot{
+  width:6px;height:6px;border-radius:50%;display:inline-block;flex-shrink:0;
+  background:#4AE62A;
+  animation:chipDotPulse 2.4s ease-in-out infinite;
+}
+@keyframes chipDotPulse{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:0.4;transform:scale(0.65)}
+}
+/* Workshops — purple */
+.ypitAfLanding .chip--1{
+  background:#7E3BED;border:1px solid #4AE62A;color:#ffffff;
+  animation:chip1Pulse 2.4s ease-in-out infinite;
+}
+.ypitAfLanding .chip--1 .chip-dot{animation-delay:0s}
+@keyframes chip1Pulse{
+  0%,100%{box-shadow:0 0 6px rgba(126,59,237,0.4)}
+  50%{box-shadow:0 0 18px rgba(126,59,237,0.9)}
+}
+/* Hackathon — orange */
+.ypitAfLanding .chip--2{
+  background:#5FCDFE;border:1px solid #DAFF02;color:#ffffff;
+  animation:chip2Pulse 2.4s ease-in-out infinite;
+  animation-delay:0.8s;
+}
+.ypitAfLanding .chip--2 .chip-dot{background:#DAFF02;animation-delay:0.8s}
+@keyframes chip2Pulse{
+  0%,100%{box-shadow:0 0 6px rgba(95,205,254,0.4)}
+  50%{box-shadow:0 0 18px rgba(95,205,254,0.9)}
+}
+/* Conference — pink */
+.ypitAfLanding .chip--3{
+  background:#FE324B;border:1px solid #4AE62A;color:#ffffff;
+  animation:chip3Pulse 2.4s ease-in-out infinite;
+  animation-delay:1.6s;
+}
+.ypitAfLanding .chip--3 .chip-dot{background:#ffc0c8;animation-delay:1.6s}
+@keyframes chip3Pulse{
+  0%,100%{box-shadow:0 0 6px rgba(254,50,75,0.4)}
+  50%{box-shadow:0 0 18px rgba(254,50,75,0.9)}
+}
 
 /* SCROLL HINT */
 .ypitAfLanding .scroll-hint{
@@ -173,8 +209,8 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 
 .ypitAfLanding .section-label{
   display:inline-flex;align-items:center;gap:10px;
-  font-family:var(--display);font-size:10px;font-weight:700;
-  letter-spacing:0.2em;text-transform:uppercase;color:var(--coral);
+  font-family:var(--display);font-size:18px;font-weight:400;
+  letter-spacing:0.25em;text-transform:uppercase;color:var(--coral);
   margin-bottom:20px;
 }
 .ypitAfLanding .section-label::after{content:'';display:block;width:22px;height:1px;background:var(--coral)}
@@ -223,58 +259,51 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 /* PROGRAMME CARDS */
 .ypitAfLanding .prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px}
 .ypitAfLanding .prog-card{
-  padding:48px 40px;background:#ffffff;border:1px solid var(--border);
+  padding:48px 40px;border:1px solid rgba(255,255,255,0.4);
+  background:rgba(255,255,255,0.88);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
   position:relative;overflow:hidden;transition:transform 0.2s,background 0.25s;
 }
-.ypitAfLanding .prog-card:hover{transform:translateY(-4px);background:#fdfcfa}
+.ypitAfLanding .prog-card:hover{transform:translateY(-4px);background:rgba(255,255,255,0.96)}
 .ypitAfLanding .prog-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:var(--coral);transform:scaleX(0);transform-origin:left;
-  transition:transform 0.35s ease;
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
 }
-.ypitAfLanding .prog-card:hover::before{transform:scaleX(1)}
+/* Workshops — purple accent */
+.ypitAfLanding .prog-card--workshops::before{background:#7E3BED}
+.ypitAfLanding .prog-card--workshops .prog-date{color:#7E3BED}
+.ypitAfLanding .prog-card--workshops .prog-link{color:#7E3BED}
+/* Hackathon — sky blue accent */
+.ypitAfLanding .prog-card--hackathon::before{background:#5FCDFE}
+.ypitAfLanding .prog-card--hackathon .prog-date{color:#2a8ab8}
+.ypitAfLanding .prog-card--hackathon .prog-link{color:#2a8ab8}
+/* Conference — pink accent */
+.ypitAfLanding .prog-card--conference::before{background:#FE324B}
+.ypitAfLanding .prog-card--conference .prog-date{color:#FE324B}
+.ypitAfLanding .prog-card--conference .prog-link{color:#FE324B}
 .ypitAfLanding .prog-num{font-family:var(--display);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#c8c2bb;margin-bottom:32px}
 .ypitAfLanding .prog-card h3{font-family:var(--display);font-size:26px;font-weight:800;color:var(--dark);margin-bottom:10px;line-height:1.1}
-.ypitAfLanding .prog-date{font-size:12px;color:var(--coral);font-weight:500;letter-spacing:0.05em;margin-bottom:20px}
+.ypitAfLanding .prog-date{font-size:12px;font-weight:500;letter-spacing:0.05em;margin-bottom:20px}
 .ypitAfLanding .prog-card p{font-size:15px;color:var(--muted);line-height:1.72;font-weight:300;margin-bottom:36px}
 .ypitAfLanding .prog-link{
   font-family:var(--display);font-size:11px;font-weight:700;
-  letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);
+  letter-spacing:0.12em;text-transform:uppercase;
   text-decoration:none;display:inline-flex;align-items:center;gap:6px;
   transition:gap 0.2s;
 }
 .ypitAfLanding .prog-link:hover{gap:12px}
 
-/* Programme — fluted orange backdrop + frosted glass cards */
+/* Programme — colour mix backdrop */
 .ypitAfLanding .section-programme-bg{
   position:relative;
-  background-color:var(--coral);
-  background-image:url('/images/af/programme-fluted-orange-bg.png');
+  background-color:#1a1714;
+  background-image:url('/images/af/colour-mix-bg.png');
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
 }
-.ypitAfLanding .section-programme-bg .section-label{color:rgba(255,255,255,0.92);}
-.ypitAfLanding .section-programme-bg .section-label::after{background:#fff;}
-.ypitAfLanding .section-programme-bg .section-headline{color:#fff;}
-.ypitAfLanding .section-programme-bg .prog-card{
-  background:rgba(255,255,255,0.14);
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
-  border:1px solid rgba(255,255,255,0.28);
-  box-shadow:0 8px 40px rgba(0,0,0,0.12);
-}
-.ypitAfLanding .section-programme-bg .prog-card:hover{
-  background:rgba(255,255,255,0.22);
-  border-color:rgba(255,255,255,0.38);
-}
-.ypitAfLanding .section-programme-bg .prog-card::before{background:#fff;}
-.ypitAfLanding .section-programme-bg .prog-num{color:rgba(255,255,255,0.45);}
-.ypitAfLanding .section-programme-bg .prog-card h3{color:#fff;}
-.ypitAfLanding .section-programme-bg .prog-date{color:rgba(255,255,255,0.88);}
-.ypitAfLanding .section-programme-bg .prog-card p{color:rgba(255,255,255,0.82);}
-.ypitAfLanding .section-programme-bg .prog-link{color:#fff;}
-.ypitAfLanding .section-programme-bg .prog-link:hover{opacity:0.9;gap:12px}
+.ypitAfLanding .section-programme-bg .section-label{color:rgba(255,255,255,0.9)}
+.ypitAfLanding .section-programme-bg .section-label::after{background:rgba(255,255,255,0.9)}
+.ypitAfLanding .section-programme-bg .section-headline{color:#ffffff}
 
 /* TRACKS */
 .ypitAfLanding .tracks-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-bottom:72px;padding-bottom:72px;border-bottom:1px solid var(--border)}
@@ -326,6 +355,8 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   text-transform:uppercase;background:rgba(255,70,0,0.08);color:var(--coral);
   padding:3px 10px;border-radius:100px;margin-bottom:8px;
 }
+.ypitAfLanding .schedule-venue{font-size:11px;font-weight:500;color:var(--muted);margin-bottom:10px}
+.ypitAfLanding .schedule-venue-note{font-weight:300;opacity:0.7}
 .ypitAfLanding .schedule-content h4{font-family:var(--display);font-size:15px;font-weight:700;color:var(--dark);margin-bottom:5px}
 .ypitAfLanding .schedule-content p{font-size:13px;color:var(--muted);font-weight:300;line-height:1.65}
 
@@ -526,4 +557,6 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   .ypitAfLanding .schedule-date{border-right:none;border-bottom:1px solid var(--border)}
   .ypitAfLanding .faq-sidebar{position:relative;top:0}
   .ypitAfLanding .partner-cta{flex-direction:column}
+  .ypitAfLanding .track-card{overflow:hidden}
+  .ypitAfLanding .track-bg-num{font-size:52px;top:10px;right:14px}
 }

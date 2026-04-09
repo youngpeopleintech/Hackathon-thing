@@ -24,7 +24,7 @@ export function HeroSection() {
           rel="noopener noreferrer"
           className="inline-block mb-8 hover:opacity-80 transition-opacity"
         >
-          <img src="/ypit-logo.png" alt="YPIT - Young People In Tech" className="h-11 md:h-12 w-auto mx-auto" />
+          <img src="/ypit-logo-black.png" alt="YPIT - Young People In Tech" className="h-11 md:h-12 w-auto mx-auto" />
         </a>
 
         <p className="af-reg-hero-eyebrow">Registration · YPIT AF 2026</p>

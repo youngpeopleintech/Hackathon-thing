@@ -6,9 +6,9 @@ export function AfFooterCta() {
     <section id="footer-cta">
       <Reveal>
         <h2>
-          Ready to be part of
+          Ready to be a part of
           <br />
-          <span>Nigeria&apos;s AI future?</span>
+          <span>Africa&apos;s future?</span>
         </h2>
       </Reveal>
       <Reveal delay={0.1}>

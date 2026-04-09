@@ -15,10 +15,10 @@ export function AfProgramme() {
           </h2>
         </Reveal>
         <div className="prog-grid">
-          <Reveal delay={0.1} className="prog-card">
+          <Reveal delay={0.1} className="prog-card prog-card--workshops">
             <div className="prog-num">01</div>
             <h3>The Workshops</h3>
-            <div className="prog-date">April – June 6, 2026 · Free</div>
+            <div className="prog-date">April – June 6, 2026 · <strong>Free</strong></div>
             <p>
               Practical sessions led by people building at the forefront of AI. Expand your view of what is possible —
               whether you are in the hackathon or just here to learn.
@@ -27,10 +27,10 @@ export function AfProgramme() {
               See Schedule →
             </a>
           </Reveal>
-          <Reveal delay={0.2} className="prog-card">
+          <Reveal delay={0.2} className="prog-card prog-card--hackathon">
             <div className="prog-num">02</div>
             <h3>The Hackathon</h3>
-            <div className="prog-date">May 30 – June 6, 2026 · Free</div>
+            <div className="prog-date">May 30 – June 6, 2026 · <strong>Free</strong></div>
             <p>
               A full week to build something that did not exist before. Pick a challenge, build a team, and work on it
               with mentors you can actually talk to.
@@ -39,10 +39,10 @@ export function AfProgramme() {
               View Tracks →
             </a>
           </Reveal>
-          <Reveal delay={0.3} className="prog-card">
+          <Reveal delay={0.3} className="prog-card prog-card--conference">
             <div className="prog-num">03</div>
             <h3>The Conference</h3>
-            <div className="prog-date">June 13, 2026 · Paid ticket</div>
+            <div className="prog-date">June 13, 2026 · <strong>Paid ticket</strong></div>
             <p>
               A full day of talks, panels, and conversations with leading voices in AI from across Africa and beyond.
               Open to anyone — no hackathon participation required.
