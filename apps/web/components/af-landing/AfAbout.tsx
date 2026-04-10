@@ -34,10 +34,10 @@ export function AfAbout() {
             <div className="callout">
               <h4>Open to everyone.</h4>
               <p>
-                Students, developers, founders, researchers, and anyone genuinely curious about AI. You do not need to
-                arrive as an expert. You just need to show up and try. If you are curious but not sure where to start,
-                you belong here. And if you are already building, you belong here too. We&apos;ve found that when you
-                put curious, hungry people in the same room, interesting things tend to happen.
+                Whether you are a student, a developer, a founder, a researcher, a policy maker, or an investor — you
+                belong here. You do not need to arrive as an expert. We have found that since 2022, across every event
+                we have run, the most interesting things happen when you put curious, ambitious people in the same room
+                together. This is that room.
               </p>
             </div>
           </Reveal>

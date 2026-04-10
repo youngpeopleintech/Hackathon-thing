@@ -13,8 +13,8 @@ export function AfSiteFooter() {
         <a href="#about">About</a>
         <a href="#programme">Event</a>
         <Link href="/register">Register</Link>
-        <a href="mailto:hello@youngpeopleintech.com" className="email">
-          hello@youngpeopleintech.com
+        <a href="mailto:partnerships@youngpeopleintech.com" className="email">
+          partnerships@youngpeopleintech.com
         </a>
       </div>
     </footer>

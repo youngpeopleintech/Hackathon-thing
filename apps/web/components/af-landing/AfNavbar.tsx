@@ -24,20 +24,20 @@ export function AfNavbar() {
           About
         </a>
         <a href="#tracks" className="nav-pill">
-          Tracks
+          Hackathon
         </a>
-        <a href="#schedule" className="nav-pill">
-          Schedule
+        <a href="#workshops" className="nav-pill">
+          Workshops
         </a>
         <a href="#conference" className="nav-pill">
           Conference
         </a>
-        <a href="#join" className="nav-pill">
-          Join
+        <a href="#join" className="nav-pill nav-cta">
+          Join Us
         </a>
-        <Link href="/register" className="nav-pill nav-cta">
-          Register Free
-        </Link>
+        <a href="https://www.youngpeopleintech.com" target="_blank" rel="noopener noreferrer" className="nav-pill">
+          About YPIT
+        </a>
       </div>
     </nav>
   );

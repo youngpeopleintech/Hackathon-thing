@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     'Africa',
     'The Artificial Future',
   ],
+  icons: {
+    icon: '/ypit-favicon.png',
+  },
 };
 
 export default function RootLayout({

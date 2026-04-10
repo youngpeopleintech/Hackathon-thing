@@ -10,19 +10,19 @@ const TRACKS = [
   {
     num: '02',
     tag: 'Local Language & Culture',
-    title: 'AI that actually speaks the way Nigerians speak.',
-    body: 'Most AI tools were not built with Yoruba, Igbo, Hausa, or Pidgin in mind. Build something genuinely useful to people in their own language.',
+    title: 'AI that actually speaks the way Africans speak.',
+    body: 'Most AI tools were not built with Yoruba, Igbo, Hausa, Pidgin, Swahili, or Arabic in mind. Build something genuinely useful to people in their own language.',
   },
   {
     num: '03',
     tag: 'Education & Skill Building',
-    title: 'Learning in a country where learning is hard.',
-    body: 'Inconsistent connectivity. Overstretched teachers. Learners who need to work while they study. Build tools designed around real Nigerian constraints.',
+    title: 'Learning on a continent where access is unequal.',
+    body: 'Inconsistent connectivity. Overstretched teachers. Learners who need to work while they study. Build tools designed around real African constraints.',
   },
   {
     num: '04',
     tag: 'Healthcare Access',
-    title: 'Healthcare that works around Nigerian infrastructure.',
+    title: 'Healthcare that works around African infrastructure.',
     body: 'Hospitals that cannot always be relied on. Supply chains under pressure. Communities where care does not reach. Build around weak infrastructure — not despite it.',
   },
 ];
