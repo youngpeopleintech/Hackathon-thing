@@ -38,9 +38,15 @@ export class CreateRegistrationDto {
   @IsIn(["16-20", "21-25", "25+"])
   ageRange: string;
 
+  @IsOptional()
   @IsString()
   @IsIn(["male", "female", "prefer-not-to-say"])
-  gender: string;
+  gender?: string;
+
+  @IsString()
+  @IsOptional()
+  @IsIn(['in-person', 'virtual', 'undecided'])
+  participationType?: string;
 
   @IsString()
   @IsNotEmpty()
@@ -114,4 +120,14 @@ export class CreateRegistrationDto {
   @IsString()
   @IsOptional()
   teamMembers?: string;
+}
+
+export class CreateWaitlistDto {
+  @IsEmail()
+  @IsNotEmpty()
+  email: string;
+
+  @IsString()
+  @IsOptional()
+  name?: string;
 }

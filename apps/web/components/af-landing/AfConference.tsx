@@ -1,12 +1,27 @@
-import { Reveal } from './Reveal';
+'use client';
 
-function conferenceTicketHref() {
-  const url = process.env.NEXT_PUBLIC_CONFERENCE_TICKET_URL;
-  return url && url.length > 0 ? url : '#conference';
-}
+import { useState } from 'react';
+import { Reveal } from './Reveal';
+import { submitWaitlist } from '@/lib/api';
 
 export function AfConference() {
-  const ticketHref = conferenceTicketHref();
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMsg, setErrorMsg] = useState('');
+
+  const handleWaitlist = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setStatus('loading');
+    try {
+      await submitWaitlist(email);
+      setStatus('success');
+      setEmail('');
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : 'Something went wrong.');
+      setStatus('error');
+    }
+  };
 
   return (
     <section id="conference" className="section section-cream">
@@ -16,7 +31,7 @@ export function AfConference() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="section-headline">
-            A day that <span style={{ color: 'var(--coral)' }}>actually matters.</span>
+            A day that <span style={{ color: '#FE324B' }}>actually matters.</span>
           </h2>
         </Reveal>
         <div className="conf-grid">
@@ -29,13 +44,35 @@ export function AfConference() {
               We will also be showcasing the most ambitious Hackathon projects. The best teams present in front of a
               live audience, and we will award prizes and crown a winner on the day.
             </p>
-            <p style={{ fontSize: 14, color: '#b0a89a', fontWeight: 300, lineHeight: 1.7, marginBottom: 40 }}>
+            <p style={{ fontSize: 14, color: '#b0a89a', fontWeight: 300, lineHeight: 1.7, marginBottom: 36 }}>
               Open to anyone. You do not need to have participated in the hackathon to attend. Tickets are paid and
               capacity is limited.
             </p>
-            <a href={ticketHref} className="btn-primary">
-              Get Your Conference Ticket →
-            </a>
+
+            {status === 'success' ? (
+              <div className="conf-waitlist-success">
+                <span className="conf-waitlist-success-icon">✓</span>
+                You&apos;re on the list. We&apos;ll let you know when tickets go on sale.
+              </div>
+            ) : (
+              <form className="conf-waitlist-form" onSubmit={handleWaitlist}>
+                <p className="conf-waitlist-label">Tickets go on sale soon. Join the waitlist:</p>
+                <div className="conf-waitlist-row">
+                  <input
+                    type="email"
+                    className="conf-waitlist-input"
+                    placeholder="your.email@example.com"
+                    value={email}
+                    onChange={(e) => { setEmail(e.target.value); setStatus('idle'); }}
+                    required
+                  />
+                  <button type="submit" className="conf-waitlist-btn" disabled={status === 'loading'}>
+                    {status === 'loading' ? 'Joining…' : 'Join Waitlist →'}
+                  </button>
+                </div>
+                {status === 'error' && <p className="conf-waitlist-error">{errorMsg}</p>}
+              </form>
+            )}
           </Reveal>
           <Reveal delay={0.25} className="conf-card">
             <div className="conf-card-header">

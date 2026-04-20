@@ -1,47 +1,20 @@
 "use client";
 
-import React, { useState, useCallback, useMemo } from "react";
+import React, { useState, useCallback } from "react";
 import "@/components/af-register/ypit-af-register.css";
 import { HeroSection } from "@/components/HeroSection";
-import { FormProgress } from "@/components/forms/FormProgress";
 import { StepOne } from "@/components/forms/StepOne";
-import { StepTwo } from "@/components/forms/StepTwo";
-import { StepThree } from "@/components/forms/StepThree";
 import { ConfirmationModal } from "@/components/ConfirmationModal";
 import { submitRegistration } from "@/lib/api";
-import { validateStep1, validateStep2, validateStep3 } from "@/lib/validation";
+import { validateStep1 } from "@/lib/validation";
 import type { RegistrationData } from "@/lib/types";
 
 export default function RegisterPage() {
-  const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState<Partial<RegistrationData>>({});
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [registrationResult, setRegistrationResult] = useState<{
-    registrationId: string;
-    name: string;
-  } | null>(null);
-
-  const isHackathonParticipant = useMemo(() => {
-    return formData.interests?.includes("hackathon-participant") ?? false;
-  }, [formData.interests]);
-
-  const formSteps = useMemo(() => {
-    if (isHackathonParticipant) {
-      return [
-        { title: "Basic Info", subtitle: "Basic Information & Interests" },
-        { title: "Project Idea", subtitle: "Project Idea" },
-        { title: "Skills", subtitle: "Skills & Background" },
-      ];
-    }
-    return [
-      { title: "Basic Info", subtitle: "Basic Information & Interests" },
-      { title: "Skills", subtitle: "Skills & Background" },
-    ];
-  }, [isHackathonParticipant]);
-
-  const totalSteps = formSteps.length;
+  const [registrationResult, setRegistrationResult] = useState<{ registrationId: string; name: string } | null>(null);
 
   const handleChange = useCallback(
     (field: keyof RegistrationData, value: string | boolean | number | string[]) => {
@@ -57,126 +30,39 @@ export default function RegisterPage() {
     [errors]
   );
 
-  const validateCurrentStep = useCallback((): boolean => {
-    let validationErrors: { field: string; message: string }[] = [];
-
-    if (currentStep === 1) {
-      validationErrors = validateStep1(formData);
-    } else if (isHackathonParticipant) {
-      if (currentStep === 2) {
-        validationErrors = validateStep2(formData);
-      } else if (currentStep === 3) {
-        validationErrors = validateStep3(formData);
-      }
-    } else {
-      if (currentStep === 2) {
-        validationErrors = validateStep3(formData);
-      }
-    }
-
+  const handleSubmit = useCallback(async () => {
+    const validationErrors = validateStep1(formData);
     if (validationErrors.length > 0) {
       const errorMap: Record<string, string> = {};
-      validationErrors.forEach((err) => {
-        errorMap[err.field] = err.message;
-      });
+      validationErrors.forEach((err) => { errorMap[err.field] = err.message; });
       setErrors(errorMap);
-      return false;
+      return;
     }
-
-    setErrors({});
-    return true;
-  }, [currentStep, formData, isHackathonParticipant]);
-
-  const handleNext = useCallback(() => {
-    if (validateCurrentStep()) {
-      setCurrentStep((prev) => Math.min(prev + 1, totalSteps));
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, [validateCurrentStep, totalSteps]);
-
-  const handleBack = useCallback(() => {
-    setCurrentStep((prev) => Math.max(prev - 1, 1));
-    setErrors({});
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
-  const handleSubmit = async () => {
-    if (!validateCurrentStep()) return;
 
     setIsSubmitting(true);
     try {
-      const response = await submitRegistration(formData as RegistrationData);
-
+      const payload: RegistrationData = {
+        ...(formData as RegistrationData),
+        interests: ['hackathon-participant'],
+        gender: 'prefer-not-to-say',
+      };
+      const response = await submitRegistration(payload);
       if (response.success && response.registrationId) {
-        setRegistrationResult({
-          registrationId: response.registrationId,
-          name: formData.fullName || "Builder",
-        });
+        setRegistrationResult({ registrationId: response.registrationId, name: formData.fullName || "Builder" });
         setShowModal(true);
       }
     } catch (error) {
-      const message =
-        error instanceof Error ? error.message : "Registration failed. Please try again.";
+      const message = error instanceof Error ? error.message : "Registration failed. Please try again.";
       setErrors({ submit: message });
     } finally {
       setIsSubmitting(false);
     }
-  };
+  }, [formData]);
 
   const handleModalClose = () => {
     setShowModal(false);
     setFormData({});
-    setCurrentStep(1);
     setRegistrationResult(null);
-  };
-
-  const renderStepContent = () => {
-    if (currentStep === 1) {
-      return (
-        <StepOne data={formData} errors={errors} onChange={handleChange} onNext={handleNext} />
-      );
-    }
-
-    if (isHackathonParticipant) {
-      if (currentStep === 2) {
-        return (
-          <StepTwo
-            data={formData}
-            errors={errors}
-            onChange={handleChange}
-            onNext={handleNext}
-            onBack={handleBack}
-          />
-        );
-      }
-      if (currentStep === 3) {
-        return (
-          <StepThree
-            data={formData}
-            errors={errors}
-            onChange={handleChange}
-            onSubmit={handleSubmit}
-            onBack={handleBack}
-            isSubmitting={isSubmitting}
-          />
-        );
-      }
-    } else {
-      if (currentStep === 2) {
-        return (
-          <StepThree
-            data={formData}
-            errors={errors}
-            onChange={handleChange}
-            onSubmit={handleSubmit}
-            onBack={handleBack}
-            isSubmitting={isSubmitting}
-          />
-        );
-      }
-    }
-
-    return null;
   };
 
   return (
@@ -187,13 +73,11 @@ export default function RegisterPage() {
 
       <div className="af-reg-form-column lg:w-1/2 lg:ml-[50%] w-full">
         <div className="af-reg-form-inner">
-          <div className="mb-2">
-            <p className="af-reg-page-label">Register</p>
-            <h1 className="af-reg-page-title">Join The Artificial Future</h1>
-            <p className="af-reg-page-sub">Be part of Africa&apos;s AI revolution — hackathon, workshops, and conference.</p>
+          <div className="mb-8">
+            <p className="af-reg-page-label">Hackathon Registration</p>
+            <h1 className="af-reg-page-title">Join the Hackathon</h1>
+            <p className="af-reg-page-sub">May 30 – June 6, 2026 · Lagos + Virtual · Free</p>
           </div>
-
-          <FormProgress currentStep={currentStep} totalSteps={totalSteps} steps={formSteps} />
 
           <div className="af-reg-form-card">
             {errors.submit && (
@@ -201,8 +85,7 @@ export default function RegisterPage() {
                 <p>{errors.submit}</p>
               </div>
             )}
-
-            {renderStepContent()}
+            <StepOne data={formData} errors={errors} onChange={handleChange} onNext={handleSubmit} />
           </div>
 
           <p className="af-reg-footer-note">

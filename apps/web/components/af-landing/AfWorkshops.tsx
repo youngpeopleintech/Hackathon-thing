@@ -2,34 +2,31 @@ import { Reveal } from './Reveal';
 
 const WORKSHOPS = [
   {
-    title: 'Building with AI APIs: From Zero to Working Prototype',
-    desc: 'Get from zero to a functional AI-powered product. Covers OpenAI, Anthropic, and Gemini APIs — how to structure prompts and ship something real in a session.',
-    dot: '#4ade80',
-    meta: 'Online · All levels',
+    num: '01',
+    title: 'Workshop title coming soon',
+    desc: 'Details will be published shortly. Register your interest below to be notified when the full schedule drops.',
+    date: 'April 2026',
+    format: 'Online · All levels',
+    lumaUrl: '#',
+    accentColor: '#7E3BED',
   },
   {
-    title: 'AI for the Last Mile: Designing for Low Connectivity',
-    desc: 'Build AI products that actually work under Nigerian infrastructure constraints — intermittent connectivity, lower-end devices, multilingual users.',
-    dot: 'var(--coral)',
-    meta: 'In-person · Intermediate',
+    num: '02',
+    title: 'Workshop title coming soon',
+    desc: 'Details will be published shortly. Register your interest below to be notified when the full schedule drops.',
+    date: 'May 2026',
+    format: 'Online · All levels',
+    lumaUrl: '#',
+    accentColor: '#7E3BED',
   },
   {
-    title: 'Fine-Tuning with African Language Data',
-    desc: "Training models on thin Yoruba, Igbo, Hausa and Pidgin datasets — where to find them, how to build your own, and what's actually possible in a hackathon week.",
-    dot: 'var(--coral)',
-    meta: 'In-person · Track 02',
-  },
-  {
-    title: 'From Hackathon to Product: What Happens After Demo Day',
-    desc: 'What it takes to turn a hackathon project into something real. What investors look for, GTM in the Nigerian market, and what the Launchpad looks for.',
-    dot: '#4ade80',
-    meta: 'Online · All levels',
-  },
-  {
-    title: 'Responsible AI in African Contexts',
-    desc: 'How AI bias manifests in African contexts and how to build with these risks in mind from day one. Practical not preachy — leaves you with a checklist.',
-    dot: '#4ade80',
-    meta: 'Online · All levels',
+    num: '03',
+    title: 'Workshop title coming soon',
+    desc: 'Details will be published shortly. Register your interest below to be notified when the full schedule drops.',
+    date: 'May 2026',
+    format: 'In-person · Lagos',
+    lumaUrl: '#',
+    accentColor: '#7E3BED',
   },
 ];
 
@@ -44,7 +41,7 @@ export function AfWorkshops() {
           <h2 className="section-headline">
             These workshops will expand your ambition.
             <br />
-            <span className="workshops-headline-accent">Feel free to leave with it.</span>
+            <span className="workshops-headline-accent" style={{ color: '#7E3BED' }}>Feel free to leave with it.</span>
           </h2>
         </Reveal>
         <Reveal delay={0.15}>
@@ -53,17 +50,26 @@ export function AfWorkshops() {
           </p>
         </Reveal>
         <div className="workshop-grid">
-          <Reveal delay={0.15} className="workshop-card soon">
-            <span className="workshop-soon-mark" aria-hidden>
-              +
-            </span>
-            <h3>Workshop schedule coming soon</h3>
-            <p>Full schedule published closer to the event. Register to be notified when it drops.</p>
-            <div className="workshop-meta">
-              <span className="dot" style={{ background: 'var(--coral)' }} />
-              Register to stay updated
-            </div>
-          </Reveal>
+          {WORKSHOPS.map((ws, i) => (
+            <Reveal key={ws.num} delay={0.1 + i * 0.08} className="workshop-card">
+              <div className="workshop-num" style={{ color: ws.accentColor }}>{ws.num}</div>
+              <h3>{ws.title}</h3>
+              <p>{ws.desc}</p>
+              <div className="workshop-footer">
+                <div className="workshop-meta">
+                  <span className="dot" style={{ background: ws.accentColor }} />
+                  {ws.date} · {ws.format}
+                </div>
+                {ws.lumaUrl !== '#' ? (
+                  <a href={ws.lumaUrl} target="_blank" rel="noopener noreferrer" className="workshop-luma-btn">
+                    Sign up →
+                  </a>
+                ) : (
+                  <span className="workshop-luma-btn workshop-luma-btn--soon">Details soon</span>
+                )}
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

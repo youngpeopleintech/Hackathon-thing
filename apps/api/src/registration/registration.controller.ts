@@ -6,7 +6,7 @@ import {
   HttpStatus,
   Post,
 } from "@nestjs/common";
-import { CreateRegistrationDto } from "./registration.dto";
+import { CreateRegistrationDto, CreateWaitlistDto } from "./registration.dto";
 import { RegistrationService } from "./registration.service";
 
 @Controller("registration")
@@ -17,6 +17,12 @@ export class RegistrationController {
   @HttpCode(HttpStatus.CREATED)
   async register(@Body() createRegistrationDto: CreateRegistrationDto) {
     return this.registrationService.createRegistration(createRegistrationDto);
+  }
+
+  @Post('waitlist')
+  @HttpCode(HttpStatus.CREATED)
+  async joinWaitlist(@Body() createWaitlistDto: CreateWaitlistDto) {
+    return this.registrationService.addToWaitlist(createWaitlistDto);
   }
 
   @Get("stats")
