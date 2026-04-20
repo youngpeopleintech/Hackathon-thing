@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -75,6 +76,18 @@ export function AfHero() {
             Conference · June 13 · Paid
           </div>
         </motion.div>
+        <motion.a
+          href="https://www.youngpeopleintech.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hero-presented-by"
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.25, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+        >
+          <Image src="/ypit-logo-white.png" alt="YPIT" height={16} width={40} style={{ objectFit: 'contain', width: 'auto' }} />
+          <span>An event by Young People In Tech</span>
+        </motion.a>
       </div>
     </section>
   );
