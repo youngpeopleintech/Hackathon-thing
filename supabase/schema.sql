@@ -15,6 +15,10 @@ CREATE TABLE IF NOT EXISTS registrations (
     gender IN ('male', 'female', 'prefer-not-to-say')
   ),
   city_country TEXT NOT NULL,
+  participation_type TEXT CHECK (
+    participation_type IS NULL
+    OR participation_type IN ('in-person', 'virtual', 'undecided')
+  ),
   -- Step 2: Project Idea (optional, only for hackathon participants)
   has_idea BOOLEAN,
   problem_statement TEXT,
@@ -74,6 +78,9 @@ CREATE INDEX IF NOT EXISTS idx_registrations_created ON registrations(created_at
 -- Create index on interests for filtering by interest type
 CREATE INDEX IF NOT EXISTS idx_registrations_interests ON registrations USING GIN(interests);
 
+-- Create index on participation_type for filtering in-person vs virtual
+CREATE INDEX IF NOT EXISTS idx_registrations_participation_type ON registrations(participation_type);
+
 -- Create function to update updated_at timestamp
 CREATE OR REPLACE FUNCTION update_updated_at_column() RETURNS TRIGGER AS $$ BEGIN NEW.updated_at = NOW();
 RETURN NEW;
@@ -97,3 +104,28 @@ GRANT SELECT ON registrations TO anon;
 
 -- Comment on table
 COMMENT ON TABLE registrations IS 'YPIT AF registration entries - supports hackathon participants, conference attendees, mentors, volunteers, sponsors, and explorers';
+
+-- Conference waitlist table
+CREATE TABLE IF NOT EXISTS conference_waitlist (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email TEXT UNIQUE NOT NULL,
+  name TEXT,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_conference_waitlist_email ON conference_waitlist(email);
+CREATE INDEX IF NOT EXISTS idx_conference_waitlist_created ON conference_waitlist(created_at DESC);
+
+DROP TRIGGER IF EXISTS update_conference_waitlist_updated_at ON conference_waitlist;
+CREATE TRIGGER update_conference_waitlist_updated_at BEFORE
+UPDATE ON conference_waitlist FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+ALTER TABLE conference_waitlist ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Service role has full access" ON conference_waitlist FOR ALL USING (TRUE) WITH CHECK (TRUE);
+
+GRANT ALL ON conference_waitlist TO service_role;
+GRANT SELECT ON conference_waitlist TO anon;
+
+COMMENT ON TABLE conference_waitlist IS 'YPIT AF conference waitlist sign-ups collected before tickets go on sale';
