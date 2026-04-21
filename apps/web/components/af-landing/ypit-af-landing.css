@@ -255,6 +255,7 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 }
 
 /* BUTTONS */
+.ypitAfLanding .section-cta{margin-top:56px}
 .ypitAfLanding .btn-primary{
   display:inline-block;background:var(--coral);color:#fff;
   padding:15px 36px;font-family:var(--display);font-size:12px;

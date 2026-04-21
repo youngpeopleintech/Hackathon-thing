@@ -85,13 +85,23 @@ export class CreateRegistrationDto {
   @IsIn([
     "frontend-developer",
     "backend-developer",
+    "fullstack-developer",
     "mobile-developer",
+    "ai-ml-engineer",
+    "data-scientist-analyst",
     "ui-ux-designer",
     "product-manager",
-    "data-analyst-ml",
+    "devops-cloud",
+    "cybersecurity",
+    "researcher-academic",
+    "business-strategy",
     "other",
   ])
   primarySkill: string;
+
+  @IsString()
+  @IsOptional()
+  primarySkillOther?: string;
 
   @IsString()
   @IsIn([

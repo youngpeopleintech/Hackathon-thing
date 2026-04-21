@@ -17,6 +17,7 @@ export interface RegistrationData {
 
   // Step 3: Skills & Background
   primarySkill: PrimarySkill;
+  primarySkillOther?: string;
   aiSkillLevel: AISkillLevel;
   hasHackathonExperience?: boolean;
   toolsTechnologies?: string;
@@ -48,10 +49,16 @@ export type HackathonTrack =
 export type PrimarySkill =
   | 'frontend-developer'
   | 'backend-developer'
+  | 'fullstack-developer'
   | 'mobile-developer'
+  | 'ai-ml-engineer'
+  | 'data-scientist-analyst'
   | 'ui-ux-designer'
   | 'product-manager'
-  | 'data-analyst-ml'
+  | 'devops-cloud'
+  | 'cybersecurity'
+  | 'researcher-academic'
+  | 'business-strategy'
   | 'other';
 
 export type AISkillLevel =
@@ -90,10 +97,16 @@ export const HACKATHON_TRACK_LABELS: Record<HackathonTrack, string> = {
 export const PRIMARY_SKILL_LABELS: Record<PrimarySkill, string> = {
   'frontend-developer': 'Frontend Developer',
   'backend-developer': 'Backend Developer',
-  'mobile-developer': 'Mobile Developer',
+  'fullstack-developer': 'Full-Stack Developer',
+  'mobile-developer': 'Mobile Developer (iOS/Android)',
+  'ai-ml-engineer': 'AI / ML Engineer',
+  'data-scientist-analyst': 'Data Scientist / Analyst',
   'ui-ux-designer': 'UI/UX Designer',
   'product-manager': 'Product Manager',
-  'data-analyst-ml': 'Data Analyst/Machine Learning',
+  'devops-cloud': 'DevOps / Cloud Engineer',
+  'cybersecurity': 'Cybersecurity Engineer',
+  'researcher-academic': 'Researcher / Academic',
+  'business-strategy': 'Business / Strategy',
   'other': 'Other',
 };
 
