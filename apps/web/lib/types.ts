@@ -4,8 +4,9 @@ export interface RegistrationData {
   fullName: string;
   email: string;
   ageRange: AgeRange;
-  gender: Gender;
+  gender?: Gender;
   cityCountry: string;
+  participationType: ParticipationType;
 
   // Step 2: Project Idea (only if hackathon participant)
   hasIdea?: boolean;
@@ -32,6 +33,8 @@ export type InterestType =
   | 'just-exploring';
 
 export type AgeRange = '16-20' | '21-25' | '25+';
+
+export type ParticipationType = 'in-person' | 'virtual' | 'undecided';
 
 export type Gender = 'male' | 'female' | 'prefer-not-to-say';
 
@@ -109,4 +112,10 @@ export const INTEREST_TYPE_LABELS: Record<InterestType, string> = {
   'volunteer': 'Volunteer',
   'sponsor-partner': 'Sponsor / Partner',
   'just-exploring': 'Just exploring for now',
+};
+
+export const PARTICIPATION_TYPE_LABELS: Record<ParticipationType, string> = {
+  'in-person': 'In-person (Lagos)',
+  'virtual': 'Virtually',
+  'undecided': 'Not sure yet',
 };

@@ -9,7 +9,7 @@ import { HACKATHON_TRACK_LABELS } from "@ypit/shared";
 import { Queue } from "bullmq";
 import { JobName, QueueName } from "../common/constants";
 import { SupabaseService } from "../supabase/supabase.service";
-import { CreateRegistrationDto } from "./registration.dto";
+import { CreateRegistrationDto, CreateWaitlistDto } from "./registration.dto";
 
 interface RegistrationRecord {
   id: string;
@@ -69,8 +69,9 @@ export class RegistrationService {
         full_name: dto.fullName,
         email: dto.email,
         age_range: dto.ageRange,
-        gender: dto.gender,
+        gender: dto.gender || 'prefer-not-to-say',
         city_country: dto.cityCountry,
+        participation_type: dto.participationType || null,
         has_idea: dto.hasIdea ?? null,
         problem_statement: dto.problemStatement || null,
         proposed_solution: dto.proposedSolution || null,
@@ -114,6 +115,21 @@ export class RegistrationService {
       message: "Registration successful! Check your email for confirmation.",
       registrationId: registration.id,
     };
+  }
+
+  async addToWaitlist(dto: CreateWaitlistDto): Promise<{ success: boolean; message: string }> {
+    const supabase = this.supabaseService.getClient();
+
+    const { error } = await supabase
+      .from('conference_waitlist')
+      .upsert({ email: dto.email, name: dto.name || null }, { onConflict: 'email' });
+
+    if (error) {
+      this.logger.error('Waitlist error:', error);
+      throw new InternalServerErrorException('Failed to join waitlist. Please try again.');
+    }
+
+    return { success: true, message: "You're on the list! We'll be in touch when tickets go on sale." };
   }
 
   async getRegistrationStats(): Promise<{

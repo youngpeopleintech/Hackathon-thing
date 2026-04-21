@@ -1,4 +1,5 @@
 import { Logger, ValidationPipe } from "@nestjs/common";
+import type { CorsOptions } from "@nestjs/common/interfaces/external/cors-options.interface";
 import { NestFactory } from "@nestjs/core";
 import { AppModule } from "./app.module";
 
@@ -15,25 +16,19 @@ async function bootstrap() {
     process.env.FRONTEND_URL,
   ].filter(Boolean);
 
-  app.enableCors({
-    origin: (
-      origin: string | undefined,
-      callback: (error: Error | null, allow?: boolean) => void,
-    ) => {
-      try {
-        if (allowedOrigins.includes(origin)) {
-          callback(null, true);
-        } else {
-          callback(null, false);
-        }
-      } catch (error) {
-        Logger.error(error);
-        callback(error, false);
+  const corsOptions: CorsOptions = {
+    origin: (origin, callback) => {
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(null, false);
       }
     },
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
-  });
+  };
+
+  app.enableCors(corsOptions);
 
   // Global validation pipe
   app.useGlobalPipes(
