@@ -232,6 +232,28 @@
   line-height: 1.5;
 }
 
+.ypitAfRegister .af-reg-select {
+  width: 100%;
+  padding: 11px 16px;
+  font-family: var(--display);
+  font-size: 14px;
+  color: var(--dark);
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' viewBox='0 0 12 8'%3E%3Cpath stroke='%236b6259' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.ypitAfRegister .af-reg-select:focus { border-color: var(--coral); }
+.ypitAfRegister .af-reg-select option[value=""] { color: var(--muted); }
+.ypitAfRegister .af-reg-field-error { font-size: 12px; color: var(--coral); margin-top: 6px; }
+
 .ypitAfRegister .af-reg-error-banner {
   margin-bottom: 24px;
   padding: 16px 20px;
