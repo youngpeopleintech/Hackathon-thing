@@ -64,17 +64,29 @@ export function StepOne({ data, errors, onChange, onNext }: StepOneProps) {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-navy-900 mb-3">
+        <label className="block text-sm font-medium text-navy-900 mb-2">
           What best describes your primary skill?
         </label>
-        <RadioGroup
-          name="primarySkill"
-          options={skillOptions}
+        <select
+          className="af-reg-select"
           value={data.primarySkill || ""}
-          onChange={(value) => onChange("primarySkill", value as PrimarySkill)}
-          columns={2}
-          error={errors.primarySkill}
-        />
+          onChange={(e) => onChange("primarySkill", e.target.value as PrimarySkill)}
+        >
+          <option value="" disabled>Select your primary skill...</option>
+          {skillOptions.map(({ value, label }) => (
+            <option key={value} value={value}>{label}</option>
+          ))}
+        </select>
+        {errors.primarySkill && <p className="af-reg-field-error">{errors.primarySkill}</p>}
+        {data.primarySkill === 'other' && (
+          <Input
+            label=""
+            placeholder="Please describe your skill or background"
+            value={data.primarySkillOther || ""}
+            onChange={(e) => onChange("primarySkillOther", e.target.value)}
+            error={errors.primarySkillOther}
+          />
+        )}
       </div>
 
       <div>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Reveal } from './Reveal';
 
 const ROWS = [
@@ -37,6 +38,9 @@ export function AfSchedule() {
               </div>
             </div>
           ))}
+        </Reveal>
+        <Reveal delay={0.25} className="section-cta">
+          <Link href="/register" className="btn-primary">Register for the Hackathon →</Link>
         </Reveal>
       </div>
     </section>

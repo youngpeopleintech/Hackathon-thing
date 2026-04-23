@@ -54,6 +54,7 @@ export default function RegisterPage() {
     } catch (error) {
       const message = error instanceof Error ? error.message : "Registration failed. Please try again.";
       setErrors({ submit: message });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } finally {
       setIsSubmitting(false);
     }

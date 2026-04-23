@@ -6,7 +6,7 @@ const hackathonFormSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
   cityCountry: z.string().min(2, 'Please enter your city and country').max(100, 'Location is too long'),
   participationType: z.enum(['in-person', 'virtual', 'undecided'], { required_error: 'Please select how you plan to participate' }),
-  primarySkill: z.enum(['frontend-developer', 'backend-developer', 'mobile-developer', 'ui-ux-designer', 'product-manager', 'data-analyst-ml', 'other'], { required_error: 'Please select your primary skill' }),
+  primarySkill: z.enum(['frontend-developer', 'backend-developer', 'fullstack-developer', 'mobile-developer', 'ai-ml-engineer', 'data-scientist-analyst', 'ui-ux-designer', 'product-manager', 'devops-cloud', 'cybersecurity', 'researcher-academic', 'business-strategy', 'other'], { required_error: 'Please select your primary skill' }),
   aiSkillLevel: z.enum(['curious-beginner', 'beginner', 'intermediate', 'advanced', 'non-technical'], { required_error: 'Please select your AI/Tech comfort level' }),
   ageRange: z.enum(['16-20', '21-25', '25+'], { required_error: 'Please select your age range' }),
 });
