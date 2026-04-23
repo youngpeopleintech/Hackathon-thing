@@ -25,9 +25,9 @@ export function AfLandingPage() {
       <AfMarquee />
       <AfAbout />
       <AfProgramme />
+      <AfWorkshops />
       <AfTracks />
       <AfSchedule />
-      <AfWorkshops />
       <AfConference />
       <AfSpeakers />
       <AfJoinPaths />
