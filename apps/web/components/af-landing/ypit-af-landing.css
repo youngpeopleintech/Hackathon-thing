@@ -344,12 +344,9 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   background-size:cover;background-position:center;
 }
 .ypitAfLanding .track-card:not(.track-card--squared):not(.track-card--fluted):hover{background:#f2ede5}
-.ypitAfLanding .track-card--squared{
-  background-image:url('/images/af/hero-squared-white-bg.png');
-  background-size:cover;background-position:center;
-}
+.ypitAfLanding .track-card--squared,
 .ypitAfLanding .track-card--fluted{
-  background-image:url('/images/af/workshops-fluted-white-bg.png');
+  background-image:url('/images/af/tracks-blue-bg.png');
   background-size:cover;background-position:center;
 }
 .ypitAfLanding .track-bg-num{
