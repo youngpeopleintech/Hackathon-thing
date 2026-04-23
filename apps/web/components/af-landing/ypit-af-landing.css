@@ -445,8 +445,9 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   .ypitAfLanding .wc-photo-wrap:hover .wc-bio-overlay{transform:translateY(0)}
 }
 .ypitAfLanding .wc-bio-text{
-  font-size:13px;line-height:1.65;color:#fff;font-weight:400;margin-bottom:14px;
+  font-size:13px;line-height:1.65;color:#fff;font-weight:400;margin-bottom:10px;
 }
+.ypitAfLanding .wc-bio-text:last-of-type{margin-bottom:14px}
 .ypitAfLanding .wc-linkedin-btn{
   display:inline-block;font-family:var(--display);font-size:11px;font-weight:700;
   letter-spacing:0.1em;text-transform:uppercase;color:#fff;
