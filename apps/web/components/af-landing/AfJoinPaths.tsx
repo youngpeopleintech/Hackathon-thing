@@ -50,21 +50,21 @@ export function AfJoinPaths() {
             <h3>Workshops Only</h3>
             <ul className="path-steps">
               <li>
-                <span className="step-num">01</span>Register using the same form
+                <span className="step-num">01</span>Register using the link below
               </li>
               <li>
-                <span className="step-num">02</span>Select <em>Workshops only</em> when prompted
+                <span className="step-num">02</span>You&apos;ll get redirected to YPIT&apos;s Luma page
               </li>
               <li>
-                <span className="step-num">03</span>Receive schedule and sign-up links by email
+                <span className="step-num">03</span>Sign up to all workshops that pique your interest
               </li>
               <li>
-                <span className="step-num">04</span>In-person sessions have limited capacity — sign up early
+                <span className="step-num">04</span>Subscribe to the Luma calendar to receive updates
               </li>
             </ul>
-            <Link href="/register" className="btn-outline" style={{ textAlign: 'center', display: 'block' }}>
+            <a href="https://luma.com/YPITAFWORKSHOPS" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ textAlign: 'center', display: 'block' }}>
               Register for Workshops →
-            </Link>
+            </a>
           </Reveal>
           <Reveal delay={0.3} className="path-card">
             <div className="path-bg-num">3</div>
