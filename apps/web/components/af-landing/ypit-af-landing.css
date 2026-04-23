@@ -340,6 +340,8 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 .ypitAfLanding .track-card{
   padding:48px;background:#f7f4ef;position:relative;overflow:hidden;
   transition:background 0.25s;
+  background-image:url('/images/af/tracks-blue-bg.png');
+  background-size:cover;background-position:center;
 }
 .ypitAfLanding .track-card:not(.track-card--squared):not(.track-card--fluted):hover{background:#f2ede5}
 .ypitAfLanding .track-card--squared{
