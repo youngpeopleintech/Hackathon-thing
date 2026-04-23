@@ -24,10 +24,10 @@ export function AfLandingPage() {
       <AfHero />
       <AfMarquee />
       <AfAbout />
-      <AfWorkshops />
       <AfProgramme />
       <AfTracks />
       <AfSchedule />
+      <AfWorkshops />
       <AfConference />
       <AfSpeakers />
       <AfJoinPaths />
