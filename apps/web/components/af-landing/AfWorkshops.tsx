@@ -14,17 +14,18 @@ interface Workshop {
   format: string;
   linkedIn: string;
   image: string;
+  photoPosition?: string;
   lumaUrl: string;
 }
 
 const WORKSHOPS: Workshop[] = [
   {
     num: '01',
-    title: 'AI at Work: A PM\'s Practical Guide',
+    title: 'AI at work: A PM\'s practical guide',
     speaker: 'Subomi Salami',
-    bio: 'Senior AI PM at Microsoft AI. Previously Meta and Bumble. Based in London.',
-    desc: 'An honest account of managing AI products day-to-day — the tools Subomi uses, how she evaluates AI output, and the skills she\'s actively building.',
-    date: 'Thu 30 Apr',
+    bio: 'Subomi is a Senior AI PM at Microsoft AI, where she works on real products at the intersection of people and intelligent systems. She started her career in Product at Softcom, Lagos. She\'s since gone on to companies like Meta and Bumble. Subomi is now based in London and enjoys sharing her journey with tech professionals especially those navigating product, AI, or career transitions in tech.',
+    desc: 'Subomi is a Senior PM at Microsoft AI and she\'s been figuring out, in real time, what it means to manage AI products and use AI to do her job better. In this session, she shares the honest account of that journey, including the tools she uses daily, the skills she\'s building, and how to think about evaluating AI output.',
+    date: 'Thursday April 30th',
     format: 'Online · All levels',
     linkedIn: 'https://www.linkedin.com/in/subomisalami/',
     image: '/images/af/speakers/subomi-salami.jpg',
@@ -32,11 +33,11 @@ const WORKSHOPS: Workshop[] = [
   },
   {
     num: '02',
-    title: 'A Deep Dive into MCPs',
+    title: 'A Deep Dive into MCPs: What They Are, What They Unlock, and How to Use Them',
     speaker: 'Andrew Nduati',
-    bio: 'Developer Relations at Paystack. Shipped the Paystack MCP server.',
-    desc: 'MCPs demystified — what they are, how they work, and a live walkthrough using the Paystack MCP server as the example.',
-    date: 'Wed 6 May',
+    bio: 'Andrew works in Developer Relations at Paystack, one of Africa\'s leading payment infrastructure companies. Andrew\'s team recently shipped the Paystack MCP server, giving AI clients accurate, real-time access to Paystack\'s APIs. He works at the intersection of developer experience and emerging AI tooling.',
+    desc: 'MCPs are one of the most important shifts happening in AI right now, and most people have no idea what they are. Andrew breaks it down using Paystack\'s MCP server as a live, real-world example, showing what MCPs unlock and how to think about building with them.',
+    date: 'Wednesday May 6th',
     format: 'Online · All levels',
     linkedIn: 'https://www.linkedin.com/in/andrewnduati/',
     image: '/images/af/speakers/andrew-nduati.jpg',
@@ -44,11 +45,11 @@ const WORKSHOPS: Workshop[] = [
   },
   {
     num: '03',
-    title: 'The DIY Stack',
+    title: 'The DIY Stack: Personalized Software in the Age of AI',
     speaker: 'Jeremiah Nnadi',
-    bio: 'Product Lead at Octav. London-based multidisciplinary builder.',
-    desc: 'Using Kolo — his personal finance app — as a live case study in building with AI tools without a traditional engineering team.',
-    date: 'Thu 7 May',
+    bio: 'Jeremiah is the Product Lead at Octav, an AI & Data company modernizing how creative rights and royalties flow through the music industry. London-based, Jerry started out as a software engineer and moved into technical product roles at companies across multiple African countries, the US, and the UK, working in fintech, e-commerce, and venture capital. He sits comfortably in the middle ground between product, engineering, design, and data, and is borderline obsessed with technical tooling and creative problem-solving. Jerry is a multidisciplinary builder at heart, and loves exploring new ideas, trying out new tools, and especially talking about and teaching what he learns.',
+    desc: 'In this session, I\'ll show how you can now design, prototype, test, integrate, and ship your own tools. The space is so matured that you can create software built for your goals, running on a stack you actually own and operate. Using a personal finance app I built (Kolo) as a case study, we\'ll walk through each stage of the build: turning an idea into a designed interface, a working prototype, tested code, real data integrations, and a maintained product (with AI at most steps). The goal isn\'t to teach you to build a finance app. It\'s to show what\'s possible when you stop outsourcing software to other people. You don\'t need a team, a big budget, or a traditional engineering background. All that\'s really essential is a problem you care about, a careful process, and a willingness to actually interact with technical workflows.',
+    date: 'Thursday May 7th',
     format: 'Online · All levels',
     linkedIn: 'https://www.linkedin.com/in/jeremiahnnadi/',
     image: '/images/af/speakers/jeremiah-nnadi.jpg',
@@ -56,11 +57,11 @@ const WORKSHOPS: Workshop[] = [
   },
   {
     num: '04',
-    title: 'Exploring Agents',
+    title: 'Exploring Agents: How to build them safely — from infrastructure to impact',
     speaker: 'Bola Banjo',
-    bio: 'AI Engineer and founder of Cencori. Focused on security and scalability.',
-    desc: 'What makes agents genuinely powerful — and genuinely risky. A look at how Cencori approaches agent infrastructure.',
-    date: 'Thu 21 May',
+    bio: 'Bola is an AI Engineer and founder of Cencori. Bola has been building AI products for years and realized early on that the infrastructure gap was killing builder productivity. His startup, Cencori, tackles that gap by handling the hard infrastructure work so builders can focus on agent logic. Security and scalability are his obsessions.',
+    desc: 'Agents are the next frontier in AI but building them safely is hard. Bola walks through what makes agents powerful, what makes them risky, and how Cencori\'s infrastructure approach lets builders create safe, scalable agents without reinventing the wheel.',
+    date: 'Thursday May 21st',
     format: 'Online · All levels',
     linkedIn: 'https://www.linkedin.com/in/bolaabanjo/',
     image: '/images/af/speakers/bola-banjo.jpg',
@@ -135,7 +136,7 @@ function WorkshopCard({ ws, index }: WorkshopCardProps) {
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           className="wc-photo"
-          style={{ objectFit: 'cover', objectPosition: 'top' }}
+          style={{ objectFit: 'cover', objectPosition: ws.photoPosition ?? 'center 20%' }}
         />
         <div className="wc-bio-overlay">
           <p className="wc-bio-text">{ws.bio}</p>
