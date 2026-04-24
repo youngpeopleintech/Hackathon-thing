@@ -32,7 +32,7 @@ const WORKSHOPS: Workshop[] = [
     format: 'Online · All levels',
     linkedIn: 'https://www.linkedin.com/in/subomisalami/',
     image: '/images/af/speakers/subomi-salami.jpg',
-    lumaUrl: '#',
+    lumaUrl: 'https://luma.com/ivjizaoi',
   },
   {
     num: '02',
