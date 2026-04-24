@@ -340,14 +340,13 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 .ypitAfLanding .track-card{
   padding:48px;background:#f7f4ef;position:relative;overflow:hidden;
   transition:background 0.25s;
-}
-.ypitAfLanding .track-card:not(.track-card--squared):not(.track-card--fluted):hover{background:#f2ede5}
-.ypitAfLanding .track-card--squared{
-  background-image:url('/images/af/hero-squared-white-bg.png');
+  background-image:url('/images/af/tracks-blue-bg.png');
   background-size:cover;background-position:center;
 }
+.ypitAfLanding .track-card:not(.track-card--squared):not(.track-card--fluted):hover{background:#f2ede5}
+.ypitAfLanding .track-card--squared,
 .ypitAfLanding .track-card--fluted{
-  background-image:url('/images/af/workshops-fluted-white-bg.png');
+  background-image:url('/images/af/tracks-blue-bg.png');
   background-size:cover;background-position:center;
 }
 .ypitAfLanding .track-bg-num{
@@ -398,28 +397,103 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   background-position:center;
   background-repeat:no-repeat;
 }
-.ypitAfLanding .workshops-headline-accent{color:var(--coral);}
-.ypitAfLanding .workshop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px}
-.ypitAfLanding .workshop-card{
-  padding:36px;background:#f7f4ef;border:1px solid var(--border);
-  transition:transform 0.2s,background 0.25s;display:flex;flex-direction:column;
+/* WORKSHOP CARDS V2 */
+@keyframes workshopBounce{
+  0%{transform:translateY(0)}
+  20%{transform:translateY(-10px)}
+  40%{transform:translateY(0)}
+  60%{transform:translateY(-5px)}
+  80%{transform:translateY(0)}
+  100%{transform:translateY(0)}
 }
-.ypitAfLanding .workshop-card:hover{transform:translateY(-3px);background:#f2ede5}
-.ypitAfLanding .workshop-card.soon{background:#f7f4ef;border-style:dashed;border-color:rgba(255,70,0,0.5)}
-.ypitAfLanding .workshop-soon-mark{
-  font-family:var(--display);
-  font-size:20px;font-weight:700;line-height:1;
-  color:var(--coral);
-  margin-bottom:14px;
-  opacity:0.85;
+
+.ypitAfLanding .workshop-grid-v2{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:56px;
 }
-.ypitAfLanding .workshop-card h3{font-family:var(--display);font-size:16px;font-weight:700;color:var(--dark);margin-bottom:12px;line-height:1.35;flex:1}
-.ypitAfLanding .workshop-card.soon h3{color:var(--dark)}
-.ypitAfLanding .workshop-card p{font-size:13px;color:var(--muted);line-height:1.72;font-weight:300;margin-bottom:18px}
-.ypitAfLanding .workshop-meta{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:6px;margin-top:auto}
+.ypitAfLanding .workshop-card-v2{
+  background:#f7f4ef;border:1px solid var(--border);
+  display:flex;flex-direction:column;cursor:pointer;
+  transition:box-shadow 0.25s;
+  animation:workshopBounce 0.7s ease-out both;
+  animation-delay:var(--bounce-delay,0s);
+}
+.ypitAfLanding .workshop-card-v2:hover,.ypitAfLanding .workshop-card-v2.is-expanded{
+  box-shadow:0 8px 32px rgba(126,59,237,0.12);
+}
+
+/* Photo section */
+.ypitAfLanding .wc-photo-wrap{
+  position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;
+  cursor:pointer;flex-shrink:0;
+}
+.ypitAfLanding .wc-photo{transition:transform 0.4s ease}
+.ypitAfLanding .wc-photo-wrap:hover .wc-photo,
+.ypitAfLanding .wc-photo-wrap.bio-open .wc-photo{transform:scale(1.04)}
+
+/* Bio overlay */
+.ypitAfLanding .wc-bio-overlay{
+  position:absolute;inset:0;
+  background:rgba(126,59,237,0.93);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:24px;
+  transform:translateY(100%);
+  transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+.ypitAfLanding .wc-photo-wrap.bio-open .wc-bio-overlay{transform:translateY(0)}
+@media(hover:hover){
+  .ypitAfLanding .wc-photo-wrap:hover .wc-bio-overlay{transform:translateY(0)}
+}
+.ypitAfLanding .wc-bio-text{
+  font-size:13px;line-height:1.65;color:#fff;font-weight:400;margin-bottom:10px;
+}
+.ypitAfLanding .wc-bio-text:last-of-type{margin-bottom:14px}
+.ypitAfLanding .wc-linkedin-btn{
+  display:inline-block;font-family:var(--display);font-size:11px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;color:#fff;
+  border:1.5px solid rgba(255,255,255,0.6);border-radius:100px;
+  padding:5px 14px;text-decoration:none;align-self:flex-start;
+  transition:background 0.18s,border-color 0.18s;
+}
+.ypitAfLanding .wc-linkedin-btn:hover{background:rgba(255,255,255,0.15);border-color:#fff}
+
+/* Card body */
+.ypitAfLanding .wc-body{
+  padding:28px 32px 24px;display:flex;flex-direction:column;flex:1;
+}
+.ypitAfLanding .wc-num{
+  font-family:var(--display);font-size:10px;font-weight:700;
+  letter-spacing:0.2em;text-transform:uppercase;margin-bottom:12px;
+}
+.ypitAfLanding .wc-title{
+  font-family:var(--display);font-size:17px;font-weight:700;
+  color:var(--dark);line-height:1.3;margin-bottom:6px;
+}
+.ypitAfLanding .wc-speaker{
+  font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;
+  color:#7E3BED;margin-bottom:0;
+}
+
+/* Expandable description */
+.ypitAfLanding .wc-desc-wrap{
+  overflow:hidden;max-height:0;
+  transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1),margin-top 0.3s;
+  margin-top:0;
+}
+.ypitAfLanding .workshop-card-v2.is-expanded .wc-desc-wrap,
+.ypitAfLanding .workshop-card-v2:hover .wc-desc-wrap{
+  max-height:200px;margin-top:16px;
+}
+.ypitAfLanding .wc-desc{
+  font-size:13px;color:var(--muted);line-height:1.72;font-weight:300;
+}
+
+/* Footer */
+.ypitAfLanding .wc-footer{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-top:20px;flex-wrap:wrap;gap:8px;
+}
+.ypitAfLanding .workshop-meta{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:6px}
 .ypitAfLanding .workshop-meta .dot{width:6px;height:6px;border-radius:50%;display:inline-block}
-.ypitAfLanding .workshop-num{font-family:var(--display);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:18px}
-.ypitAfLanding .workshop-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;flex-wrap:wrap;gap:8px}
 .ypitAfLanding .workshop-luma-btn{
   font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
   color:#7E3BED;text-decoration:none;padding:6px 14px;border:1.5px solid #7E3BED;
@@ -623,7 +697,7 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   .ypitAfLanding #footer-cta{padding:80px 24px}
   .ypitAfLanding footer{padding:32px 24px}
   .ypitAfLanding .about-grid, .ypitAfLanding .tracks-intro, .ypitAfLanding .conf-grid, .ypitAfLanding .faq-grid{grid-template-columns:1fr;gap:40px}
-  .ypitAfLanding .prog-grid, .ypitAfLanding .tracks-grid, .ypitAfLanding .workshop-grid, .ypitAfLanding .paths-grid, .ypitAfLanding .path-info-grid{grid-template-columns:1fr}
+  .ypitAfLanding .prog-grid, .ypitAfLanding .tracks-grid, .ypitAfLanding .workshop-grid, .ypitAfLanding .workshop-grid-v2, .ypitAfLanding .paths-grid, .ypitAfLanding .path-info-grid{grid-template-columns:1fr}
   .ypitAfLanding .schedule-row{grid-template-columns:1fr}
   .ypitAfLanding .schedule-date{border-right:none;border-bottom:1px solid var(--border)}
   .ypitAfLanding .faq-sidebar{position:relative;top:0}
