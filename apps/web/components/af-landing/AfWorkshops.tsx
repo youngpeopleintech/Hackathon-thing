@@ -39,7 +39,8 @@ const WORKSHOPS: Workshop[] = [
     title: 'A Deep Dive into MCPs: What They Are, What They Unlock, and How to Use Them',
     speaker: 'Andrew Nduati',
     bio: [
-      'Andrew works in Developer Relations at Paystack, one of Africa\'s leading payment infrastructure companies. Andrew\'s team recently shipped the Paystack MCP server, giving AI clients accurate, real-time access to Paystack\'s APIs. He works at the intersection of developer experience and emerging AI tooling.',
+      'Andrew is a Developer Relations engineer at Paystack, one of Africa\'s leading payment infrastructure companies. He works closely with developers and product teams to help bring their ideas to life — most recently shipping the Paystack MCP server, giving AI clients accurate, real-time access to Paystack\'s APIs.',
+      'In his free time, he\'s either hiking or playing some chess.',
     ],
     desc: 'MCPs are one of the most important shifts happening in AI right now, and most people have no idea what they are. Andrew breaks it down using Paystack\'s MCP server as a live, real-world example, showing what MCPs unlock and how to think about building with them.',
     date: 'Wednesday May 6th',
