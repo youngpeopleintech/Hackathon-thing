@@ -24,8 +24,8 @@ const WORKSHOPS: Workshop[] = [
     title: 'AI at work: A PM\'s practical guide',
     speaker: 'Subomi Salami',
     bio: [
-      'Subomi is a Senior AI PM at Microsoft AI, where she works on real products at the intersection of people and intelligent systems.',
-      'She started her career in Product at Softcom, Lagos. She\'s since gone on to companies like Meta and Bumble. Subomi is now based in London and enjoys sharing her journey with tech professionals especially those navigating product, AI, or career transitions in tech.',
+      'Subomi is a Senior Product Manager at Microsoft, where she works on building innovative AI-driven solutions that enhance user work experiences. She brings a unique blend of strategic thinking, user empathy, and execution to her work.',
+      'Subomi is very passionate about technology, creativity, and helping others break into tech. She enjoys sharing insights on career transitions, product strategy, and AI\'s impact on the future of work.',
     ],
     desc: 'Subomi is a Senior PM at Microsoft AI and she\'s been figuring out, in real time, what it means to manage AI products and use AI to do her job better. In this session, she shares the honest account of that journey, including the tools she uses daily, the skills she\'s building, and how to think about evaluating AI output.',
     date: 'Thursday April 30th',
