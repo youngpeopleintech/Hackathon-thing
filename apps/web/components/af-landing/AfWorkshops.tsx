@@ -67,6 +67,21 @@ const WORKSHOPS: Workshop[] = [
   },
   {
     num: '04',
+    title: 'AI-assisted development: Principles for building in the age of AI',
+    speaker: 'Nkechi',
+    bio: [
+      'Nkechi is a founding Product engineer building trust infrastructure for KYC and Digital ID at Vouchsafe. She\'s a host of Conversations with Technologists, where technologists gather to talk about what they\'re building and learning, and Build Sessions, one-day hackathons where builders take ideas into working products.',
+      'Before tech, she spent her early career as an investment banker covering financial services and fintech companies.',
+    ],
+    desc: 'Before you jump into randomly prompting Claude or Lovable, you need to get your foundation right. This session gives you the framework for using AI to augment your ability to build — covering spec-driven development workflows, patterns for interacting with AI tools, and how to think about your role as a builder in the age of AI.',
+    date: 'Thursday May 14th',
+    format: 'Online · All levels',
+    linkedIn: '#',
+    image: '/images/af/speakers/nkechi.jpg',
+    lumaUrl: '#',
+  },
+  {
+    num: '05',
     title: 'Exploring Agents: How to build them safely — from infrastructure to impact',
     speaker: 'Bola Banjo',
     bio: [
