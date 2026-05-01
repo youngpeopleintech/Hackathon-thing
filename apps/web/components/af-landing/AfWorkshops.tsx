@@ -76,8 +76,8 @@ const WORKSHOPS: Workshop[] = [
     desc: 'Before you jump into randomly prompting Claude or Lovable, you need to get your foundation right. This session gives you the framework for using AI to augment your ability to build — covering spec-driven development workflows, patterns for interacting with AI tools, and how to think about your role as a builder in the age of AI.',
     date: 'Thursday May 14th',
     format: 'Online · All levels',
-    linkedIn: '#',
-    image: '/images/af/speakers/nkechi.jpg',
+    linkedIn: 'https://www.linkedin.com/in/nkechianyanwu/',
+    image: '/images/af/speakers/nkechi-anyanwu.jpg',
     lumaUrl: '#',
   },
   {
