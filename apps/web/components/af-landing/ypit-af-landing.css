@@ -408,7 +408,7 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 }
 
 .ypitAfLanding .workshop-grid-v2{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:56px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px;
 }
 .ypitAfLanding .workshop-card-v2{
   background:#f7f4ef;border:1px solid var(--border);
@@ -697,11 +697,15 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   .ypitAfLanding #footer-cta{padding:80px 24px}
   .ypitAfLanding footer{padding:32px 24px}
   .ypitAfLanding .about-grid, .ypitAfLanding .tracks-intro, .ypitAfLanding .conf-grid, .ypitAfLanding .faq-grid{grid-template-columns:1fr;gap:40px}
-  .ypitAfLanding .prog-grid, .ypitAfLanding .tracks-grid, .ypitAfLanding .workshop-grid, .ypitAfLanding .workshop-grid-v2, .ypitAfLanding .paths-grid, .ypitAfLanding .path-info-grid{grid-template-columns:1fr}
+  .ypitAfLanding .prog-grid, .ypitAfLanding .tracks-grid, .ypitAfLanding .workshop-grid, .ypitAfLanding .paths-grid, .ypitAfLanding .path-info-grid{grid-template-columns:1fr}
+  .ypitAfLanding .workshop-grid-v2{grid-template-columns:repeat(2,1fr)}
   .ypitAfLanding .schedule-row{grid-template-columns:1fr}
   .ypitAfLanding .schedule-date{border-right:none;border-bottom:1px solid var(--border)}
   .ypitAfLanding .faq-sidebar{position:relative;top:0}
   .ypitAfLanding .partner-cta{flex-direction:column}
   .ypitAfLanding .track-card{overflow:hidden}
   .ypitAfLanding .track-bg-num{font-size:52px;top:10px;right:14px}
+}
+@media(max-width:600px){
+  .ypitAfLanding .workshop-grid-v2{grid-template-columns:1fr}
 }
