@@ -18,7 +18,7 @@ export function AfSiteFooter() {
         <Link href="/">Home</Link>
         <a href="#about">About</a>
         <a href="#programme">Event</a>
-        <Link href="/register">Register</Link>
+        <a href="https://luma.com/1zien2bm" target="_blank" rel="noopener noreferrer">Register</a>
         <a href="mailto:partnerships@youngpeopleintech.com" className="email">
           partnerships@youngpeopleintech.com
         </a>

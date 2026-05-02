@@ -50,9 +50,9 @@ export function AfHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.95, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <Link href="/register" className="btn-primary">
+          <a href="https://luma.com/1zien2bm" target="_blank" rel="noopener noreferrer" className="btn-primary">
             Register for Free
-          </Link>
+          </a>
           <a href="#conference" className="btn-outline">
             Get Conference Tickets
           </a>

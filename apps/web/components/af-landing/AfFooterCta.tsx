@@ -15,9 +15,9 @@ export function AfFooterCta() {
         <p>The Artificial Future. Lagos. May 30 – June 13, 2026.</p>
       </Reveal>
       <Reveal delay={0.2} className="footer-cta-btns">
-        <Link href="/register" className="btn-primary">
+        <a href="https://luma.com/1zien2bm" target="_blank" rel="noopener noreferrer" className="btn-primary">
           Register for Free
-        </Link>
+        </a>
         <a href="#conference" className="btn-outline">
           Get Conference Tickets
         </a>

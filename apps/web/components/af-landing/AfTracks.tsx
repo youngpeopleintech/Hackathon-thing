@@ -67,7 +67,7 @@ export function AfTracks() {
           })}
         </div>
         <Reveal delay={0.2} className="section-cta">
-          <Link href="/register" className="btn-primary">Register for the Hackathon →</Link>
+          <a href="https://luma.com/1zien2bm" target="_blank" rel="noopener noreferrer" className="btn-primary">Register for the Hackathon →</a>
         </Reveal>
       </div>
     </section>
