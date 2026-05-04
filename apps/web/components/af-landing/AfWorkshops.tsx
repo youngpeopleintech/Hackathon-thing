@@ -54,9 +54,8 @@ const WORKSHOPS: Workshop[] = [
     title: 'The DIY Stack: Personalized Software in the Age of AI',
     speaker: 'Jeremiah Nnadi',
     bio: [
-      'Jeremiah is the Product Lead at Octav, an AI & Data company modernizing how creative rights and royalties flow through the music industry.',
-      'London-based, Jeremiah started out as a software engineer and moved into technical product roles at companies across multiple African countries, the US, and the UK, working in fintech, e-commerce, and venture capital. He sits comfortably in the middle ground between product, engineering, design, and data, and is borderline obsessed with technical tooling and creative problem-solving.',
-      'Jeremiah is a multidisciplinary builder at heart, and loves exploring new ideas, trying out new tools, and especially talking about and teaching what he learns.',
+      'Jeremiah is the Product Lead at Octav, an AI & Data company modernizing how creative rights and royalties flow through the music industry. London-based, he started out as a software engineer and has since worked across fintech, e-commerce, and venture capital in Africa, the US, and the UK.',
+      'A multidisciplinary builder at heart, he lives at the intersection of product, engineering, and design, and loves exploring new tools and teaching what he learns.',
     ],
     desc: 'In this session, I\'ll show how you can now design, prototype, test, integrate, and ship your own tools. The space is so matured that you can create software built for your goals, running on a stack you actually own and operate. Using a personal finance app I built (Kolo) as a case study, we\'ll walk through each stage of the build: turning an idea into a designed interface, a working prototype, tested code, real data integrations, and a maintained product (with AI at most steps). The goal isn\'t to teach you to build a finance app. It\'s to show what\'s possible when you stop outsourcing software to other people. You don\'t need a team, a big budget, or a traditional engineering background. All that\'s really essential is a problem you care about, a careful process, and a willingness to actually interact with technical workflows.',
     date: 'Thursday May 7th',
