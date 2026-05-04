@@ -62,7 +62,7 @@ export function AfJoinPaths() {
                 <span className="step-num">04</span>Subscribe to the Luma calendar to receive updates
               </li>
             </ul>
-            <a href="https://luma.com/YPITAFWORKSHOPS" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ textAlign: 'center', display: 'block' }}>
+            <a href="https://luma.com/YPITAFCALENDAR" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ textAlign: 'center', display: 'block' }}>
               Register for Workshops →
             </a>
           </Reveal>
