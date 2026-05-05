@@ -35,9 +35,9 @@ export function AfJoinPaths() {
                 <span className="step-num">04</span>Show up May 30 with your laptop and curiosity
               </li>
             </ul>
-            <Link href="/register" className="btn-primary" style={{ textAlign: 'center' }}>
+            <a href="https://luma.com/1zien2bm" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ textAlign: 'center', display: 'block' }}>
               Register for the Hackathon →
-            </Link>
+            </a>
           </Reveal>
           <Reveal delay={0.2} className="path-card">
             <div className="path-bg-num">2</div>
@@ -57,7 +57,7 @@ export function AfJoinPaths() {
                 <span className="step-num">04</span>Subscribe to the Luma calendar to receive updates
               </li>
             </ul>
-            <a href="https://luma.com/YPITAFWORKSHOPS" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ textAlign: 'center', display: 'block' }}>
+            <a href="https://luma.com/YPITAFCALENDAR" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ textAlign: 'center', display: 'block' }}>
               Register for Workshops →
             </a>
           </Reveal>
