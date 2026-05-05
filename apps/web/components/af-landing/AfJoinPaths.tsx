@@ -1,14 +1,9 @@
 import Link from 'next/link';
 import { Reveal } from './Reveal';
 
-function conferenceTicketHref() {
-  const url = process.env.NEXT_PUBLIC_CONFERENCE_TICKET_URL;
-  return url && url.length > 0 ? url : '#conference';
-}
+const CONFERENCE_TICKET_URL = 'https://eventornigeria.com/explore/ypit-af';
 
 export function AfJoinPaths() {
-  const ticketHref = conferenceTicketHref();
-
   return (
     <section id="join" className="section section-cream">
       <div className="section-inner">
@@ -84,7 +79,7 @@ export function AfJoinPaths() {
                 <span className="step-num">04</span>Show up at The Civic Centre, Lagos Island
               </li>
             </ul>
-            <a href={ticketHref} className="btn-outline" style={{ textAlign: 'center', display: 'block' }}>
+            <a href={CONFERENCE_TICKET_URL} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ textAlign: 'center', display: 'block' }}>
               Get Conference Tickets →
             </a>
           </Reveal>

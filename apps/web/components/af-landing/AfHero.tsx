@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const lineVariants = {
@@ -53,7 +52,7 @@ export function AfHero() {
           <a href="https://luma.com/1zien2bm" target="_blank" rel="noopener noreferrer" className="btn-primary">
             Register for Free
           </a>
-          <a href="#conference" className="btn-outline">
+          <a href="https://eventornigeria.com/explore/ypit-af" target="_blank" rel="noopener noreferrer" className="btn-outline">
             Get Conference Tickets
           </a>
         </motion.div>

@@ -1,28 +1,10 @@
 'use client';
 
-import { useState } from 'react';
 import { Reveal } from './Reveal';
-import { submitWaitlist } from '@/lib/api';
+
+const CONFERENCE_TICKET_URL = 'https://eventornigeria.com/explore/ypit-af';
 
 export function AfConference() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [errorMsg, setErrorMsg] = useState('');
-
-  const handleWaitlist = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    setStatus('loading');
-    try {
-      await submitWaitlist(email);
-      setStatus('success');
-      setEmail('');
-    } catch (err) {
-      setErrorMsg(err instanceof Error ? err.message : 'Something went wrong.');
-      setStatus('error');
-    }
-  };
-
   return (
     <section id="conference" className="section section-cream">
       <div className="section-inner">
@@ -48,31 +30,15 @@ export function AfConference() {
               Open to anyone. You do not need to have participated in the hackathon to attend. Tickets are paid and
               capacity is limited.
             </p>
-
-            {status === 'success' ? (
-              <div className="conf-waitlist-success">
-                <span className="conf-waitlist-success-icon">✓</span>
-                You&apos;re on the list. We&apos;ll let you know when tickets go on sale.
-              </div>
-            ) : (
-              <form className="conf-waitlist-form" onSubmit={handleWaitlist}>
-                <p className="conf-waitlist-label">Tickets go on sale soon. Join the waitlist:</p>
-                <div className="conf-waitlist-row">
-                  <input
-                    type="email"
-                    className="conf-waitlist-input"
-                    placeholder="your.email@example.com"
-                    value={email}
-                    onChange={(e) => { setEmail(e.target.value); setStatus('idle'); }}
-                    required
-                  />
-                  <button type="submit" className="conf-waitlist-btn" disabled={status === 'loading'}>
-                    {status === 'loading' ? 'Joining…' : 'Join Waitlist →'}
-                  </button>
-                </div>
-                {status === 'error' && <p className="conf-waitlist-error">{errorMsg}</p>}
-              </form>
-            )}
+            <a
+              href={CONFERENCE_TICKET_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="conf-waitlist-btn"
+              style={{ display: 'inline-flex', textDecoration: 'none' }}
+            >
+              Get Conference Tickets →
+            </a>
           </Reveal>
           <Reveal delay={0.25} className="conf-card">
             <div className="conf-card-header">

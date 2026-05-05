@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { Reveal } from './Reveal';
 
 export function AfFooterCta() {
@@ -18,7 +17,7 @@ export function AfFooterCta() {
         <a href="https://luma.com/1zien2bm" target="_blank" rel="noopener noreferrer" className="btn-primary">
           Register for Free
         </a>
-        <a href="#conference" className="btn-outline">
+        <a href="https://eventornigeria.com/explore/ypit-af" target="_blank" rel="noopener noreferrer" className="btn-outline">
           Get Conference Tickets
         </a>
       </Reveal>
