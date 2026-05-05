@@ -47,7 +47,7 @@ export function AfProgramme() {
               A full day of talks, panels, and conversations with leading voices in AI from across Africa and beyond.
               Open to anyone — no hackathon participation required.
             </p>
-            <a href="#conference" className="prog-link">
+            <a href="https://eventornigeria.com/explore/ypit-af" target="_blank" rel="noopener noreferrer" className="prog-link">
               Get Tickets →
             </a>
           </Reveal>

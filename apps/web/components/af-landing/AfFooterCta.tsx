@@ -18,7 +18,7 @@ export function AfFooterCta() {
         <Link href="/register" className="btn-primary">
           Register for Free
         </Link>
-        <a href="#conference" className="btn-outline">
+        <a href="https://eventornigeria.com/explore/ypit-af" target="_blank" rel="noopener noreferrer" className="btn-outline">
           Get Conference Tickets
         </a>
       </Reveal>
