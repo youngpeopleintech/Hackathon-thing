@@ -77,7 +77,7 @@ const WORKSHOPS: Workshop[] = [
     format: 'Online · All levels',
     linkedIn: 'https://www.linkedin.com/in/nkechianyanwu/',
     image: '/images/af/speakers/nkechi-anyanwu.jpg',
-    lumaUrl: '#',
+    lumaUrl: 'https://luma.com/g3959aq9',
   },
   {
     num: '05',
