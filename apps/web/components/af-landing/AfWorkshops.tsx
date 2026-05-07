@@ -91,7 +91,7 @@ const WORKSHOPS: Workshop[] = [
     format: 'Online · All levels',
     linkedIn: 'https://www.linkedin.com/in/bolaabanjo/',
     image: '/images/af/speakers/bola-banjo.jpg',
-    photoPosition: 'center 10%',
+    photoPosition: 'center 30%',
     lumaUrl: '#',
   },
 ];
