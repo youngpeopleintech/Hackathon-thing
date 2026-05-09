@@ -1,9 +1,20 @@
 import Image from 'next/image';
 import { Reveal } from './Reveal';
 
-const PARTNERS = [
+interface Partner {
+  name: string;
+  src: string;
+  imgStyle?: React.CSSProperties;
+  imgClassName?: string;
+}
+
+const PARTNERS: Partner[] = [
   { name: 'Paystack', src: '/images/af/partners/paystack.png' },
-  { name: 'African Fintech Foundry', src: '/images/af/partners/african-fintech-foundry.png' },
+  {
+    name: 'African Fintech Foundry',
+    src: '/images/af/partners/african-fintech-foundry.png',
+    imgStyle: { height: '72px', maxWidth: '180px' },
+  },
   { name: 'Oracle Academy', src: '/images/af/partners/oracle-academy.png' },
   { name: 'Enyata Community', src: '/images/af/partners/enyata.png' },
   { name: 'TechCabal', src: '/images/af/partners/techcabal.png' },
@@ -11,9 +22,18 @@ const PARTNERS = [
   { name: 'PyData', src: '/images/af/partners/pydata.png' },
   { name: 'CafeOne', src: '/images/af/partners/cafeone.svg' },
   { name: 'Remostart', src: '/images/af/partners/remostart.svg' },
-  { name: 'Tonative', src: '/images/af/partners/tonative.png' },
+  {
+    name: 'Tonative',
+    src: '/images/af/partners/tonative.png',
+    imgStyle: { height: '100px', maxWidth: '220px' },
+  },
   { name: 'TRI AI', src: '/images/af/partners/tri-ai.png' },
-  { name: 'iAfrica', src: '/images/af/partners/iafrica.png' },
+  {
+    name: 'iAfrica',
+    src: '/images/af/partners/iafrica.png',
+    imgStyle: { filter: 'drop-shadow(0 0 3px rgba(0,0,0,0.3))' },
+    imgClassName: 'logo-no-blend',
+  },
   { name: 'NexoAfrica', src: '/images/af/partners/nexo.png' },
 ];
 
@@ -45,8 +65,15 @@ export function AfPartners() {
                   src={p.src}
                   alt={p.name}
                   width={160}
-                  height={48}
-                  style={{ objectFit: 'contain', width: 'auto', height: '40px', maxWidth: '140px' }}
+                  height={80}
+                  className={p.imgClassName}
+                  style={{
+                    objectFit: 'contain',
+                    width: 'auto',
+                    height: '40px',
+                    maxWidth: '140px',
+                    ...p.imgStyle,
+                  }}
                 />
               </div>
             ))}

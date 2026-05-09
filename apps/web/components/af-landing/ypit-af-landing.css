@@ -646,11 +646,14 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 .ypitAfLanding .partner-marquee-track{
   display:flex;align-items:center;width:max-content;
   animation:marquee 40s linear infinite;
+  background:#faf9f7;
 }
 .ypitAfLanding .partner-marquee-item{
   display:flex;align-items:center;justify-content:center;
-  padding:0 52px;height:56px;flex-shrink:0;
+  padding:0 52px;height:108px;flex-shrink:0;
 }
+.ypitAfLanding .partner-marquee-item img{mix-blend-mode:multiply}
+.ypitAfLanding .partner-marquee-item img.logo-no-blend{mix-blend-mode:normal}
 .ypitAfLanding .partner-cta{
   display:flex;align-items:center;justify-content:space-between;gap:40px;
   padding:40px;border:1px solid var(--border);background:#ffffff;flex-wrap:wrap;
