@@ -635,19 +635,25 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 .ypitAfLanding .faq-a-inner{padding:0 26px 22px;font-size:14px;color:var(--muted);font-weight:300;line-height:1.76}
 
 /* PARTNERS */
+.ypitAfLanding #partners{background:#faf9f7}
 .ypitAfLanding .partner-marquee-wrap{
   overflow:hidden;margin-top:56px;margin-bottom:2px;
-  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
-  padding:24px 0;background:#ffffff;
+  padding:28px 0;background:transparent;
+  /* Fade out left and right edges */
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);
+  mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);
 }
 .ypitAfLanding .partner-marquee-track{
   display:flex;align-items:center;width:max-content;
-  animation:marquee 30s linear infinite;
+  animation:marquee 40s linear infinite;
+  background:#faf9f7;
 }
 .ypitAfLanding .partner-marquee-item{
   display:flex;align-items:center;justify-content:center;
-  padding:0 48px;border-right:1px solid var(--border);height:56px;
+  padding:0 52px;height:108px;flex-shrink:0;
 }
+.ypitAfLanding .partner-marquee-item img{mix-blend-mode:multiply}
+.ypitAfLanding .partner-marquee-item img.logo-no-blend{mix-blend-mode:normal}
 .ypitAfLanding .partner-cta{
   display:flex;align-items:center;justify-content:space-between;gap:40px;
   padding:40px;border:1px solid var(--border);background:#ffffff;flex-wrap:wrap;
