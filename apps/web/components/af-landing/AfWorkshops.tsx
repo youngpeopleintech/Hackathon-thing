@@ -93,7 +93,7 @@ const WORKSHOPS: Workshop[] = [
     linkedIn: 'https://www.linkedin.com/in/bolaabanjo/',
     image: '/images/af/speakers/bola-banjo.jpg',
     photoPosition: 'center 30%',
-    lumaUrl: '#',
+    lumaUrl: 'https://luma.com/bv5hhcrp',
   },
   {
     num: '06',
