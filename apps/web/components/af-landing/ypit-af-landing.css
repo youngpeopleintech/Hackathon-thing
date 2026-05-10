@@ -635,10 +635,10 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 .ypitAfLanding .faq-a-inner{padding:0 26px 22px;font-size:14px;color:var(--muted);font-weight:300;line-height:1.76}
 
 /* PARTNERS */
+.ypitAfLanding #partners{background:#faf9f7}
 .ypitAfLanding .partner-marquee-wrap{
   overflow:hidden;margin-top:56px;margin-bottom:2px;
-  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
-  padding:28px 0;background:#faf9f7;
+  padding:28px 0;background:transparent;
   /* Fade out left and right edges */
   -webkit-mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);
   mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);
