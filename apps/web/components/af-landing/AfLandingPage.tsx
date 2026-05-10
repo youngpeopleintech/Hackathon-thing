@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import './ypit-af-landing.css';
 import { AfAbout } from './AfAbout';
 import { AfConference } from './AfConference';
@@ -7,6 +8,7 @@ import { AfFooterCta } from './AfFooterCta';
 import { AfFaq } from './AfFaq';
 import { AfHero } from './AfHero';
 import { AfJoinPaths } from './AfJoinPaths';
+import { AfManifestoOverlay } from './AfManifestoOverlay';
 import { AfMarquee } from './AfMarquee';
 import { AfNavbar } from './AfNavbar';
 import { AfPartners } from './AfPartners';
@@ -18,12 +20,15 @@ import { AfTracks } from './AfTracks';
 import { AfWorkshops } from './AfWorkshops';
 
 export function AfLandingPage() {
+  const [isManifestoOpen, setIsManifestoOpen] = useState(false);
+
   return (
     <div className="ypitAfLanding">
+      <AfManifestoOverlay isOpen={isManifestoOpen} onClose={() => setIsManifestoOpen(false)} />
       <AfNavbar />
       <AfHero />
       <AfMarquee />
-      <AfAbout />
+      <AfAbout onOpenManifesto={() => setIsManifestoOpen(true)} />
       <AfProgramme />
       <AfWorkshops />
       <AfTracks />

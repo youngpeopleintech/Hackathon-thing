@@ -1,13 +1,17 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 interface Props {
   isOpen: boolean;
   onClose: () => void;
 }
 
+const FADE_SIZE = 80; // px of fade at each edge
+
 export function AfManifestoOverlay({ isOpen, onClose }: Props) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
   // Close on Escape
   useEffect(() => {
     if (!isOpen) return;
@@ -22,6 +26,27 @@ export function AfManifestoOverlay({ isOpen, onClose }: Props) {
     return () => { document.body.style.overflow = ''; };
   }, [isOpen]);
 
+  // Scroll-driven edge fades via mask-image
+  const updateMask = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const { scrollTop, scrollHeight, clientHeight } = el;
+    const atTop = scrollTop < 2;
+    const atBottom = scrollTop + clientHeight >= scrollHeight - 2;
+    const topStop = atTop ? '0%' : `${FADE_SIZE}px`;
+    const bottomStop = atBottom ? '100%' : `calc(100% - ${FADE_SIZE}px)`;
+    el.style.maskImage = `linear-gradient(to bottom, transparent 0%, black ${topStop}, black ${bottomStop}, transparent 100%)`;
+    el.style.webkitMaskImage = el.style.maskImage;
+  }, []);
+
+  // Reset scroll position and mask when overlay opens
+  useEffect(() => {
+    if (isOpen) {
+      const el = scrollRef.current;
+      if (el) { el.scrollTop = 0; updateMask(); }
+    }
+  }, [isOpen, updateMask]);
+
   return (
     <div className={`manifesto-overlay${isOpen ? ' is-open' : ''}`} aria-modal role="dialog" aria-label="The Artificial Future Manifesto">
 
@@ -33,7 +58,7 @@ export function AfManifestoOverlay({ isOpen, onClose }: Props) {
         </svg>
       </button>
 
-      <div className="manifesto-scroll">
+      <div className="manifesto-scroll" ref={scrollRef} onScroll={updateMask}>
         <div className="manifesto-inner">
 
           {/* Header */}

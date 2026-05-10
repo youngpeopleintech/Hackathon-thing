@@ -1,9 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { AfManifestoOverlay } from './AfManifestoOverlay';
 
 const lineVariants = {
   hidden: { opacity: 0, y: 36 },
@@ -15,11 +13,7 @@ const lineVariants = {
 };
 
 export function AfHero() {
-  const [isManifestoOpen, setIsManifestoOpen] = useState(false);
-
   return (
-    <>
-    <AfManifestoOverlay isOpen={isManifestoOpen} onClose={() => setIsManifestoOpen(false)} />
     <section id="hero">
       <div className="hero-bg-image" aria-hidden />
       <div className="scroll-hint">
@@ -62,16 +56,6 @@ export function AfHero() {
             Get Conference Tickets
           </a>
         </motion.div>
-        <motion.button
-          className="manifesto-pill"
-          onClick={() => setIsManifestoOpen(true)}
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.05, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-        >
-          <span className="manifesto-pill-dot" />
-          Read the Manifesto ↗
-        </motion.button>
         <motion.div
           className="hero-chips"
           initial={{ opacity: 0, y: 28 }}
@@ -105,6 +89,5 @@ export function AfHero() {
         </motion.a>
       </div>
     </section>
-    </>
   );
 }
