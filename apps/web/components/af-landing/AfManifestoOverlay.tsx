@@ -77,7 +77,7 @@ export function AfManifestoOverlay({ isOpen, onClose }: Props) {
               <p>Four years later, we're watching another moment unfold. AI is here, and once again we see the same pattern: interested people, not enough places for them to go. People who want to learn but don't know where to start. People who've started but don't know what to build. People already building but without the support to take it further.</p>
               <p>Most of the tools being built right now weren't built with Africa in mind. LLMs that don't speak Hausa or Swahili with any fluency. Financial AI untrained on informal economy data. Voice interfaces that don't recognise our accents. The companies deciding what problems to solve, what data to train on, and what use cases to prioritise are not in Lagos, Nairobi, or Accra.</p>
               <p>The next few years will determine whether AI ends up useful to a trader in Balogun Market, a farmer in Kano, or a student in Enugu. Whether African voices shape this technology, or whether we receive a version designed for someone else.</p>
-              <p className="manifesto-pull"><span className="manifesto-highlight">Africa is not late to AI.</span> The question isn't whether African builders will participate. It's whether the environment exists to help them do it well.</p>
+              <p className="manifesto-pull">Africa is not late to AI. The question isn't whether African builders will participate. It's whether the environment exists to help them do it well.</p>
               <p><span className="manifesto-highlight">The Artificial Future is our answer to that question.</span></p>
             </div>
           </div>
@@ -98,7 +98,7 @@ export function AfManifestoOverlay({ isOpen, onClose }: Props) {
             <div className="manifesto-section-num">03</div>
             <h2 className="manifesto-heading">What We're Building</h2>
             <div className="manifesto-body">
-              <p className="manifesto-pull"><span className="manifesto-highlight">The Artificial Future is a pathway from curiosity to learning, to building, to launching.</span></p>
+              <p className="manifesto-pull">The Artificial Future is a pathway from curiosity to learning, to building, to launching.</p>
               <p>The Workshop Series runs in the weeks before the hackathon: virtual sessions led by practitioners actively building with AI, sharing honest accounts of what the work actually looks like from inside.</p>
               <p>The Hackathon brings together 250+ builders across 50 teams over two weekends in Lagos. Challenge areas are economic access, local language and culture, education, and healthcare. Non-technical tracks are included by design, because not every valuable contribution to a product is written in code.</p>
               <p>The Conference convenes the ecosystem on June 13 at The Civic Centre, Lagos, with up to 1,000 founders, investors, policymakers, and builders in one room. Demo Day is where the best hackathon projects present to the people who can actually do something with them.</p>
@@ -122,7 +122,7 @@ export function AfManifestoOverlay({ isOpen, onClose }: Props) {
             <h2 className="manifesto-heading">What We're Reaching For</h2>
             <div className="manifesto-body">
               <p>For every person who comes through AF, we want the same three things: you learned something you didn't know before, you built something you're proud of, and you met people you want to keep building with. <span className="manifesto-highlight">That's the floor, but the ceiling is bigger.</span></p>
-              <p><span className="manifesto-highlight">Africa has builders.</span> What it doesn't have is a reliable way to find them, develop them, and connect them to the capital and networks they need to build at scale. The Artificial Future is designed to show that there's an ecosystem to be built here. To start the flywheel of talent, network, capital, and scale that a thriving, African AI ecosystem needs. The workshops, the hackathon, the conference, the Launchpad are how we get there.</p>
+              <p>Africa has builders. What it doesn't have is a reliable way to find them, develop them, and connect them to the capital and networks they need to build at scale. The Artificial Future is designed to show that there's an ecosystem to be built here. To start the flywheel of talent, network, capital, and scale that a thriving, African AI ecosystem needs. The workshops, the hackathon, the conference, the Launchpad are how we get there.</p>
             </div>
           </div>
 

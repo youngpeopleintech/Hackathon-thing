@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './ypit-af-landing.css';
 import { AfAbout } from './AfAbout';
 import { AfConference } from './AfConference';
@@ -21,6 +21,20 @@ import { AfWorkshops } from './AfWorkshops';
 
 export function AfLandingPage() {
   const [isManifestoOpen, setIsManifestoOpen] = useState(false);
+
+  // Open on direct link (e.g. theartificialfuture.com/#manifesto)
+  useEffect(() => {
+    if (window.location.hash === '#manifesto') setIsManifestoOpen(true);
+  }, []);
+
+  // Keep URL in sync with overlay state
+  useEffect(() => {
+    if (isManifestoOpen) {
+      history.pushState(null, '', '#manifesto');
+    } else if (window.location.hash === '#manifesto') {
+      history.pushState(null, '', window.location.pathname);
+    }
+  }, [isManifestoOpen]);
 
   return (
     <div className="ypitAfLanding">
