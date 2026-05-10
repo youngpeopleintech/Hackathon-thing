@@ -100,8 +100,8 @@ const WORKSHOPS: Workshop[] = [
     title: 'Bridging the Data Skills Gap for African Languages',
     speaker: 'Tonative Data Academy',
     bio: [
-      'The Tonative Data Academy is a community-driven training program on linguistic data curation for African languages. Through practical, hands-on training, the Academy equips language speakers with the tools and skills to document, translate, and validate language content in formats that feed directly into AI model training.',
-      'Tonative is building infrastructure for African language data — driven by the belief that the people who speak these languages are best placed to shape how they are represented in AI.',
+      'The Tonative Data Academy is a community-driven training program on linguistic data curation for African languages, equipping language speakers with the skills to contribute directly to AI model training.',
+      'Tonative builds infrastructure for African language data — on the belief that the people who speak these languages are best placed to shape how they appear in AI.',
     ],
     desc: 'African languages are underrepresented in AI because the training data simply doesn\'t exist at scale yet. This workshop changes that, starting with you. Led by tutors from the Tonative Data Academy, you\'ll learn how the data gap came to be, what it means for AI systems in African contexts, and how to personally contribute. You\'ll leave with practical skills to curate your own language dataset and publish it for use in AI model training and evaluation. No prior technical background needed — if you speak an African language or care about how it\'s represented in AI, this session is for you.',
     date: 'Sunday May 25th',
