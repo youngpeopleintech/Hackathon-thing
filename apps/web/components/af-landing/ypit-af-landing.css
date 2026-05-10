@@ -764,8 +764,6 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 .manifesto-pull{
   font-size:19px!important;font-weight:400!important;
   color:rgba(255,255,255,0.85)!important;
-  border-left:2px solid #FF4600;padding-left:20px;
-  margin-left:-22px!important;
 }
 
 /* Orange highlight */
@@ -827,7 +825,6 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 @media(max-width:640px){
   .manifesto-scroll{padding:80px 24px 60px}
   .manifesto-section{grid-template-columns:40px 1fr;gap:0 16px}
-  .manifesto-pull{margin-left:-16px!important;padding-left:14px}
   .manifesto-close{top:20px;right:20px}
   .manifesto-footer{align-items:stretch}
   .manifesto-footer .btn-primary{text-align:center}
