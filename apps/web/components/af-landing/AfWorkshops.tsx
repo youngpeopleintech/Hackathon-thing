@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, CSSProperties } from 'react';
 import Image from 'next/image';
 import { Reveal } from './Reveal';
 
@@ -15,6 +15,7 @@ interface Workshop {
   linkedIn: string;
   image: string;
   photoPosition?: string;
+  photoStyle?: React.CSSProperties;
   lumaUrl: string;
 }
 
@@ -94,6 +95,22 @@ const WORKSHOPS: Workshop[] = [
     photoPosition: 'center 30%',
     lumaUrl: '#',
   },
+  {
+    num: '06',
+    title: 'Bridging the Data Skills Gap for African Languages',
+    speaker: 'Tonative Data Academy',
+    bio: [
+      'The Tonative Data Academy is a community-driven training program on linguistic data curation for African languages. Through practical, hands-on training, the Academy equips language speakers with the tools and skills to document, translate, and validate language content in formats that feed directly into AI model training.',
+      'Tonative is building infrastructure for African language data — driven by the belief that the people who speak these languages are best placed to shape how they are represented in AI.',
+    ],
+    desc: 'African languages are underrepresented in AI because the training data simply doesn\'t exist at scale yet. This workshop changes that, starting with you. Led by tutors from the Tonative Data Academy, you\'ll learn how the data gap came to be, what it means for AI systems in African contexts, and how to personally contribute. You\'ll leave with practical skills to curate your own language dataset and publish it for use in AI model training and evaluation. No prior technical background needed — if you speak an African language or care about how it\'s represented in AI, this session is for you.',
+    date: 'Sunday May 25th',
+    format: 'Online · All levels',
+    linkedIn: 'https://www.tonative.org/',
+    image: '/images/af/speakers/tonative-data-academy.png',
+    photoStyle: { objectFit: 'contain', background: '#faf9f7', padding: '32px' },
+    lumaUrl: '#',
+  },
 ];
 
 function isHoverDevice(): boolean {
@@ -163,7 +180,7 @@ function WorkshopCard({ ws, index }: WorkshopCardProps) {
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           className="wc-photo"
-          style={{ objectFit: 'cover', objectPosition: ws.photoPosition ?? 'center 20%' }}
+          style={ws.photoStyle ?? { objectFit: 'cover', objectPosition: ws.photoPosition ?? 'center 20%' }}
         />
         <div className="wc-bio-overlay">
           {ws.bio.map((para, i) => (
@@ -176,7 +193,7 @@ function WorkshopCard({ ws, index }: WorkshopCardProps) {
             className="wc-linkedin-btn"
             onClick={e => e.stopPropagation()}
           >
-            LinkedIn →
+            {ws.linkedIn.includes('linkedin.com') ? 'LinkedIn →' : 'Website →'}
           </a>
         </div>
       </div>
