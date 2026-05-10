@@ -791,15 +791,25 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 
 /* About section manifesto button */
 .ypitAfLanding .about-manifesto-btn{
-  display:inline-flex;align-items:center;gap:8px;
-  background:none;border:1px solid var(--border);border-radius:100px;
-  padding:9px 20px;margin-top:20px;
-  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;
-  color:var(--dark);cursor:pointer;
-  transition:border-color 0.2s,color 0.2s,background 0.2s;
+  display:inline-flex;align-items:center;gap:10px;
+  background:#FF4600;border:none;border-radius:100px;
+  padding:12px 24px;margin-top:24px;
+  font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;
+  color:#fff;cursor:pointer;
+  transition:background 0.2s,transform 0.15s,box-shadow 0.2s;
+  box-shadow:0 4px 20px rgba(255,70,0,0.35);
 }
-.ypitAfLanding .about-manifesto-btn:hover{border-color:var(--coral);color:var(--coral);background:rgba(255,70,0,0.04)}
-.ypitAfLanding .about-manifesto-btn .manifesto-pill-dot{background:#FF4600}
+.ypitAfLanding .about-manifesto-btn:hover{background:#e33d00;transform:translateY(-1px);box-shadow:0 6px 24px rgba(255,70,0,0.45)}
+.ypitAfLanding .about-manifesto-btn:active{transform:translateY(0);box-shadow:0 2px 10px rgba(255,70,0,0.3)}
+.ypitAfLanding .about-manifesto-btn .manifesto-pill-dot{background:#fff;opacity:0.85}
+.ypitAfLanding .about-manifesto-btn.is-pulsing{
+  animation:manifesto-pulse 2.2s cubic-bezier(0.4,0,0.6,1) infinite;
+}
+@keyframes manifesto-pulse{
+  0%,100%{transform:translateY(0);box-shadow:0 4px 20px rgba(255,70,0,0.35)}
+  40%{transform:translateY(-5px);box-shadow:0 10px 32px rgba(255,70,0,0.45)}
+  60%{transform:translateY(-3px);box-shadow:0 8px 28px rgba(255,70,0,0.4)}
+}
 
 /* Hero manifesto pill trigger */
 .manifesto-pill{
