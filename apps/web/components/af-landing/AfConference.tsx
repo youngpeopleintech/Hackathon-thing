@@ -4,6 +4,51 @@ import { Reveal } from './Reveal';
 
 const CONFERENCE_TICKET_URL = 'https://eventornigeria.com/explore/ypit-af';
 
+const AGENDA = [
+  {
+    num: '01',
+    type: 'Panel',
+    typeColor: '#FF4600',
+    title: 'What it actually takes to build AI in Africa',
+    desc: 'Data, infrastructure, applications, and policy — how the verticals work together, or don\'t.',
+  },
+  {
+    num: '02',
+    type: 'Lecture',
+    typeColor: '#1a1714',
+    title: 'From Next Token Prediction to AI Agents',
+    desc: 'A technical journey through the history of AI, the key breakthroughs behind modern language models, and how they evolved into today\'s agentic systems.',
+  },
+  {
+    num: '03',
+    type: 'Fireside Chat',
+    typeColor: '#7E3BED',
+    title: 'The realities of building AI businesses for Africans',
+    desc: 'Local founders building AI-first businesses share what the journey actually looks like.',
+  },
+  {
+    num: '04',
+    type: 'Fireside Chat',
+    typeColor: '#7E3BED',
+    title: 'Investing in Africa\'s AI Future',
+    desc: 'Founders, angels, and institutional investors on funding the ecosystem.',
+  },
+  {
+    num: '05',
+    type: 'Demo Day',
+    typeColor: '#0077C8',
+    title: 'Hackathon Showcase',
+    desc: 'Top teams present to a live audience of investors, corporates, and community. Judges deliberate.',
+  },
+  {
+    num: '06',
+    type: 'Awards',
+    typeColor: '#c9a84c',
+    title: 'Awards Ceremony',
+    desc: 'Prize announcements including named award categories from headline partners.',
+  },
+];
+
 export function AfConference() {
   return (
     <section id="conference" className="section section-cream">
@@ -81,6 +126,25 @@ export function AfConference() {
               </div>
             </div>
           </Reveal>
+        </div>
+
+        {/* Agenda */}
+        <Reveal delay={0.2}>
+          <div className="conf-agenda-label">June 13 · Agenda</div>
+        </Reveal>
+        <div className="conf-agenda">
+          {AGENDA.map((item, i) => (
+            <Reveal key={item.num} delay={0.1 + i * 0.07}>
+              <div className="conf-agenda-row">
+                <span className="conf-agenda-num">{item.num}</span>
+                <div className="conf-agenda-body">
+                  <span className="conf-agenda-type" style={{ color: item.typeColor }}>{item.type}</span>
+                  <h4 className="conf-agenda-title">{item.title}</h4>
+                  <p className="conf-agenda-desc">{item.desc}</p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
