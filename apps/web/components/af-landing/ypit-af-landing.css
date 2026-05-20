@@ -553,6 +553,10 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 .ypitAfLanding .conf-agenda-desc{
   font-size:14px;font-weight:300;color:var(--muted);line-height:1.65;
 }
+.ypitAfLanding .conf-agenda-speaker{
+  font-size:12px;font-weight:600;color:var(--dark);
+  margin-top:10px;letter-spacing:0.01em;
+}
 
 /* Conference waitlist form */
 .ypitAfLanding .conf-waitlist-label{font-size:13px;color:var(--muted);font-weight:500;margin-bottom:12px}
@@ -584,23 +588,76 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;
 }
 
-/* SPEAKERS PLACEHOLDER */
-.ypitAfLanding .speakers-box{
-  margin-top:56px;padding:72px;
-  border:1px dashed var(--border);border-radius:4px;
-  text-align:center;background:#fafaf8;
+/* SPEAKERS */
+.ypitAfLanding .speakers-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
+  margin-top:56px;
 }
-.ypitAfLanding .speakers-box h3{font-family:var(--display);font-size:22px;font-weight:700;color:var(--dark);margin-bottom:14px}
-.ypitAfLanding .speakers-box p{font-size:16px;color:var(--muted);font-weight:300;max-width:480px;margin:0 auto 32px;line-height:1.72}
-.ypitAfLanding .ghost-grid{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:48px}
-.ypitAfLanding .ghost-card{display:flex;flex-direction:column;align-items:center;gap:10px;width:100px}
-.ypitAfLanding .ghost-avatar{width:64px;height:64px;border-radius:50%;background:var(--border);border:1px dashed #d4cfc8;animation:ghostPulse 2.5s ease-in-out infinite}
-.ypitAfLanding .ghost-card:nth-child(2) .ghost-avatar{animation-delay:0.3s}
-.ypitAfLanding .ghost-card:nth-child(3) .ghost-avatar{animation-delay:0.6s}
-.ypitAfLanding .ghost-card:nth-child(4) .ghost-avatar{animation-delay:0.9s}
-.ypitAfLanding .ghost-card:nth-child(5) .ghost-avatar{animation-delay:1.2s}
-.ypitAfLanding .ghost-line{height:7px;background:#ece8e2;border-radius:4px;width:72px}
-.ypitAfLanding .ghost-line.short{width:52px}
+.ypitAfLanding .speaker-card{
+  display:flex;flex-direction:column;
+  background:#fff;border:1px solid var(--border);overflow:hidden;
+}
+.ypitAfLanding .speaker-photo-wrap{
+  position:relative;width:100%;aspect-ratio:1/1;background:#f0ede8;
+  overflow:hidden;flex-shrink:0;
+}
+.ypitAfLanding .speaker-photo{object-fit:cover}
+.ypitAfLanding .speaker-session-badge{
+  position:absolute;bottom:12px;left:12px;
+  background:rgba(10,10,10,0.72);backdrop-filter:blur(6px);
+  color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  padding:5px 10px;border-radius:100px;
+}
+.ypitAfLanding .speaker-body{
+  padding:24px 24px 28px;display:flex;flex-direction:column;flex:1;
+}
+.ypitAfLanding .speaker-name{
+  font-family:var(--display);font-size:18px;font-weight:800;
+  color:var(--dark);margin-bottom:4px;
+}
+.ypitAfLanding .speaker-role{
+  font-size:13px;font-weight:400;color:var(--muted);margin-bottom:14px;
+}
+.ypitAfLanding .speaker-role span{font-weight:600;color:var(--dark)}
+.ypitAfLanding .speaker-session-title{
+  font-family:var(--display);font-size:14px;font-weight:700;color:var(--coral);
+  margin-bottom:14px;line-height:1.35;
+}
+.ypitAfLanding .speaker-bio{flex:1}
+.ypitAfLanding .speaker-bio p{
+  font-size:13px;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:10px;
+}
+.ypitAfLanding .speaker-bio p:last-child{margin-bottom:0}
+.ypitAfLanding .speaker-links{
+  display:flex;gap:16px;margin-top:20px;padding-top:16px;border-top:1px solid var(--border);
+}
+.ypitAfLanding .speaker-link{
+  font-size:12px;font-weight:600;letter-spacing:0.04em;color:var(--dark);
+  text-decoration:none;transition:color 0.2s;
+}
+.ypitAfLanding .speaker-link:hover{color:var(--coral)}
+
+/* Ghost speaker cards */
+.ypitAfLanding .speaker-card--ghost{opacity:0.55}
+.ypitAfLanding .ghost-photo{animation:ghostPulse 2.5s ease-in-out infinite}
+.ypitAfLanding .speaker-card--ghost:nth-child(2) .ghost-photo{animation-delay:0.25s}
+.ypitAfLanding .speaker-card--ghost:nth-child(3) .ghost-photo{animation-delay:0.5s}
+.ypitAfLanding .speaker-card--ghost:nth-child(4) .ghost-photo{animation-delay:0.75s}
+.ypitAfLanding .speaker-card--ghost:nth-child(5) .ghost-photo{animation-delay:1s}
+.ypitAfLanding .ghost-lines{display:flex;flex-direction:column;gap:8px;flex:1}
+.ypitAfLanding .ghost-line-block{
+  height:8px;background:#ece8e2;border-radius:4px;
+  animation:ghostPulse 2.5s ease-in-out infinite;
+}
+.ypitAfLanding .ghost-line-block.wide{width:80%}
+.ypitAfLanding .ghost-line-block.medium{width:55%}
+.ypitAfLanding .ghost-line-block.long{width:90%}
+.ypitAfLanding .ghost-line-block.short{width:40%}
+.ypitAfLanding .speaker-ghost-label{
+  font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+  color:#ccc;margin-top:auto;padding-top:16px;
+}
 @keyframes ghostPulse{0%,100%{opacity:0.4}50%{opacity:0.75}}
 
 /* PATHS */
@@ -737,6 +794,7 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   .ypitAfLanding footer{padding:32px 24px}
   .ypitAfLanding .about-grid, .ypitAfLanding .tracks-intro, .ypitAfLanding .conf-grid, .ypitAfLanding .faq-grid{grid-template-columns:1fr;gap:40px}
   .ypitAfLanding .prog-grid, .ypitAfLanding .tracks-grid, .ypitAfLanding .workshop-grid, .ypitAfLanding .paths-grid, .ypitAfLanding .path-info-grid{grid-template-columns:1fr}
+  .ypitAfLanding .speakers-grid{grid-template-columns:repeat(2,1fr)}
   .ypitAfLanding .workshop-grid-v2{grid-template-columns:repeat(2,1fr)}
   .ypitAfLanding .schedule-row{grid-template-columns:1fr}
   .ypitAfLanding .schedule-date{border-right:none;border-bottom:1px solid var(--border)}

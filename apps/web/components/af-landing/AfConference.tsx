@@ -18,6 +18,7 @@ const AGENDA = [
     typeColor: '#1a1714',
     title: 'From Next Token Prediction to AI Agents',
     desc: 'A technical journey through the history of AI, the key breakthroughs behind modern language models, and how they evolved into today\'s agentic systems.',
+    speaker: 'Ayomide Odunmakinde · Member of Technical Staff, Cohere',
   },
   {
     num: '03',
@@ -141,6 +142,7 @@ export function AfConference() {
                   <span className="conf-agenda-type" style={{ color: item.typeColor }}>{item.type}</span>
                   <h4 className="conf-agenda-title">{item.title}</h4>
                   <p className="conf-agenda-desc">{item.desc}</p>
+                  {item.speaker && <p className="conf-agenda-speaker">{item.speaker}</p>}
                 </div>
               </div>
             </Reveal>
