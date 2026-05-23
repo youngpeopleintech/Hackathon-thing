@@ -167,7 +167,7 @@ function MentorCard({ mentor }: { mentor: Mentor }) {
           className="mentor-link"
           onClick={e => e.stopPropagation()}
         >
-          {mentor.linkedin.includes('linkedin.com') ? 'LinkedIn ↗' : 'Website ↗'}
+          {mentor.linkedin.includes('linkedin.com') ? 'LinkedIn' : 'Website'}
         </a>
       </div>
     </div>

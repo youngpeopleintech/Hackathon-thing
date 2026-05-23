@@ -125,7 +125,7 @@ const WORKSHOPS: Workshop[] = [
     image: '/images/af/speakers/uche-onyeka.jpeg',
     photoPosition: 'center 20%',
     linkedIn: 'https://www.linkedin.com/in/ichieuche/',
-    lumaUrl: '#',
+    lumaUrl: 'https://luma.com/ypitthe-y2lk',
   },
   {
     num: '08',
@@ -141,7 +141,7 @@ const WORKSHOPS: Workshop[] = [
     linkedIn: 'https://www.linkedin.com/company/pydata-lagos/',
     image: '/images/af/speakers/pydata-lagos.jpg',
     photoStyle: { objectFit: 'contain', background: '#faf9f7', padding: '28px' },
-    lumaUrl: '#',
+    lumaUrl: 'https://luma.com/ypitthe-z7ja',
   },
 ];
 
