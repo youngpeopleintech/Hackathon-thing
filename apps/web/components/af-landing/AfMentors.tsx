@@ -145,15 +145,6 @@ function MentorCard({ mentor }: { mentor: Mentor }) {
         )}
         <div className="mentor-bio-overlay">
           <p className="mentor-bio-text">{mentor.bio}</p>
-          <a
-            href={mentor.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mentor-bio-link"
-            onClick={e => e.stopPropagation()}
-          >
-            {mentor.linkedin.includes('linkedin.com') ? 'LinkedIn ↗' : 'Website ↗'}
-          </a>
         </div>
       </div>
 
@@ -169,6 +160,15 @@ function MentorCard({ mentor }: { mentor: Mentor }) {
         <div className="mentor-areas">
           {mentor.areas.map(a => <span key={a} className="mentor-area-tag">{a}</span>)}
         </div>
+        <a
+          href={mentor.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mentor-link"
+          onClick={e => e.stopPropagation()}
+        >
+          {mentor.linkedin.includes('linkedin.com') ? 'LinkedIn ↗' : 'Website ↗'}
+        </a>
       </div>
     </div>
   );
