@@ -124,6 +124,7 @@ const WORKSHOPS: Workshop[] = [
     format: 'Online · All levels',
     image: '/images/af/speakers/uche-onyeka.jpeg',
     photoPosition: 'center 20%',
+    linkedIn: 'https://www.linkedin.com/in/ichieuche/',
     lumaUrl: '#',
   },
   {
@@ -137,7 +138,7 @@ const WORKSHOPS: Workshop[] = [
     desc: 'WER is the standard metric for evaluating speech models — but it regularly misjudges real-world quality when models meet African accents, dialects, code-switching, and noisy environments at scale. Bunmi walks through what breaks down and why, then introduces production-grade evaluation approaches that actually reflect user experience: semantic correctness, error severity weighting, task success, and monitoring for drift over time.',
     date: 'Thursday May 28th',
     format: 'Online · All levels',
-    linkedIn: 'https://pydata.org/lagos/',
+    linkedIn: 'https://www.linkedin.com/company/pydata-lagos/',
     image: '/images/af/speakers/pydata-lagos.jpg',
     photoStyle: { objectFit: 'contain', background: '#faf9f7', padding: '28px' },
     lumaUrl: '#',
