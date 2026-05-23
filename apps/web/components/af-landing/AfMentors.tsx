@@ -31,7 +31,8 @@ const MENTORS: Mentor[] = [
     areas: ['Generative AI', 'Agentic AI', 'RAG Systems'],
     bio: 'Triumph is an experienced AI and Machine Learning Engineer who architects and scales end-to-end AI systems for high-impact clients across Telecommunications, Oil & Gas, and Financial Services. He is particularly recognised for his work in Generative AI, developing sophisticated RAG systems and Agentic AI workflows to solve complex enterprise challenges.',
     linkedin: 'https://triumphurias.com',
-    image: null,
+    image: '/images/af/speakers/triumph-urias.jpg',
+    photoPosition: 'center 20%',
   },
   {
     name: 'Adebusayo Adewunmi',
