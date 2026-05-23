@@ -69,7 +69,8 @@ const MENTORS: Mentor[] = [
     areas: ['AI Research', 'Blockchain & AI', 'Ventures', 'IoT'],
     bio: 'Ubio is an AI and Blockchain researcher with an academic background in Artificial Intelligence and around 5 years of experience across AI, IoT, agriculture, and human behaviour. He has approximately 7 research publications in journals including the American Institute of Physics and IEEE, holds 2 patents under application, and authored "Research Writing for Beginners". He is a Microsoft Winsider Recipient, KECTIL Leadership Fellow, and SingularityNet Ambassador.',
     linkedin: 'https://www.linkedin.com/in/ubio-obu-71927276/',
-    image: null,
+    image: '/images/af/speakers/ubio-obu.jpeg',
+    photoPosition: 'center 15%',
   },
   {
     name: 'Deborah Adewunmi',
