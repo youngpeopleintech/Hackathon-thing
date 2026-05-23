@@ -74,6 +74,16 @@ const MENTORS: Mentor[] = [
     photoPosition: 'center 15%',
   },
   {
+    name: 'Odunola Jenrola',
+    role: 'AI Engineer',
+    company: 'Awarri',
+    areas: ['Audio & Speech AI', 'African Language Models', 'Machine Learning', 'Real-time Inference'],
+    bio: 'Odunola is a Machine Learning Engineer specialising in audio and multimodal AI systems, with a particular focus on African languages. At Awarri in Lagos, he builds fast, low-latency streaming speech models and real-time inference systems for African language applications. Previously, as a Founding ML Researcher at Spitch, he worked on automatic speech recognition and speech-language models. He holds a First Class Honours degree in Electrical and Electronics Engineering from the University of Ibadan.',
+    linkedin: 'https://www.linkedin.com/in/odunolaoluwa-jenrola',
+    image: '/images/af/speakers/odunola-jenrola.jpeg',
+    photoPosition: 'center 15%',
+  },
+  {
     name: 'Deborah Adewunmi',
     role: 'Senior Software Engineer',
     company: 'JPMorgan Chase',
