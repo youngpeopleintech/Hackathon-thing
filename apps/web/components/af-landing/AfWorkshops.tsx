@@ -12,7 +12,7 @@ interface Workshop {
   desc: string;
   date: string;
   format: string;
-  linkedIn: string;
+  linkedIn?: string;
   image: string;
   photoPosition?: string;
   photoStyle?: React.CSSProperties;
@@ -104,11 +104,43 @@ const WORKSHOPS: Workshop[] = [
       'Tonative builds infrastructure for African language data — on the belief that the people who speak these languages are best placed to shape how they appear in AI.',
     ],
     desc: 'African languages are underrepresented in AI because the training data simply doesn\'t exist at scale yet. This workshop changes that, starting with you. Led by tutors from the Tonative Data Academy, you\'ll learn how the data gap came to be, what it means for AI systems in African contexts, and how to personally contribute. You\'ll leave with practical skills to curate your own language dataset and publish it for use in AI model training and evaluation. No prior technical background needed — if you speak an African language or care about how it\'s represented in AI, this session is for you.',
-    date: 'Sunday May 25th',
+    date: 'Tuesday May 26th',
     format: 'Online · All levels',
     linkedIn: 'https://www.tonative.org/',
     image: '/images/af/speakers/tonative-data-academy.png',
     photoStyle: { objectFit: 'contain', background: '#faf9f7', padding: '32px' },
+    lumaUrl: 'https://luma.com/ypitthe-etft',
+  },
+  {
+    num: '07',
+    title: 'Design in the Age of AI: How to Build Things That Look Good and Actually Work',
+    speaker: 'Uche Onyeka',
+    bio: [
+      'Uche is a Senior Product Designer at Monzo, where he works on the Business Banking product — helping small business owners get set up, activated, and growing faster. Before Monzo, he worked at Meta, Pagatech, and Workstation NG.',
+      'He\'s been building side projects with AI tools, enjoys interaction design and delightful interfaces, and writes about design and technology.',
+    ],
+    desc: 'Most people think design is something you either "have an eye for" or you don\'t. That\'s not true anymore. Uche walks through how designers and non-designers alike can use AI to think through problems, generate interfaces, prototype ideas, and ship things that feel intentional — using real examples from his own projects. The goal isn\'t to turn you into a designer. It\'s to show that in 2026, the gap between an idea and a product that looks real is smaller than you think.',
+    date: 'Wednesday May 27th',
+    format: 'Online · All levels',
+    image: '/images/af/speakers/uche-onyeka.jpeg',
+    photoPosition: 'center 20%',
+    linkedIn: 'https://www.linkedin.com/in/ichieuche/',
+    lumaUrl: '#',
+  },
+  {
+    num: '08',
+    title: 'Beyond WER: Nuanced Evaluation Metrics for African Speech Models',
+    speaker: 'Bunmi Akinremi · PyData Lagos',
+    bio: [
+      'Bunmi is an AI Engineer and Adjunct Faculty at Pan Atlantic University, with 3+ years of experience spanning computer vision, NLP, and climate-relevant AI. She has deployed Gen AI speech applications, built AI fact-checking platforms, and applied computer vision to satellite imagery for precision farming — across Nigeria and internationally.',
+      'She is a two-time organiser of the Deep Learning Indaba conference, and is recognised as one of Africa\'s pioneering ML engineers.',
+    ],
+    desc: 'WER is the standard metric for evaluating speech models — but it regularly misjudges real-world quality when models meet African accents, dialects, code-switching, and noisy environments at scale. Bunmi walks through what breaks down and why, then introduces production-grade evaluation approaches that actually reflect user experience: semantic correctness, error severity weighting, task success, and monitoring for drift over time.',
+    date: 'Thursday May 28th',
+    format: 'Online · Technical',
+    linkedIn: 'https://www.linkedin.com/company/pydata-lagos/',
+    image: '/images/af/speakers/pydata-lagos.jpg',
+    photoStyle: { objectFit: 'contain', background: '#faf9f7', padding: '28px' },
     lumaUrl: '#',
   },
 ];
@@ -186,15 +218,17 @@ function WorkshopCard({ ws, index }: WorkshopCardProps) {
           {ws.bio.map((para, i) => (
             <p key={i} className="wc-bio-text">{para}</p>
           ))}
-          <a
-            href={ws.linkedIn}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="wc-linkedin-btn"
-            onClick={e => e.stopPropagation()}
-          >
-            {ws.linkedIn.includes('linkedin.com') ? 'LinkedIn →' : 'Website →'}
-          </a>
+          {ws.linkedIn && (
+            <a
+              href={ws.linkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="wc-linkedin-btn"
+              onClick={e => e.stopPropagation()}
+            >
+              {ws.linkedIn.includes('linkedin.com') ? 'LinkedIn →' : 'Website →'}
+            </a>
+          )}
         </div>
       </div>
 
