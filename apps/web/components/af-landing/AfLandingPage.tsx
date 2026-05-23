@@ -10,6 +10,7 @@ import { AfHero } from './AfHero';
 import { AfJoinPaths } from './AfJoinPaths';
 import { AfManifestoOverlay } from './AfManifestoOverlay';
 import { AfMarquee } from './AfMarquee';
+import { AfMentors } from './AfMentors';
 import { AfNavbar } from './AfNavbar';
 import { AfPartners } from './AfPartners';
 import { AfProgramme } from './AfProgramme';
@@ -49,6 +50,7 @@ export function AfLandingPage() {
       <AfSchedule />
       <AfConference />
       <AfSpeakers />
+      <AfMentors />
       <AfJoinPaths />
       <AfFaq />
       <AfPartners />

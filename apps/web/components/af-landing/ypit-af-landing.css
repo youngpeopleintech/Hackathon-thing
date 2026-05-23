@@ -660,6 +660,65 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 }
 @keyframes ghostPulse{0%,100%{opacity:0.4}50%{opacity:0.75}}
 
+/* MENTORS */
+.ypitAfLanding .mentor-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:56px;
+}
+.ypitAfLanding .mentor-card{
+  background:#fff;border:1px solid var(--border);
+  display:flex;flex-direction:column;overflow:hidden;
+}
+.ypitAfLanding .mentor-photo-wrap{
+  position:relative;width:100%;aspect-ratio:1/1;background:#ece8e2;flex-shrink:0;overflow:hidden;
+  cursor:pointer;
+}
+.ypitAfLanding .mentor-placeholder{
+  width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  color:var(--dark);
+}
+
+/* Bio overlay — blue, shown on photo hover */
+.ypitAfLanding .mentor-bio-overlay{
+  position:absolute;inset:0;
+  background:rgba(29,78,216,0.92);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:20px;
+  opacity:0;transform:translateY(8px);
+  transition:opacity 0.25s ease,transform 0.25s ease;
+  pointer-events:none;
+}
+.ypitAfLanding .mentor-photo-wrap.bio-open .mentor-bio-overlay{
+  opacity:1;transform:translateY(0);pointer-events:auto;
+}
+.ypitAfLanding .mentor-bio-text{
+  font-size:12px;font-weight:400;color:rgba(255,255,255,0.92);line-height:1.65;
+}
+
+/* Card body */
+.ypitAfLanding .mentor-body{
+  padding:16px 16px 20px;display:flex;flex-direction:column;gap:10px;
+}
+.ypitAfLanding .mentor-name{
+  font-family:var(--display);font-size:15px;font-weight:800;color:var(--dark);margin-bottom:2px;
+}
+.ypitAfLanding .mentor-role{
+  font-size:11px;font-weight:400;color:var(--muted);line-height:1.4;
+}
+.ypitAfLanding .mentor-company{font-weight:700;color:#1D4ED8}
+.ypitAfLanding .mentor-areas{display:flex;flex-wrap:wrap;gap:5px}
+.ypitAfLanding .mentor-area-tag{
+  font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
+  background:var(--cream);border:1px solid var(--border);
+  padding:3px 7px;border-radius:100px;color:var(--muted);
+}
+.ypitAfLanding .mentor-link{
+  font-size:11px;font-weight:700;letter-spacing:0.04em;
+  color:#fff;background:#1D4ED8;text-decoration:none;
+  padding:5px 14px;border-radius:100px;width:fit-content;
+  transition:background 0.2s;
+}
+.ypitAfLanding .mentor-link:hover{background:#1e40af}
+
 /* PATHS */
 .ypitAfLanding .paths-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px;margin-bottom:2px}
 .ypitAfLanding .path-card{
@@ -933,6 +992,8 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   .ypitAfLanding .about-grid, .ypitAfLanding .tracks-intro, .ypitAfLanding .conf-grid, .ypitAfLanding .faq-grid{grid-template-columns:1fr;gap:40px}
   .ypitAfLanding .prog-grid, .ypitAfLanding .tracks-grid, .ypitAfLanding .workshop-grid, .ypitAfLanding .paths-grid, .ypitAfLanding .path-info-grid{grid-template-columns:1fr}
   .ypitAfLanding .speakers-grid{grid-template-columns:repeat(2,1fr)}
+  .ypitAfLanding .mentor-grid{grid-template-columns:repeat(2,1fr)}
+
   .ypitAfLanding .workshop-grid-v2{grid-template-columns:repeat(2,1fr)}
   .ypitAfLanding .schedule-row{grid-template-columns:1fr}
   .ypitAfLanding .schedule-date{border-right:none;border-bottom:1px solid var(--border)}
