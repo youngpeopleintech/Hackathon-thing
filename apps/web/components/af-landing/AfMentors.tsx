@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useCallback } from 'react';
 import Image from 'next/image';
 import { Reveal } from './Reveal';
 
@@ -97,10 +98,35 @@ const MENTORS: Mentor[] = [
   },
 ];
 
+function isHoverDevice(): boolean {
+  if (typeof window === 'undefined') return true;
+  return window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+}
+
 function MentorCard({ mentor }: { mentor: Mentor }) {
+  const [isBioOpen, setIsBioOpen] = useState(false);
+
+  const handlePhotoEnter = useCallback(() => {
+    if (isHoverDevice()) setIsBioOpen(true);
+  }, []);
+
+  const handlePhotoLeave = useCallback(() => {
+    if (isHoverDevice()) setIsBioOpen(false);
+  }, []);
+
+  const handlePhotoClick = useCallback(() => {
+    if (!isHoverDevice()) setIsBioOpen(prev => !prev);
+  }, []);
+
   return (
     <div className="mentor-card">
-      <div className="mentor-photo-wrap">
+      {/* Photo with bio overlay on hover */}
+      <div
+        className={`mentor-photo-wrap${isBioOpen ? ' bio-open' : ''}`}
+        onMouseEnter={handlePhotoEnter}
+        onMouseLeave={handlePhotoLeave}
+        onClick={handlePhotoClick}
+      >
         {mentor.image ? (
           <Image
             src={mentor.image}
@@ -117,19 +143,32 @@ function MentorCard({ mentor }: { mentor: Mentor }) {
             </svg>
           </div>
         )}
+        <div className="mentor-bio-overlay">
+          <p className="mentor-bio-text">{mentor.bio}</p>
+          <a
+            href={mentor.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mentor-bio-link"
+            onClick={e => e.stopPropagation()}
+          >
+            {mentor.linkedin.includes('linkedin.com') ? 'LinkedIn ↗' : 'Website ↗'}
+          </a>
+        </div>
       </div>
+
+      {/* Card body — always visible */}
       <div className="mentor-body">
         <div>
           <h3 className="mentor-name">{mentor.name}</h3>
-          <p className="mentor-role">{mentor.role}{mentor.company ? <> · <span>{mentor.company}</span></> : null}</p>
+          <p className="mentor-role">
+            {mentor.role}
+            {mentor.company ? <> · <span className="mentor-company">{mentor.company}</span></> : null}
+          </p>
         </div>
         <div className="mentor-areas">
           {mentor.areas.map(a => <span key={a} className="mentor-area-tag">{a}</span>)}
         </div>
-        <p className="mentor-bio">{mentor.bio}</p>
-        <a href={mentor.linkedin} target="_blank" rel="noopener noreferrer" className="mentor-link">
-          {mentor.linkedin.includes('linkedin.com') ? 'LinkedIn ↗' : 'Website ↗'}
-        </a>
       </div>
     </div>
   );
