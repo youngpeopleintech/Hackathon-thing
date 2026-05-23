@@ -22,7 +22,8 @@ const MENTORS: Mentor[] = [
     areas: ['Healthcare AI', 'Enterprise Architecture', 'AI Governance'],
     bio: 'Pearce is a digital health leader, enterprise architect, and AI practitioner with over 20 years of experience spanning clinical practice, national health systems, and frontier technology. He began his career as a nurse before transitioning into technology, and has advised governments and Ministries of Health across Africa — including Kenya, Nigeria, and Uganda — on national digital health architecture. He is Co-Founder and CTO of Synergya, and is completing an MSc in Global Healthcare Leadership at Oxford\'s Saïd Business School.',
     linkedin: 'https://www.linkedin.com/in/pearcemutendera/',
-    image: null,
+    image: '/images/af/speakers/pearce-mutendera.jpeg',
+    photoPosition: 'center 20%',
   },
   {
     name: 'Triumph Urias',
@@ -61,7 +62,8 @@ const MENTORS: Mentor[] = [
     areas: ['Product Building', 'AI Agents', 'Business & Strategy', 'Fintech'],
     bio: 'Aaron is an operator with over seven years of experience building and scaling technology businesses across Africa, working across fintech, infrastructure, and platform products. He is Co-founder at Quonos, a product studio that takes ideas from early concept to scalable software, and leads R&D at Sycamore.ng. He previously founded Zoropay, a tuition finance platform that disbursed over $500,000 to underserved students.',
     linkedin: 'https://www.linkedin.com/in/aaron-sotunde-adesina-09330416a/',
-    image: null,
+    image: '/images/af/speakers/aaron-sotunde-adesina.png',
+    photoPosition: 'center 20%',
   },
   {
     name: 'Ubio Obu',
