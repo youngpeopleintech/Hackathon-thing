@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "teams:update": "node scripts/update-team-board.js"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
