@@ -839,6 +839,17 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 .ypitAfLanding .footer-links a{font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s}
 .ypitAfLanding .footer-links a:hover{color:var(--dark)}
 .ypitAfLanding .footer-links a.email{text-transform:none}
+.ypitAfLanding .footer-links a.footer-team-link{
+  border:1px solid rgba(255,70,0,0.28);
+  border-radius:999px;
+  color:var(--coral);
+  padding:8px 14px;
+}
+.ypitAfLanding .footer-links a.footer-team-link:hover{
+  background:var(--coral);
+  border-color:var(--coral);
+  color:#fff;
+}
 
 /* KEYFRAMES */
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
