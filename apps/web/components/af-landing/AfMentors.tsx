@@ -96,6 +96,36 @@ const MENTORS: Mentor[] = [
     image: '/images/af/speakers/deborah-adewunmi.jpeg',
     photoPosition: 'center 15%',
   },
+  {
+    name: 'Nkechi Anyanwu',
+    role: 'Product Engineer',
+    company: 'Vouchsafe',
+    areas: ['Software Engineering', 'AI-assisted Building', 'Fintech'],
+    bio: 'Nkechi is a founding Product Engineer building trust infrastructure for KYC and Digital ID at Vouchsafe. She is a host of Conversations with Technologists, where technologists gather to talk about what they\'re building and learning, and Build Sessions, one-day hackathons where builders take ideas into working products. Before tech, she spent her early career as an investment banker covering financial services and fintech companies.',
+    linkedin: 'https://www.linkedin.com/in/nkechianyanwu/',
+    image: '/images/af/speakers/nkechi-anyanwu.jpg',
+    photoPosition: 'center 20%',
+  },
+  {
+    name: 'Abisola Aderohunmu',
+    role: 'AI Product Manager',
+    company: 'Heala Tech',
+    areas: ['AI Product Strategy', 'Product Building', 'Healthtech', 'MVP Scoping'],
+    bio: 'Abisola is an award-winning AI Product Manager, speaker, and thought leader specialising in AI, product strategy, and digital innovation. With experience across fintech, HRTech, and healthtech, she builds scalable, user-centric products powered by data and intelligent systems. At Heala Tech, she leads product innovation across a connected digital health ecosystem, using AI and automation to improve healthcare access across Africa. She has guided hundreds of aspiring and mid-level product managers through mentorship and practical frameworks.',
+    linkedin: 'https://www.linkedin.com/in/abisola-r-a-4316b6144',
+    image: '/images/af/speakers/abisola-aderohunmu.jpg',
+    photoPosition: 'center 20%',
+  },
+  {
+    name: 'Ojurereoluwa Daniel Oreofe',
+    role: 'Co-founder',
+    company: 'Cencori',
+    areas: ['Product Strategy', 'AI Integration', 'Go-to-Market', 'Growth'],
+    bio: 'Daniel is Co-Founder of Cencori, a product and growth leader working across AI, fintech, and healthtech. He speaks on AI adoption, building in Africa, and the gap between strategy and execution. He has six years of experience helping teams move from clarity to building — his mentoring style is less about giving answers and more about asking the question that makes the answer obvious.',
+    linkedin: 'https://www.linkedin.com/in/thedanieloreofe',
+    image: '/images/af/speakers/oreofe-daniel.jpg',
+    photoPosition: 'center 20%',
+  },
 ];
 
 function isHoverDevice(): boolean {
