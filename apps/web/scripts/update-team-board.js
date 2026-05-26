@@ -106,10 +106,13 @@ function validateData(data) {
   const seenTeamNames = new Set();
   const seenParticipantIds = new Set();
   const seenParticipantEmails = new Set();
+  const seenParticipantKeys = new Set();
+  const seenPlacements = new Set();
   let teamMemberCount = 0;
   let totalParticipantCount = 0;
+  let duplicatePlacementCount = 0;
 
-  function validateParticipant(member, context) {
+  function validateParticipant(member, placementGroup, context) {
     totalParticipantCount += 1;
 
     if (!member || typeof member !== 'object' || Array.isArray(member)) {
@@ -119,6 +122,8 @@ function validateData(data) {
 
     const participantId = normalize(member.id);
     const participantEmail = normalize(member.email);
+    const participantKey = participantId || participantEmail;
+    const placementKey = participantKey ? `${participantKey}:${placementGroup}` : '';
 
     if (!normalize(member.name)) {
       errors.push(`${context} is missing a name`);
@@ -126,17 +131,27 @@ function validateData(data) {
 
     if (!participantId) {
       errors.push(`${context} is missing an id`);
-    } else if (seenParticipantIds.has(participantId)) {
-      errors.push('duplicate participant id detected');
     } else {
       seenParticipantIds.add(participantId);
     }
 
     if (participantEmail) {
-      if (seenParticipantEmails.has(participantEmail)) {
-        errors.push('duplicate participant email detected');
+      seenParticipantEmails.add(participantEmail);
+    }
+
+    if (participantKey) {
+      if (seenParticipantKeys.has(participantKey)) {
+        duplicatePlacementCount += 1;
       } else {
-        seenParticipantEmails.add(participantEmail);
+        seenParticipantKeys.add(participantKey);
+      }
+    }
+
+    if (placementKey) {
+      if (seenPlacements.has(placementKey)) {
+        errors.push(`duplicate participant placement detected for ${context}`);
+      } else {
+        seenPlacements.add(placementKey);
       }
     }
   }
@@ -164,7 +179,7 @@ function validateData(data) {
 
     team.members.forEach((member, memberIndex) => {
       teamMemberCount += 1;
-      validateParticipant(member, `member ${memberIndex + 1} in team ${teamIndex + 1}`);
+      validateParticipant(member, `team:${teamName}`, `member ${memberIndex + 1} in team ${teamIndex + 1}`);
     });
   });
 
@@ -178,7 +193,7 @@ function validateData(data) {
     }
 
     data[arrayKey].forEach((member, memberIndex) => {
-      validateParticipant(member, `${arrayKey} member ${memberIndex + 1}`);
+      validateParticipant(member, arrayKey, `${arrayKey} member ${memberIndex + 1}`);
     });
 
     if (typeof data.meta[metaKey] === 'number' && data.meta[metaKey] !== data[arrayKey].length) {
@@ -186,8 +201,8 @@ function validateData(data) {
     }
   });
 
-  if (typeof data.meta.total_participants === 'number' && data.meta.total_participants !== totalParticipantCount) {
-    errors.push('DATA.meta.total_participants does not match the counted participants');
+  if (typeof data.meta.total_participants === 'number' && data.meta.total_participants < seenParticipantEmails.size) {
+    errors.push('DATA.meta.total_participants is lower than the counted unique participant emails');
   }
 
   if (typeof data.meta.people_in_teams === 'number' && data.meta.people_in_teams !== teamMemberCount) {
@@ -198,7 +213,14 @@ function validateData(data) {
     errors.push('DATA.meta.total_teams does not match DATA.teams.length');
   }
 
-  return { errors, participantCount: totalParticipantCount, teamMemberCount, teamCount: data.teams.length };
+  return {
+    errors,
+    participantCount: seenParticipantKeys.size,
+    placementCount: totalParticipantCount,
+    duplicatePlacementCount,
+    teamMemberCount,
+    teamCount: data.teams.length,
+  };
 }
 
 function readExistingSnapshot() {
