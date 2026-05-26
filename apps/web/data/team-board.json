@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_participants": 136,
-    "total_teams": 36,
-    "people_in_teams": 114,
-    "on_hold_count": 16,
+    "total_participants": 148,
+    "total_teams": 43,
+    "people_in_teams": 139,
+    "on_hold_count": 3,
     "storytelling_count": 6,
-    "new_teams": 27,
-    "preformed_teams": 9,
-    "flagged_teams": 22
+    "new_teams": 32,
+    "preformed_teams": 11,
+    "flagged_teams": 29
   },
   "teams": [
     {
@@ -810,15 +810,55 @@
           "language": "",
           "cluster": "MISSION_BUILDER",
           "cluster_reason": "Ship something a native speaker can actually use — language NLP, not a demo"
+        },
+        {
+          "id": "kdkbW7J",
+          "name": "Elebiemayo Iseoluwa Emmanuel",
+          "email": "iseoluwae949@gmail.com",
+          "phone": "+2349072376212",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Software Developer/Engineer",
+            "Machine Learning Engineer",
+            "Technical",
+            "Project Manager",
+            "Educator/Academic",
+            "Finance/Economics Expert"
+          ],
+          "cats": [
+            "Technical",
+            "Product/Biz",
+            "Domain"
+          ],
+          "track": "Finance",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Nexum",
+          "hackathon_exp": "Yes",
+          "goals": "To strengthen my practical software development skills and build meaningful connections with like-minded developers.",
+          "bg": "My name is Elebiemayo Iseoluwa Emmanuel, a 200-level Computer Science student at the University of Lagos with a first-class CGPA of 4.86. I have a strong passion for understanding how systems and software are built, and I have applied this curiosity by developing projects across several domains, including education, finance, and e-commerce.\n\nWhile I take pride in my academic performance, I firmly believe that excellence in tech is defined by both theoretical knowledge and hands-on practical ability. This hackathon aligns perfectly with my goal of growing as a well-rounded software developer.\n\nI am interested in participating because it offers a unique environment to develop real-world problem-solving skills, collaborate with talented peers, and gain industry exposure. Beyond the technical growth, I am eager to build meaningful connections with professionals and fellow developers who can influence my journey positively.\n\nI am committed to bringing my best to this experience and walking away with new skills, new perspectives, and new impact.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "LEARNER",
+          "cluster_reason": "Strengthen practical software development skills — skill-building primary"
         }
       ],
       "org_flags": [
         {
           "type": "incomplete",
           "msg": "Awaiting 2 more registered member(s)"
+        },
+        {
+          "type": "track_mismatch",
+          "msg": "Elebiemayo registered Finance track but joined Language team — verify intentional"
         }
       ],
-      "members_needed": 2,
+      "members_needed": 1,
       "claimed": 4
     },
     {
@@ -4205,43 +4245,907 @@
       "members_needed": 1,
       "claimed": 2,
       "note": "Precious Kayili moved from On Hold after micheal olapade ojedeji registered with matching team name. Note: members have different participation modes."
+    },
+    {
+      "name": "Hodari Team",
+      "display_name": "Hodari Team",
+      "track": "Finance",
+      "mode": "Virtual",
+      "type": "pre_formed_incomplete",
+      "members": [
+        {
+          "id": "zx1x7ME",
+          "name": "Elvis Chege Ndungu",
+          "email": "elvisndungu511@gmail.com",
+          "phone": "+27615907885",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer",
+            "UI/UX"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "South Africa",
+          "ts": "I have a team already",
+          "team_name": "Hodari Team",
+          "hackathon_exp": "Yes",
+          "goals": "",
+          "bg": "I'm Elvis Chege, a Kenyan developer based in Johannesburg, currently studying at WeThinkCode. I build across Go, Rust, Zig, and JavaScript, and I'm drawn to problems where the infrastructure itself is the challenge. I've built a tamper-proof database from scratch, a township spaza shop search engine connecting informal traders to customers, and an AI health avatar, so I sit at the intersection of systems thinking and African-context product work.\nI'm applying to the hackathon because The Artificial Future is asking exactly the question I care about: what does it look like when Africans build the AI, not just use it? Living between Kenya and South Africa means I understand both the M-Pesa economy and the Capitec/informal township economy firsthand, not as an abstraction. I want to bring that lived context into what I build here.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "BG: Kenyan developer building solutions in SA — growth builder"
+        },
+        {
+          "id": "PdGd5B0",
+          "name": "Mphele Moswane",
+          "email": "mphelemoswane3@gmail.com",
+          "phone": "+27639852808",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Software Developer/Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "South Africa",
+          "ts": "I have a team already",
+          "team_name": "Hodari Team",
+          "hackathon_exp": "Yes",
+          "goals": "To build a technology solution that can make an impact and can be further developed after this hacakathon. This hackathon should be the launch pad for a  real solution that makes a difference.",
+          "bg": "I am a young south african man who grew up in the township and has been blessed with access to quality education and access. This has given me the perspective of what a world with technological advancement looks like compared to where I grew up and live and how much this would increase the quality of life of those around me. I am passionate about building tech that benefits africans and makes life easier for us.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Build technology solution with impact and further development potential"
+        }
+      ],
+      "org_flags": [
+        {
+          "type": "incomplete",
+          "msg": "2 registered, awaiting 1+ more member(s)"
+        }
+      ],
+      "members_needed": 1,
+      "claimed": 3,
+      "note": ""
+    },
+    {
+      "name": "Mavericks",
+      "display_name": "Mavericks",
+      "track": "Language",
+      "mode": "In-person",
+      "type": "pre_formed",
+      "members": [
+        {
+          "id": "rjkD1XN",
+          "name": "Raheem Akapo",
+          "email": "akapsyjr@gmail.com",
+          "phone": "+2349074304369",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Software Developer/Engineer",
+            "Technical",
+            "Project Manager"
+          ],
+          "cats": [
+            "Technical",
+            "Product/Biz"
+          ],
+          "track": "Language",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Mavericks",
+          "hackathon_exp": "Yes",
+          "goals": "",
+          "bg": "I’m a Systems Engineering student and software developer based in Lagos with a strong interest in building practical tech solutions that solve real problems in African communities. I’ve worked on several web-based projects including productivity tools, communication platforms, and AI-focused concepts, and I enjoy turning ideas into working products quickly. Tiny obsession with building things that people actually use.\n\nAnd I’m interested in this hackathon because it brings together innovation, community, and problems that directly affect everyday people across Africa. I’m especially excited about exploring how AI can improve accessibility, education, and local experiences in ways that feel relevant to our environment instead of copied from somewhere else. I also enjoy collaborating with other builders, learning from mentors, and pushing myself to create impactful solutions under pressure.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "BG: Systems Engineering student + software developer, wants to build — growth builder"
+        },
+        {
+          "id": "jakZlYR",
+          "name": "Ismail Olaiwon",
+          "email": "olaiwonismail@gmail.com",
+          "phone": "+2347089811353",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer",
+            "Academic/Industry",
+            "Educator/Academic"
+          ],
+          "cats": [
+            "Technical",
+            "Domain"
+          ],
+          "track": "Language",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Mavericks",
+          "hackathon_exp": "Yes",
+          "goals": "to build a standout product and network with other developers",
+          "bg": "I'm an Engineering student focused on backend infrastructure and ai development. I'm interested in this hackathon to build a high-performance tool that solves a genuine technical problem.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "SHIPPER",
+          "cluster_reason": "Build a standout product and network — polish and competition framing"
+        },
+        {
+          "id": "VL4GZoy",
+          "name": "Emafido Emmanuel Aridon",
+          "email": "emmanuelemafido@gmail.com",
+          "phone": "+2349038927320",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Language",
+          "mode": "In-person",
+          "location": "Lagos/Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Mavericks",
+          "hackathon_exp": "Yes",
+          "goals": "Form connections and win",
+          "bg": "I am a full stack developer from the University of Lagos and I want to participate in this hackathon to bring my skills to the global stage, collaborate with others and get to meet very interesting people",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "SHIPPER",
+          "cluster_reason": "Form connections and win — explicit win motivation"
+        }
+      ],
+      "org_flags": [
+        {
+          "type": "gender",
+          "msg": "All-male team"
+        }
+      ],
+      "members_needed": 0,
+      "claimed": 3,
+      "note": ""
+    },
+    {
+      "name": "FIN-I005",
+      "display_name": "FIN-I005",
+      "track": "Finance",
+      "mode": "In-person",
+      "type": "new",
+      "members": [
+        {
+          "id": "2ElpXbD",
+          "name": "Ndubuisi Ekeh",
+          "email": "ndubuisiekeh169@gmail.com",
+          "phone": "+2347078344746",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer",
+            "Machine Learning Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Finance",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Atlas",
+          "hackathon_exp": "Yes",
+          "goals": "Win the Launchpad program, connect with investors, and validate Iroko AI as a product for African enterprise markets.",
+          "bg": "I'm an AI Lead and Backend Engineer based in Lagos, building production multi-agent AI systems for African enterprise markets. I recently placed 4th at the TeKnowledge × Microsoft 2026 Agentic AI Hackathon Finale — our team built Iroko AI, a 5-agent autonomous intelligence platform for MTN Nigeria that monitors regulatory changes, detects fraud patterns, and delivers compliance-verified decisions in real time.\nI'm interested in the Artificial Future Hackathon because the Economic Access track is exactly the problem I'm working on — African enterprises and financial institutions are making critical decisions without real-time intelligence, and no existing AI platform is built for how Nigerian markets actually operate. I want to bring Iroko AI's architecture to this challenge, adapt it for the financial sector, and connect with the community building AI solutions that actually work for Africa.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "MISSION_BUILDER",
+          "cluster_reason": "Win Launchpad, connect with investors, validate Iroko AI — product validation"
+        },
+        {
+          "id": "b5YB6yZ",
+          "name": "Bakare Tioluwani Boluwatife",
+          "email": "bakaretioluwani@yahoo.com",
+          "phone": "+2349154604723",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer",
+            "Machine Learning Engineer",
+            "Data Engineer",
+            "Technical",
+            "Business Analyst",
+            "Business Development",
+            "Strategy/Consulting",
+            "Project Manager",
+            "Finance/Economics Expert",
+            "Policy/Government Expert"
+          ],
+          "cats": [
+            "Technical",
+            "Product/Biz",
+            "Domain"
+          ],
+          "track": "Finance",
+          "mode": "In-person",
+          "location": "Lagos/Nigeria",
+          "ts": "I want to form a team at the hackathon",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "My main aim is build a product or system of a financial workflow automation tool that directly solves a problem for informal or SME economies in Nigeria. I want to ship something that’s technically sounds and at the end addresses real user needs  not just a demo. I also want to connect with founders, designers, and other experts who understand African markets. The best ideas come from friction in real markets and I want to build a network around that.",
+          "bg": "I’m a backend software engineer with production fintech experience. I worked at Union Bank of Nigeria on an internal platform approved by the CTO and CIO for organization wide deployment. I’m also Oracle-certified in Java SE 8 and have built systems covering REST APIs, async processing, and AI integration. I’m joining this hackathon to collaborate with designers, developers and other experts to build something that genuinely solves problems for African markets, particularly around economic access.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "MISSION_BUILDER",
+          "cluster_reason": "Build financial workflow automation for informal/SME Nigerian economies — specific and detailed"
+        },
+        {
+          "id": "A7jrA4W",
+          "name": "Samuel John",
+          "email": "sayojami2007@gmail.com",
+          "phone": "+2348067954912",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer",
+            "Machine Learning Engineer",
+            "Technical",
+            "Project Manager"
+          ],
+          "cats": [
+            "Technical",
+            "Product/Biz"
+          ],
+          "track": "Finance",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "",
+          "bg": "",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "EXPLORER",
+          "cluster_reason": "No goals, no background — Explorer default"
+        },
+        {
+          "id": "q4kLEr7",
+          "name": "Fakorode Henry",
+          "email": "fakorodehenry@gmail.com",
+          "phone": "+2348100597712",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer",
+            "Academic/Industry",
+            "Project Manager",
+            "Healthcare Professional",
+            "Finance/Economics Expert"
+          ],
+          "cats": [
+            "Technical",
+            "Product/Biz",
+            "Domain"
+          ],
+          "track": "Finance",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Debuggers",
+          "hackathon_exp": "Yes",
+          "goals": "To build a production-ready MVP, collaborate intensely with my team, and network with mentors and industry experts to scale our solution.",
+          "bg": "I am an intermediate Java developer and Electrical and Electronics Engineering student with over 5 years of professional software development experience. My expertise lies in building scalable backend architectures, primarily using the Spring Boot ecosystem, and working with embedded systems and IoT hardware (such as ESP32 modules).\n\nI am deeply passionate about the intersection of high-concurrency backend engineering, hardware, and AI. I’m entering this hackathon to challenge myself, collaborate with other innovators, and leverage intelligent systems to build high-impact, real-world solutions that address critical local challenges.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Build production-ready MVP + collaborate intensely + network — strong builder"
+        },
+        {
+          "id": "jaJLd4R",
+          "name": "Marvellous Ogunleke",
+          "email": "marvellousabiola08@gmail.com",
+          "phone": "+2348022871344",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Software Developer/Engineer",
+            "UI/UX",
+            "Graphic Designer",
+            "Business Development"
+          ],
+          "cats": [
+            "Technical",
+            "Design",
+            "Product/Biz"
+          ],
+          "track": "Finance",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "cryptex",
+          "hackathon_exp": "Yes",
+          "goals": "Build a solution that have impact and it is needed right now",
+          "bg": "I am a full stack developer, I have built solutions that solves problems like my latest biblefriend.vercel.app\nI have participated in lots of Hackathon and won the second runner up at the Microsoft AI skills week Hackathon.\nI am interested in this Hackathon as I am ready to build a solution in economics access area and I am ready to build.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Build impactful solution needed right now — practical builder"
+        }
+      ],
+      "org_flags": [
+        {
+          "type": "gender",
+          "msg": "All-male team"
+        }
+      ],
+      "members_needed": 0,
+      "claimed": 5
+    },
+    {
+      "name": "EDU-I003",
+      "display_name": "EDU-I003",
+      "track": "Education",
+      "mode": "In-person",
+      "type": "new",
+      "members": [
+        {
+          "id": "kd7WN0e",
+          "name": "Faruk Bileasnmi",
+          "email": "bilesanmifaruk@gmail.com",
+          "phone": "+2349054297049",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer",
+            "Machine Learning Engineer",
+            "Data Analyst",
+            "Data Engineer",
+            "Technical",
+            "Project Manager",
+            "Educator/Academic",
+            "Finance/Economics Expert"
+          ],
+          "cats": [
+            "Technical",
+            "Product/Biz",
+            "Domain"
+          ],
+          "track": "Education",
+          "mode": "In-person",
+          "location": "Lagos,Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Lena",
+          "hackathon_exp": "Yes",
+          "goals": "To be able show the world about what we do at Lena and hopefully get more people to partner and propel us forward with access or funds.",
+          "bg": "I'm Farouk Bilesanmi, ex-ChowCentral (YC '23), Clan Africa, BuySimply, an AI enabled engineer building with almost a decade of experience since working in uni, built different products and systems from the ground up in multiple sectors from fintech, healthtech, edtech, \"mealtech\".\n\nRight now, I'm redesigning the way kids learn with Lena by using games built on an AI tutor to help them get their grades up and the parents and schools get value from them immediately, even without internet.",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "MISSION_BUILDER",
+          "cluster_reason": "Showcase Lena, get partners + funds — specific product validation"
+        },
+        {
+          "id": "A74oAYo",
+          "name": "Abel Duba",
+          "email": "abelskid002@gmail.com",
+          "phone": "+2347043079022",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Software Developer/Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Education",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Abeltrust",
+          "hackathon_exp": "This will be my first",
+          "goals": "Network and connect",
+          "bg": "Graduate of computer science, I want to network and connect ]",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "EXPLORER",
+          "cluster_reason": "Network and connect — pure connector"
+        },
+        {
+          "id": "vGdjKX0",
+          "name": "Cindy Shontan",
+          "email": "cindyshontan@gmail.com",
+          "phone": "+2347052919353",
+          "gender": "Female",
+          "student": false,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "UI/UX"
+          ],
+          "cats": [
+            "Other"
+          ],
+          "track": "Education",
+          "mode": "In-person",
+          "location": "Lagos, Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "Build a working product that can grow and scale.",
+          "bg": "I have many years of experience building AI powered solutions for different industries and capacities. I'm looking to work on projects that are challenging and solves really human problem.",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Build working product that can grow and scale — experienced AI solution builder"
+        }
+      ],
+      "org_flags": [
+        {
+          "type": "student",
+          "msg": "Only 0 student(s)"
+        }
+      ],
+      "members_needed": 0,
+      "claimed": 3
+    },
+    {
+      "name": "EDU-I004",
+      "display_name": "EDU-I004",
+      "track": "Education",
+      "mode": "In-person",
+      "type": "new",
+      "members": [
+        {
+          "id": "1ANb0PQ",
+          "name": "Chibueze Peter",
+          "email": "ebubepeter919@gmail.com",
+          "phone": "+2349153208619",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Software Developer/Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Education",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Builder mind",
+          "hackathon_exp": "No",
+          "goals": "Learn ai build a product and also build good connection",
+          "bg": "Am a fullstack stack developer with over a year experience and I find it's interesting using ai to actually build a product",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Learn AI + build product + connections — growth builder"
+        },
+        {
+          "id": "EkZAbL4",
+          "name": "ramadan salaudeen",
+          "email": "salaudeenramadan8@gmail.com",
+          "phone": "+2347012763604",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Software Developer/Engineer",
+            "Technical",
+            "UI/UX",
+            "Project Manager",
+            "Educator/Academic",
+            "Finance/Economics Expert"
+          ],
+          "cats": [
+            "Technical",
+            "Product/Biz",
+            "Domain"
+          ],
+          "track": "Education",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Parc",
+          "hackathon_exp": "Yes",
+          "goals": "To win",
+          "bg": "I am economics undergrad, and I have also been coding for 3 years now.\nI love attending Hackathons as they improve my skill by challenging me to build hard projects.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "SHIPPER",
+          "cluster_reason": "To win — explicit"
+        },
+        {
+          "id": "rjkypEL",
+          "name": "Irawooluwa Akintunde",
+          "email": "airawoluwa@gmail.com",
+          "phone": "+2347012588035",
+          "gender": "Female",
+          "student": false,
+          "exp_raw": "Beginner (Learning the basics)",
+          "exp": "Beginner",
+          "tier": 3,
+          "skills": [
+            "Business Development",
+            "Project Manager",
+            "Operations Manager",
+            "Administrative/Logistics",
+            "Educator/Academic"
+          ],
+          "cats": [
+            "Product/Biz",
+            "Domain"
+          ],
+          "track": "Education",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I want to form a team at the hackathon",
+          "team_name": "",
+          "hackathon_exp": "This will be my first",
+          "goals": "",
+          "bg": "I have a background in Educational Management, which has given me a strong foundation in project coordination, community engagement, and problem-solving. Throughout my academic and professional journey, I have been passionate about creating solutions that improve people's experiences and make opportunities more accessible.\n\nCurrently, I am building Gift Cop, a platform designed to make gift-giving more thoughtful, seamless, and personalized. The idea was inspired by the challenges people face in choosing meaningful gifts and managing special occasions. Through Gift Cop, I am learning firsthand about product development, user research, marketing, and building technology-driven solutions that address real-world problems.\n\nI am interested in this hackathon because it presents an opportunity to collaborate with innovative minds, gain practical experience, and accelerate my growth as a builder and entrepreneur. I am particularly excited to learn from mentors, validate ideas, and explore how technology can be leveraged to create impactful solutions. I believe the experience will not only help me refine my problem-solving skills but also contribute valuable insights to the development of Gift Cop and future projects.",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "LEARNER",
+          "cluster_reason": "BG: Educational Management background, passionate about creating solutions"
+        },
+        {
+          "id": "68pLplk",
+          "name": "odugbesan Gabriel",
+          "email": "odugbesan1234@gmail.com",
+          "phone": "+2349122409355",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Non-technical (product, design, business, ops)",
+          "exp": "Non-tech",
+          "tier": 5,
+          "skills": [
+            "Business Development",
+            "Educator/Academic"
+          ],
+          "cats": [
+            "Product/Biz",
+            "Domain"
+          ],
+          "track": "Education",
+          "mode": "In-person",
+          "location": "Lagos, Nigeria",
+          "ts": "I have a team already",
+          "team_name": "TAMS360",
+          "hackathon_exp": "This will be my first",
+          "goals": "My biggest goal for this hackathon is to build meaningful connections with other founders, developers, and mentors while validating and improving the AI-powered education solutions we are building at Tecxha Edu. I also want to explore innovative ways to use AI to improve learning outcomes, assessment systems, and student engagement across African schools.",
+          "bg": "I’m the co-founder of Tecxha Edu, an edtech company based in Lagos, Nigeria, focused on improving education through technology and innovative learning systems. We currently work with schools through our products, Speemt — a speed maths learning platform — and TAMS, a school management and assessment system with CBT and AI-driven learning features.\n\nBefore fully focusing on the company, I worked as a teacher, which gave me firsthand experience of the challenges schools, teachers, and students face daily. That experience inspired us to build practical solutions that improve learning, assessment, and student engagement.\n\nI’m interested in this hackathon because I want to connect with other builders, learn from experienced mentors, and explore new AI and technology ideas that can help us scale impactful education solutions across Africa.",
+          "launchpad": "",
+          "language": "",
+          "cluster": "EXPLORER",
+          "cluster_reason": "Build meaningful connections + learn from experienced practitioners — connector"
+        }
+      ],
+      "org_flags": [
+        {
+          "type": "experience",
+          "msg": "Wide experience range"
+        }
+      ],
+      "members_needed": 0,
+      "claimed": 4
+    },
+    {
+      "name": "EDU-V005",
+      "display_name": "EDU-V005",
+      "track": "Education",
+      "mode": "Virtual",
+      "type": "new",
+      "members": [
+        {
+          "id": "aQAA6kB",
+          "name": "Obembe Eyitayo David",
+          "email": "eyitayobembe@gmail.com",
+          "phone": "+2348085716180",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer",
+            "Academic/Industry",
+            "Business Development",
+            "Operations Manager",
+            "Educator/Academic"
+          ],
+          "cats": [
+            "Technical",
+            "Product/Biz",
+            "Domain"
+          ],
+          "track": "Education",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "CyberForce",
+          "hackathon_exp": "Yes",
+          "goals": "",
+          "bg": "I am Obembe Eyitayo David, full stack developer and project manager, and I am interested in this hackathon because I believe that the current education system in Nigeria is one-size-fits-all. I envision a class of 20 students with 20 uniquely personalized learning plans. And that's exactly why I am building for.",
+          "launchpad": "",
+          "language": "",
+          "cluster": "MISSION_BUILDER",
+          "cluster_reason": "BG: envisions personalised learning for Nigerian students — specific educational mission"
+        },
+        {
+          "id": "PdbMg4P",
+          "name": "Chudi Ogunjiofor",
+          "email": "chudi.ogunjiofor@gmail.com",
+          "phone": "+2348039930005",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Beginner (Learning the basics)",
+          "exp": "Beginner",
+          "tier": 3,
+          "skills": [
+            "Software Developer/Engineer",
+            "UI/UX"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Education",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "My biggest goal for this hackathon is to build a useful, working product that solves a real problem, not just a nice-looking demo. I want to push myself to move fast, collaborate well, and combine my UI/UX and web development skills with AI to create something practical, simple, and valuable for users.",
+          "bg": "I’m a UI/UX designer and web developer with experience building practical digital products, dashboards, and AI-assisted tools. I enjoy turning real everyday problems into simple, usable products, especially around productivity, business operations, and user-friendly web apps.\n\nI’m interested in this hackathon because it’s a chance to build fast, test ideas, collaborate with other smart builders, and push myself beyond just designing concepts into creating something useful. I’m especially excited about using AI and product design together to solve real problems in a way people can actually use.",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Build useful working product + push self + combine UI/UX + AI"
+        },
+        {
+          "id": "Y5xPYVJ",
+          "name": "George Temitayo",
+          "email": "tammygee08@gmail.com",
+          "phone": "+2348130701381",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Beginner (Learning the basics)",
+          "exp": "Beginner",
+          "tier": 3,
+          "skills": [
+            "Software Developer/Engineer",
+            "Machine Learning Engineer",
+            "Strategy/Consulting",
+            "Communications/PR",
+            "Community Manager"
+          ],
+          "cats": [
+            "Technical",
+            "Product/Biz",
+            "Content"
+          ],
+          "track": "Education",
+          "mode": "Virtual",
+          "location": "Ondo/Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "No",
+          "goals": "",
+          "bg": "I want to explore in the world of AI technologies",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "EXPLORER",
+          "cluster_reason": "BG: wants to explore AI technologies — open-ended curiosity"
+        }
+      ],
+      "org_flags": [
+        {
+          "type": "gender",
+          "msg": "All-male team"
+        }
+      ],
+      "members_needed": 0,
+      "claimed": 3
+    },
+    {
+      "name": "HLT-V004",
+      "display_name": "HLT-V004",
+      "track": "Healthcare",
+      "mode": "Virtual",
+      "type": "new",
+      "members": [
+        {
+          "id": "EkNKZl4",
+          "name": "Emmanuel Adebambo",
+          "email": "bamboadegboyega@gmail.com",
+          "phone": "+2348129212057",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "UI/UX"
+          ],
+          "cats": [
+            "Other"
+          ],
+          "track": "Healthcare",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "No",
+          "goals": "Learn more about AI,meet and connect with alot of people",
+          "bg": "My name is Emmanuel,a student of university of ibadan,I see hackathon has an opportunity to gain more insight and knowledge on Ai.",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "LEARNER",
+          "cluster_reason": "Learn more about AI + meet and connect — learning primary"
+        },
+        {
+          "id": "68ped2J",
+          "name": "Agbata Trust",
+          "email": "trustagbata@gmail.com",
+          "phone": "+2347036529366",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Software Developer/Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Healthcare",
+          "mode": "Virtual",
+          "location": "Lagos/Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "This will be my first",
+          "goals": "",
+          "bg": "I come from a technology and problem-solving background with experience in digital products, web development, and innovation-driven projects. I enjoy building solutions that address real-world challenges and collaborating with creative minds. I’m interested in this hackathon because it provides an opportunity to learn, sharpen my skills, network with talented people, and contribute to impactful ideas while working in a fast-paced and innovative environment.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "BG: technology and problem-solving background with digital experience — growth builder"
+        },
+        {
+          "id": "GxQva1z",
+          "name": "Yahaya Yusuf",
+          "email": "yyahaya222@gmail.com",
+          "phone": "+2348164346318",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Beginner (Learning the basics)",
+          "exp": "Beginner",
+          "tier": 3,
+          "skills": [
+            "Software Developer/Engineer",
+            "Writer/Content Creator"
+          ],
+          "cats": [
+            "Technical",
+            "Content"
+          ],
+          "track": "Healthcare",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "Network",
+          "bg": "To learn and build",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "EXPLORER",
+          "cluster_reason": "Network — BG: To learn and build; minimal signal"
+        },
+        {
+          "id": "44pXo7A",
+          "name": "Olufunke Adeoye",
+          "email": "dewunmig@gmail.com",
+          "phone": "+2348105737751",
+          "gender": "Female",
+          "student": false,
+          "exp_raw": "Non-technical (product, design, business, ops)",
+          "exp": "Non-tech",
+          "tier": 5,
+          "skills": [
+            "Technical",
+            "Graphic Designer",
+            "Academic/Industry",
+            "Writer/Content Creator",
+            "Administrative/Logistics",
+            "Healthcare Professional"
+          ],
+          "cats": [
+            "Technical",
+            "Design",
+            "Content",
+            "Product/Biz",
+            "Domain"
+          ],
+          "track": "Healthcare",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "This will be my first",
+          "goals": "To build a product that solves real world problems and form meaningful peer connections.",
+          "bg": "I just completed a fellowship programme in product management and I think this would be a great opportunity to gain real world experience in product ideation, strategy, design, and ultimately building an MVP that solves a real world problem. I also think it's an opportunity to connect with people of like minds and forge meaningful partnerships.",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Build product solving real problems + meaningful peer connections — PM fellowship grad"
+        }
+      ],
+      "org_flags": [
+        {
+          "type": "experience",
+          "msg": "Wide experience range"
+        }
+      ],
+      "members_needed": 0,
+      "claimed": 4
     }
   ],
   "on_hold": [
-    {
-      "id": "jaJLd4R",
-      "name": "Marvellous Ogunleke",
-      "email": "marvellousabiola08@gmail.com",
-      "phone": "+2348022871344",
-      "gender": "Male",
-      "student": true,
-      "exp_raw": "Intermediate (Some hands-on project)",
-      "exp": "Intermediate",
-      "tier": 2,
-      "skills": [
-        "Software Developer/Engineer",
-        "UI/UX",
-        "Graphic Designer",
-        "Business Development"
-      ],
-      "cats": [
-        "Technical",
-        "Design",
-        "Product/Biz"
-      ],
-      "track": "Finance",
-      "mode": "In-person",
-      "location": "Nigeria",
-      "ts": "I have a team already",
-      "team_name": "cryptex",
-      "hackathon_exp": "Yes",
-      "goals": "Build a solution that have impact and it is needed right now",
-      "bg": "I am a full stack developer, I have built solutions that solves problems like my latest biblefriend.vercel.app\nI have participated in lots of Hackathon and won the second runner up at the Microsoft AI skills week Hackathon.\nI am interested in this Hackathon as I am ready to build a solution in economics access area and I am ready to build.",
-      "launchpad": "Yes, very interested",
-      "language": "",
-      "cluster": "GROWTH_BUILDER",
-      "cluster_reason": "Build impactful solution needed right now — practical builder"
-    },
     {
       "id": "A74DJ0z",
       "name": "Edith Itodo",
@@ -4311,203 +5215,6 @@
       "cluster_reason": "BG: continuing Agric/Fintech platform from prior buildathon — clear ongoing mission"
     },
     {
-      "id": "1ANb0PQ",
-      "name": "Chibueze Peter",
-      "email": "ebubepeter919@gmail.com",
-      "phone": "+2349153208619",
-      "gender": "Male",
-      "student": true,
-      "exp_raw": "Intermediate (Some hands-on project)",
-      "exp": "Intermediate",
-      "tier": 2,
-      "skills": [
-        "Software Developer/Engineer"
-      ],
-      "cats": [
-        "Technical"
-      ],
-      "track": "Education",
-      "mode": "In-person",
-      "location": "Nigeria",
-      "ts": "I have a team already",
-      "team_name": "Builder mind",
-      "hackathon_exp": "No",
-      "goals": "Learn ai build a product and also build good connection",
-      "bg": "Am a fullstack stack developer with over a year experience and I find it's interesting using ai to actually build a product",
-      "launchpad": "Yes, very interested",
-      "language": "",
-      "cluster": "GROWTH_BUILDER",
-      "cluster_reason": "Learn AI + build product + connections — growth builder"
-    },
-    {
-      "id": "aQAA6kB",
-      "name": "Obembe Eyitayo David",
-      "email": "eyitayobembe@gmail.com",
-      "phone": "+2348085716180",
-      "gender": "Male",
-      "student": true,
-      "exp_raw": "Advanced (Building or deploying AI Solutions)",
-      "exp": "Advanced",
-      "tier": 1,
-      "skills": [
-        "Software Developer/Engineer",
-        "Academic/Industry",
-        "Business Development",
-        "Operations Manager",
-        "Educator/Academic"
-      ],
-      "cats": [
-        "Technical",
-        "Product/Biz",
-        "Domain"
-      ],
-      "track": "Education",
-      "mode": "Virtual",
-      "location": "Nigeria",
-      "ts": "I have a team already",
-      "team_name": "CyberForce",
-      "hackathon_exp": "Yes",
-      "goals": "",
-      "bg": "I am Obembe Eyitayo David, full stack developer and project manager, and I am interested in this hackathon because I believe that the current education system in Nigeria is one-size-fits-all. I envision a class of 20 students with 20 uniquely personalized learning plans. And that's exactly why I am building for.",
-      "launchpad": "",
-      "language": "",
-      "cluster": "MISSION_BUILDER",
-      "cluster_reason": "BG: envisions personalised learning for Nigerian students — specific educational mission"
-    },
-    {
-      "id": "EkZAbL4",
-      "name": "ramadan salaudeen",
-      "email": "salaudeenramadan8@gmail.com",
-      "phone": "+2347012763604",
-      "gender": "Male",
-      "student": true,
-      "exp_raw": "Intermediate (Some hands-on project)",
-      "exp": "Intermediate",
-      "tier": 2,
-      "skills": [
-        "Software Developer/Engineer",
-        "Technical",
-        "UI/UX",
-        "Project Manager",
-        "Educator/Academic",
-        "Finance/Economics Expert"
-      ],
-      "cats": [
-        "Technical",
-        "Product/Biz",
-        "Domain"
-      ],
-      "track": "Education",
-      "mode": "In-person",
-      "location": "Nigeria",
-      "ts": "I have a team already",
-      "team_name": "Parc",
-      "hackathon_exp": "Yes",
-      "goals": "To win",
-      "bg": "I am economics undergrad, and I have also been coding for 3 years now.\nI love attending Hackathons as they improve my skill by challenging me to build hard projects.",
-      "launchpad": "Yes, very interested",
-      "language": "",
-      "cluster": "SHIPPER",
-      "cluster_reason": "To win — explicit"
-    },
-    {
-      "id": "kd7WN0e",
-      "name": "Faruk Bileasnmi",
-      "email": "bilesanmifaruk@gmail.com",
-      "phone": "+2349054297049",
-      "gender": "Male",
-      "student": false,
-      "exp_raw": "Advanced (Building or deploying AI Solutions)",
-      "exp": "Advanced",
-      "tier": 1,
-      "skills": [
-        "Software Developer/Engineer",
-        "Machine Learning Engineer",
-        "Data Analyst",
-        "Data Engineer",
-        "Technical",
-        "Project Manager",
-        "Educator/Academic",
-        "Finance/Economics Expert"
-      ],
-      "cats": [
-        "Technical",
-        "Product/Biz",
-        "Domain"
-      ],
-      "track": "Education",
-      "mode": "In-person",
-      "location": "Lagos,Nigeria",
-      "ts": "I have a team already",
-      "team_name": "Lena",
-      "hackathon_exp": "Yes",
-      "goals": "To be able show the world about what we do at Lena and hopefully get more people to partner and propel us forward with access or funds.",
-      "bg": "I'm Farouk Bilesanmi, ex-ChowCentral (YC '23), Clan Africa, BuySimply, an AI enabled engineer building with almost a decade of experience since working in uni, built different products and systems from the ground up in multiple sectors from fintech, healthtech, edtech, \"mealtech\".\n\nRight now, I'm redesigning the way kids learn with Lena by using games built on an AI tutor to help them get their grades up and the parents and schools get value from them immediately, even without internet.",
-      "launchpad": "Maybe, tell me more",
-      "language": "",
-      "cluster": "MISSION_BUILDER",
-      "cluster_reason": "Showcase Lena, get partners + funds — specific product validation"
-    },
-    {
-      "id": "2ElpXbD",
-      "name": "Ndubuisi Ekeh",
-      "email": "ndubuisiekeh169@gmail.com",
-      "phone": "+2347078344746",
-      "gender": "Male",
-      "student": true,
-      "exp_raw": "Advanced (Building or deploying AI Solutions)",
-      "exp": "Advanced",
-      "tier": 1,
-      "skills": [
-        "Software Developer/Engineer",
-        "Machine Learning Engineer"
-      ],
-      "cats": [
-        "Technical"
-      ],
-      "track": "Finance",
-      "mode": "In-person",
-      "location": "Nigeria",
-      "ts": "I have a team already",
-      "team_name": "Atlas",
-      "hackathon_exp": "Yes",
-      "goals": "Win the Launchpad program, connect with investors, and validate Iroko AI as a product for African enterprise markets.",
-      "bg": "I'm an AI Lead and Backend Engineer based in Lagos, building production multi-agent AI systems for African enterprise markets. I recently placed 4th at the TeKnowledge × Microsoft 2026 Agentic AI Hackathon Finale — our team built Iroko AI, a 5-agent autonomous intelligence platform for MTN Nigeria that monitors regulatory changes, detects fraud patterns, and delivers compliance-verified decisions in real time.\nI'm interested in the Artificial Future Hackathon because the Economic Access track is exactly the problem I'm working on — African enterprises and financial institutions are making critical decisions without real-time intelligence, and no existing AI platform is built for how Nigerian markets actually operate. I want to bring Iroko AI's architecture to this challenge, adapt it for the financial sector, and connect with the community building AI solutions that actually work for Africa.",
-      "launchpad": "Yes, very interested",
-      "language": "",
-      "cluster": "MISSION_BUILDER",
-      "cluster_reason": "Win Launchpad, connect with investors, validate Iroko AI — product validation"
-    },
-    {
-      "id": "A74oAYo",
-      "name": "Abel Duba",
-      "email": "abelskid002@gmail.com",
-      "phone": "+2347043079022",
-      "gender": "Male",
-      "student": false,
-      "exp_raw": "Intermediate (Some hands-on project)",
-      "exp": "Intermediate",
-      "tier": 2,
-      "skills": [
-        "Software Developer/Engineer"
-      ],
-      "cats": [
-        "Technical"
-      ],
-      "track": "Education",
-      "mode": "In-person",
-      "location": "Nigeria",
-      "ts": "I have a team already",
-      "team_name": "Abeltrust",
-      "hackathon_exp": "This will be my first",
-      "goals": "Network and connect",
-      "bg": "Graduate of computer science, I want to network and connect ]",
-      "launchpad": "Yes, very interested",
-      "language": "",
-      "cluster": "EXPLORER",
-      "cluster_reason": "Network and connect — pure connector"
-    },
-    {
       "id": "zxGp1e1",
       "name": "olakunle Adeyemi obasoro",
       "email": "obasorokunle@gmail.com",
@@ -4541,208 +5248,6 @@
       "language": "",
       "cluster": "GROWTH_BUILDER",
       "cluster_reason": "BG: geoscientist + Python/ML + cloud; learning and building AI applications"
-    },
-    {
-      "id": "b5YB6yZ",
-      "name": "Bakare Tioluwani Boluwatife",
-      "email": "bakaretioluwani@yahoo.com",
-      "phone": "+2349154604723",
-      "gender": "Male",
-      "student": false,
-      "exp_raw": "Advanced (Building or deploying AI Solutions)",
-      "exp": "Advanced",
-      "tier": 1,
-      "skills": [
-        "Software Developer/Engineer",
-        "Machine Learning Engineer",
-        "Data Engineer",
-        "Technical",
-        "Business Analyst",
-        "Business Development",
-        "Strategy/Consulting",
-        "Project Manager",
-        "Finance/Economics Expert",
-        "Policy/Government Expert"
-      ],
-      "cats": [
-        "Technical",
-        "Product/Biz",
-        "Domain"
-      ],
-      "track": "Finance",
-      "mode": "In-person",
-      "location": "Lagos/Nigeria",
-      "ts": "I want to form a team at the hackathon",
-      "team_name": "",
-      "hackathon_exp": "Yes",
-      "goals": "My main aim is build a product or system of a financial workflow automation tool that directly solves a problem for informal or SME economies in Nigeria. I want to ship something that’s technically sounds and at the end addresses real user needs  not just a demo. I also want to connect with founders, designers, and other experts who understand African markets. The best ideas come from friction in real markets and I want to build a network around that.",
-      "bg": "I’m a backend software engineer with production fintech experience. I worked at Union Bank of Nigeria on an internal platform approved by the CTO and CIO for organization wide deployment. I’m also Oracle-certified in Java SE 8 and have built systems covering REST APIs, async processing, and AI integration. I’m joining this hackathon to collaborate with designers, developers and other experts to build something that genuinely solves problems for African markets, particularly around economic access.",
-      "launchpad": "Yes, very interested",
-      "language": "",
-      "cluster": "MISSION_BUILDER",
-      "cluster_reason": "Build financial workflow automation for informal/SME Nigerian economies — specific and detailed"
-    },
-    {
-      "id": "PdbMg4P",
-      "name": "Chudi Ogunjiofor",
-      "email": "chudi.ogunjiofor@gmail.com",
-      "phone": "+2348039930005",
-      "gender": "Male",
-      "student": false,
-      "exp_raw": "Beginner (Learning the basics)",
-      "exp": "Beginner",
-      "tier": 3,
-      "skills": [
-        "Software Developer/Engineer",
-        "UI/UX"
-      ],
-      "cats": [
-        "Technical"
-      ],
-      "track": "Education",
-      "mode": "Virtual",
-      "location": "Nigeria",
-      "ts": "I'm open to joining a team",
-      "team_name": "",
-      "hackathon_exp": "Yes",
-      "goals": "My biggest goal for this hackathon is to build a useful, working product that solves a real problem, not just a nice-looking demo. I want to push myself to move fast, collaborate well, and combine my UI/UX and web development skills with AI to create something practical, simple, and valuable for users.",
-      "bg": "I’m a UI/UX designer and web developer with experience building practical digital products, dashboards, and AI-assisted tools. I enjoy turning real everyday problems into simple, usable products, especially around productivity, business operations, and user-friendly web apps.\n\nI’m interested in this hackathon because it’s a chance to build fast, test ideas, collaborate with other smart builders, and push myself beyond just designing concepts into creating something useful. I’m especially excited about using AI and product design together to solve real problems in a way people can actually use.",
-      "launchpad": "Maybe, tell me more",
-      "language": "",
-      "cluster": "GROWTH_BUILDER",
-      "cluster_reason": "Build useful working product + push self + combine UI/UX + AI"
-    },
-    {
-      "id": "44pXo7A",
-      "name": "Olufunke Adeoye",
-      "email": "dewunmig@gmail.com",
-      "phone": "+2348105737751",
-      "gender": "Female",
-      "student": false,
-      "exp_raw": "Non-technical (product, design, business, ops)",
-      "exp": "Non-tech",
-      "tier": 5,
-      "skills": [
-        "Technical",
-        "Graphic Designer",
-        "Academic/Industry",
-        "Writer/Content Creator",
-        "Administrative/Logistics",
-        "Healthcare Professional"
-      ],
-      "cats": [
-        "Technical",
-        "Design",
-        "Content",
-        "Product/Biz",
-        "Domain"
-      ],
-      "track": "Healthcare",
-      "mode": "Virtual",
-      "location": "Nigeria",
-      "ts": "I'm open to joining a team",
-      "team_name": "",
-      "hackathon_exp": "This will be my first",
-      "goals": "To build a product that solves real world problems and form meaningful peer connections.",
-      "bg": "I just completed a fellowship programme in product management and I think this would be a great opportunity to gain real world experience in product ideation, strategy, design, and ultimately building an MVP that solves a real world problem. I also think it's an opportunity to connect with people of like minds and forge meaningful partnerships.",
-      "launchpad": "Maybe, tell me more",
-      "language": "",
-      "cluster": "GROWTH_BUILDER",
-      "cluster_reason": "Build product solving real problems + meaningful peer connections — PM fellowship grad"
-    },
-    {
-      "id": "GxQva1z",
-      "name": "Yahaya Yusuf",
-      "email": "yyahaya222@gmail.com",
-      "phone": "+2348164346318",
-      "gender": "Male",
-      "student": true,
-      "exp_raw": "Beginner (Learning the basics)",
-      "exp": "Beginner",
-      "tier": 3,
-      "skills": [
-        "Software Developer/Engineer",
-        "Writer/Content Creator"
-      ],
-      "cats": [
-        "Technical",
-        "Content"
-      ],
-      "track": "Healthcare",
-      "mode": "Virtual",
-      "location": "Nigeria",
-      "ts": "I'm open to joining a team",
-      "team_name": "",
-      "hackathon_exp": "Yes",
-      "goals": "Network",
-      "bg": "To learn and build",
-      "launchpad": "Maybe, tell me more",
-      "language": "",
-      "cluster": "EXPLORER",
-      "cluster_reason": "Network — BG: To learn and build; minimal signal"
-    },
-    {
-      "id": "vGdjKX0",
-      "name": "Cindy Shontan",
-      "email": "cindyshontan@gmail.com",
-      "phone": "+2347052919353",
-      "gender": "Female",
-      "student": false,
-      "exp_raw": "Intermediate (Some hands-on project)",
-      "exp": "Intermediate",
-      "tier": 2,
-      "skills": [
-        "UI/UX"
-      ],
-      "cats": [
-        "Other"
-      ],
-      "track": "Education",
-      "mode": "In-person",
-      "location": "Lagos, Nigeria",
-      "ts": "I'm open to joining a team",
-      "team_name": "",
-      "hackathon_exp": "Yes",
-      "goals": "Build a working product that can grow and scale.",
-      "bg": "I have many years of experience building AI powered solutions for different industries and capacities. I'm looking to work on projects that are challenging and solves really human problem.",
-      "launchpad": "Maybe, tell me more",
-      "language": "",
-      "cluster": "GROWTH_BUILDER",
-      "cluster_reason": "Build working product that can grow and scale — experienced AI solution builder"
-    },
-    {
-      "id": "rjkypEL",
-      "name": "Irawooluwa Akintunde",
-      "email": "airawoluwa@gmail.com",
-      "phone": "+2347012588035",
-      "gender": "Female",
-      "student": false,
-      "exp_raw": "Beginner (Learning the basics)",
-      "exp": "Beginner",
-      "tier": 3,
-      "skills": [
-        "Business Development",
-        "Project Manager",
-        "Operations Manager",
-        "Administrative/Logistics",
-        "Educator/Academic"
-      ],
-      "cats": [
-        "Product/Biz",
-        "Domain"
-      ],
-      "track": "Education",
-      "mode": "In-person",
-      "location": "Nigeria",
-      "ts": "I want to form a team at the hackathon",
-      "team_name": "",
-      "hackathon_exp": "This will be my first",
-      "goals": "",
-      "bg": "I have a background in Educational Management, which has given me a strong foundation in project coordination, community engagement, and problem-solving. Throughout my academic and professional journey, I have been passionate about creating solutions that improve people's experiences and make opportunities more accessible.\n\nCurrently, I am building Gift Cop, a platform designed to make gift-giving more thoughtful, seamless, and personalized. The idea was inspired by the challenges people face in choosing meaningful gifts and managing special occasions. Through Gift Cop, I am learning firsthand about product development, user research, marketing, and building technology-driven solutions that address real-world problems.\n\nI am interested in this hackathon because it presents an opportunity to collaborate with innovative minds, gain practical experience, and accelerate my growth as a builder and entrepreneur. I am particularly excited to learn from mentors, validate ideas, and explore how technology can be leveraged to create impactful solutions. I believe the experience will not only help me refine my problem-solving skills but also contribute valuable insights to the development of Gift Cop and future projects.",
-      "launchpad": "Maybe, tell me more",
-      "language": "",
-      "cluster": "LEARNER",
-      "cluster_reason": "BG: Educational Management background, passionate about creating solutions"
     }
   ],
   "storytelling": [
