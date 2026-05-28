@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_participants": 173,
+    "total_participants": 180,
     "total_teams": 46,
-    "people_in_teams": 158,
-    "on_hold_count": 4,
-    "storytelling_count": 8,
+    "people_in_teams": 163,
+    "on_hold_count": 5,
+    "storytelling_count": 9,
     "new_teams": 35,
     "preformed_teams": 11,
-    "flagged_teams": 33
+    "flagged_teams": 32
   },
   "teams": [
     {
@@ -4921,42 +4921,80 @@
           "cluster_reason": "BG: Educational Management background, passionate about creating solutions"
         },
         {
-          "id": "68pLplk",
-          "name": "odugbesan Gabriel",
-          "email": "odugbesan1234@gmail.com",
+          "id": "81RLxox",
+          "name": "Osadolor Imarhia",
+          "email": "nuelmaybe@gmail.com",
           "gender": "Male",
           "student": false,
-          "exp_raw": "Non-technical (product, design, business, ops)",
-          "exp": "Non-tech",
-          "tier": 5,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
           "skills": [
+            "Software Developer/Engineer",
+            "Data Analyst",
+            "Graphic Designer",
+            "Business Analyst",
             "Business Development",
-            "Educator/Academic"
+            "Strategy/Consulting",
+            "Writer/Content Creator",
+            "Marketing/Growth",
+            "Communications/PR",
+            "Community Manager",
+            "Project Manager",
+            "Operations Manager",
+            "Administrative/Logistics",
+            "Finance/Economics Expert"
           ],
           "cats": [
+            "Technical",
+            "Design",
             "Product/Biz",
+            "Content",
             "Domain"
           ],
           "track": "Education",
           "mode": "In-person",
-          "location": "Lagos, Nigeria",
-          "ts": "I have a team already",
-          "team_name": "TAMS360",
-          "hackathon_exp": "This will be my first",
-          "goals": "My biggest goal for this hackathon is to build meaningful connections with other founders, developers, and mentors while validating and improving the AI-powered education solutions we are building at Tecxha Edu. I also want to explore innovative ways to use AI to improve learning outcomes, assessment systems, and student engagement across African schools.",
-          "bg": "I’m the co-founder of Tecxha Edu, an edtech company based in Lagos, Nigeria, focused on improving education through technology and innovative learning systems. We currently work with schools through our products, Speemt — a speed maths learning platform — and TAMS, a school management and assessment system with CBT and AI-driven learning features.\n\nBefore fully focusing on the company, I worked as a teacher, which gave me firsthand experience of the challenges schools, teachers, and students face daily. That experience inspired us to build practical solutions that improve learning, assessment, and student engagement.\n\nI’m interested in this hackathon because I want to connect with other builders, learn from experienced mentors, and explore new AI and technology ideas that can help us scale impactful education solutions across Africa.",
-          "launchpad": "",
+          "location": "lagos",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "No",
+          "goals": "learn more. built with. produce",
+          "bg": "long in content creation/influencer field\nmigrated to crypto and web3 field\n(new-in) hands in some projects(developer).. with AI \n\nbeen more of freelancing and personal experiences/motion. this hackathon would help me fixate on something. been exposed to a lot of things and just want to fixate on something and build a career.",
+          "launchpad": "Yes, very interested",
           "language": "",
-          "cluster": "EXPLORER",
-          "cluster_reason": "Build meaningful connections + learn from experienced practitioners — connector"
-        }
-      ],
-      "org_flags": [
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Learn, build, produce — balanced growth"
+        },
         {
-          "type": "experience",
-          "msg": "Wide experience range"
+          "id": "WOjN8rP",
+          "name": "Akinfenwa Obaseyi",
+          "email": "akinfenwaobaseyi03@gmail.com",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Education",
+          "mode": "In-person",
+          "location": "Lagos/Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "",
+          "bg": "",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
         }
       ],
+      "org_flags": [],
       "members_needed": 0,
       "claimed": 4
     },
@@ -5222,7 +5260,7 @@
       "display_name": "Tecxha Edu",
       "track": "Education",
       "mode": "Virtual",
-      "type": "pre_formed_incomplete",
+      "type": "pre_formed",
       "members": [
         {
           "id": "pbkyAdB",
@@ -5283,19 +5321,119 @@
           "language": "",
           "cluster": "GROWTH_BUILDER",
           "cluster_reason": "Build a project — straightforward builder"
+        },
+        {
+          "id": "68pLplk",
+          "name": "odugbesan Gabriel",
+          "email": "odugbesan1234@gmail.com",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Non-technical (product, design, business, ops)",
+          "exp": "Non-tech",
+          "tier": 5,
+          "skills": [
+            "Business Development",
+            "Educator/Academic"
+          ],
+          "cats": [
+            "Product/Biz",
+            "Domain"
+          ],
+          "track": "Education",
+          "mode": "In-person",
+          "location": "Lagos, Nigeria",
+          "ts": "I have a team already",
+          "team_name": "TAMS360",
+          "hackathon_exp": "This will be my first",
+          "goals": "My biggest goal for this hackathon is to build meaningful connections with other founders, developers, and mentors while validating and improving the AI-powered education solutions we are building at Tecxha Edu. I also want to explore innovative ways to use AI to improve learning outcomes, assessment systems, and student engagement across African schools.",
+          "bg": "I’m the co-founder of Tecxha Edu, an edtech company based in Lagos, Nigeria, focused on improving education through technology and innovative learning systems. We currently work with schools through our products, Speemt — a speed maths learning platform — and TAMS, a school management and assessment system with CBT and AI-driven learning features.\n\nBefore fully focusing on the company, I worked as a teacher, which gave me firsthand experience of the challenges schools, teachers, and students face daily. That experience inspired us to build practical solutions that improve learning, assessment, and student engagement.\n\nI’m interested in this hackathon because I want to connect with other builders, learn from experienced mentors, and explore new AI and technology ideas that can help us scale impactful education solutions across Africa.",
+          "launchpad": "",
+          "language": "",
+          "cluster": "EXPLORER",
+          "cluster_reason": "Build meaningful connections + learn from experienced practitioners — connector"
+        },
+        {
+          "id": "rjk6oYv",
+          "name": "Oluyemi odugbesan",
+          "email": "odugbesanyemi@gmail.com",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer",
+            "UI/UX",
+            "Graphic Designer",
+            "Illustrator/Visual Artist"
+          ],
+          "cats": [
+            "Technical",
+            "Design"
+          ],
+          "track": "Education",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Tecxhaedu",
+          "hackathon_exp": "This will be my first",
+          "goals": "Form connections",
+          "bg": "",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "BG: Tecxha Edu co-founder, education product builder"
+        },
+        {
+          "id": "PdG60kx",
+          "name": "ADEYEMI FELIX ADEOLU",
+          "email": "felixzyee4@gmail.com",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Non-technical (product, design, business, ops)",
+          "exp": "Non-tech",
+          "tier": 5,
+          "skills": [
+            "Operations Manager",
+            "Educator/Academic"
+          ],
+          "cats": [
+            "Product/Biz",
+            "Domain"
+          ],
+          "track": "Education",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Tecxha Edu",
+          "hackathon_exp": "No",
+          "goals": "Build a project",
+          "bg": "Very simple, discipline fellow of osun State, my interest is that \"the improve one and set one on a global scene for recognition\".",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "BG: Tecxha Edu team, education product builder"
         }
       ],
       "org_flags": [
         {
-          "type": "incomplete",
-          "msg": "2 registered, awaiting 1+ more"
+          "type": "gender",
+          "msg": "All-male team"
+        },
+        {
+          "type": "student",
+          "msg": "Only 0 student(s)"
+        },
+        {
+          "type": "experience",
+          "msg": "Wide experience range"
         },
         {
           "type": "note",
-          "msg": "Gabriel Odugbesan (EDU-I004) is co-founder of Tecxha Edu but registered under TAMS360 — confirm with Daniel if this is the same team"
+          "msg": "Gabriel Odugbesan registered In-person; rest of team is Virtual"
         }
       ],
-      "members_needed": 1,
+      "members_needed": 0,
       "claimed": 3,
       "note": ""
     },
@@ -5394,6 +5532,44 @@
           "language": "",
           "cluster": "GROWTH_BUILDER",
           "cluster_reason": "Build a product and build connections — balanced"
+        },
+        {
+          "id": "KYaMgoM",
+          "name": "OLADERU Olaoluwa James",
+          "email": "tristyjacob@gmail.com",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Software Developer/Engineer",
+            "Data Analyst",
+            "Technical",
+            "UI/UX",
+            "Graphic Designer",
+            "Writer/Content Creator",
+            "Linguist/Language Expert",
+            "Project Manager"
+          ],
+          "cats": [
+            "Technical",
+            "Design",
+            "Content",
+            "Product/Biz"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "Lagos/Nigeria",
+          "ts": "I want to form a team at the hackathon",
+          "team_name": "",
+          "hackathon_exp": "This will be my first",
+          "goals": "To build a financial product based on cryptocurrencies/digital tokens in order to elevate local payment methods to the digital level.",
+          "bg": "I’m a final year computer science student of University of the People. My interest in participating in the hackathon is to broaden my experience and learn more.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
         }
       ],
       "org_flags": [],
@@ -5760,51 +5936,6 @@
       "cluster_reason": "Apply data analysis and economic modelling — balanced builder"
     },
     {
-      "id": "81RLxox",
-      "name": "Osadolor Imarhia",
-      "email": "nuelmaybe@gmail.com",
-      "gender": "Male",
-      "student": false,
-      "exp_raw": "Intermediate (Some hands-on project)",
-      "exp": "Intermediate",
-      "tier": 2,
-      "skills": [
-        "Software Developer/Engineer",
-        "Data Analyst",
-        "Graphic Designer",
-        "Business Analyst",
-        "Business Development",
-        "Strategy/Consulting",
-        "Writer/Content Creator",
-        "Marketing/Growth",
-        "Communications/PR",
-        "Community Manager",
-        "Project Manager",
-        "Operations Manager",
-        "Administrative/Logistics",
-        "Finance/Economics Expert"
-      ],
-      "cats": [
-        "Technical",
-        "Design",
-        "Product/Biz",
-        "Content",
-        "Domain"
-      ],
-      "track": "Education",
-      "mode": "In-person",
-      "location": "lagos",
-      "ts": "I'm open to joining a team",
-      "team_name": "",
-      "hackathon_exp": "No",
-      "goals": "learn more. built with. produce",
-      "bg": "long in content creation/influencer field\nmigrated to crypto and web3 field\n(new-in) hands in some projects(developer).. with AI \n\nbeen more of freelancing and personal experiences/motion. this hackathon would help me fixate on something. been exposed to a lot of things and just want to fixate on something and build a career.",
-      "launchpad": "Yes, very interested",
-      "language": "",
-      "cluster": "GROWTH_BUILDER",
-      "cluster_reason": "Learn, build, produce — balanced growth"
-    },
-    {
       "id": "LZ6WJ1z",
       "name": "Olowookere Micheal",
       "email": "developermykel@gmail.com",
@@ -5831,6 +5962,65 @@
       "language": "",
       "cluster": "GROWTH_BUILDER",
       "cluster_reason": "Build practical, impactful solution — growth builder"
+    },
+    {
+      "id": "LZ6dV0z",
+      "name": "Edoh Victoria",
+      "email": "edohvictoria6@gmail.com",
+      "gender": "Female",
+      "student": true,
+      "exp_raw": "Intermediate (Some hands-on project)",
+      "exp": "Intermediate",
+      "tier": 2,
+      "skills": [
+        "Writer/Content Creator",
+        "Communications/PR"
+      ],
+      "cats": [
+        "Content"
+      ],
+      "track": "Healthcare",
+      "mode": "Virtual",
+      "location": "Nigeria",
+      "ts": "I'm open to joining a team",
+      "team_name": "",
+      "hackathon_exp": "No",
+      "goals": "to win and help myself in school",
+      "bg": "I would to participate in the hackaton to improve myself",
+      "launchpad": "Maybe, tell me more",
+      "language": "",
+      "cluster": "GROWTH_BUILDER",
+      "cluster_reason": "Goals indicate building focus"
+    },
+    {
+      "id": "jakMyoY",
+      "name": "Ian Kimani",
+      "email": "frihkian@gmail.com",
+      "gender": "Male",
+      "student": false,
+      "exp_raw": "Intermediate (Some hands-on project)",
+      "exp": "Intermediate",
+      "tier": 2,
+      "skills": [
+        "Software Developer/Engineer",
+        "UI/UX",
+        "Academic/Industry"
+      ],
+      "cats": [
+        "Technical"
+      ],
+      "track": "Education",
+      "mode": "Virtual",
+      "location": "Kenya",
+      "ts": "I'm open to joining a team",
+      "team_name": "",
+      "hackathon_exp": "Yes",
+      "goals": "Networking, build and learning.",
+      "bg": "I see this as an opportunity  to learn and increase my skills and experience arsenal.",
+      "launchpad": "Maybe, tell me more",
+      "language": "",
+      "cluster": "GROWTH_BUILDER",
+      "cluster_reason": "Goals indicate building focus"
     }
   ],
   "storytelling": [
@@ -6111,6 +6301,48 @@
       "language": "Nigerian Pidgin",
       "cluster": "LEARNER",
       "cluster_reason": "Learn AI and build connections — storytelling participant"
+    },
+    {
+      "id": "PdvbQM1",
+      "name": "Toyyeebah Daramola Lanre-lawal",
+      "email": "thelanrelawaltoyyeebah@gmail.com",
+      "gender": "Female",
+      "student": true,
+      "exp_raw": "Curious Beginner (New to AI)",
+      "exp": "Curious",
+      "tier": 4,
+      "skills": [
+        "Software Developer/Engineer",
+        "Machine Learning Engineer",
+        "Data Analyst",
+        "UI/UX",
+        "Brand/Creative Director",
+        "Academic/Industry",
+        "Writer/Content Creator",
+        "Linguist/Language Expert",
+        "Translator",
+        "Project Manager",
+        "Finance/Economics Expert"
+      ],
+      "cats": [
+        "Technical",
+        "Design",
+        "Content",
+        "Product/Biz",
+        "Domain"
+      ],
+      "track": "Storytelling",
+      "mode": "In-person",
+      "location": "Nigeria",
+      "ts": "I'm open to joining a team",
+      "team_name": "",
+      "hackathon_exp": "No",
+      "goals": "",
+      "bg": "",
+      "launchpad": "Yes, very interested",
+      "language": "Yoruba",
+      "cluster": "GROWTH_BUILDER",
+      "cluster_reason": "Goals indicate building focus"
     }
   ]
 }
