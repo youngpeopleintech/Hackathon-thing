@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_participants": 193,
-    "total_teams": 49,
-    "people_in_teams": 178,
-    "on_hold_count": 2,
+    "total_participants": 196,
+    "total_teams": 50,
+    "people_in_teams": 185,
+    "on_hold_count": 0,
     "storytelling_count": 10,
-    "new_teams": 37,
+    "new_teams": 38,
     "preformed_teams": 12,
-    "flagged_teams": 34
+    "flagged_teams": 36
   },
   "teams": [
     {
@@ -535,9 +535,57 @@
           "language": "",
           "cluster": "LEARNER",
           "cluster_reason": "Expand network + build cool things — Beginner product designer; LEARNER given novice level"
+        },
+        {
+          "id": "68pQxqO",
+          "name": "Olayode Rachael Oluwayemisi",
+          "email": "destinifeoluwa@gmail.com",
+          "gender": "Female",
+          "student": true,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer",
+            "Illustrator/Visual Artist",
+            "Academic/Industry",
+            "Business Development",
+            "Marketing/Growth",
+            "Community Manager",
+            "Operations Manager",
+            "Administrative/Logistics",
+            "Healthcare Professional",
+            "Finance/Economics Expert",
+            "Agriculture/Sustainability Expert",
+            "Policy/Government Expert"
+          ],
+          "cats": [
+            "Technical",
+            "Design",
+            "Product/Biz",
+            "Content",
+            "Domain"
+          ],
+          "track": "Healthcare",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I want to form a team at the hackathon",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "",
+          "bg": "",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
         }
       ],
-      "org_flags": [],
+      "org_flags": [
+        {
+          "type": "student",
+          "msg": "Only 1 student(s)"
+        }
+      ],
       "members_needed": 0,
       "claimed": 2
     },
@@ -2372,12 +2420,49 @@
           "language": "",
           "cluster": "LEARNER",
           "cluster_reason": "Learn and use AI in new way + outstanding product — aspiring data analyst"
+        },
+        {
+          "id": "yPdvo08",
+          "name": "Folashade Adewara",
+          "email": "folashadeadewara2004@gmail.com",
+          "gender": "Female",
+          "student": true,
+          "exp_raw": "Non-technical (product, design, business, ops)",
+          "exp": "Non-tech",
+          "tier": 5,
+          "skills": [
+            "UI/UX",
+            "Community Manager",
+            "Project Manager",
+            "Educator/Academic"
+          ],
+          "cats": [
+            "Content",
+            "Product/Biz",
+            "Domain"
+          ],
+          "track": "Education",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Team Cryptex",
+          "hackathon_exp": "Yes",
+          "goals": "My biggest goal is to learn, build and connect and if possible, land a gig.",
+          "bg": "I'm an undergraduate in the University of Lagos and a product designer.\nI have completed a one year product design training and participated in Hackathons.\n\nI am interested in this hackathon because I am passionate about solving problems in the end tech space and making impact, and participating in an hackathon is a fast and efficient way to solve problems and build solutions.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
         }
       ],
       "org_flags": [
         {
           "type": "student",
-          "msg": "Only 0 student(s)"
+          "msg": "Only 1 student(s)"
+        },
+        {
+          "type": "experience",
+          "msg": "Wide experience range"
         }
       ]
     },
@@ -2482,6 +2567,38 @@
           "language": "",
           "cluster": "LEARNER",
           "cluster_reason": "Learn to use AI to accelerate building + form connections — learning primary"
+        },
+        {
+          "id": "68pOYzk",
+          "name": "Samuel Oloyede",
+          "email": "oloyede.s.t@gmail.com",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Technical",
+            "Business Development",
+            "Strategy/Consulting",
+            "Other"
+          ],
+          "cats": [
+            "Technical",
+            "Product/Biz"
+          ],
+          "track": "Education",
+          "mode": "In-person",
+          "location": "Lagos/Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "This will be my first",
+          "goals": "My biggest goal is to form connections with potential partners to build a product with.",
+          "bg": "I have some experience in logistics and Quality Management, as I currently head the Quality Management System in the organization where I work.\n\nI am looking to build my own startup, though with virtually no experience in that ecosystem, so I view this hackathon as a way to get my feet wet, introduce me to some ideas and people to help this journey.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
         }
       ],
       "org_flags": []
@@ -3331,9 +3448,46 @@
           "language": "",
           "cluster": "LEARNER",
           "cluster_reason": "Gain practical experience + broaden AI understanding + strengthen skills — Microbiology background"
+        },
+        {
+          "id": "MANUAL-EI-001",
+          "name": "Emmanuel Ikharo",
+          "email": "emmyjnrikharo@gmail.com",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer",
+            "UI/UX",
+            "Graphic Designer"
+          ],
+          "cats": [
+            "Technical",
+            "Design"
+          ],
+          "track": "Healthcare",
+          "mode": "Virtual",
+          "location": "Lagos/Nigeria",
+          "ts": "I have a team already",
+          "team_name": "HLT-V001",
+          "hackathon_exp": "No",
+          "goals": "My biggest goal for this hackathon is to collaborate with a strong team to build a meaningful and well-designed solution that addresses a real problem. I also want to challenge myself creatively and technically, gain hands-on experience working in a fast-paced innovation environment, and connect with people who are passionate about technology, design, and impact-driven solutions.",
+          "bg": "I’m a multidisciplinary creative with experience in web development, UI/UX design, and graphic design, with a strong interest in building user-centered digital experiences that are both functional and visually engaging. I’m interested in the hackathon because it presents an opportunity to collaborate with innovative minds, solve real-world problems creatively, and contribute my design and development skills toward building impactful solutions.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Collaborative builder — UI/UX + Software Dev, hackathon experience",
+          "org_flags_note": "Placeholder ID MANUAL-EI-001 — duplicate Tally submission (shared ID with efe). Added by organiser request only."
         }
       ],
-      "org_flags": []
+      "org_flags": [
+        {
+          "type": "note",
+          "msg": "Emmanuel Ikharo has placeholder ID MANUAL-EI-001 — Tally form ID clash with efe"
+        }
+      ]
     },
     {
       "name": "HLT-V002",
@@ -6372,72 +6526,111 @@
       ],
       "members_needed": 0,
       "claimed": 4
-    }
-  ],
-  "on_hold": [
-    {
-      "id": "LZ6dV0z",
-      "name": "Edoh Victoria",
-      "email": "edohvictoria6@gmail.com",
-      "gender": "Female",
-      "student": true,
-      "exp_raw": "Intermediate (Some hands-on project)",
-      "exp": "Intermediate",
-      "tier": 2,
-      "skills": [
-        "Writer/Content Creator",
-        "Communications/PR"
-      ],
-      "cats": [
-        "Content"
-      ],
-      "track": "Healthcare",
-      "mode": "Virtual",
-      "location": "Nigeria",
-      "ts": "I'm open to joining a team",
-      "team_name": "",
-      "hackathon_exp": "No",
-      "goals": "to win and help myself in school",
-      "bg": "I would to participate in the hackaton to improve myself",
-      "launchpad": "Maybe, tell me more",
-      "language": "",
-      "cluster": "GROWTH_BUILDER",
-      "cluster_reason": "Goals indicate building focus"
     },
     {
-      "id": "yPdvo08",
-      "name": "Folashade Adewara",
-      "email": "folashadeadewara2004@gmail.com",
-      "gender": "Female",
-      "student": true,
-      "exp_raw": "Non-technical (product, design, business, ops)",
-      "exp": "Non-tech",
-      "tier": 5,
-      "skills": [
-        "UI/UX",
-        "Community Manager",
-        "Project Manager",
-        "Educator/Academic"
+      "name": "HLT-V006",
+      "display_name": "HLT-V006",
+      "track": "Healthcare",
+      "mode": "Virtual",
+      "type": "new",
+      "members": [
+        {
+          "id": "LZ6dV0z",
+          "name": "Edoh Victoria",
+          "email": "edohvictoria6@gmail.com",
+          "gender": "Female",
+          "student": true,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Writer/Content Creator",
+            "Communications/PR"
+          ],
+          "cats": [
+            "Content"
+          ],
+          "track": "Healthcare",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "No",
+          "goals": "to win and help myself in school",
+          "bg": "I would to participate in the hackaton to improve myself",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
+        },
+        {
+          "id": "2EDJZ9A",
+          "name": "Jamilat Olawuyi",
+          "email": "jamilatolawuyi@gmail.com",
+          "gender": "Female",
+          "student": true,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Machine Learning Engineer",
+            "UI/UX",
+            "Academic/Industry",
+            "Community Manager"
+          ],
+          "cats": [
+            "Technical",
+            "Design",
+            "Content"
+          ],
+          "track": "Healthcare",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I want to form a team at the hackathon",
+          "team_name": "",
+          "hackathon_exp": "This will be my first",
+          "goals": "My biggest goal is to learn more about practical AI development, collaborate with innovative people, and build a solution that can create real impact in Africa. I also want to improve my technical and teamwork skills, gain mentorship, and explore how AI can be combined with engineering and creativity to solve everyday problems.",
+          "bg": "I’m a Mechatronics Engineering student at Federal University of Technology Minna with a growing interest in robotics, artificial intelligence, and automation systems that can solve real problems in African communities. Beyond academics, I’ve been involved in leadership, STEM outreach, technical learning programs, and community building initiatives, which have helped me develop teamwork, communication, and problem-solving skills.\n\nI’m interested in this hackathon because I want to deepen my practical understanding of AI by working on real-world solutions alongside other passionate innovators. I’m especially excited about the opportunity to collaborate, learn from mentors, build meaningful connections, and contribute to solutions that can create impact in areas like education, healthcare, and accessibility across Africa. I also see this as a chance to challenge myself, improve my technical skills, and turn ideas into something tangible.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
+        },
+        {
+          "id": "Y5xM7p5",
+          "name": "Muhammadkabir Yaqub",
+          "email": "ahmadkabiryaqub@gmail.com",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Technical"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Healthcare",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "This will be my first",
+          "goals": "My biggest goal is to learn more about practical AI applications, collaborate with talented people, and build a product that solves a real problem. I also want to form meaningful connections with builders, designers, developers, and founders while improving my execution skills in a fast paced environment.",
+          "bg": "I am a Product Manager with experience working on startup and technology products across operations, logistics, and digital platforms. I have worked on products like WasteAway, a platform focused on connecting households with waste management services, and I enjoy turning ideas into structured, user focused solutions.\n\nI am interested in this hackathon because I want to deepen my understanding of AI, collaborate with ambitious builders, and contribute to solving real African problems with technology. I am especially excited about the opportunity to work with multidisciplinary teams, learn from mentors, and build products that can create meaningful impact beyond the hackathon itself.",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
+        }
       ],
-      "cats": [
-        "Content",
-        "Product/Biz",
-        "Domain"
-      ],
-      "track": "Education",
-      "mode": "In-person",
-      "location": "Nigeria",
-      "ts": "I have a team already",
-      "team_name": "Team Cryptex",
-      "hackathon_exp": "Yes",
-      "goals": "My biggest goal is to learn, build and connect and if possible, land a gig.",
-      "bg": "I'm an undergraduate in the University of Lagos and a product designer.\nI have completed a one year product design training and participated in Hackathons.\n\nI am interested in this hackathon because I am passionate about solving problems in the end tech space and making impact, and participating in an hackathon is a fast and efficient way to solve problems and build solutions.",
-      "launchpad": "Yes, very interested",
-      "language": "",
-      "cluster": "GROWTH_BUILDER",
-      "cluster_reason": "Goals indicate building focus"
+      "org_flags": [],
+      "members_needed": 0,
+      "claimed": 3
     }
   ],
+  "on_hold": [],
   "storytelling": [
     {
       "id": "GxqLN2O",
