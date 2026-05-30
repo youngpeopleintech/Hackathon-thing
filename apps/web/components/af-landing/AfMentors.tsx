@@ -87,16 +87,6 @@ const MENTORS: Mentor[] = [
     photoPosition: 'center 15%',
   },
   {
-    name: 'Deborah Adewunmi',
-    role: 'Senior Software Engineer',
-    company: 'JPMorgan Chase',
-    areas: ['Software Engineering', 'React & TypeScript', 'AI Tools', 'Accessibility'],
-    bio: 'Deborah is a Senior Software Engineer at JPMorgan Chase. She specialises in React/TypeScript, systems design, and web accessibility and brings an unusual lens to software: an MSc in Health Technology and a BSc in Biochemistry. Before JPMorgan, she built products at Alife Health — a California-based AI platform applying machine learning to IVF clinic operations — and at Zoropay. She won First Place for Best Use of Google Cloud and came second runner-up at MIT Hacking Medicine. She has also been a long-term volunteer at YPIT.',
-    linkedin: 'https://www.linkedin.com/in/deborah-adewunmi/',
-    image: '/images/af/speakers/deborah-adewunmi.jpeg',
-    photoPosition: 'center 15%',
-  },
-  {
     name: 'Nkechi Anyanwu',
     role: 'Product Engineer',
     company: 'Vouchsafe',
