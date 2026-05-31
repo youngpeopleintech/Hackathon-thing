@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_participants": 196,
-    "total_teams": 50,
-    "people_in_teams": 185,
+    "total_participants": 204,
+    "total_teams": 52,
+    "people_in_teams": 193,
     "on_hold_count": 0,
     "storytelling_count": 10,
-    "new_teams": 38,
-    "preformed_teams": 12,
-    "flagged_teams": 36
+    "new_teams": 39,
+    "preformed_teams": 13,
+    "flagged_teams": 37
   },
   "teams": [
     {
@@ -312,6 +312,34 @@
           "language": "",
           "cluster": "GROWTH_BUILDER",
           "cluster_reason": "Learn, build, collaborate, network — balanced growth builder"
+        },
+        {
+          "id": "rjkJ2yl",
+          "name": "Odunayo Kareemat Buliaminu",
+          "email": "buliaminuodunayo12@gmail.com",
+          "gender": "Female",
+          "student": false,
+          "exp_raw": "Beginner (Learning the basics)",
+          "exp": "Beginner",
+          "tier": 3,
+          "skills": [
+            "Linguist/Language Expert"
+          ],
+          "cats": [
+            "Content"
+          ],
+          "track": "Language",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "No",
+          "goals": "To learn, unlearn and relearn",
+          "bg": "",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "LEARNER",
+          "cluster_reason": "Learn, unlearn, relearn — curious learner"
         }
       ],
       "org_flags": [
@@ -2694,9 +2722,50 @@
           "language": "",
           "cluster": "LEARNER",
           "cluster_reason": "Learning and building connections — no BG"
+        },
+        {
+          "id": "PdGk1eP",
+          "name": "Sultan Abdulkareem",
+          "email": "sultanabdulkareem7@gmail.com",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Technical",
+            "Academic/Industry",
+            "Business Development",
+            "Strategy/Consulting",
+            "Project Manager",
+            "Educator/Academic",
+            "Agriculture/Sustainability Expert"
+          ],
+          "cats": [
+            "Technical",
+            "Product/Biz",
+            "Domain"
+          ],
+          "track": "Education",
+          "mode": "Virtual",
+          "location": "Kwara/Nigeria",
+          "ts": "I have a team already",
+          "team_name": "AfriNova AI",
+          "hackathon_exp": "Yes",
+          "goals": "My biggest goal for this hackathon is to build an impactful AI-powered solution that addresses a real challenge facing African communities. I want to collaborate with talented innovators, strengthen my technical and problem-solving skills, learn from mentors, and transform an idea into a working prototype with the potential for long-term social impact. I also hope to expand my network and explore opportunities to further develop the project beyond the hackathon",
+          "bg": "I am a young Nigerian innovator and aspiring engineer passionate about using technology to solve real-world challenges in Africa. Over the years, I have led and participated in projects focused on clean energy, environmental sustainability, disaster management, and STEM education. I have also been involved in various international competitions, leadership programs, and community initiatives that promote innovation and positive social impact.\n\nI am interested in this hackathon because it provides an opportunity to collaborate with talented individuals, deepen my understanding of artificial intelligence, and build practical solutions for challenges facing African communities. I am particularly excited about exploring how AI can improve access to quality education, sustainable energy, and opportunities for young people. Beyond building a project, I hope to learn from mentors, expand my network, and contribute meaningfully to the future of technology in Africa.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "MISSION_BUILDER",
+          "cluster_reason": "Build impactful AI solution — domain expertise in Education/Agriculture"
         }
       ],
-      "org_flags": []
+      "org_flags": [
+        {
+          "type": "experience",
+          "msg": "Wide experience range"
+        }
+      ]
     },
     {
       "name": "EDU-V002",
@@ -3187,6 +3256,52 @@
           "language": "",
           "cluster": "EXPLORER",
           "cluster_reason": "BG: content writer/visual designer; showcase skills — connector/explorer"
+        },
+        {
+          "id": "KYaaO5A",
+          "name": "Eniolami Saheed",
+          "email": "eniolamiseyi62@gmail.com",
+          "gender": "Female",
+          "student": true,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Software Developer/Engineer",
+            "Machine Learning Engineer",
+            "Brand/Creative Director",
+            "Academic/Industry",
+            "Strategy/Consulting",
+            "Writer/Content Creator",
+            "Marketing/Growth",
+            "Communications/PR",
+            "Community Manager",
+            "Project Manager",
+            "Operations Manager",
+            "Healthcare Professional",
+            "Educator/Academic",
+            "Finance/Economics Expert",
+            "Agriculture/Sustainability Expert"
+          ],
+          "cats": [
+            "Technical",
+            "Design",
+            "Product/Biz",
+            "Content",
+            "Domain"
+          ],
+          "track": "Healthcare",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "",
+          "bg": "I'm Eniolami Saheed A just concluded Computer science student of the federal polytechnic ilaro I have built some project like advisor flow for insurance company, car rnetage system and lot more and also I'm expertise in Marketing with three years of experience",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "CS graduate building AI solutions — growth builder"
         }
       ],
       "org_flags": [
@@ -5740,34 +5855,6 @@
       "type": "new",
       "members": [
         {
-          "id": "0QZjE4Q",
-          "name": "Deborah Okeke",
-          "email": "okekedeborah@gmail.com",
-          "gender": "Female",
-          "student": false,
-          "exp_raw": "Intermediate (Some hands-on project)",
-          "exp": "Intermediate",
-          "tier": 2,
-          "skills": [
-            "Software Developer/Engineer"
-          ],
-          "cats": [
-            "Technical"
-          ],
-          "track": "Finance",
-          "mode": "Virtual",
-          "location": "Lagos, Nigeria",
-          "ts": "I have a team already",
-          "team_name": "FarmXnap",
-          "hackathon_exp": "Yes",
-          "goals": "",
-          "bg": "I'm a backend engineer with over two years of production experience building scalable backend systems. My teammate and I were inspired during the Interswitch x Enyata Buildathon to build an AI/Agric/Fintech platform; we want to continue with the project.",
-          "launchpad": "",
-          "language": "",
-          "cluster": "MISSION_BUILDER",
-          "cluster_reason": "BG: continuing Agric/Fintech platform from prior buildathon — clear ongoing mission"
-        },
-        {
           "id": "KYaegOX",
           "name": "Mahmud Adegboyega",
           "email": "mahmud.adegboyega@gmail.com",
@@ -5867,7 +5954,12 @@
           "cluster_reason": "Goals indicate building focus"
         }
       ],
-      "org_flags": [],
+      "org_flags": [
+        {
+          "type": "gender",
+          "msg": "All-male team"
+        }
+      ],
       "members_needed": 0,
       "claimed": 3
     },
@@ -6217,38 +6309,6 @@
       "type": "new",
       "members": [
         {
-          "id": "QKO5ejg",
-          "name": "Benedict Isaac",
-          "email": "benedictisaac258@gmail.com",
-          "gender": "Male",
-          "student": true,
-          "exp_raw": "Advanced (Building or deploying AI Solutions)",
-          "exp": "Advanced",
-          "tier": 1,
-          "skills": [
-            "Software Developer/Engineer",
-            "Project Manager",
-            "Operations Manager",
-            "Other"
-          ],
-          "cats": [
-            "Technical",
-            "Product/Biz"
-          ],
-          "track": "Finance",
-          "mode": "Virtual",
-          "location": "Nigeria",
-          "ts": "I have a team already",
-          "team_name": "TeamSuiaah",
-          "hackathon_exp": "Yes",
-          "goals": "My biggest goal is to engineer and deploy a production-ready, context-aware AI system that proves agentic workflows can solve real-world, localized operational gaps in the African ecosystem. Rather than just building a basic wrapper or a conceptual prototype, I am focused on shipping a high-performance solution with robust backend architecture, multi-LLM orchestration, and clear observability.\n\nBeyond the engineering execution, my goal is to collaborate with ambitious, like-minded builders, combine our technical synergies under intense hackathon constraints, and build a viable product that directly drives economic access or eliminates systemic friction for local users.",
-          "bg": "I am joining the Hackathon because it directly addresses a critical gap: building localization-first AI tailored to African realities. Most global AI applications suffer from severe context blindness when deployed locally. I want to collaborate with ambitious builders to design context-aware, agentic solutions that eliminate structural friction in economic access, leverage local cultural nuances, and demonstrate the absolute highest caliber of technical density coming out of our ecosystem.",
-          "launchpad": "Yes, very interested",
-          "language": "",
-          "cluster": "MISSION_BUILDER",
-          "cluster_reason": "Engineer and deploy a production-ready context-aware AI solution — specific product"
-        },
-        {
           "id": "VL4VApj",
           "name": "Ezekiel Ogunyemi",
           "email": "ezekielinioluwa9@gmail.com",
@@ -6377,12 +6437,7 @@
           "cluster_reason": "Goals indicate building focus"
         }
       ],
-      "org_flags": [
-        {
-          "type": "experience",
-          "msg": "Wide experience range"
-        }
-      ],
+      "org_flags": [],
       "members_needed": 0,
       "claimed": 5
     },
@@ -6623,6 +6678,240 @@
           "language": "",
           "cluster": "GROWTH_BUILDER",
           "cluster_reason": "Goals indicate building focus"
+        }
+      ],
+      "org_flags": [],
+      "members_needed": 0,
+      "claimed": 3
+    },
+    {
+      "name": "FIN-V011",
+      "display_name": "FIN-V011",
+      "track": "Finance",
+      "mode": "Virtual",
+      "type": "new",
+      "members": [
+        {
+          "id": "0QZjE4Q",
+          "name": "Deborah Okeke",
+          "email": "okekedeborah@gmail.com",
+          "gender": "Female",
+          "student": false,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Software Developer/Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "Lagos, Nigeria",
+          "ts": "I have a team already",
+          "team_name": "FarmXnap",
+          "hackathon_exp": "Yes",
+          "goals": "",
+          "bg": "I'm a backend engineer with over two years of production experience building scalable backend systems. My teammate and I were inspired during the Interswitch x Enyata Buildathon to build an AI/Agric/Fintech platform; we want to continue with the project.",
+          "launchpad": "",
+          "language": "",
+          "cluster": "MISSION_BUILDER",
+          "cluster_reason": "BG: continuing Agric/Fintech platform from prior buildathon — clear ongoing mission"
+        },
+        {
+          "id": "81RjjYk",
+          "name": "Anyaefiena Ifechukwu",
+          "email": "iamipheco@gmail.com",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Software Developer/Engineer",
+            "Graphic Designer"
+          ],
+          "cats": [
+            "Technical",
+            "Design"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "My biggest goal for this hackathon is to build a meaningful and innovative solution that solves a real problem using AI while also improving my technical and teamwork skills. I want to collaborate with other creative minds, gain hands-on experience working under pressure, and learn new approaches to building scalable and impactful products. Beyond the competition itself, I’m hoping to grow my network, gain mentorship, and leave the hackathon with a project that has real potential beyond the event.",
+          "bg": "I’m a developer with experience building web applications using Node.js, Express, and MongoDB. \n\nI enjoy creating practical digital solutions, especially systems that improve organization, communication, and user experience. Recently, I’ve been working on scalable multi-user SaaS applications with role-based access and collaborative features, which has strengthened my interest in modern software architecture and emerging technologies.\n\nI’m interested in the Artificial Future Hackathon because I want to explore how AI can be used to solve real-world problems and improve the way people interact with technology. I see the hackathon as an opportunity to learn from other innovative minds, sharpen my problem-solving skills, and build impactful solutions in a fast-paced collaborative environment. I’m also excited to challenge myself creatively and contribute ideas that align with the future of artificial intelligence and digital innovation.",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
+        },
+        {
+          "id": "81R66Ao",
+          "name": "Joseph Omeiza Dania",
+          "email": "daniajoseph111@gmail.com",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Beginner (Learning the basics)",
+          "exp": "Beginner",
+          "tier": 3,
+          "skills": [
+            "Machine Learning Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "",
+          "bg": "I want to connect with like minds.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
+        },
+        {
+          "id": "Xx22xrj",
+          "name": "Godson Akapo",
+          "email": "akapogodson@gmail.com",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Beginner (Learning the basics)",
+          "exp": "Beginner",
+          "tier": 3,
+          "skills": [
+            "Data Scientist",
+            "Data Analyst",
+            "Graphic Designer"
+          ],
+          "cats": [
+            "Technical",
+            "Design"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "This will be my first",
+          "goals": "Learn AI and build connections",
+          "bg": "",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
+        }
+      ],
+      "org_flags": [],
+      "members_needed": 0,
+      "claimed": 4
+    },
+    {
+      "name": "Team Suiaah",
+      "display_name": "Team Suiaah",
+      "track": "Finance",
+      "mode": "Virtual",
+      "type": "pre_formed",
+      "members": [
+        {
+          "id": "68prdeO",
+          "name": "Baridomaka pop-yornwin",
+          "email": "barrypop703@gmail.com",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer",
+            "UI/UX"
+          ],
+          "cats": [
+            "Technical",
+            "Design"
+          ],
+          "track": "Healthcare",
+          "mode": "Virtual",
+          "location": "Abuja",
+          "ts": "I have a team already",
+          "team_name": "Team suiaah",
+          "hackathon_exp": "Yes",
+          "goals": "My biggest goal is to build a scalable AI solution that solves a real operational problem for SMEs in Africa while connecting with talented innovators, mentors, and potential partners. I also want to push my technical and product development skills further by building under real hackathon conditions.",
+          "bg": "I’m a fullstack developer and AI enthusiast experienced in building web and AI-powered applications using React, Django, JavaScript, and related technologies. I’m passionate about solving real-world problems for African businesses through technology and excited to collaborate, learn, and build impactful AI solutions during the hackathon.",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
+        },
+        {
+          "id": "b56NK06",
+          "name": "Akubo Rita Ojimaojo",
+          "email": "ritaakubo@gmail.com",
+          "gender": "Female",
+          "student": true,
+          "exp_raw": "Beginner (Learning the basics)",
+          "exp": "Beginner",
+          "tier": 3,
+          "skills": [
+            "Graphic Designer",
+            "Writer/Content Creator",
+            "Marketing/Growth"
+          ],
+          "cats": [
+            "Design",
+            "Content"
+          ],
+          "track": "Education",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Team Suiaah",
+          "hackathon_exp": "This will be my first",
+          "goals": "Learn AI in depth with projects and build meaningful connections with like minds",
+          "bg": "I'm a curious minded creative exploring ways to make impacts in my field of expertise",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
+        },
+        {
+          "id": "QKO5ejg",
+          "name": "Benedict Isaac",
+          "email": "benedictisaac258@gmail.com",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer",
+            "Project Manager",
+            "Operations Manager",
+            "Other"
+          ],
+          "cats": [
+            "Technical",
+            "Product/Biz"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "TeamSuiaah",
+          "hackathon_exp": "Yes",
+          "goals": "My biggest goal is to engineer and deploy a production-ready, context-aware AI system that proves agentic workflows can solve real-world, localized operational gaps in the African ecosystem. Rather than just building a basic wrapper or a conceptual prototype, I am focused on shipping a high-performance solution with robust backend architecture, multi-LLM orchestration, and clear observability.\n\nBeyond the engineering execution, my goal is to collaborate with ambitious, like-minded builders, combine our technical synergies under intense hackathon constraints, and build a viable product that directly drives economic access or eliminates systemic friction for local users.",
+          "bg": "I am joining the Hackathon because it directly addresses a critical gap: building localization-first AI tailored to African realities. Most global AI applications suffer from severe context blindness when deployed locally. I want to collaborate with ambitious builders to design context-aware, agentic solutions that eliminate structural friction in economic access, leverage local cultural nuances, and demonstrate the absolute highest caliber of technical density coming out of our ecosystem.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "MISSION_BUILDER",
+          "cluster_reason": "Engineer and deploy a production-ready context-aware AI solution — specific product"
         }
       ],
       "org_flags": [],
