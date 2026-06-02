@@ -1,13 +1,13 @@
 {
   "meta": {
-    "total_participants": 204,
-    "total_teams": 52,
-    "people_in_teams": 193,
+    "total_participants": 210,
+    "total_teams": 55,
+    "people_in_teams": 199,
     "on_hold_count": 0,
     "storytelling_count": 10,
-    "new_teams": 39,
-    "preformed_teams": 13,
-    "flagged_teams": 37
+    "new_teams": 41,
+    "preformed_teams": 14,
+    "flagged_teams": 40
   },
   "teams": [
     {
@@ -4627,35 +4627,6 @@
           "phone": "+2347064942567"
         },
         {
-          "id": "zx1XZ9Z",
-          "name": "Venecia Igobah",
-          "email": "veneciaigobah@gmail.com",
-          "gender": "Female",
-          "student": false,
-          "exp_raw": "Non-technical (product, design, business, ops)",
-          "exp": "Non-tech",
-          "tier": 5,
-          "skills": [
-            "Technical"
-          ],
-          "cats": [
-            "Technical"
-          ],
-          "track": "Finance",
-          "mode": "Virtual",
-          "location": "Nigeria",
-          "ts": "I'm open to joining a team",
-          "team_name": "",
-          "hackathon_exp": "This will be my first",
-          "goals": "To collaborate with strong multidisciplinary teams, explore practical AI applications for African systems and communities, and contribute to building solutions with long-term real-world relevance beyond the hackathon itself.",
-          "bg": "I’m a Product Manager with experience working on digital platforms across governance, verification systems, operational intelligence, and civic-tech related solutions. My work typically sits at the intersection of technology, strategy, data, and user experience — translating complex systems into products that solve real operational problems.\n\nI’m particularly interested in how AI can be applied within African contexts to improve decision-making, accessibility, intelligence gathering, public systems, and local problem-solving at scale. The hackathon is an opportunity for me to collaborate with builders, researchers, and creatives while exploring practical AI applications that move beyond hype into real impact.",
-          "launchpad": "Yes, very interested",
-          "language": "",
-          "cluster": "GROWTH_BUILDER",
-          "cluster_reason": "Collaborate with multidisciplinary teams + explore AI for African systems — PM background",
-          "phone": "+2348089890801"
-        },
-        {
           "id": "A7jP1WW",
           "name": "Bakare Akeem Ademola",
           "email": "herdeymorelarherkym@gmail.com",
@@ -4686,12 +4657,45 @@
           "cluster": "LEARNER",
           "cluster_reason": "Learn AI — Curious Beginner microbiologist; single-signal learner",
           "phone": "+2347065872071"
+        },
+        {
+          "id": "KYaegOX",
+          "name": "Mahmud Adegboyega",
+          "email": "mahmud.adegboyega@gmail.com",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Beginner (Learning the basics)",
+          "exp": "Beginner",
+          "tier": 3,
+          "skills": [
+            "Software Developer/Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "To win it",
+          "bg": "I've been a backend developer building rest APIs in nodejs/express for the past one and half years. I've always wanted to dive into AI and I feel I should start here",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "SHIPPER",
+          "cluster_reason": "To win it — explicit",
+          "phone": "+2348164247735"
         }
       ],
       "org_flags": [
         {
-          "type": "experience",
-          "msg": "Wide experience range"
+          "type": "gender",
+          "msg": "All-male team"
+        },
+        {
+          "type": "note",
+          "msg": "TEAM UNRESPONSIVE — members have not responded to communications. Venecia Igobah left this team for this reason."
         }
       ],
       "members_needed": 0,
@@ -4804,14 +4808,38 @@
           "cluster": "LEARNER",
           "cluster_reason": "Learn AI, build a project, form connection — expand knowledge",
           "phone": "+2347083192483"
-        }
-      ],
-      "org_flags": [
+        },
         {
-          "type": "cluster",
-          "msg": "No anchor — all Learner/Explorer"
+          "id": "Y5xbaGW",
+          "name": "Bomane Raphael Ronami",
+          "email": "Bomane.ar@gmail.com",
+          "phone": "+2349016853443",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Software Developer/Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "Oyo, Ibadan, Nigeria.",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "Build a product with my skills, and connect with more devs.",
+          "bg": "I am a Computer Science undergraduate at the University of Ibadan. I am a Frontend Developer and my tech stack is basic HTML, CSS, Javascript and React.",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Net-new — goals indicate building focus"
         }
       ],
+      "org_flags": [],
       "members_needed": 0,
       "claimed": 3
     },
@@ -5049,36 +5077,6 @@
       "mode": "In-person",
       "type": "new",
       "members": [
-        {
-          "id": "2ElpXbD",
-          "name": "Ndubuisi Ekeh",
-          "email": "ndubuisiekeh169@gmail.com",
-          "gender": "Male",
-          "student": true,
-          "exp_raw": "Advanced (Building or deploying AI Solutions)",
-          "exp": "Advanced",
-          "tier": 1,
-          "skills": [
-            "Software Developer/Engineer",
-            "Machine Learning Engineer"
-          ],
-          "cats": [
-            "Technical"
-          ],
-          "track": "Finance",
-          "mode": "In-person",
-          "location": "Nigeria",
-          "ts": "I have a team already",
-          "team_name": "Atlas",
-          "hackathon_exp": "Yes",
-          "goals": "Win the Launchpad program, connect with investors, and validate Iroko AI as a product for African enterprise markets.",
-          "bg": "I'm an AI Lead and Backend Engineer based in Lagos, building production multi-agent AI systems for African enterprise markets. I recently placed 4th at the TeKnowledge × Microsoft 2026 Agentic AI Hackathon Finale — our team built Iroko AI, a 5-agent autonomous intelligence platform for MTN Nigeria that monitors regulatory changes, detects fraud patterns, and delivers compliance-verified decisions in real time.\nI'm interested in the Artificial Future Hackathon because the Economic Access track is exactly the problem I'm working on — African enterprises and financial institutions are making critical decisions without real-time intelligence, and no existing AI platform is built for how Nigerian markets actually operate. I want to bring Iroko AI's architecture to this challenge, adapt it for the financial sector, and connect with the community building AI solutions that actually work for Africa.",
-          "launchpad": "Yes, very interested",
-          "language": "",
-          "cluster": "MISSION_BUILDER",
-          "cluster_reason": "Win Launchpad, connect with investors, validate Iroko AI — product validation",
-          "phone": "+2347078344746"
-        },
         {
           "id": "b5YB6yZ",
           "name": "Bakare Tioluwani Boluwatife",
@@ -6018,35 +6016,6 @@
       "type": "new",
       "members": [
         {
-          "id": "KYaegOX",
-          "name": "Mahmud Adegboyega",
-          "email": "mahmud.adegboyega@gmail.com",
-          "gender": "Male",
-          "student": true,
-          "exp_raw": "Beginner (Learning the basics)",
-          "exp": "Beginner",
-          "tier": 3,
-          "skills": [
-            "Software Developer/Engineer"
-          ],
-          "cats": [
-            "Technical"
-          ],
-          "track": "Finance",
-          "mode": "Virtual",
-          "location": "Nigeria",
-          "ts": "I'm open to joining a team",
-          "team_name": "",
-          "hackathon_exp": "Yes",
-          "goals": "To win it",
-          "bg": "I've been a backend developer building rest APIs in nodejs/express for the past one and half years. I've always wanted to dive into AI and I feel I should start here",
-          "launchpad": "Maybe, tell me more",
-          "language": "",
-          "cluster": "SHIPPER",
-          "cluster_reason": "To win it — explicit",
-          "phone": "+2348164247735"
-        },
-        {
           "id": "Y5x0gMW",
           "name": "Benjamin Oni",
           "email": "benjaminoni007@gmail.com",
@@ -6118,12 +6087,41 @@
           "language": "",
           "cluster": "GROWTH_BUILDER",
           "cluster_reason": "Goals indicate building focus"
+        },
+        {
+          "id": "zx1XZ9Z",
+          "name": "Venecia Igobah",
+          "email": "veneciaigobah@gmail.com",
+          "gender": "Female",
+          "student": false,
+          "exp_raw": "Non-technical (product, design, business, ops)",
+          "exp": "Non-tech",
+          "tier": 5,
+          "skills": [
+            "Technical"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "This will be my first",
+          "goals": "To collaborate with strong multidisciplinary teams, explore practical AI applications for African systems and communities, and contribute to building solutions with long-term real-world relevance beyond the hackathon itself.",
+          "bg": "I’m a Product Manager with experience working on digital platforms across governance, verification systems, operational intelligence, and civic-tech related solutions. My work typically sits at the intersection of technology, strategy, data, and user experience — translating complex systems into products that solve real operational problems.\n\nI’m particularly interested in how AI can be applied within African contexts to improve decision-making, accessibility, intelligence gathering, public systems, and local problem-solving at scale. The hackathon is an opportunity for me to collaborate with builders, researchers, and creatives while exploring practical AI applications that move beyond hype into real impact.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Collaborate with multidisciplinary teams + explore AI for African systems — PM background",
+          "phone": "+2348089890801"
         }
       ],
       "org_flags": [
         {
-          "type": "gender",
-          "msg": "All-male team"
+          "type": "experience",
+          "msg": "Wide experience range"
         }
       ],
       "members_needed": 0,
@@ -6936,70 +6934,14 @@
           "language": "",
           "cluster": "GROWTH_BUILDER",
           "cluster_reason": "Goals indicate building focus"
-        },
-        {
-          "id": "81R66Ao",
-          "name": "Joseph Omeiza Dania",
-          "email": "daniajoseph111@gmail.com",
-          "phone": "+2348120870068",
-          "gender": "Male",
-          "student": true,
-          "exp_raw": "Beginner (Learning the basics)",
-          "exp": "Beginner",
-          "tier": 3,
-          "skills": [
-            "Machine Learning Engineer"
-          ],
-          "cats": [
-            "Technical"
-          ],
-          "track": "Finance",
-          "mode": "Virtual",
-          "location": "Nigeria",
-          "ts": "I'm open to joining a team",
-          "team_name": "",
-          "hackathon_exp": "Yes",
-          "goals": "",
-          "bg": "I want to connect with like minds.",
-          "launchpad": "Yes, very interested",
-          "language": "",
-          "cluster": "GROWTH_BUILDER",
-          "cluster_reason": "Goals indicate building focus"
-        },
-        {
-          "id": "Xx22xrj",
-          "name": "Godson Akapo",
-          "email": "akapogodson@gmail.com",
-          "phone": "+2349071262415",
-          "gender": "Male",
-          "student": true,
-          "exp_raw": "Beginner (Learning the basics)",
-          "exp": "Beginner",
-          "tier": 3,
-          "skills": [
-            "Data Scientist",
-            "Data Analyst",
-            "Graphic Designer"
-          ],
-          "cats": [
-            "Technical",
-            "Design"
-          ],
-          "track": "Finance",
-          "mode": "Virtual",
-          "location": "Nigeria",
-          "ts": "I'm open to joining a team",
-          "team_name": "",
-          "hackathon_exp": "This will be my first",
-          "goals": "Learn AI and build connections",
-          "bg": "",
-          "launchpad": "Maybe, tell me more",
-          "language": "",
-          "cluster": "GROWTH_BUILDER",
-          "cluster_reason": "Goals indicate building focus"
         }
       ],
-      "org_flags": [],
+      "org_flags": [
+        {
+          "type": "note",
+          "msg": "2-person team by organiser request"
+        }
+      ],
       "members_needed": 0,
       "claimed": 4
     },
@@ -7110,6 +7052,363 @@
       "org_flags": [],
       "members_needed": 0,
       "claimed": 3
+    },
+    {
+      "name": "Atlas",
+      "display_name": "Atlas",
+      "track": "Finance",
+      "mode": "In-person",
+      "type": "pre_formed",
+      "members": [
+        {
+          "id": "2ElpXbD",
+          "name": "Ndubuisi Ekeh",
+          "email": "ndubuisiekeh169@gmail.com",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Software Developer/Engineer",
+            "Machine Learning Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Finance",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Atlas",
+          "hackathon_exp": "Yes",
+          "goals": "Win the Launchpad program, connect with investors, and validate Iroko AI as a product for African enterprise markets.",
+          "bg": "I'm an AI Lead and Backend Engineer based in Lagos, building production multi-agent AI systems for African enterprise markets. I recently placed 4th at the TeKnowledge × Microsoft 2026 Agentic AI Hackathon Finale — our team built Iroko AI, a 5-agent autonomous intelligence platform for MTN Nigeria that monitors regulatory changes, detects fraud patterns, and delivers compliance-verified decisions in real time.\nI'm interested in the Artificial Future Hackathon because the Economic Access track is exactly the problem I'm working on — African enterprises and financial institutions are making critical decisions without real-time intelligence, and no existing AI platform is built for how Nigerian markets actually operate. I want to bring Iroko AI's architecture to this challenge, adapt it for the financial sector, and connect with the community building AI solutions that actually work for Africa.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "MISSION_BUILDER",
+          "cluster_reason": "Win Launchpad, connect with investors, validate Iroko AI — product validation",
+          "phone": "+2347078344746"
+        },
+        {
+          "id": "jaJ1P66",
+          "name": "Chukwuma obiagwu",
+          "email": "ndubuisiekeh0@gmail.com",
+          "phone": "+2349096618761",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Beginner (Learning the basics)",
+          "exp": "Beginner",
+          "tier": 3,
+          "skills": [
+            "Software Developer/Engineer",
+            "Machine Learning Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Finance",
+          "mode": "In-person",
+          "location": "Nigeria",
+          "ts": "I have a team already",
+          "team_name": "Atlas",
+          "hackathon_exp": "This will be my first",
+          "goals": "\"Build a deployable AI product and connect with potential co-founders/investors",
+          "bg": "\"Full-stack AI/backend engineer based in Lagos. I build and deploy production LLM-powered systems — including an enterprise document intelligence platform for the TeKnowledge × Microsoft 2026 Agentic AI Hackathon (finalist), a healthcare SaaS targeting UK clinics, and a B2B telecom fraud platform. I run a web agency (Jwebly) focused on agentic solutions for SMEs. I'm here to build something real, fast.\"",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Build deployable AI product — growth builder"
+        }
+      ],
+      "org_flags": [
+        {
+          "type": "gender",
+          "msg": "All-male team"
+        },
+        {
+          "type": "note",
+          "msg": "2-person team by organiser request"
+        }
+      ],
+      "members_needed": 0,
+      "claimed": 2
+    },
+    {
+      "name": "FIN-V012",
+      "display_name": "FIN-V012",
+      "track": "Finance",
+      "mode": "Virtual",
+      "type": "new",
+      "members": [
+        {
+          "id": "81R66Ao",
+          "name": "Joseph Omeiza Dania",
+          "email": "daniajoseph111@gmail.com",
+          "phone": "+2348120870068",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Beginner (Learning the basics)",
+          "exp": "Beginner",
+          "tier": 3,
+          "skills": [
+            "Machine Learning Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "",
+          "bg": "I want to connect with like minds.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
+        },
+        {
+          "id": "Xx22xrj",
+          "name": "Godson Akapo",
+          "email": "akapogodson@gmail.com",
+          "phone": "+2349071262415",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Beginner (Learning the basics)",
+          "exp": "Beginner",
+          "tier": 3,
+          "skills": [
+            "Data Scientist",
+            "Data Analyst",
+            "Graphic Designer"
+          ],
+          "cats": [
+            "Technical",
+            "Design"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "This will be my first",
+          "goals": "Learn AI and build connections",
+          "bg": "",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Goals indicate building focus"
+        },
+        {
+          "id": "xXlzGeJ",
+          "name": "Ifeanyichukwu Onukwu",
+          "email": "bolu.onukwu@gmail.com",
+          "phone": "+2347085115454",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Intermediate (Some hands-on project)",
+          "exp": "Intermediate",
+          "tier": 2,
+          "skills": [
+            "Software Developer/Engineer"
+          ],
+          "cats": [
+            "Technical"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "My biggest goal is to successfully build and deploy a functional AI-powered product within the hackathon timeframe that solves a clear, real-world problem. I want to go beyond just experimenting with AI APIs and focus on end-to-end execution, idea validation, rapid prototyping, integration, and deployment.\n\nOn a personal level, I also want to improve how I collaborate in a fast-paced team environment, especially working across product, design, and engineering roles. Ultimately, I see this as a chance to sharpen my ability to turn ideas into working systems under real constraints.",
+          "bg": "I’m a software developer with experience building web applications using JavaScript/TypeScript and React, and I’m currently expanding into backend development with Python and cloud-focused systems. I’m especially interested in how AI can be integrated into real-world products to solve practical problems, not just exist as standalone models.\n\nI’m applying to the YPIT AI Hackathon because I want to strengthen my skills in building AI-powered applications in a fast, collaborative environment. I’m also looking to gain more hands-on experience working with teams that combine product thinking and engineering. Most importantly, I see it as an opportunity to challenge myself, learn from others, and build something impactful within a short time frame.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Net-new — goals indicate building focus"
+        },
+        {
+          "id": "xXl7JPE",
+          "name": "Gidado Muhammed",
+          "email": "gidadobabugah@gmail.com",
+          "phone": "+2347036039053",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Curious Beginner (New to AI)",
+          "exp": "Curious",
+          "tier": 4,
+          "skills": [
+            "Technical",
+            "Graphic Designer",
+            "Brand/Creative Director",
+            "Illustrator/Visual Artist",
+            "Business Analyst",
+            "Business Development",
+            "Strategy/Consulting",
+            "Marketing/Growth",
+            "Communications/PR",
+            "Project Manager",
+            "Operations Manager",
+            "Healthcare Professional",
+            "Agriculture/Sustainability Expert"
+          ],
+          "cats": [
+            "Technical",
+            "Design",
+            "Product/Biz",
+            "Content",
+            "Domain"
+          ],
+          "track": "Finance",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "This will be my first",
+          "goals": "",
+          "bg": "I have the honour to write and apply for this position.\nI have graduated and have a Higher National Diploma in Animal Health in addition to the National Diploma in Animal Health and Production from the Divisions Colleges of Agriculture, Ahmadu Bello University, Zaria.\nI have worked as a Health Assistant with the National Animal Production Research Institute, Shika – Zaria, conducting many outreach programs and ambulatory services. This is in addition the support given to the Veterinary Surgeon in terms of drugs administration, vaccination and drenching etc. Of my job was also to support in Agricultural research out station activities and ambulatory services for outreach support in about 7 LGAs. I also was in charge of collecting samples of animal blood, urine, skin scrapping etc for laboratory diagnosis and also calf management from calving to weaning period\nI have also worked in support of the Mobgal Fulbe Association in Kaduna state to assist the Association in handling Fulani Pastoralists livestock in terms of their health, through collection of relevant information on Animal disease and animal movement in the field for proper advice and guidance to the association.Also, I supported the Fulani cattle herders with technical and physical veterinary services through management of Food and Mouth disease, vaccination of their livestock in terms of PPR to their sheep and CBPP to the cattle. This was done to Fulani pastoralists in Kaduna state (Kagarko, Ladduga, Dalle, Jagindi and Unguwan Nungu in southern Kaduna).\nI have also worked as Field Officer with Babban Gona in Giwa Hub Kaduna state to Supporting the company in interview and recruiting farmers, Supporting the company during Input Distribution (fertilizer Quality seeds Herbicide and pesticide, supporting company in Coaching farmers on Babban Gona agronomy Regular visitation to farmers to know the problems, their farms faces (such as diseases, pests, soil fertility, mixed cropping etc.), Regular visitation to farmers to know the problems, their farms faces (such as diseases, pests, soil fertility, mixed cropping etc.).\nI have experience supporting smallholder farmers through training, mentoring, and community mobilization in Regenerative Agriculture (RA) and Integrated Crops, Trees, and Livestock (ICTL) systems. My role includes facilitating the establishment of community Mutual Trust Groups (MTGs/cooperatives), identifying suitable sites for demonstration farms, and supporting farmer adoption of sustainable agricultural practices through continuous knowledge sharing and hand-holding. I also assist in identifying key community leaders and champions to strengthen community engagement and project implementation. In addition, I provide training on nursery establishment, tree planting, financial inclusion, compost making, and the construction of water harvesting structures to improve resilience, productivity, and livelihoods among smallholder farming households.\nBecause I want to improve knowledge and skills to build a sustainable communities around me, in agriculture",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Net-new — goals indicate building focus"
+        }
+      ],
+      "org_flags": [
+        {
+          "type": "gender",
+          "msg": "All-male team"
+        }
+      ],
+      "members_needed": 0,
+      "claimed": 4
+    },
+    {
+      "name": "LNG-V003",
+      "display_name": "LNG-V003",
+      "track": "Language",
+      "mode": "Virtual",
+      "type": "new",
+      "members": [
+        {
+          "id": "ODoZlY8",
+          "name": "Surajo Ibrahim Muhammad",
+          "email": "suraajuteete@gmail.com",
+          "phone": "+2348088116440",
+          "gender": "Male",
+          "student": true,
+          "exp_raw": "Advanced (Building or deploying AI Solutions)",
+          "exp": "Advanced",
+          "tier": 1,
+          "skills": [
+            "Graphic Designer",
+            "Writer/Content Creator",
+            "Linguist/Language Expert",
+            "Translator",
+            "Communications/PR",
+            "Community Manager",
+            "Project Manager",
+            "Healthcare Professional",
+            "Educator/Academic",
+            "Finance/Economics Expert",
+            "Agriculture/Sustainability Expert",
+            "Policy/Government Expert"
+          ],
+          "cats": [
+            "Design",
+            "Content",
+            "Product/Biz",
+            "Domain"
+          ],
+          "track": "Language",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I want to form a team at the hackathon",
+          "team_name": "",
+          "hackathon_exp": "Yes",
+          "goals": "My biggest goal for this hackathon is to build practical experience in applying artificial intelligence to real-world problems, especially in language, education, and communication. I also aim to collaborate with others, strengthen my technical and problem-solving skills, and contribute to developing solutions that can improve accessibility and support indigenous language and local community needs.",
+          "bg": "I have a background in linguistics, education content development, and translation, with experience working on Hausa and Fulfulde instructional materials, research-based linguistic analysis, and proofreading. I am also involved in digital content preparation, data annotation, and language quality tasks, especially within multilingual and Nigerian contexts.\n\nI am interested in the hackathon because I want to deepen my understanding of artificial intelligence and its practical applications in language, education, and communication. I am particularly keen on exploring how AI can support indigenous language processing, improve accessibility, and solve real-world problems in African communities through innovative, technology-driven solutions.",
+          "launchpad": "Maybe, tell me more",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Net-new — goals indicate building focus"
+        },
+        {
+          "id": "aQa1rrq",
+          "name": "Abubakar Mustapha Abubakar",
+          "email": "abubakarmustaphaabubakar458@gmail.com",
+          "phone": "+2348103647362",
+          "gender": "Male",
+          "student": false,
+          "exp_raw": "Beginner (Learning the basics)",
+          "exp": "Beginner",
+          "tier": 3,
+          "skills": [
+            "Software Developer/Engineer",
+            "Machine Learning Engineer",
+            "Data Scientist",
+            "Data Analyst",
+            "Data Engineer",
+            "Technical",
+            "UI/UX",
+            "Graphic Designer",
+            "Brand/Creative Director",
+            "Illustrator/Visual Artist",
+            "Academic/Industry",
+            "Business Analyst",
+            "Business Development",
+            "Strategy/Consulting",
+            "Writer/Content Creator",
+            "Linguist/Language Expert",
+            "Translator",
+            "Marketing/Growth",
+            "Communications/PR",
+            "Community Manager",
+            "Project Manager",
+            "Operations Manager",
+            "Administrative/Logistics",
+            "Healthcare Professional",
+            "Educator/Academic",
+            "Finance/Economics Expert",
+            "Agriculture/Sustainability Expert",
+            "Policy/Government Expert"
+          ],
+          "cats": [
+            "Technical",
+            "Design",
+            "Product/Biz",
+            "Content",
+            "Domain"
+          ],
+          "track": "Language",
+          "mode": "Virtual",
+          "location": "Nigeria",
+          "ts": "I'm open to joining a team",
+          "team_name": "",
+          "hackathon_exp": "This will be my first",
+          "goals": "Build a product and learn AI",
+          "bg": "I have litle know about it, and i want expanded my experience.",
+          "launchpad": "Yes, very interested",
+          "language": "",
+          "cluster": "GROWTH_BUILDER",
+          "cluster_reason": "Net-new — goals indicate building focus"
+        }
+      ],
+      "org_flags": [
+        {
+          "type": "gender",
+          "msg": "All-male team"
+        },
+        {
+          "type": "note",
+          "msg": "2-person team — no additional Language/Virtual participants available"
+        }
+      ],
+      "members_needed": 0,
+      "claimed": 2
     }
   ],
   "on_hold": [],
