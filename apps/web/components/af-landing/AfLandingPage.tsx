@@ -2,6 +2,7 @@
 
 import './ypit-af-landing.css';
 import { AfAbout } from './AfAbout';
+import { AfAnnouncementBar } from './AfAnnouncementBar';
 import { AfConference } from './AfConference';
 import { AfFooterCta } from './AfFooterCta';
 import { AfFaq } from './AfFaq';
@@ -21,17 +22,18 @@ import { AfWorkshops } from './AfWorkshops';
 export function AfLandingPage() {
   return (
     <div className="ypitAfLanding">
+      <AfAnnouncementBar />
       <AfNavbar />
       <AfHero />
       <AfMarquee />
       <AfAbout />
       <AfProgramme />
-      <AfWorkshops />
-      <AfTracks />
-      <AfSchedule />
       <AfConference />
       <AfSpeakers />
+      <AfTracks />
+      <AfSchedule />
       <AfMentors />
+      <AfWorkshops />
       <AfJoinPaths />
       <AfFaq />
       <AfPartners />

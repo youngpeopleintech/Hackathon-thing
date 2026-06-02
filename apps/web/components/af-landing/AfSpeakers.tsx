@@ -32,9 +32,51 @@ const SPEAKERS: Speaker[] = [
     twitter: 'https://x.com/ayoodumakinde',
     photoPosition: 'center 15%',
   },
+  {
+    name: 'Sharon Ibejih',
+    role: 'Senior Data Scientist & Founder',
+    company: 'Tonative',
+    session: 'The pillars of a functional AI ecosystem',
+    sessionType: 'Panel',
+    bio: [
+      'Sharon is a Senior Data Scientist and researcher whose entire career has been oriented around a single problem: African languages are severely underrepresented in AI, and the data needed to fix that largely doesn\'t exist yet.',
+      'She came up through Data Science Nigeria as a researcher and innovation engineer, was a Machine Learning Fellow at Sunbird AI in Uganda, and has worked as an ML engineer across several Nigerian tech companies. She founded Tonative to institutionalise the data curation work she\'d been doing in research contexts.',
+    ],
+    image: '/images/af/speakers/sharon-ibejih.png',
+    linkedin: 'https://www.linkedin.com/in/sharonibejih/',
+    photoPosition: 'center 15%',
+  },
+  {
+    name: 'Temi Babs',
+    role: 'Founder',
+    company: 'SpitchAI',
+    session: 'The pillars of a functional AI ecosystem',
+    sessionType: 'Panel',
+    bio: [
+      'Temi is an engineer with a deep love for AI and an even deeper connection to language, with seven years in the AI space. He built Spitch — the ElevenLabs of Africa — after realising that the voice feature he needed didn\'t work because existing models couldn\'t handle African accents.',
+      'SpitchAI pitched at AA3 (Iyinoluwa Aboyeji\'s fund demo day) and appeared at VivaTech in Paris.',
+    ],
+    image: '/images/af/speakers/temi-babs.jpeg',
+    linkedin: 'https://www.linkedin.com/in/temi-babs/',
+    photoPosition: 'center 15%',
+  },
+  {
+    name: 'Loba Agboola',
+    role: 'Digital Policy & Programmes Analyst',
+    company: 'Federal Ministry of Innovation, Communication and Digital Economy',
+    session: 'The pillars of a functional AI ecosystem',
+    sessionType: 'Panel',
+    bio: [
+      'Loba is a development economist and technology policy practitioner whose research cuts across artificial intelligence, innovation, and digital public infrastructure in African countries. She has contributed directly to Nigeria\'s Child Online Protection Bill and the delivery of key digital public infrastructure.',
+      'She is also a researcher at Advocacy for Policy and Innovation. Her work has been published in The Republic and The Cable, and she has contributed to flagship research including the AfreximBank African Trade & Economic Outlook 2026.',
+    ],
+    image: '/images/af/speakers/loba-agboola.jpeg',
+    linkedin: 'https://www.linkedin.com/in/starloba/',
+    photoPosition: 'center 15%',
+  },
 ];
 
-const GHOST_COUNT = 5;
+const GHOST_COUNT = 2;
 
 export function AfSpeakers() {
   return (
@@ -78,12 +120,12 @@ export function AfSpeakers() {
                   <div className="speaker-links">
                     {sp.linkedin && (
                       <a href={sp.linkedin} target="_blank" rel="noopener noreferrer" className="speaker-link">
-                        LinkedIn ↗
+                        LinkedIn
                       </a>
                     )}
                     {sp.twitter && (
                       <a href={sp.twitter} target="_blank" rel="noopener noreferrer" className="speaker-link">
-                        X / Twitter ↗
+                        X / Twitter
                       </a>
                     )}
                   </div>

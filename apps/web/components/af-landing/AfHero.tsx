@@ -39,9 +39,8 @@ export function AfHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          Over three weeks in Lagos, we are bringing together curious people, working builders, and everyone in
-          between — for a hackathon, workshops, and a conference all answering the same question: what does AI look
-          like when Africans are the ones building it?
+          Join us on June 13 at The Civic Centre, Lagos for a day of conversations and panels about what AI looks
+          like when Africans are the ones building it.
         </motion.p>
         <motion.div
           className="hero-actions"
@@ -49,10 +48,7 @@ export function AfHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.95, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <a href="https://luma.com/1zien2bm" target="_blank" rel="noopener noreferrer" className="btn-primary">
-            Register for Free
-          </a>
-          <a href="https://eventornigeria.com/explore/ypit-af" target="_blank" rel="noopener noreferrer" className="btn-outline">
+          <a href="https://eventornigeria.com/explore/ypit-af" target="_blank" rel="noopener noreferrer" className="btn-primary">
             Get Conference Tickets
           </a>
         </motion.div>
@@ -62,9 +58,9 @@ export function AfHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <div className="chip chip--1">
+          <div className="chip chip--1 chip--done">
             <span className="chip-dot" />
-            Workshops · April–June · Free
+            Workshops · Complete
           </div>
           <div className="chip chip--2">
             <span className="chip-dot" />
