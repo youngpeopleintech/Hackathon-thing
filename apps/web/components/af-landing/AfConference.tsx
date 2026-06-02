@@ -13,7 +13,7 @@ const TICKETS = [
     desc: 'You took part in the hackathon. This ticket gets you into the conference to see how it all wraps up — the demos, the awards, and the day itself.',
     includes: 'Full day conference access and sponsor area.',
     note: 'Bring your hackathon registration confirmation and student ID.',
-    image: '/images/af/african-ai-man.jpg',
+    image: '/images/af/african-ai-man.png',
     url: 'https://eventornigeria.com/checkout?step=1&action=purchase&ticket=86ac67dd-4d9d-42b9-9439-99716daaa9d5&event=91a755ba-62e4-4a77-8566-96608eb39b8a&occurrence=23158575-6458-471a-a273-b17904fd13c1',
   },
   {
@@ -23,7 +23,7 @@ const TICKETS = [
     desc: 'You were in the hackathon. Come to the conference and see the best projects presented live. This is the finish line.',
     includes: 'Full day conference access and sponsor area.',
     note: 'Bring your participation proof — we\'ll check at the door.',
-    image: '/images/af/african-woman-ai.jpg',
+    image: '/images/af/african-woman-ai.png',
     url: 'https://eventornigeria.com/checkout?step=1&action=purchase&ticket=86006851-24bd-4645-8dbe-1b6ca8be0441&event=91a755ba-62e4-4a77-8566-96608eb39b8a&occurrence=23158575-6458-471a-a273-b17904fd13c1',
   },
   {
@@ -33,7 +33,7 @@ const TICKETS = [
     desc: 'A full day of talks and panels with people who are actually building AI. If you\'re a student curious about where this is all going, this is worth your Saturday.',
     includes: 'Full day conference access and sponsor area.',
     note: 'Valid student ID required at the door.',
-    image: '/images/af/young-tech-bro.jpg',
+    image: '/images/af/young-tech-bro.png',
     url: 'https://eventornigeria.com/checkout?step=1&action=purchase&ticket=1383be7a-e090-453e-bb0f-4b19a2b557af&event=91a755ba-62e4-4a77-8566-96608eb39b8a&occurrence=23158575-6458-471a-a273-b17904fd13c1',
   },
   {
@@ -43,7 +43,7 @@ const TICKETS = [
     desc: 'A full day of honest conversations about AI in Africa — where it is, where it\'s going, and who\'s building it. No prior technical background needed.',
     includes: 'Full day conference access and sponsor area.',
     note: null,
-    image: '/images/af/young-tech-woman-ai.jpg',
+    image: '/images/af/young-tech-woman-ai.png',
     url: 'https://eventornigeria.com/checkout?step=1&action=purchase&ticket=ea053f23-1922-4697-9729-bfbd4c53190d&event=91a755ba-62e4-4a77-8566-96608eb39b8a&occurrence=23158575-6458-471a-a273-b17904fd13c1',
   },
 ];
