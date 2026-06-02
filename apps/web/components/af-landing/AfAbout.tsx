@@ -1,6 +1,20 @@
+'use client';
+
+import { useState } from 'react';
 import { Reveal } from './Reveal';
 
-export function AfAbout() {
+interface Props {
+  onOpenManifesto: () => void;
+}
+
+export function AfAbout({ onOpenManifesto }: Props) {
+  const [clicked, setClicked] = useState(false);
+
+  function handleClick() {
+    setClicked(true);
+    onOpenManifesto();
+  }
+
   return (
     <section id="about" className="section section-white">
       <div className="section-inner">
@@ -40,6 +54,13 @@ export function AfAbout() {
                 together. This is that room.
               </p>
             </div>
+            <button
+              className={`about-manifesto-btn${clicked ? '' : ' is-pulsing'}`}
+              onClick={handleClick}
+            >
+              <span className="manifesto-pill-dot" />
+              Read the Manifesto ↗
+            </button>
           </Reveal>
         </div>
       </div>
