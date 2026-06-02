@@ -6,9 +6,7 @@ const REPEATS = 8;
 export function AfAnnouncementBar() {
   return (
     <a
-      href="https://eventornigeria.com/explore/ypit-af"
-      target="_blank"
-      rel="noopener noreferrer"
+      href="#tickets"
       className="announcement-bar"
     >
       <div className="announcement-track">
