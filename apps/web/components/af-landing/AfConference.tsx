@@ -13,7 +13,7 @@ const TICKETS = [
     desc: 'You took part in the hackathon. This ticket gets you into the conference to see how it all wraps up — the demos, the awards, and the day itself.',
     includes: 'Full day conference access and sponsor area.',
     note: 'Bring your hackathon registration confirmation and student ID.',
-    image: '/images/af/african-ai-man.png',
+    image: '/images/af/african-ai-man.jpg',
   },
   {
     name: 'Hackathon Participants',
@@ -22,7 +22,7 @@ const TICKETS = [
     desc: 'You were in the hackathon. Come to the conference and see the best projects presented live. This is the finish line.',
     includes: 'Full day conference access and sponsor area.',
     note: 'Bring your participation proof — we\'ll check at the door.',
-    image: '/images/af/african-woman-ai.png',
+    image: '/images/af/african-woman-ai.jpg',
   },
   {
     name: 'General Attendees',
@@ -31,7 +31,7 @@ const TICKETS = [
     desc: 'A full day of talks and panels with people who are actually building AI. If you\'re a student curious about where this is all going, this is worth your Saturday.',
     includes: 'Full day conference access and sponsor area.',
     note: 'Valid student ID required at the door.',
-    image: '/images/af/young-tech-bro.png',
+    image: '/images/af/young-tech-bro.jpg',
   },
   {
     name: 'General Attendees',
@@ -40,7 +40,7 @@ const TICKETS = [
     desc: 'A full day of honest conversations about AI in Africa — where it is, where it\'s going, and who\'s building it. No prior technical background needed.',
     includes: 'Full day conference access and sponsor area.',
     note: null,
-    image: '/images/af/young-tech-woman-ai.png',
+    image: '/images/af/young-tech-woman-ai.jpg',
   },
 ];
 
