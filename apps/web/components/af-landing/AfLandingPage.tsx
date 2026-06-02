@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import './ypit-af-landing.css';
 import { AfAbout } from './AfAbout';
+import { AfAnnouncementBar } from './AfAnnouncementBar';
 import { AfConference } from './AfConference';
 import { AfFooterCta } from './AfFooterCta';
 import { AfFaq } from './AfFaq';
@@ -45,12 +46,12 @@ export function AfLandingPage() {
       <AfMarquee />
       <AfAbout onOpenManifesto={() => setIsManifestoOpen(true)} />
       <AfProgramme />
-      <AfWorkshops />
-      <AfTracks />
-      <AfSchedule />
       <AfConference />
       <AfSpeakers />
+      <AfTracks />
+      <AfSchedule />
       <AfMentors />
+      <AfWorkshops />
       <AfJoinPaths />
       <AfFaq />
       <AfPartners />
