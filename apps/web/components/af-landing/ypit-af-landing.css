@@ -702,9 +702,16 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 }
 
 /* SPEAKERS */
+/* Speaker groups */
+.ypitAfLanding .speaker-group{margin-top:56px}
+.ypitAfLanding .speaker-group-label{
+  font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);
+  padding-bottom:20px;border-bottom:1px solid var(--border);margin-bottom:0;
+}
 .ypitAfLanding .speakers-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
-  margin-top:56px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:2px;
+  margin-top:0;
 }
 .ypitAfLanding .speaker-card{
   display:flex;flex-direction:column;
@@ -712,38 +719,49 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 }
 .ypitAfLanding .speaker-photo-wrap{
   position:relative;width:100%;aspect-ratio:1/1;background:#f0ede8;
-  overflow:hidden;flex-shrink:0;
+  overflow:hidden;flex-shrink:0;cursor:pointer;
 }
 .ypitAfLanding .speaker-photo{object-fit:cover}
 .ypitAfLanding .speaker-session-badge{
-  position:absolute;bottom:12px;left:12px;
+  position:absolute;bottom:12px;left:12px;z-index:2;
   background:rgba(10,10,10,0.72);backdrop-filter:blur(6px);
   color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;
   letter-spacing:0.1em;text-transform:uppercase;
   padding:5px 10px;border-radius:100px;
+  transition:opacity 0.3s;
 }
+.ypitAfLanding .speaker-photo-wrap.bio-open .speaker-session-badge{opacity:0}
+
+/* Bio overlay — pink */
+.ypitAfLanding .speaker-bio-overlay{
+  position:absolute;inset:0;z-index:3;
+  background:rgba(254,50,75,0.92);
+  padding:24px;overflow-y:auto;
+  display:flex;flex-direction:column;justify-content:center;gap:10px;
+  opacity:0;transform:translateY(8px);
+  transition:opacity 0.3s ease, transform 0.3s ease;
+  pointer-events:none;
+}
+.ypitAfLanding .speaker-photo-wrap.bio-open .speaker-bio-overlay{
+  opacity:1;transform:translateY(0);pointer-events:auto;
+}
+.ypitAfLanding .speaker-bio-text{
+  font-size:12px;color:#fff;font-weight:300;line-height:1.65;margin:0;
+}
+
 .ypitAfLanding .speaker-body{
-  padding:24px 24px 28px;display:flex;flex-direction:column;flex:1;
+  padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;
 }
 .ypitAfLanding .speaker-name{
-  font-family:var(--display);font-size:18px;font-weight:800;
-  color:var(--dark);margin-bottom:4px;
+  font-family:var(--display);font-size:14px;font-weight:800;
+  color:var(--dark);margin-bottom:2px;
 }
 .ypitAfLanding .speaker-role{
-  font-size:13px;font-weight:400;color:var(--muted);margin-bottom:14px;
+  font-size:11px;font-weight:400;color:var(--muted);margin:0;
 }
 .ypitAfLanding .speaker-role span{font-weight:600;color:var(--dark)}
-.ypitAfLanding .speaker-session-title{
-  font-family:var(--display);font-size:14px;font-weight:700;color:#FE324B;
-  margin-bottom:14px;line-height:1.35;
-}
-.ypitAfLanding .speaker-bio{flex:1}
-.ypitAfLanding .speaker-bio p{
-  font-size:13px;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:10px;
-}
-.ypitAfLanding .speaker-bio p:last-child{margin-bottom:0}
 .ypitAfLanding .speaker-links{
-  display:flex;gap:10px;margin-top:20px;padding-top:16px;border-top:1px solid var(--border);flex-wrap:wrap;
+  display:flex;gap:8px;flex-wrap:wrap;
 }
 .ypitAfLanding .speaker-link{
   font-size:11px;font-weight:700;letter-spacing:0.04em;color:#fff;
@@ -1118,6 +1136,8 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   .ypitAfLanding .about-grid, .ypitAfLanding .tracks-intro, .ypitAfLanding .conf-grid, .ypitAfLanding .faq-grid{grid-template-columns:1fr;gap:40px}
   .ypitAfLanding .prog-grid, .ypitAfLanding .tracks-grid, .ypitAfLanding .workshop-grid, .ypitAfLanding .paths-grid, .ypitAfLanding .path-info-grid{grid-template-columns:1fr}
   .ypitAfLanding .speakers-grid{grid-template-columns:repeat(2,1fr)}
+  .ypitAfLanding .speaker-group{margin-top:40px}
+
   .ypitAfLanding .mentor-grid{grid-template-columns:repeat(2,1fr)}
 
   .ypitAfLanding .workshop-grid-v2{grid-template-columns:repeat(2,1fr)}
