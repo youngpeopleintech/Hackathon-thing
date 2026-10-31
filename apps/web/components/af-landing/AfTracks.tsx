@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { Reveal } from './Reveal';
 
 const TRACKS = [
@@ -67,7 +66,7 @@ export function AfTracks() {
           })}
         </div>
         <Reveal delay={0.2} className="section-cta">
-          <Link href="/register" className="btn-primary">Register for the Hackathon →</Link>
+          <a href="#schedule" className="btn-primary">See the week →</a>
         </Reveal>
       </div>
     </section>

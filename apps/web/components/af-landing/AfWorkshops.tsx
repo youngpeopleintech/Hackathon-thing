@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useRef, useCallback } from 'react';
-import Image from 'next/image';
 import { Reveal } from './Reveal';
 
 interface Workshop {
@@ -142,11 +141,9 @@ function WorkshopCard({ ws, index }: WorkshopCardProps) {
         onMouseLeave={handlePhotoLeave}
         onClick={handlePhotoClick}
       >
-        <Image
+        <img
           src={ws.image}
           alt={ws.speaker}
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
           className="wc-photo"
           style={{ objectFit: 'cover', objectPosition: ws.photoPosition ?? 'center 20%' }}
         />
@@ -190,7 +187,7 @@ function WorkshopCard({ ws, index }: WorkshopCardProps) {
               className="workshop-luma-btn"
               onClick={e => e.stopPropagation()}
             >
-              Sign up →
+              Session page →
             </a>
           ) : (
             <span className="workshop-luma-btn workshop-luma-btn--soon">Details soon</span>
@@ -210,9 +207,9 @@ export function AfWorkshops() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="section-headline">
-            These workshops will expand your ambition.
+            These workshops expanded what people thought was possible.
             <br />
-            <span style={{ color: '#7E3BED' }}>Feel free to leave with it.</span>
+            <span style={{ color: '#7E3BED' }}>The sessions are still listed below.</span>
           </h2>
         </Reveal>
         <Reveal delay={0.15}>

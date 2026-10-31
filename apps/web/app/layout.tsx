@@ -21,7 +21,7 @@ const syne = Syne({
 export const metadata: Metadata = {
   title: 'The Artificial Future — YPIT AF 2026',
   description:
-    'Hackathon, workshops, and conference in Lagos — May 30 – June 13, 2026. Young People In Tech.',
+    'A record of The Artificial Future: hackathon, workshops, and conference in Lagos, May 30 – June 13, 2026. Young People In Tech.',
   keywords: [
     'hackathon',
     'AI',
@@ -44,9 +44,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body
-        className={`${dmSans.variable} ${syne.variable} min-h-screen bg-white antialiased font-body`}
-      >
+      <body className={`${dmSans.variable} ${syne.variable} min-h-screen bg-white antialiased`}>
         {children}
         <Analytics />
         <SpeedInsights />

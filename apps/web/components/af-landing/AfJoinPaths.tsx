@@ -1,113 +1,88 @@
-import Link from 'next/link';
 import { Reveal } from './Reveal';
 
-function conferenceTicketHref() {
-  const url = process.env.NEXT_PUBLIC_CONFERENCE_TICKET_URL;
-  return url && url.length > 0 ? url : '#conference';
-}
-
 export function AfJoinPaths() {
-  const ticketHref = conferenceTicketHref();
-
   return (
-    <section id="join" className="section section-cream">
+    <section id="audiences" className="section section-cream">
       <div className="section-inner">
         <Reveal>
-          <div className="section-label">How to Join</div>
+          <div className="section-label">Who it was for</div>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="section-headline">Three ways to get involved.</h2>
+          <h2 className="section-headline">Builders, students, and the room around them.</h2>
         </Reveal>
         <Reveal delay={0.15}>
-          <p className="section-sub">Find the path that fits you — we hope one does, no matter who you are.</p>
+          <p className="section-sub">
+            The programme had different ways in. This is what each of them included.
+          </p>
         </Reveal>
         <div className="paths-grid">
           <Reveal delay={0.1} className="path-card">
             <div className="path-bg-num">1</div>
-            <span className="path-badge free">Free</span>
-            <h3>Hackathon + Workshops</h3>
+            <span className="path-badge free">Hackathon</span>
+            <h3>Teams and builders</h3>
             <ul className="path-steps">
               <li>
-                <span className="step-num">01</span>Register using the form on this page
+                <span className="step-num">01</span>People registered solo, then formed teams of 2 to 4
               </li>
               <li>
-                <span className="step-num">02</span>Receive confirmation with everything you need
+                <span className="step-num">02</span>Opening session on May 30 was for team formation
               </li>
               <li>
-                <span className="step-num">03</span>Form or join a team, sign up for workshops, book mentors
+                <span className="step-num">03</span>The build week included mentor office hours
               </li>
               <li>
-                <span className="step-num">04</span>Show up May 30 with your laptop and curiosity
+                <span className="step-num">04</span>Teams could join from Lagos or remotely
               </li>
             </ul>
-            <Link href="/register" className="btn-primary" style={{ textAlign: 'center' }}>
-              Register for the Hackathon →
-            </Link>
+            <a href="#tracks" className="btn-primary" style={{ textAlign: 'center', display: 'block' }}>
+              See the tracks →
+            </a>
           </Reveal>
           <Reveal delay={0.2} className="path-card">
             <div className="path-bg-num">2</div>
-            <span className="path-badge free">Free</span>
-            <h3>Workshops Only</h3>
+            <span className="path-badge free">Students</span>
+            <h3>Student builders and attendees</h3>
             <ul className="path-steps">
               <li>
-                <span className="step-num">01</span>Register using the link below
+                <span className="step-num">01</span>Students could join the hackathon with no prior AI experience
               </li>
               <li>
-                <span className="step-num">02</span>You&apos;ll get redirected to YPIT&apos;s Luma page
+                <span className="step-num">02</span>A student conference pass asked for ID at the door
               </li>
               <li>
-                <span className="step-num">03</span>Sign up to all workshops that pique your interest
+                <span className="step-num">03</span>Workshops stayed open whether or not you were on a team
               </li>
               <li>
-                <span className="step-num">04</span>Subscribe to the Luma calendar to receive updates
+                <span className="step-num">04</span>The point was a room lecturers do not usually put you in
               </li>
             </ul>
-            <a href="https://luma.com/YPITAFWORKSHOPS" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ textAlign: 'center', display: 'block' }}>
-              Register for Workshops →
+            <a href="#workshops" className="btn-outline" style={{ textAlign: 'center', display: 'block' }}>
+              See the workshops →
             </a>
           </Reveal>
           <Reveal delay={0.3} className="path-card">
             <div className="path-bg-num">3</div>
-            <span className="path-badge paid">Paid</span>
-            <h3>Conference Only</h3>
+            <span className="path-badge paid">Conference</span>
+            <h3>Guests and investors</h3>
             <ul className="path-steps">
               <li>
-                <span className="step-num">01</span>Purchase a conference ticket via the ticketing page
+                <span className="step-num">01</span>June 13 at The Civic Centre was a paid conference day
               </li>
               <li>
-                <span className="step-num">02</span>Your ticket covers the full conference day on June 13
+                <span className="step-num">02</span>General attendees did not need to have built anything
               </li>
               <li>
-                <span className="step-num">03</span>No separate hackathon registration needed
+                <span className="step-num">03</span>Hackathon teams presented the work from the week
               </li>
               <li>
-                <span className="step-num">04</span>Show up at The Civic Centre, Lagos Island
+                <span className="step-num">04</span>Investor passes included the demo day and the mixer
               </li>
             </ul>
-            <a href={ticketHref} className="btn-outline" style={{ textAlign: 'center', display: 'block' }}>
-              Get Conference Tickets →
+            <a href="#conference" className="btn-outline" style={{ textAlign: 'center', display: 'block' }}>
+              See the conference →
             </a>
           </Reveal>
         </div>
-        <Reveal delay={0.25}>
-          <div className="path-info-grid">
-            <div className="path-info-card">
-              <h4>If you want to be here and you are willing to learn — you are in.</h4>
-              <p>
-                We are not trying to find the people who are already good at this. Students, developers, founders,
-                researchers. Experts and total beginners. Some of the best things get built by people who had no idea
-                what they were capable of on day one.
-              </p>
-            </div>
-            <div className="path-info-card">
-              <h4>You do not need a team to register.</h4>
-              <p>
-                Register solo and we will help you find teammates during the opening session. Teams are between 2 and 4
-                people. The hackathon and workshops can be joined remotely from anywhere in the world.
-              </p>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -16,25 +15,31 @@ export function AfNavbar() {
 
   return (
     <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
-      <a href="#hero" className="nav-logo">
-        <Image src="/ypit-logo-white.png" alt="YPIT" height={36} width={90} style={{ objectFit: 'contain', width: 'auto' }} />
-      </a>
+      <Link href="/#hero" className="nav-logo">
+        <img src="/ypit-logo-white.png" alt="YPIT" height={36} width={90} style={{ objectFit: 'contain', width: 'auto' }} />
+      </Link>
       <div className="nav-links">
-        <a href="#about" className="nav-pill">
+        <Link href="/#about" className="nav-pill">
           About
-        </a>
-        <a href="#tracks" className="nav-pill">
-          Hackathon
-        </a>
-        <a href="#workshops" className="nav-pill">
+        </Link>
+        <Link href="/#highlights" className="nav-pill">
+          Highlights
+        </Link>
+        <Link href="/#programme" className="nav-pill">
+          Programme
+        </Link>
+        <Link href="/#workshops" className="nav-pill">
           Workshops
-        </a>
-        <a href="#conference" className="nav-pill">
+        </Link>
+        <Link href="/#conference" className="nav-pill">
           Conference
-        </a>
-        <a href="#join" className="nav-pill nav-cta">
-          Join Us
-        </a>
+        </Link>
+        <Link href="/teams" className="nav-pill nav-keep">
+          Teams
+        </Link>
+        <Link href="/#impact" className="nav-pill nav-cta">
+          Impact report
+        </Link>
         <a href="https://www.youngpeopleintech.com" target="_blank" rel="noopener noreferrer" className="nav-pill">
           About YPIT
         </a>

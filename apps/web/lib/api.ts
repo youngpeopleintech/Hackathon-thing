@@ -29,6 +29,25 @@ export async function getRegistrationStats(): Promise<{ total: number; byTrack: 
   return response.json();
 }
 
+export async function submitImpactReport(email: string, name?: string): Promise<{ success: boolean; message: string }> {
+  const response = await fetch(`${API_URL}/registration/impact-report`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, name }),
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.message || 'Failed to join the list. Please try again.');
+  }
+
+  return response.json();
+}
+
+export function apiUrl(path: string) {
+  return `${API_URL}${path}`;
+}
+
 export async function submitWaitlist(email: string, name?: string): Promise<{ success: boolean; message: string }> {
   const response = await fetch(`${API_URL}/registration/waitlist`, {
     method: 'POST',

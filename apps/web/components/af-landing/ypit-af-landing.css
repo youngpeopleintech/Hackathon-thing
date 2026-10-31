@@ -426,7 +426,10 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;
   cursor:pointer;flex-shrink:0;
 }
-.ypitAfLanding .wc-photo{transition:transform 0.4s ease}
+.ypitAfLanding .wc-photo{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transition:transform 0.4s ease;
+}
 .ypitAfLanding .wc-photo-wrap:hover .wc-photo,
 .ypitAfLanding .wc-photo-wrap.bio-open .wc-photo{transform:scale(1.04)}
 
@@ -692,7 +695,7 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 /* RESPONSIVE */
 @media(max-width:960px){
   .ypitAfLanding nav{padding:18px 24px}
-  .ypitAfLanding .nav-links a:not(.nav-cta){display:none}
+  .ypitAfLanding .nav-links a:not(.nav-cta):not(.nav-keep){display:none}
   .ypitAfLanding #hero, .ypitAfLanding .section{padding-left:24px;padding-right:24px}
   .ypitAfLanding #footer-cta{padding:80px 24px}
   .ypitAfLanding footer{padding:32px 24px}

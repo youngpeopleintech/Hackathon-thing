@@ -25,6 +25,12 @@ export class RegistrationController {
     return this.registrationService.addToWaitlist(createWaitlistDto);
   }
 
+  @Post("impact-report")
+  @HttpCode(HttpStatus.CREATED)
+  async joinImpactReport(@Body() createWaitlistDto: CreateWaitlistDto) {
+    return this.registrationService.addToImpactReport(createWaitlistDto);
+  }
+
   @Get("stats")
   async getStats() {
     return this.registrationService.getRegistrationStats();

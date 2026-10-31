@@ -6,6 +6,8 @@ import { AfConference } from './AfConference';
 import { AfFooterCta } from './AfFooterCta';
 import { AfFaq } from './AfFaq';
 import { AfHero } from './AfHero';
+import { AfHighlights } from './AfHighlights';
+import { AfImpactReport } from './AfImpactReport';
 import { AfJoinPaths } from './AfJoinPaths';
 import { AfMarquee } from './AfMarquee';
 import { AfNavbar } from './AfNavbar';
@@ -23,6 +25,7 @@ export function AfLandingPage() {
       <AfNavbar />
       <AfHero />
       <AfMarquee />
+      <AfHighlights />
       <AfAbout />
       <AfProgramme />
       <AfWorkshops />
@@ -31,6 +34,7 @@ export function AfLandingPage() {
       <AfConference />
       <AfSpeakers />
       <AfJoinPaths />
+      <AfImpactReport />
       <AfFaq />
       <AfPartners />
       <AfFooterCta />

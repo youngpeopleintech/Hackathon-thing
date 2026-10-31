@@ -9,29 +9,21 @@ export function AfSpeakers() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="section-headline">
-            We are putting together
+            The people who taught,
             <br />
-            an exceptional group of people.
+            mentored, and took the stage.
           </h2>
         </Reveal>
-        <Reveal delay={0.2} className="speakers-box">
-          <h3>Announcements coming soon.</h3>
-          <p>
-            We are recruiting practitioners, researchers, and builders who are actually changing what it means to build
-            AI for Africans. Follow us to hear first.
+        <Reveal delay={0.15}>
+          <p className="section-sub">
+            Workshop leads are on this page. Mentors sat with teams through the build week. The conference brought a
+            wider set of voices to The Civic Centre on June 13.
           </p>
-          <a href="https://www.youngpeopleintech.com" target="_blank" rel="noopener noreferrer" className="btn-outline">
-            Follow us for updates →
+        </Reveal>
+        <Reveal delay={0.2}>
+          <a href="#workshops" className="btn-outline">
+            See the workshop leads →
           </a>
-          <div className="ghost-grid">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="ghost-card">
-                <div className="ghost-avatar" />
-                <div className="ghost-line" />
-                <div className="ghost-line short" />
-              </div>
-            ))}
-          </div>
         </Reveal>
       </div>
     </section>

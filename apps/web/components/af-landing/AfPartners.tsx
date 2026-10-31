@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Reveal } from './Reveal';
 
 const PARTNERS = [
@@ -27,14 +26,14 @@ export function AfPartners() {
         </Reveal>
         <Reveal delay={0.15}>
           <p className="section-sub">
-            We are grateful to the partners who believe in what we are building. More announcements coming soon.
+            These organisations made the programme possible.
           </p>
         </Reveal>
         <div className="partner-marquee-wrap">
           <div className="partner-marquee-track">
             {[...PARTNERS, ...PARTNERS].map((p, i) => (
               <div key={`${p.name}-${i}`} className="partner-marquee-item">
-                <Image src={p.src} alt={p.name} width={120} height={48} style={{ objectFit: 'contain', width: 'auto', height: 'auto', maxWidth: '120px', maxHeight: '44px' }} />
+                <img src={p.src} alt={p.name} width={120} height={48} style={{ objectFit: 'contain', width: 'auto', height: 'auto', maxWidth: '120px', maxHeight: '44px' }} />
               </div>
             ))}
           </div>

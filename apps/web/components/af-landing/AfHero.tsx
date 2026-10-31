@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const lineVariants = {
@@ -40,9 +38,9 @@ export function AfHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          Over three weeks in Lagos, we are bringing together curious people, working builders, and everyone in
-          between — for a hackathon, workshops, and a conference all answering the same question: what does AI look
-          like when Africans are the ones building it?
+          Over three weeks in Lagos, curious people and working builders came together for a hackathon, workshops,
+          and a conference — all answering the same question: what does AI look like when Africans are the ones
+          building it?
         </motion.p>
         <motion.div
           className="hero-actions"
@@ -50,11 +48,14 @@ export function AfHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.95, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <Link href="/register" className="btn-primary">
-            Register for Free
-          </Link>
-          <a href="#conference" className="btn-outline">
-            Get Conference Tickets
+          <a href="#highlights" className="btn-primary">
+            See the highlights
+          </a>
+          <a href="/teams" className="btn-outline">
+            See what teams built
+          </a>
+          <a href="#impact" className="btn-outline">
+            Get the impact report
           </a>
         </motion.div>
         <motion.div
@@ -85,7 +86,7 @@ export function AfHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.25, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <Image src="/ypit-logo-white.png" alt="YPIT" height={16} width={40} style={{ objectFit: 'contain', width: 'auto' }} />
+          <img src="/ypit-logo-white.png" alt="YPIT" height={16} width={40} style={{ objectFit: 'contain', width: 'auto' }} />
           <span>An event by Young People In Tech</span>
         </motion.a>
       </div>

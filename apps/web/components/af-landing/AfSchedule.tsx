@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { Reveal } from './Reveal';
 
 const ROWS = [
@@ -24,7 +23,7 @@ export function AfSchedule() {
           </h2>
         </Reveal>
         <Reveal delay={0.15}>
-          <p className="section-sub">Designed across two full weekends so you can go through the motions like real builders. Every session is available to join in person in Lagos or virtually — exact details will be provided to registered participants.</p>
+          <p className="section-sub">The week ran across two weekends so teams could build the way working teams do. Sessions were in Lagos and online.</p>
         </Reveal>
         <Reveal delay={0.2} className="schedule-table">
           {ROWS.map((row) => (
@@ -40,7 +39,7 @@ export function AfSchedule() {
           ))}
         </Reveal>
         <Reveal delay={0.25} className="section-cta">
-          <Link href="/register" className="btn-primary">Register for the Hackathon →</Link>
+          <a href="#highlights" className="btn-primary">See the highlights →</a>
         </Reveal>
       </div>
     </section>
