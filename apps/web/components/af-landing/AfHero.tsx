@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const lineVariants = {
@@ -39,8 +38,9 @@ export function AfHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          Join us on June 13 at The Civic Centre, Lagos for a day of conversations and panels about what AI looks
-          like when Africans are the ones building it.
+          Over three weeks in Lagos, curious people and working builders came together for a hackathon, workshops,
+          and a conference — all answering the same question: what does AI look like when Africans are the ones
+          building it?
         </motion.p>
         <motion.div
           className="hero-actions"
@@ -48,8 +48,14 @@ export function AfHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.95, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <a href="https://eventornigeria.com/explore/ypit-af" target="_blank" rel="noopener noreferrer" className="btn-primary">
-            Get Conference Tickets
+          <a href="#highlights" className="btn-primary">
+            See the highlights
+          </a>
+          <a href="/teams" className="btn-outline">
+            See what teams built
+          </a>
+          <a href="#impact" className="btn-outline">
+            Get the impact report
           </a>
         </motion.div>
         <motion.div
@@ -58,9 +64,9 @@ export function AfHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <div className="chip chip--1 chip--done">
+          <div className="chip chip--1">
             <span className="chip-dot" />
-            Workshops · Complete
+            Workshops · April–June · Free
           </div>
           <div className="chip chip--2">
             <span className="chip-dot" />
@@ -80,7 +86,7 @@ export function AfHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.25, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <Image src="/ypit-logo-white.png" alt="YPIT" height={16} width={40} style={{ objectFit: 'contain', width: 'auto' }} />
+          <img src="/ypit-logo-white.png" alt="YPIT" height={16} width={40} style={{ objectFit: 'contain', width: 'auto' }} />
           <span>An event by Young People In Tech</span>
         </motion.a>
       </div>

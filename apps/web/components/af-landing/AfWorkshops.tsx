@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useCallback, CSSProperties } from 'react';
-import Image from 'next/image';
+import React, { useState, useRef, useCallback } from 'react';
 import { Reveal } from './Reveal';
 
 interface Workshop {
@@ -12,10 +11,9 @@ interface Workshop {
   desc: string;
   date: string;
   format: string;
-  linkedIn?: string;
+  linkedIn: string;
   image: string;
   photoPosition?: string;
-  photoStyle?: React.CSSProperties;
   lumaUrl: string;
 }
 
@@ -48,40 +46,26 @@ const WORKSHOPS: Workshop[] = [
     format: 'Online · All levels',
     linkedIn: 'https://www.linkedin.com/in/andrewnduati/',
     image: '/images/af/speakers/andrew-nduati.jpg',
-    lumaUrl: 'https://luma.com/ts2oj8s2',
+    lumaUrl: '#',
   },
   {
     num: '03',
     title: 'The DIY Stack: Personalized Software in the Age of AI',
     speaker: 'Jeremiah Nnadi',
     bio: [
-      'Jeremiah is the Product Lead at Octav, an AI & Data company modernizing how creative rights and royalties flow through the music industry. London-based, he started out as a software engineer and has since worked across fintech, e-commerce, and venture capital in Africa, the US, and the UK.',
-      'A multidisciplinary builder at heart, he lives at the intersection of product, engineering, and design, and loves exploring new tools and teaching what he learns.',
+      'Jeremiah is the Product Lead at Octav, an AI & Data company modernizing how creative rights and royalties flow through the music industry.',
+      'London-based, Jerry started out as a software engineer and moved into technical product roles at companies across multiple African countries, the US, and the UK, working in fintech, e-commerce, and venture capital. He sits comfortably in the middle ground between product, engineering, design, and data, and is borderline obsessed with technical tooling and creative problem-solving.',
+      'Jerry is a multidisciplinary builder at heart, and loves exploring new ideas, trying out new tools, and especially talking about and teaching what he learns.',
     ],
     desc: 'In this session, I\'ll show how you can now design, prototype, test, integrate, and ship your own tools. The space is so matured that you can create software built for your goals, running on a stack you actually own and operate. Using a personal finance app I built (Kolo) as a case study, we\'ll walk through each stage of the build: turning an idea into a designed interface, a working prototype, tested code, real data integrations, and a maintained product (with AI at most steps). The goal isn\'t to teach you to build a finance app. It\'s to show what\'s possible when you stop outsourcing software to other people. You don\'t need a team, a big budget, or a traditional engineering background. All that\'s really essential is a problem you care about, a careful process, and a willingness to actually interact with technical workflows.',
     date: 'Thursday May 7th',
     format: 'Online · All levels',
     linkedIn: 'https://www.linkedin.com/in/jeremiahnnadi/',
     image: '/images/af/speakers/jeremiah-nnadi.jpg',
-    lumaUrl: 'https://luma.com/l312mzrr',
+    lumaUrl: '#',
   },
   {
     num: '04',
-    title: 'AI-assisted development: Principles for building in the age of AI',
-    speaker: 'Nkechi',
-    bio: [
-      'Nkechi is a founding Product engineer building trust infrastructure for KYC and Digital ID at Vouchsafe. She\'s a host of Conversations with Technologists, where technologists gather to talk about what they\'re building and learning, and Build Sessions, one-day hackathons where builders take ideas into working products.',
-      'Before tech, she spent her early career as an investment banker covering financial services and fintech companies.',
-    ],
-    desc: 'Before you jump into randomly prompting Claude or Lovable, you need to get your foundation right. This session gives you the framework for using AI to augment your ability to build — covering spec-driven development workflows, patterns for interacting with AI tools, and how to think about your role as a builder in the age of AI.',
-    date: 'Thursday May 14th',
-    format: 'Online · All levels',
-    linkedIn: 'https://www.linkedin.com/in/nkechianyanwu/',
-    image: '/images/af/speakers/nkechi-anyanwu.jpg',
-    lumaUrl: 'https://luma.com/g3959aq9',
-  },
-  {
-    num: '05',
     title: 'Exploring Agents: How to build them safely — from infrastructure to impact',
     speaker: 'Bola Banjo',
     bio: [
@@ -92,56 +76,7 @@ const WORKSHOPS: Workshop[] = [
     format: 'Online · All levels',
     linkedIn: 'https://www.linkedin.com/in/bolaabanjo/',
     image: '/images/af/speakers/bola-banjo.jpg',
-    photoPosition: 'center 30%',
-    lumaUrl: 'https://luma.com/bv5hhcrp',
-  },
-  {
-    num: '06',
-    title: 'Bridging the Data Skills Gap for African Languages',
-    speaker: 'Tonative Data Academy',
-    bio: [
-      'The Tonative Data Academy is a community-driven training program on linguistic data curation for African languages, equipping language speakers with the skills to contribute directly to AI model training.',
-      'Tonative builds infrastructure for African language data — on the belief that the people who speak these languages are best placed to shape how they appear in AI.',
-    ],
-    desc: 'African languages are underrepresented in AI because the training data simply doesn\'t exist at scale yet. This workshop changes that, starting with you. Led by tutors from the Tonative Data Academy, you\'ll learn how the data gap came to be, what it means for AI systems in African contexts, and how to personally contribute. You\'ll leave with practical skills to curate your own language dataset and publish it for use in AI model training and evaluation. No prior technical background needed — if you speak an African language or care about how it\'s represented in AI, this session is for you.',
-    date: 'Tuesday May 26th',
-    format: 'Online · All levels',
-    linkedIn: 'https://www.tonative.org/',
-    image: '/images/af/speakers/tonative-data-academy.png',
-    photoStyle: { objectFit: 'contain', background: '#faf9f7', padding: '32px' },
-    lumaUrl: 'https://luma.com/ypitthe-etft',
-  },
-  {
-    num: '07',
-    title: 'Design in the Age of AI: How to Build Things That Look Good and Actually Work',
-    speaker: 'Uche Onyeka',
-    bio: [
-      'Uche is a Senior Product Designer at Monzo, where he works on the Business Banking product — helping small business owners get set up, activated, and growing faster. Before Monzo, he worked at Meta, Pagatech, and Workstation NG.',
-      'He\'s been building side projects with AI tools, enjoys interaction design and delightful interfaces, and writes about design and technology.',
-    ],
-    desc: 'Most people think design is something you either "have an eye for" or you don\'t. That\'s not true anymore. Uche walks through how designers and non-designers alike can use AI to think through problems, generate interfaces, prototype ideas, and ship things that feel intentional — using real examples from his own projects. The goal isn\'t to turn you into a designer. It\'s to show that in 2026, the gap between an idea and a product that looks real is smaller than you think.',
-    date: 'Wednesday May 27th',
-    format: 'Online · All levels',
-    image: '/images/af/speakers/uche-onyeka.jpeg',
-    photoPosition: 'center 20%',
-    linkedIn: 'https://www.linkedin.com/in/ichieuche/',
-    lumaUrl: 'https://luma.com/ypitthe-y2lk',
-  },
-  {
-    num: '08',
-    title: 'Beyond WER: Nuanced Evaluation Metrics for African Speech Models',
-    speaker: 'Bunmi Akinremi · PyData Lagos',
-    bio: [
-      'Bunmi is an AI Engineer and Adjunct Faculty at Pan Atlantic University, with 3+ years of experience spanning computer vision, NLP, and climate-relevant AI. She has deployed Gen AI speech applications, built AI fact-checking platforms, and applied computer vision to satellite imagery for precision farming — across Nigeria and internationally.',
-      'She is a two-time organiser of the Deep Learning Indaba conference, and is recognised as one of Africa\'s pioneering ML engineers.',
-    ],
-    desc: 'WER is the standard metric for evaluating speech models — but it regularly misjudges real-world quality when models meet African accents, dialects, code-switching, and noisy environments at scale. Bunmi walks through what breaks down and why, then introduces production-grade evaluation approaches that actually reflect user experience: semantic correctness, error severity weighting, task success, and monitoring for drift over time.',
-    date: 'Thursday May 28th',
-    format: 'Online · Technical',
-    linkedIn: 'https://www.linkedin.com/company/pydata-lagos/',
-    image: '/images/af/speakers/pydata-lagos.jpg',
-    photoStyle: { objectFit: 'contain', background: '#faf9f7', padding: '28px' },
-    lumaUrl: 'https://luma.com/ypitthe-z7ja',
+    lumaUrl: '#',
   },
 ];
 
@@ -206,29 +141,25 @@ function WorkshopCard({ ws, index }: WorkshopCardProps) {
         onMouseLeave={handlePhotoLeave}
         onClick={handlePhotoClick}
       >
-        <Image
+        <img
           src={ws.image}
           alt={ws.speaker}
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
           className="wc-photo"
-          style={ws.photoStyle ?? { objectFit: 'cover', objectPosition: ws.photoPosition ?? 'center 20%' }}
+          style={{ objectFit: 'cover', objectPosition: ws.photoPosition ?? 'center 20%' }}
         />
         <div className="wc-bio-overlay">
           {ws.bio.map((para, i) => (
             <p key={i} className="wc-bio-text">{para}</p>
           ))}
-          {ws.linkedIn && (
-            <a
-              href={ws.linkedIn}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="wc-linkedin-btn"
-              onClick={e => e.stopPropagation()}
-            >
-              {ws.linkedIn.includes('linkedin.com') ? 'LinkedIn →' : 'Website →'}
-            </a>
-          )}
+          <a
+            href={ws.linkedIn}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="wc-linkedin-btn"
+            onClick={e => e.stopPropagation()}
+          >
+            LinkedIn →
+          </a>
         </div>
       </div>
 
@@ -256,7 +187,7 @@ function WorkshopCard({ ws, index }: WorkshopCardProps) {
               className="workshop-luma-btn"
               onClick={e => e.stopPropagation()}
             >
-              Sign up →
+              Session page →
             </a>
           ) : (
             <span className="workshop-luma-btn workshop-luma-btn--soon">Details soon</span>
@@ -276,9 +207,9 @@ export function AfWorkshops() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="section-headline">
-            These workshops will expand your ambition.
+            These workshops expanded what people thought was possible.
             <br />
-            <span style={{ color: '#7E3BED' }}>Feel free to leave with it.</span>
+            <span style={{ color: '#7E3BED' }}>The sessions are still listed below.</span>
           </h2>
         </Reveal>
         <Reveal delay={0.15}>

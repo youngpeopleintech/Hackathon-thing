@@ -30,7 +30,7 @@ export function AfFaq() {
           <div className="section-label">FAQ</div>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="section-headline">Everything you need to know.</h2>
+          <h2 className="section-headline">What the programme was.</h2>
         </Reveal>
         <div className="faq-grid">
           <Reveal className="faq-sidebar">

@@ -1,20 +1,6 @@
-'use client';
-
-import { useState } from 'react';
 import { Reveal } from './Reveal';
 
-interface Props {
-  onOpenManifesto: () => void;
-}
-
-export function AfAbout({ onOpenManifesto }: Props) {
-  const [clicked, setClicked] = useState(false);
-
-  function handleClick() {
-    setClicked(true);
-    onOpenManifesto();
-  }
-
+export function AfAbout() {
   return (
     <section id="about" className="section section-white">
       <div className="section-inner">
@@ -36,12 +22,9 @@ export function AfAbout({ onOpenManifesto }: Props) {
               nearly enough spaces built to actually empower them.
             </p>
             <p>
-              The Artificial Future is trying to be a space that empowers these people. If this resonates, join us.
-            </p>
-            <p>
-              Over several weeks, you will take part in workshops that build real skills, collaborate with others in a
-              live hackathon, and join a conference where Africa&apos;s most ambitious thinkers share what they are
-              seeing and building. Active participation involves learning, building, and exposure. All of it is connected.
+              The Artificial Future was a space built to empower these people. Over several weeks, participants took part
+              in workshops, collaborated in a live hackathon, and joined a conference where Africa&apos;s most ambitious
+              thinkers shared what they are seeing and building.
             </p>
           </Reveal>
           <Reveal delay={0.25}>
@@ -49,18 +32,10 @@ export function AfAbout({ onOpenManifesto }: Props) {
               <h4>Open to everyone.</h4>
               <p>
                 Whether you are a student, a developer, a founder, a researcher, a policy maker, or an investor — you
-                belong here. You do not need to arrive as an expert. We have found that since 2022, across every event
-                we have run, the most interesting things happen when you put curious, ambitious people in the same room
-                together. This is that room.
+                belong in that room. You did not need to arrive as an expert. Since 2022, across every event we have
+                run, the most interesting things happen when curious, ambitious people share a room. This was that room.
               </p>
             </div>
-            <button
-              className={`about-manifesto-btn${clicked ? '' : ' is-pulsing'}`}
-              onClick={handleClick}
-            >
-              <span className="manifesto-pill-dot" />
-              Read the Manifesto ↗
-            </button>
           </Reveal>
         </div>
       </div>

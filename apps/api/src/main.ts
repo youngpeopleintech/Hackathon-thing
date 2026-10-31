@@ -9,6 +9,7 @@ async function bootstrap() {
   // Enable CORS for frontend
   const allowedOrigins = [
     "http://localhost:3000",
+    "http://localhost:5173",
     "http://localhost:3005",
     "https://theartificialfuture.com",
     "https://www.theartificialfuture.com",
@@ -25,6 +26,7 @@ async function bootstrap() {
       }
     },
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   };
 

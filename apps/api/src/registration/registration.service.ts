@@ -132,6 +132,24 @@ export class RegistrationService {
     return { success: true, message: "You're on the list! We'll be in touch when tickets go on sale." };
   }
 
+  async addToImpactReport(dto: CreateWaitlistDto): Promise<{ success: boolean; message: string }> {
+    const supabase = this.supabaseService.getClient();
+
+    const { error } = await supabase
+      .from("impact_report_waitlist")
+      .upsert({ email: dto.email, name: dto.name || null }, { onConflict: "email" });
+
+    if (error) {
+      this.logger.error("Impact report waitlist error:", error);
+      throw new InternalServerErrorException("Failed to join the list. Please try again.");
+    }
+
+    return {
+      success: true,
+      message: "You're on the list. We'll send the impact report when it's ready.",
+    };
+  }
+
   async getRegistrationStats(): Promise<{
     total: number;
     byTrack: Record<string, number>;

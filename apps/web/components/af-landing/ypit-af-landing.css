@@ -6,34 +6,6 @@
   font-display: swap;
 }
 
-/* Announcement bar */
-.ypitAfLanding .announcement-bar{
-  display:block;position:fixed;top:0;left:0;right:0;z-index:600;
-  background:#FE324B;overflow:hidden;
-  height:36px;text-decoration:none;cursor:pointer;
-  border-bottom:1px solid rgba(255,255,255,0.15);
-}
-.ypitAfLanding .announcement-track{
-  display:flex;align-items:center;height:100%;
-  white-space:nowrap;
-  animation:announcementScroll 28s linear infinite;
-}
-.ypitAfLanding .announcement-bar:hover .announcement-track{
-  animation-play-state:paused;
-}
-.ypitAfLanding .announcement-item{
-  font-size:12px;font-weight:600;letter-spacing:0.06em;
-  text-transform:uppercase;color:#fff;
-  padding-right:0;flex-shrink:0;
-}
-.ypitAfLanding .announcement-sep{
-  margin:0 24px;opacity:0.6;font-size:11px;
-}
-@keyframes announcementScroll{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-50%)}
-}
-
 /* Scrollbar when AF landing present */
 html:has(.ypitAfLanding) ::-webkit-scrollbar{width:6px}
 html:has(.ypitAfLanding) ::-webkit-scrollbar-track{background:#f0ede8}
@@ -63,7 +35,7 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 
 /* NAV */
 .ypitAfLanding nav{
-  position:fixed;top:36px;left:0;right:0;z-index:500;
+  position:fixed;top:0;left:0;right:0;z-index:500;
   padding:20px 56px;display:flex;align-items:center;justify-content:space-between;
   transition:all 0.35s ease;
   background:var(--coral);
@@ -110,7 +82,7 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 /* HERO */
 .ypitAfLanding #hero{
   min-height:100vh;display:flex;flex-direction:column;
-  justify-content:flex-end;padding:170px 56px 88px;
+  justify-content:flex-end;padding:134px 56px 88px;
   overflow:hidden;position:relative;background:#faf9f7;
 }
 .ypitAfLanding .hero-bg-image{
@@ -173,8 +145,6 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   animation:chip1Pulse 2.4s ease-in-out infinite;
 }
 .ypitAfLanding .chip--1 .chip-dot{animation-delay:0s}
-.ypitAfLanding .chip--done{background:transparent!important;border-color:var(--muted)!important;color:var(--muted)!important;animation:none!important;box-shadow:none!important;opacity:0.6}
-.ypitAfLanding .chip--done .chip-dot{background:var(--muted)!important;animation:none!important}
 @keyframes chip1Pulse{
   0%,100%{box-shadow:0 0 6px rgba(126,59,237,0.4)}
   50%{box-shadow:0 0 18px rgba(126,59,237,0.9)}
@@ -415,7 +385,6 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 }
 .ypitAfLanding .schedule-venue{font-size:11px;font-weight:500;color:var(--muted);margin-bottom:10px}
 .ypitAfLanding .schedule-venue-note{font-weight:300;opacity:0.7}
-.ypitAfLanding .schedule-requirements{font-size:12px;color:var(--muted);font-weight:300;margin-top:8px;padding:8px 12px;background:rgba(0,0,0,0.03);border-radius:6px;line-height:1.6}
 .ypitAfLanding .schedule-content h4{font-family:var(--display);font-size:15px;font-weight:700;color:var(--dark);margin-bottom:5px}
 .ypitAfLanding .schedule-content p{font-size:13px;color:var(--muted);font-weight:300;line-height:1.65}
 
@@ -439,7 +408,7 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 }
 
 .ypitAfLanding .workshop-grid-v2{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px;
+  display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:56px;
 }
 .ypitAfLanding .workshop-card-v2{
   background:#f7f4ef;border:1px solid var(--border);
@@ -457,7 +426,10 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;
   cursor:pointer;flex-shrink:0;
 }
-.ypitAfLanding .wc-photo{transition:transform 0.4s ease}
+.ypitAfLanding .wc-photo{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transition:transform 0.4s ease;
+}
 .ypitAfLanding .wc-photo-wrap:hover .wc-photo,
 .ypitAfLanding .wc-photo-wrap.bio-open .wc-photo{transform:scale(1.04)}
 
@@ -467,7 +439,6 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   background:rgba(126,59,237,0.93);
   display:flex;flex-direction:column;justify-content:flex-end;
   padding:24px;
-  overflow-y:auto;
   transform:translateY(100%);
   transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);
 }
@@ -553,124 +524,6 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 .ypitAfLanding .conf-detail h5{font-family:var(--display);font-size:13px;font-weight:700;color:var(--dark);margin-bottom:3px}
 .ypitAfLanding .conf-detail p{font-size:12px;color:var(--muted);font-weight:300}
 
-/* Conference agenda */
-/* Ticket grid */
-.ypitAfLanding .ticket-grid{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px;margin-bottom:16px;
-}
-.ypitAfLanding .ticket-card{
-  background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:16px;
-  padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;
-  transition:box-shadow 0.2s,transform 0.2s;
-}
-.ypitAfLanding .ticket-card:hover{
-  box-shadow:0 8px 32px rgba(0,0,0,0.08);transform:translateY(-2px);
-}
-.ypitAfLanding .ticket-card-top{display:flex;flex-direction:column;gap:6px}
-.ypitAfLanding .ticket-card-bottom{display:flex;flex-direction:column;gap:8px}
-
-/* Featured ticket card */
-.ypitAfLanding .ticket-card--featured{
-  display:flex;flex-direction:row;padding:0;overflow:hidden;
-}
-.ypitAfLanding .ticket-card-left{
-  flex:1;padding:20px 22px;display:flex;flex-direction:column;justify-content:space-between;gap:14px;
-  min-width:0;
-}
-.ypitAfLanding .ticket-card-right{
-  width:28%;flex-shrink:0;position:relative;overflow:hidden;
-  background:#FF4600;
-  clip-path:polygon(14% 0, 100% 0, 100% 100%, 0% 100%);
-}
-.ypitAfLanding .ticket-name-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.ypitAfLanding .ticket-name{font-family:var(--display);font-size:17px;font-weight:700;color:var(--dark)}
-.ypitAfLanding .ticket-tag{
-  font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
-  background:rgba(126,59,237,0.1);color:#7E3BED;
-  padding:3px 9px;border-radius:100px;
-}
-.ypitAfLanding .ticket-tag--gold{
-  background:rgba(201,168,76,0.15);color:#a07c20;
-}
-.ypitAfLanding .ticket-price{
-  font-family:var(--display);font-size:28px;font-weight:800;color:#FF4600;line-height:1;
-}
-.ypitAfLanding .ticket-price--gold{color:#c9a84c;font-size:36px}
-.ypitAfLanding .ticket-desc{font-size:13px;color:var(--muted);font-weight:300;line-height:1.65}
-.ypitAfLanding .ticket-includes{
-  font-size:12px;color:rgba(255,70,0,0.6);font-weight:400;line-height:1.6;
-  padding:10px 14px;background:rgba(255,70,0,0.05);border-radius:8px;
-}
-.ypitAfLanding .ticket-note{
-  font-size:11px;color:#b0a89a;font-weight:400;line-height:1.5;font-style:italic;
-}
-.ypitAfLanding .ticket-btn{
-  display:inline-flex;align-items:center;
-  font-size:12px;font-weight:700;letter-spacing:0.04em;
-  color:#fff;background:var(--dark);text-decoration:none;
-  padding:9px 18px;border-radius:100px;width:fit-content;
-  transition:background 0.2s;
-}
-.ypitAfLanding .ticket-btn:hover{background:#333}
-.ypitAfLanding .ticket-btn--gold{
-  background:#c9a84c;color:#fff;font-size:14px;padding:12px 24px;
-}
-.ypitAfLanding .ticket-btn--gold:hover{background:#a07c20}
-
-/* Sponsor ticket */
-.ypitAfLanding .ticket-sponsor-card{
-  display:flex;align-items:flex-start;justify-content:space-between;gap:40px;
-  background:#1a1714;border-radius:20px;padding:40px;margin-bottom:16px;
-  text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;
-}
-.ypitAfLanding .ticket-sponsor-card:hover{
-  transform:translateY(-2px);box-shadow:0 12px 48px rgba(0,0,0,0.2);
-}
-.ypitAfLanding .ticket-sponsor-card .ticket-name{color:#fff}
-.ypitAfLanding .ticket-sponsor-card .ticket-desc{color:rgba(255,255,255,0.55)}
-.ypitAfLanding .ticket-sponsor-card .ticket-includes{
-  background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.5);
-}
-.ypitAfLanding .ticket-sponsor-left{flex:1;display:flex;flex-direction:column;gap:14px}
-.ypitAfLanding .ticket-sponsor-right{
-  display:flex;flex-direction:column;align-items:flex-end;gap:20px;flex-shrink:0;
-}
-
-.ypitAfLanding .conf-agenda-label{
-  font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;
-  letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);
-  margin-top:72px;margin-bottom:0;padding-bottom:20px;
-  border-bottom:1px solid var(--border);
-}
-.ypitAfLanding .conf-agenda{margin-top:0}
-.ypitAfLanding .conf-agenda-row{
-  display:grid;grid-template-columns:100px 1fr;gap:0 40px;
-  padding:28px 0;border-bottom:1px solid var(--border);
-  transition:background 0.2s;
-}
-.ypitAfLanding .conf-agenda-num{
-  font-family:var(--display);font-size:clamp(48px,5vw,72px);font-weight:800;
-  letter-spacing:-0.03em;color:var(--border);
-  line-height:1;align-self:center;
-}
-.ypitAfLanding .conf-agenda-type{
-  display:inline-block;
-  font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;
-  letter-spacing:0.1em;text-transform:uppercase;
-  margin-bottom:8px;
-}
-.ypitAfLanding .conf-agenda-title{
-  font-family:var(--display);font-size:clamp(17px,2vw,22px);font-weight:700;
-  color:var(--dark);line-height:1.25;margin-bottom:8px;
-}
-.ypitAfLanding .conf-agenda-desc{
-  font-size:14px;font-weight:300;color:var(--muted);line-height:1.65;
-}
-.ypitAfLanding .conf-agenda-speaker{
-  font-size:12px;font-weight:600;color:var(--dark);
-  margin-top:10px;letter-spacing:0.01em;
-}
-
 /* Conference waitlist form */
 .ypitAfLanding .conf-waitlist-label{font-size:13px;color:var(--muted);font-weight:500;margin-bottom:12px}
 .ypitAfLanding .conf-waitlist-form{}
@@ -701,156 +554,24 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
   display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;
 }
 
-/* SPEAKERS */
-/* Speaker groups */
-.ypitAfLanding .speaker-group{margin-top:56px}
-.ypitAfLanding .speaker-group-label{
-  font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;
-  letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);
-  padding-bottom:20px;border-bottom:1px solid var(--border);margin-bottom:0;
+/* SPEAKERS PLACEHOLDER */
+.ypitAfLanding .speakers-box{
+  margin-top:56px;padding:72px;
+  border:1px dashed var(--border);border-radius:4px;
+  text-align:center;background:#fafaf8;
 }
-.ypitAfLanding .speakers-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:2px;
-  margin-top:0;
-}
-.ypitAfLanding .speaker-card{
-  display:flex;flex-direction:column;
-  background:#fff;border:1px solid var(--border);overflow:hidden;
-}
-.ypitAfLanding .speaker-photo-wrap{
-  position:relative;width:100%;aspect-ratio:1/1;background:#f0ede8;
-  overflow:hidden;flex-shrink:0;cursor:pointer;
-}
-.ypitAfLanding .speaker-photo{object-fit:cover}
-.ypitAfLanding .speaker-session-badge{
-  position:absolute;bottom:12px;left:12px;z-index:2;
-  background:rgba(10,10,10,0.72);backdrop-filter:blur(6px);
-  color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;
-  letter-spacing:0.1em;text-transform:uppercase;
-  padding:5px 10px;border-radius:100px;
-  transition:opacity 0.3s;
-}
-.ypitAfLanding .speaker-photo-wrap.bio-open .speaker-session-badge{opacity:0}
-
-/* Bio overlay — pink */
-.ypitAfLanding .speaker-bio-overlay{
-  position:absolute;inset:0;z-index:3;
-  background:rgba(254,50,75,0.92);
-  padding:24px;overflow-y:auto;
-  display:flex;flex-direction:column;justify-content:center;gap:10px;
-  opacity:0;transform:translateY(8px);
-  transition:opacity 0.3s ease, transform 0.3s ease;
-  pointer-events:none;
-}
-.ypitAfLanding .speaker-photo-wrap.bio-open .speaker-bio-overlay{
-  opacity:1;transform:translateY(0);pointer-events:auto;
-}
-.ypitAfLanding .speaker-bio-text{
-  font-size:12px;color:#fff;font-weight:300;line-height:1.65;margin:0;
-}
-
-.ypitAfLanding .speaker-body{
-  padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;
-}
-.ypitAfLanding .speaker-name{
-  font-family:var(--display);font-size:14px;font-weight:800;
-  color:var(--dark);margin-bottom:2px;
-}
-.ypitAfLanding .speaker-role{
-  font-size:11px;font-weight:400;color:var(--muted);margin:0;
-}
-.ypitAfLanding .speaker-role span{font-weight:600;color:var(--dark)}
-.ypitAfLanding .speaker-links{
-  display:flex;gap:8px;flex-wrap:wrap;
-}
-.ypitAfLanding .speaker-link{
-  font-size:11px;font-weight:700;letter-spacing:0.04em;color:#fff;
-  background:#FE324B;text-decoration:none;
-  padding:5px 14px;border-radius:100px;
-  transition:background 0.2s;
-}
-.ypitAfLanding .speaker-link:hover{background:#c9002e}
-
-/* Ghost speaker cards */
-.ypitAfLanding .speaker-card--ghost{opacity:0.55}
-.ypitAfLanding .ghost-photo{animation:ghostPulse 2.5s ease-in-out infinite}
-.ypitAfLanding .speaker-card--ghost:nth-child(2) .ghost-photo{animation-delay:0.25s}
-.ypitAfLanding .speaker-card--ghost:nth-child(3) .ghost-photo{animation-delay:0.5s}
-.ypitAfLanding .speaker-card--ghost:nth-child(4) .ghost-photo{animation-delay:0.75s}
-.ypitAfLanding .speaker-card--ghost:nth-child(5) .ghost-photo{animation-delay:1s}
-.ypitAfLanding .ghost-lines{display:flex;flex-direction:column;gap:8px;flex:1}
-.ypitAfLanding .ghost-line-block{
-  height:8px;background:#ece8e2;border-radius:4px;
-  animation:ghostPulse 2.5s ease-in-out infinite;
-}
-.ypitAfLanding .ghost-line-block.wide{width:80%}
-.ypitAfLanding .ghost-line-block.medium{width:55%}
-.ypitAfLanding .ghost-line-block.long{width:90%}
-.ypitAfLanding .ghost-line-block.short{width:40%}
-.ypitAfLanding .speaker-ghost-label{
-  font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
-  color:#ccc;margin-top:auto;padding-top:16px;
-}
+.ypitAfLanding .speakers-box h3{font-family:var(--display);font-size:22px;font-weight:700;color:var(--dark);margin-bottom:14px}
+.ypitAfLanding .speakers-box p{font-size:16px;color:var(--muted);font-weight:300;max-width:480px;margin:0 auto 32px;line-height:1.72}
+.ypitAfLanding .ghost-grid{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:48px}
+.ypitAfLanding .ghost-card{display:flex;flex-direction:column;align-items:center;gap:10px;width:100px}
+.ypitAfLanding .ghost-avatar{width:64px;height:64px;border-radius:50%;background:var(--border);border:1px dashed #d4cfc8;animation:ghostPulse 2.5s ease-in-out infinite}
+.ypitAfLanding .ghost-card:nth-child(2) .ghost-avatar{animation-delay:0.3s}
+.ypitAfLanding .ghost-card:nth-child(3) .ghost-avatar{animation-delay:0.6s}
+.ypitAfLanding .ghost-card:nth-child(4) .ghost-avatar{animation-delay:0.9s}
+.ypitAfLanding .ghost-card:nth-child(5) .ghost-avatar{animation-delay:1.2s}
+.ypitAfLanding .ghost-line{height:7px;background:#ece8e2;border-radius:4px;width:72px}
+.ypitAfLanding .ghost-line.short{width:52px}
 @keyframes ghostPulse{0%,100%{opacity:0.4}50%{opacity:0.75}}
-
-/* MENTORS */
-.ypitAfLanding .mentor-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:56px;
-}
-.ypitAfLanding .mentor-card{
-  background:#fff;border:1px solid var(--border);
-  display:flex;flex-direction:column;overflow:hidden;
-}
-.ypitAfLanding .mentor-photo-wrap{
-  position:relative;width:100%;aspect-ratio:1/1;background:#ece8e2;flex-shrink:0;overflow:hidden;
-  cursor:pointer;
-}
-.ypitAfLanding .mentor-placeholder{
-  width:100%;height:100%;display:flex;align-items:center;justify-content:center;
-  color:var(--dark);
-}
-
-/* Bio overlay — blue, shown on photo hover */
-.ypitAfLanding .mentor-bio-overlay{
-  position:absolute;inset:0;
-  background:rgba(29,78,216,0.92);
-  display:flex;flex-direction:column;justify-content:flex-end;
-  padding:20px;
-  opacity:0;transform:translateY(8px);
-  transition:opacity 0.25s ease,transform 0.25s ease;
-  pointer-events:none;
-}
-.ypitAfLanding .mentor-photo-wrap.bio-open .mentor-bio-overlay{
-  opacity:1;transform:translateY(0);pointer-events:auto;
-}
-.ypitAfLanding .mentor-bio-text{
-  font-size:12px;font-weight:400;color:rgba(255,255,255,0.92);line-height:1.65;
-}
-
-/* Card body */
-.ypitAfLanding .mentor-body{
-  padding:16px 16px 20px;display:flex;flex-direction:column;gap:10px;
-}
-.ypitAfLanding .mentor-name{
-  font-family:var(--display);font-size:15px;font-weight:800;color:var(--dark);margin-bottom:2px;
-}
-.ypitAfLanding .mentor-role{
-  font-size:11px;font-weight:400;color:var(--muted);line-height:1.4;
-}
-.ypitAfLanding .mentor-company{font-weight:700;color:#1D4ED8}
-.ypitAfLanding .mentor-areas{display:flex;flex-wrap:wrap;gap:5px}
-.ypitAfLanding .mentor-area-tag{
-  font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
-  background:var(--cream);border:1px solid var(--border);
-  padding:3px 7px;border-radius:100px;color:var(--muted);
-}
-.ypitAfLanding .mentor-link{
-  font-size:11px;font-weight:700;letter-spacing:0.04em;
-  color:#fff;background:#1D4ED8;text-decoration:none;
-  padding:5px 14px;border-radius:100px;width:fit-content;
-  transition:background 0.2s;
-}
-.ypitAfLanding .mentor-link:hover{background:#1e40af}
 
 /* PATHS */
 .ypitAfLanding .paths-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px;margin-bottom:2px}
@@ -916,25 +637,19 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 .ypitAfLanding .faq-a-inner{padding:0 26px 22px;font-size:14px;color:var(--muted);font-weight:300;line-height:1.76}
 
 /* PARTNERS */
-.ypitAfLanding #partners{background:#faf9f7}
 .ypitAfLanding .partner-marquee-wrap{
   overflow:hidden;margin-top:56px;margin-bottom:2px;
-  padding:28px 0;background:transparent;
-  /* Fade out left and right edges */
-  -webkit-mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);
-  mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:24px 0;background:#ffffff;
 }
 .ypitAfLanding .partner-marquee-track{
   display:flex;align-items:center;width:max-content;
-  animation:marquee 40s linear infinite;
-  background:#faf9f7;
+  animation:marquee 30s linear infinite;
 }
 .ypitAfLanding .partner-marquee-item{
   display:flex;align-items:center;justify-content:center;
-  padding:0 52px;height:108px;flex-shrink:0;
+  padding:0 48px;border-right:1px solid var(--border);height:56px;
 }
-.ypitAfLanding .partner-marquee-item img{mix-blend-mode:multiply}
-.ypitAfLanding .partner-marquee-item img.logo-no-blend{mix-blend-mode:normal}
 .ypitAfLanding .partner-cta{
   display:flex;align-items:center;justify-content:space-between;gap:40px;
   padding:40px;border:1px solid var(--border);background:#ffffff;flex-wrap:wrap;
@@ -972,155 +687,6 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 .ypitAfLanding .footer-links a{font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s}
 .ypitAfLanding .footer-links a:hover{color:var(--dark)}
 .ypitAfLanding .footer-links a.email{text-transform:none}
-.ypitAfLanding .footer-links a.footer-team-link{
-  border:1px solid rgba(255,70,0,0.28);
-  border-radius:999px;
-  color:var(--coral);
-  padding:8px 14px;
-}
-.ypitAfLanding .footer-links a.footer-team-link:hover{
-  background:var(--coral);
-  border-color:var(--coral);
-  color:#fff;
-}
-
-/* ── MANIFESTO OVERLAY ────────────────────────────────────────────────────── */
-.manifesto-overlay{
-  position:fixed;inset:0;z-index:1000;
-  background:#0a0a0a;
-  transform:translateY(100%);
-  transition:transform 0.72s cubic-bezier(0.76,0,0.24,1);
-  display:flex;flex-direction:column;
-}
-.manifesto-overlay.is-open{transform:translateY(0)}
-
-/* Close button */
-.manifesto-close{
-  position:absolute;top:28px;right:32px;z-index:10;
-  display:flex;align-items:center;gap:8px;
-  background:none;border:1px solid rgba(255,255,255,0.18);border-radius:100px;
-  padding:8px 16px;color:rgba(255,255,255,0.7);cursor:pointer;
-  font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.04em;
-  transition:border-color 0.2s,color 0.2s,background 0.2s;
-}
-.manifesto-close:hover{border-color:rgba(255,255,255,0.5);color:#fff;background:rgba(255,255,255,0.06)}
-
-/* Scroll container — mask-image applied dynamically via JS for scroll-driven edge fades */
-.manifesto-scroll{
-  flex:1;overflow-y:auto;
-  padding:80px 48px 80px;
-  scrollbar-width:thin;scrollbar-color:rgba(255,255,255,0.15) transparent;
-}
-.manifesto-scroll::-webkit-scrollbar{width:4px}
-.manifesto-scroll::-webkit-scrollbar-track{background:transparent}
-.manifesto-scroll::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.18);border-radius:2px}
-
-/* Inner container */
-.manifesto-inner{max-width:720px;margin:0 auto}
-
-/* Header */
-.manifesto-header{margin-bottom:72px}
-.manifesto-label{
-  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;
-  letter-spacing:0.12em;text-transform:uppercase;
-  color:rgba(255,255,255,0.4);margin-bottom:24px;
-}
-.manifesto-title{
-  font-family:var(--display);font-size:clamp(52px,8vw,96px);font-weight:800;
-  line-height:1.0;letter-spacing:-0.03em;color:#FF4600;margin:0;
-}
-
-/* Sections */
-.manifesto-section{
-  padding:48px 0;border-top:1px solid rgba(255,255,255,0.08);
-  display:grid;grid-template-columns:64px 1fr;gap:0 32px;
-}
-.manifesto-section-num{
-  font-family:var(--display);font-size:13px;font-weight:700;
-  letter-spacing:0.08em;color:rgba(255,255,255,0.25);
-  padding-top:5px;
-}
-.manifesto-heading{
-  grid-column:2;font-family:var(--display);
-  font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-0.02em;
-  color:#fff;margin:0 0 24px;
-}
-.manifesto-body{grid-column:2}
-.manifesto-body p{
-  font-family:'DM Sans',sans-serif;font-size:17px;font-weight:300;
-  line-height:1.75;color:rgba(255,255,255,0.65);margin:0 0 20px;
-}
-.manifesto-body p:last-child{margin-bottom:0}
-
-/* Pull quote */
-.manifesto-pull{
-  font-size:19px!important;font-weight:400!important;
-  color:rgba(255,255,255,0.85)!important;
-}
-
-/* Orange highlight */
-.manifesto-highlight{color:#FF4600;font-weight:500}
-
-/* Footer */
-.manifesto-footer{
-  display:flex;flex-direction:column;align-items:flex-start;gap:16px;
-  padding-top:48px;margin-top:8px;border-top:1px solid rgba(255,255,255,0.08);
-}
-.manifesto-footer .btn-primary{
-  background:#FF4600;color:#fff;border-color:#FF4600;
-  font-size:15px;padding:14px 32px;
-}
-.manifesto-footer .btn-primary:hover{background:#e33d00;border-color:#e33d00}
-.manifesto-close-link{
-  background:none;border:none;cursor:pointer;padding:0;
-  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;
-  color:rgba(255,255,255,0.4);letter-spacing:0.04em;
-  transition:color 0.2s;
-}
-.manifesto-close-link:hover{color:rgba(255,255,255,0.8)}
-
-/* About section manifesto button */
-.ypitAfLanding .about-manifesto-btn{
-  display:inline-flex;align-items:center;gap:10px;
-  background:#FF4600;border:none;border-radius:100px;
-  padding:12px 24px;margin-top:24px;
-  font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;
-  color:#fff;cursor:pointer;
-  transition:background 0.2s,transform 0.15s,box-shadow 0.2s;
-  box-shadow:0 4px 20px rgba(255,70,0,0.35);
-}
-.ypitAfLanding .about-manifesto-btn:hover{background:#e33d00;transform:translateY(-1px);box-shadow:0 6px 24px rgba(255,70,0,0.45)}
-.ypitAfLanding .about-manifesto-btn:active{transform:translateY(0);box-shadow:0 2px 10px rgba(255,70,0,0.3)}
-.ypitAfLanding .about-manifesto-btn .manifesto-pill-dot{background:#fff;opacity:0.85}
-.ypitAfLanding .about-manifesto-btn.is-pulsing{
-  animation:manifesto-pulse 2.2s cubic-bezier(0.4,0,0.6,1) infinite;
-}
-@keyframes manifesto-pulse{
-  0%,100%{transform:translateY(0);box-shadow:0 4px 20px rgba(255,70,0,0.35)}
-  40%{transform:translateY(-5px);box-shadow:0 10px 32px rgba(255,70,0,0.45)}
-  60%{transform:translateY(-3px);box-shadow:0 8px 28px rgba(255,70,0,0.4)}
-}
-
-/* Hero manifesto pill trigger */
-.manifesto-pill{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);
-  border-radius:100px;padding:8px 18px;
-  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;
-  color:rgba(255,255,255,0.8);cursor:pointer;
-  transition:background 0.2s,border-color 0.2s,color 0.2s;
-  margin-top:20px;
-}
-.manifesto-pill:hover{background:rgba(255,255,255,0.14);border-color:rgba(255,255,255,0.4);color:#fff}
-.manifesto-pill-dot{width:6px;height:6px;border-radius:50%;background:#FF4600;flex-shrink:0}
-
-@media(max-width:640px){
-  .manifesto-scroll{padding:80px 24px 60px}
-  .manifesto-section{grid-template-columns:40px 1fr;gap:0 16px}
-  .manifesto-close{top:20px;right:20px}
-  .manifesto-footer{align-items:stretch}
-  .manifesto-footer .btn-primary{text-align:center}
-}
 
 /* KEYFRAMES */
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
@@ -1129,29 +695,16 @@ html:has(.ypitAfLanding) ::-webkit-scrollbar-thumb{background:#FF4600;border-rad
 /* RESPONSIVE */
 @media(max-width:960px){
   .ypitAfLanding nav{padding:18px 24px}
-  .ypitAfLanding .nav-links a:not(.nav-cta){display:none}
+  .ypitAfLanding .nav-links a:not(.nav-cta):not(.nav-keep){display:none}
   .ypitAfLanding #hero, .ypitAfLanding .section{padding-left:24px;padding-right:24px}
   .ypitAfLanding #footer-cta{padding:80px 24px}
   .ypitAfLanding footer{padding:32px 24px}
   .ypitAfLanding .about-grid, .ypitAfLanding .tracks-intro, .ypitAfLanding .conf-grid, .ypitAfLanding .faq-grid{grid-template-columns:1fr;gap:40px}
-  .ypitAfLanding .prog-grid, .ypitAfLanding .tracks-grid, .ypitAfLanding .workshop-grid, .ypitAfLanding .paths-grid, .ypitAfLanding .path-info-grid{grid-template-columns:1fr}
-  .ypitAfLanding .speakers-grid{grid-template-columns:repeat(2,1fr)}
-  .ypitAfLanding .speaker-group{margin-top:40px}
-
-  .ypitAfLanding .mentor-grid{grid-template-columns:repeat(2,1fr)}
-
-  .ypitAfLanding .workshop-grid-v2{grid-template-columns:repeat(2,1fr)}
+  .ypitAfLanding .prog-grid, .ypitAfLanding .tracks-grid, .ypitAfLanding .workshop-grid, .ypitAfLanding .workshop-grid-v2, .ypitAfLanding .paths-grid, .ypitAfLanding .path-info-grid{grid-template-columns:1fr}
   .ypitAfLanding .schedule-row{grid-template-columns:1fr}
   .ypitAfLanding .schedule-date{border-right:none;border-bottom:1px solid var(--border)}
   .ypitAfLanding .faq-sidebar{position:relative;top:0}
   .ypitAfLanding .partner-cta{flex-direction:column}
   .ypitAfLanding .track-card{overflow:hidden}
   .ypitAfLanding .track-bg-num{font-size:52px;top:10px;right:14px}
-}
-@media(max-width:600px){
-  .ypitAfLanding .workshop-grid-v2{grid-template-columns:1fr}
-  .ypitAfLanding .ticket-grid{grid-template-columns:1fr}
-  .ypitAfLanding .ticket-sponsor-card{flex-direction:column;gap:24px}
-  .ypitAfLanding .ticket-sponsor-right{align-items:flex-start}
-  .ypitAfLanding .ticket-price--gold{font-size:28px}
 }

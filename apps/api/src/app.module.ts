@@ -3,6 +3,7 @@ import { Module } from "@nestjs/common";
 import { ConfigModule, ConfigService } from "@nestjs/config";
 import { API_QUEUE_PREFIX } from "./common/constants";
 import { EmailModule } from "./email/email.module";
+import { AdminModule } from "./admin/admin.module";
 import { RegistrationModule } from "./registration/registration.module";
 import { SupabaseModule } from "./supabase/supabase.module";
 
@@ -25,6 +26,7 @@ import { SupabaseModule } from "./supabase/supabase.module";
     SupabaseModule,
     EmailModule,
     RegistrationModule,
+    AdminModule,
   ],
 })
 export class AppModule {}

@@ -5,17 +5,20 @@ export function AfFooterCta() {
     <section id="footer-cta">
       <Reveal>
         <h2>
-          Be in the room on
+          Want the record of
           <br />
-          <span>June 13.</span>
+          <span>what happened?</span>
         </h2>
       </Reveal>
       <Reveal delay={0.1}>
-        <p>The Artificial Future Conference. The Civic Centre, Lagos Island.</p>
+        <p>The Artificial Future. Lagos. May 30 – June 13, 2026.</p>
       </Reveal>
       <Reveal delay={0.2} className="footer-cta-btns">
-        <a href="https://eventornigeria.com/explore/ypit-af" target="_blank" rel="noopener noreferrer" className="btn-primary">
-          Get Conference Tickets
+        <a href="#impact" className="btn-primary">
+          Get the impact report
+        </a>
+        <a href="#highlights" className="btn-outline">
+          See the highlights
         </a>
       </Reveal>
     </section>

@@ -1,13 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/register',
-        destination: 'https://luma.com/1zien2bm',
-        permanent: false,
-      },
-    ];
+  outputFileTracingIncludes: {
+    '/teams/organiser': ['./data/team-board-organiser.html', './data/team-board-organiser.json'],
   },
 };
 

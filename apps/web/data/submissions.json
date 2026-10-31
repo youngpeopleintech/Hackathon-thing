@@ -1,0 +1,907 @@
+{
+  "projects": [
+    {
+      "team": "Mavericks",
+      "product": "Ìmọ̀",
+      "track": "Language",
+      "problem": "The web was built in English. For the hundreds of millions of Nigerians whose first language is Yoruba, Hausa, or Igbo, this creates a one-way wall — they can access content only by fighting through a language that isn't theirs, in dense unstructured formats that assume a level of English literacy many don't have. The problem compounds for neurodivergent users: someone with ADHD or dyslexia reading formal English web content is fighting two battles simultaneously — language and cognitive load.",
+      "audience": "Tunde is a 24-year-old university student in Lagos studying Public Administration. Yoruba is his first language and he has ADHD. Most of his coursework, research, and civic life happens on his laptop — but the entire web speaks to him in dense English: walls of unbroken text that lose his attention before the second paragraph. He currently abandons most articles halfway or asks classmates to explain content that should take him minutes.",
+      "built": "Ìmọ̀ is now a standalone Chrome extension plus FastAPI backend for Nigerian-language accessibility. What’s shipped in the repo today is a working popup UI with three actions: detect the language of the current page, read page text aloud, and capture microphone input for voice-to-form filling. The extension can extract visible page text, send it to the backend for Yoruba/Hausa/Igbo detection, request YarnGPT TTS audio and play it inline, and record audio/webm from the mic for Gemini-powered transcription, English translation, and JSON form extraction.",
+      "ai": "AI is what makes Ìmọ̀ useful beyond a static accessibility tool. It handles the parts that rule-based software usually can’t: recognizing whether a page is actually Yoruba, Hausa, or Igbo; turning long or noisy page text into something that can be read aloud naturally; and converting spoken local-language input into structured English form data that can be matched to real fields on the page.",
+      "members": [
+        {
+          "name": "Raheem Akapo",
+          "role": "Backend Developer"
+        },
+        {
+          "name": "Olaiwon Ismail",
+          "role": "Backend Developer"
+        },
+        {
+          "name": "Emafido Emmanuel",
+          "role": "Frontend Developer"
+        }
+      ],
+      "github": [
+        "https://github.com/lgndcraft2/Imo"
+      ],
+      "brief": "https://docs.google.com/document/d/1CP0QcvjU6o4g8e2XTl8IIXBJdGItan9FBr8tN_6ez5c/edit"
+    },
+    {
+      "team": "Dose Pass",
+      "product": "OCML-DI",
+      "track": "Healthcare",
+      "problem": "Clinicians across rural and peri-urban Africa routinely prescribe medications without access to a patient's full medical history — because healthcare facilities don't share data, paper records get lost, and most digital safety tools require reliable internet that simply doesn't exist. Community health workers operating in low-connectivity areas have no way to check drug interactions at the point of care.",
+      "audience": "Our primary user is a nurse or community health worker (CHW) in a rural or peri-urban Nigerian clinic — operating on a shared device, often with no reliable internet, seeing 30–50 patients per day. Today, she relies on memory and paper notes to flag drug interactions. When a patient's history is incomplete or unavailable, she prescribes based on the presenting complaint alone. This creates silent, preventable harm. With OCML-DI, she scans a patient's QR wallet to instantly load their full medical history offline, checks any proposed prescription against a WHO-validated AI risk engine, and receives an instant alert if the drug is dangerous — all without internet, all in under five seconds. ________________",
+      "built": "OCML-DI is a fully working offline-first drug safety system with three functional layers. First, a QR medical wallet — patients carry an encrypted QR code containing their conditions, medications, and allergies, scannable without any network connection. Second, a clinician dashboard — a web interface where nurses enter a proposed prescription and receive an instant AI-powered drug interaction alert, with a governance layer that requires senior clinician sign-off for critical cases and logs every action to an immutable audit trail.",
+      "ai": "The AI component is a rule-based expert system that evaluates every proposed prescription against a curated set of 32+ clinically validated drug interaction rules in under 5 milliseconds — with no internet connection required. What makes it meaningfully better than existing tools is the combination of offline execution, African clinical context, and a governance layer. Existing drug checkers like Drugs.com require internet and a smartphone, and contain no rules specific to ARV-antimalarial interactions, G6PD deficiency prevalence in West Africa, or TB drug interactions common in the Nigerian clinical context.",
+      "members": [
+        {
+          "name": "Efe Ikharo",
+          "role": "Data Science/Machine Learning Engineering"
+        },
+        {
+          "name": "Esirioghene Okeroghene",
+          "role": "Full stack engineer"
+        }
+      ],
+      "github": [
+        "https://github.com/Princess565/ocml-di"
+      ],
+      "brief": "https://docs.google.com/document/d/1YYNDkL88K3pGZp5UpTuWxJDPVmyAiKMaEMX311MAYLs/edit"
+    },
+    {
+      "team": "Voice Naija",
+      "product": "VoiceNaija",
+      "track": "Language",
+      "problem": "Yoruba and Hausa speakers especially diaspora Nigerians and younger generations cannot have a real-time voice conversation in their native language with any AI tool. ChatGPT and Claude can translate text but cannot listen to you speak Yoruba or Hausa, understand the tones and context, and speak back naturally in the language. The gap is voice, not text.",
+      "audience": "A second-generation Nigerian in Lagos or abroad who understands basic Yoruba or Hausa but has nobody to practice speaking with consistently. They can read it slightly but their spoken fluency is fading.",
+      "built": "We built VoiceNaija — a real-time voice companion web app powered by AethexAI's African speech models. The app opens a WebRTC session between the user's browser and AethexAI. The user taps the mic, speaks in English, Pidgin, Yoruba, or Hausa, and the AI agent responds in natural Yoruba or Hausa voice. What works today: the session handshake (POST /conversation/connect), SDP offer/answer exchange (POST /conversation/offer), microphone capture, audio track delivery, and graceful session termination (POST /conversation/end). The full pipeline — speech recognition, LLM inference, and Nigerian voice synthesis — connects end to end.",
+      "ai": "AethexAI handles African-accented speech recognition — understanding Yoruba tones and Hausa phonemes that standard STT models miss entirely. YarnGPT generates natural Nigerian-accented TTS output in Yoruba, Hausa, and Igbo — something no mainstream voice AI currently offers. Groq powers the LLM layer with ultra-low latency inference, keeping the three-step pipeline (STT → LLM → TTS) fast enough for real conversation.",
+      "members": [
+        {
+          "name": "Michael Omijie",
+          "role": "AI Engineer"
+        },
+        {
+          "name": "Aisha Ilyasu",
+          "role": ""
+        },
+        {
+          "name": "Divine Chidera Nwobodo",
+          "role": "Data Scientist"
+        },
+        {
+          "name": "Adebayo Stephen Oluwadamilola",
+          "role": "Software Engineer"
+        }
+      ],
+      "github": [
+        "https://github.com/Mikomijie/voicenaija"
+      ],
+      "brief": "https://docs.google.com/document/d/1zSOhE_Y2bzcujSEExui9SssskbPXHDIifBie-BuAdJE/edit"
+    },
+    {
+      "team": "Ase",
+      "product": "HealthConnect",
+      "track": "Healthcare",
+      "problem": "In Nigerian cities, even the more exposed ones like Lagos, many people who develop a minor or worrying symptom, a rash, fever, cough, or small injury, have no quick, affordable way to get trustworthy first-line guidance. A clinic visit means cost, transport, and long queues for something that may turn out to be minor, so people often delay, self-medicate at a pharmacy without advice, or rely on unreliable web searches.",
+      "audience": "Amara, 27, lives and works in Lagos. When she or a family member develops a symptom, say a persistent skin rash or a fever, she currently Googles it, asks relatives on WhatsApp, or walks into the nearest pharmacy and buys whatever is suggested, because booking a doctor feels expensive and time-consuming for something that might be minor. This creates anxiety, risks the wrong self-treatment, and sometimes a wasted clinic trip.",
+      "built": "So we have an AI agent acting as a first responder to health related issues via a web-app. Once all symptoms and clinical details have been collected, the data is sent to a doctor dashboard. Doctor can login at and view requests (List View & Details)",
+      "ai": "AI via Aethex powers the initial data collection in a natural & conversational manner (VOICE).",
+      "members": [
+        {
+          "name": "Bridget Imarhia",
+          "role": "Operations"
+        },
+        {
+          "name": "Fadipe Ibukun",
+          "role": "UI/UX Design"
+        },
+        {
+          "name": "Akinrele Pelumi",
+          "role": "Software Engineer"
+        },
+        {
+          "name": "Oyeniyi Ganiyat Opeyemi",
+          "role": "Partnership/outreach"
+        }
+      ],
+      "github": [
+        "https://github.com/pelDev/healthconnect-backend",
+        "https://github.com/pelDev/healthconnect-frontend"
+      ],
+      "brief": "https://docs.google.com/document/d/1Z0H8FP-M_6sCE_cMr6MfgHn0kgpG355YEnyixYsnPfk/edit"
+    },
+    {
+      "team": "Team Apex",
+      "product": "StudyPal",
+      "track": "Education",
+      "problem": "African university students who work while studying often lack a structured support system to help them stay consistent with their learning. Study materials are scattered across PDFs, lecture notes, voice recordings, class group discussions, and online resources, making it difficult to organize and follow a clear study path. Unreliable internet access further disrupts learning by limiting access to educational content when students need it most.",
+      "audience": "StudyPal is built for African university students and self-learners who balance their education with work, business activities, or other financial responsibilities. They often have limited study time, inconsistent internet access, and learning materials spread across multiple sources. Although they are motivated to succeed, they lack personalized guidance, accountability, and a structured system that adapts to their schedules.",
+      "built": "StudyPal is an AI study companion that takes a student's unstructured learning materials lecture notes, PDFs, voice recordings, and other study resources and converts them into organized daily micro-sessions. Groq AI structures the content into clear lessons, AethexAI's voice reads those lessons aloud so students can learn hands-free, and a progress tracking system tells students exactly where they stand and what they need to do next. The core MVP includes material upload and structuring, voice-powered lesson delivery, comprehension checks, and a progress dashboard, all accessible offline after the first load.",
+      "ai": "Groq AI processes raw, unstructured learning materials and converts them into organized topic-by-topic lessons, something that would otherwise require significant manual effort from students. AethexAI's voice infrastructure then reads those lessons aloud, enabling hands-free learning during commutes and other low-screen moments. After each session, Groq AI runs comprehension checks, identifies weak points, and adjusts the student's study plan accordingly.",
+      "members": [
+        {
+          "name": "St. Nicholas Ayotunde Sobowale",
+          "role": "Product Manager, Business Strategy, Content, Frontend Developer"
+        },
+        {
+          "name": "Daniel Joseph Adeogun",
+          "role": "Full Stack Developer, Product Manager,Web Administrator"
+        },
+        {
+          "name": "Ayedun Samuel Oluwawamiri",
+          "role": "UI/UX Designer, Frontend Developer"
+        },
+        {
+          "name": "Faith Abayomi Ayodeji",
+          "role": "Full Stack Developer, Business Strategy"
+        }
+      ],
+      "github": [
+        "https://github.com/zion-robotics/studypal-your-ai-study-companion"
+      ],
+      "brief": "https://docs.google.com/document/d/1V0kDMZfwQE8ThHt4DJvKxkn1KsxTAMW-joUk0N8n8pg/edit"
+    },
+    {
+      "team": "CyberVerse",
+      "product": "DermaScan",
+      "track": "Healthcare",
+      "problem": "Many individuals struggle to accurately identify skin conditions & diseases at an early stage due to limited access to dermatologists, lack of awareness, and reliance on incorrect self-diagnosis. This often leads to delayed treatment, worsening conditions, and wrong medication purchase",
+      "audience": "Amina (Age 23, Lagos) Amina is a university student living in Lagos. She notices a strange rash on her face that keeps spreading. It itches and looks different from anything she’s had before. So she searches on Google but gets confusing and conflicting results. Then she asks friends or family for advice who tell her to buy creams from a local pharmacy without proper diagnosis.",
+      "built": "We built DermaScan, an AI-powered mobile solution that allows users to instantly analyze skin diseases using their smartphone camera or via text in English, Pidgin, Yoruba, Igbo and Hausa. It acts as a first-level diagnostic assistant, providing users with instant and reliable insights on possible conditions, disease types, severity, prescriptions and connecting individuals with professional dermatologists, helping users act early, get professional help and avoid harmful self-diagnosis.",
+      "ai": "So basically the AI model makes DermaScan an intelligent medical assistant by the use of advanced pattern recognition to analyze skin images, compare them with large medical datasets, and deliver instant, probability-based insights with confidence levels and severity ratings. It also provides personalized recommendations tailored to the user’s specific condition by providing medical recommendations, with their updated prices and effectiveness level.",
+      "members": [
+        {
+          "name": "Salman Omolaja",
+          "role": "UX Design / Frontend Development"
+        },
+        {
+          "name": "Eniolami Saheed",
+          "role": "Backend Development"
+        }
+      ],
+      "github": [
+        "https://github.com/CYBERLORD97/DermaScan"
+      ],
+      "brief": "https://docs.google.com/document/d/1-ugnipKSaicJb9Ry0NfVL7aGYY-KhhMk-acdfWVRL34/edit"
+    },
+    {
+      "team": "Kawe",
+      "product": "Kawe",
+      "track": "Education",
+      "problem": "The Nigerian university student has access to numerous study materials: PDF documents, lecture recordings, handwritten notes, YouTube tutorials, or web sources. However, they still struggle to synthesize and retain the information from these materials.",
+      "audience": "Our target user is a tertiary institution student or academic preparing for exams, writing reports, or solving technical problems. Today, they spend hours reviewing lecture notes, replaying recordings, and searching online for explanations when they get stuck. This process is time-consuming and often ineffective because they lack personalized guidance.",
+      "built": "We built Kawe, an AI-powered platform that transforms learning materials into an interactive learning experience. To achieve this objective, Kawe serves two purposes. Firstly, it acts as a management system for the student's study materials, enabling them to effectively organize them by topic. Secondly, it provides an AI tutor that actively engages the user through conversations, summaries, flash cards, quizzes, and follow-up questions to assess their understanding.",
+      "ai": "Kawe uses a collection of AI products and concepts in its core features. For generating chat responses and structured artifacts such as summaries, quizzes, and flash cards, Kawe uses the Gemini large language model. Next, the use of embeddings enables the AI tutor to effectively retrieve context about a topic from the study sources. Finally, for audio transcription of recorded materials and voice chat with the AI tutor, we use the Aethex Text-to-Speech and Speech-to-Text modules.",
+      "members": [
+        {
+          "name": "Stanley Nnaka",
+          "role": "Frontend Developer"
+        },
+        {
+          "name": "Simeon Adebola",
+          "role": "Backend/AI Engineer"
+        },
+        {
+          "name": "Fawaz Bello",
+          "role": "ML Engineer"
+        },
+        {
+          "name": "Abdulhafiz Tiamiyu",
+          "role": "Product Manager"
+        }
+      ],
+      "github": [
+        "https://github.com/kawe-1/kawe"
+      ],
+      "brief": "https://docs.google.com/document/d/12YPUHqDwsb3TnbdxD5CDD8I_sUfd28FRdtF9N2hTARQ/edit"
+    },
+    {
+      "team": "CircuFi",
+      "product": "CircuFi",
+      "track": "Finance",
+      "problem": "Circles of people like groups of traders, students, friends, and communities depends on cooperative savings (informally known as Osusu, Ajo, Adashe) to access credit finance for different personal and business goals. However, participants often have little reliable information about the trustworthiness and contribution history of the people they are saving with.",
+      "audience": "Mama Amaka is a 38-year-old foodstuff trader and mother of three who relies on cooperative savings circles to achieve important financial goals. When she needs to raise rent for a new apartment, she considers joining an Osusu group but worries about whether members will fulfill their commitments after receiving payouts. Today, she depends on recommendations and guesswork when deciding who to contribute with, creating anxiety and uncertainty around her financial plans.",
+      "built": "The platform is currently a functional MVP that is 70% backend-integrated, effectively managing the core lifecycle of traditional savings circles by replacing opaque, cash-based tracking with a transparent digital infrastructure. At its foundation, the system features a phone-based onboarding mechanism utilizing OTP verification to tie user identities directly to their financial activities. Transparency is maintained through a centralized payment ledger that tracks real-time contribution histories alongside mobile-responsive Next.js interface views dedicated to member reliability, visual rotation schedules, and interactive trust gauges.",
+      "ai": "CircuFi Assistant, a local AI component that operates as the platform’s objective trust validator. Powered locally via Ollama and Mistral to preserve community data sovereignty and privacy, the assistant serves as an instant group coordinator capable of pulling real-time ledger metrics.",
+      "members": [
+        {
+          "name": "Muhammed Boluwatife",
+          "role": "Product Lead"
+        },
+        {
+          "name": "Gilbert Tcheugoue Djissitche",
+          "role": "Backend Support & AI Lead"
+        },
+        {
+          "name": "Alarape Michael Olawale",
+          "role": "Frontend developer"
+        },
+        {
+          "name": "Ladan Sagir Sani",
+          "role": "Data Analyst/Science"
+        },
+        {
+          "name": "Mercy Oluwasemilore Adebambo",
+          "role": "Team Support"
+        }
+      ],
+      "github": [
+        "https://github.com/Michaelolawale/Circufi"
+      ],
+      "brief": "https://docs.google.com/document/d/1f_Lj-GtvcDxfn8s5bctv36WSbDxxwxcPMn_3fUPk23I/edit"
+    },
+    {
+      "team": "Koya",
+      "product": "Koya",
+      "track": "Education",
+      "problem": "A teacher in an African public school manages 60 to 70 students with no diagnostic tools and no time. Students fail end-of-term and WAEC exams not because they skipped class, but because a gap from two years earlier was never found: a student failing SS2 simultaneous equations usually has an unaddressed negative-integers gap from JSS2, and nobody caught it. ChatGPT made it worse, because students now produce correct-looking answers with no understanding behind them, so the gap stays invisible until the exam exposes it at scale.",
+      "audience": "Mrs. Adeyemi, twenty-six years teaching Mathematics in a Lagos public school. SS2, 52 students, chalk, a blackboard, a government scheme-of-work booklet, and exercise books she marks at night. No projector, no student laptops, power not guaranteed; her phone is the only smart device in the room. Today she marks blindly and moves on, the gaps compound in silence, and the class fails the exam.",
+      "built": "A live web app that runs the full diagnostic loop today, end to end. The teacher picks a subject and topic, or uploads her scheme of work, which Koya reads and lets her pick the week from. Koya generates five board questions that each test a prerequisite the topic depends on, never the topic itself, each with a verified answer key so she can mark fast. She marks the class on paper, then either types the wrong-count per question or photographs the marked books.",
+      "ai": "Without AI, a teacher with sixty-plus students cannot read every paper, classify the mistakes, and trace them to a single root gap in a 40-minute window, so it never happens and the teacher moves on. Koya splits the work across two models, each doing only what it is best at: Groq Llama 4 Scout (vision) reads each student's handwritten working, and DeepSeek V4 (reasoning) writes the diagnosis.",
+      "members": [
+        {
+          "name": "Beatrice Chifiero",
+          "role": "Project Manager"
+        },
+        {
+          "name": "David Uhumagho",
+          "role": "AI Applied Developer"
+        },
+        {
+          "name": "Olumide Adekunle",
+          "role": "Product Designer"
+        },
+        {
+          "name": "Samuel Oloyede",
+          "role": "Frontend Developer"
+        }
+      ],
+      "github": [
+        "https://github.com/David-Pjs/KOYA-AI"
+      ],
+      "brief": "https://docs.google.com/document/d/1OySD4P6W9d1WN48NiYtcKbCzzvRQmeZasTnf0Fh-sLs/edit"
+    },
+    {
+      "team": "Cosmologic",
+      "product": "Omnatal",
+      "track": "Healthcare",
+      "problem": "Every year, Nigeria accounts for roughly 20% of all global maternal deaths. The women dying are not dying from untreatable conditions. They are dying from preeclampsia and postpartum hemorrhage, two complications that are detectable early and preventable with the right intervention. Pregnant women in peri-urban and rural Nigerian communities attend between 4 and 5 antenatal visits across their entire pregnancy, leaving weeks-long gaps where nobody is watching.",
+      "audience": "Pregnant women in peri-urban and rural Nigeria, aged 18 to 40, who are attending antenatal care but have no support or monitoring between visits. Many rely on their husbands or family for transport and healthcare decisions. They own smartphones and use them every day, but have never had a health tool that speaks to them in a way they understand, checks on them proactively, or tells them when something that feels normal is actually dangerous.",
+      "built": "We built Omnatal, an offline-first maternal care companion app for pregnant women to keep track of their health. We built Omnatal as a double-sided app, one part for the patient and the other for community health workers. The patent side contains a voice AI check-in system using Aethex AI, conjunctival pallor for anemia prediction, and rPPG blood pressure scanner to track maternal risk profile history. The community health worker side allows them to manage their patients list, automatically receive high risk alert, and log clinical vitals data that automatically syncs with the backend.",
+      "ai": "We are using AI in three distinct places inside Omnatal. The first is the daily check-in conversation. Instead of asking a woman to fill a form, an AI voice agent or chat assistant talks to her the way a health worker would, asking about her symptoms, how she has been sleeping, whether she has had headaches or swelling, whether she took her supplements. The AI listens, understands her responses in natural conversational English, and translates what she says into a structured health log that feeds into her risk profile. The second is the risk engine.",
+      "members": [
+        {
+          "name": "Ahmad Babangida",
+          "role": "ML / Backend Engineer"
+        },
+        {
+          "name": "Muhammad Almustapha Aliyu",
+          "role": "Frontend developer/product designer"
+        },
+        {
+          "name": "Ibrahim Hussaini Danhaire",
+          "role": "AI/ML Engineer"
+        }
+      ],
+      "github": [
+        "https://github.com/ahmadktn/omnatal"
+      ],
+      "brief": "https://docs.google.com/document/d/1Io0atVYpBc41cLp5Ivn0r-Ezcy_6Ny_VM_s7OLE3huY/edit"
+    },
+    {
+      "team": "Atlas",
+      "product": "Iroko AI",
+      "track": "Finance",
+      "problem": "Compliance officers at Nigerian microfinance banks and fintechs manually monitor CBN and SEC regulatory directives across dozens of browser tabs, spreadsheets, and email alerts. A single missed CBN circular or late AML/CFT quarterly return can trigger fines exceeding ₦50 million. The Head of Compliance at a licensed MFB like Kuda spends 15+ hours weekly on manual regulatory tracking — time that should go toward strategic decisions.",
+      "audience": "Adaeze, 34, Head of Compliance at Kuda Microfinance Bank, Lagos. Every Monday morning she opens CBN's website, checks for new circulars, cross-references Kuda's lending ratios against CBN minimums in Excel, and manually updates a filing calendar shared on Google Sheets. When she misses something — which happens — legal gets involved, remediation costs pile up, and CBN supervisory letters land on the MD's desk.",
+      "built": "Iroko AI is a multi-agent regulatory intelligence platform that monitors CBN and SEC compliance in real time for Nigerian fintechs. It ships today with five specialized AI agents — Researcher, Watchdog, Analyst, Strategist, and Scribe — that continuously scrape live regulatory signals via Bright Data, evaluate them against a CBN/SEC regulatory corpus, and produce GO/NO-GO/MONITOR compliance verdicts with cryptographic audit trails. The platform includes a live signal dashboard, a compliance filing tracker, a semantic knowledge graph mapping regulatory relationships, an AI chat interface with cited regulatory answers, and automated PDF brief generation.",
+      "ai": "Without AI, a compliance officer manually reads CBN circulars, checks ratios in Excel, and files returns based on memory and calendar reminders. With Iroko, five agents work simultaneously 24/7 — the Watchdog scrapes live CBN signals the moment they're published, the Analyst scores breach risk automatically, the Strategist answers complex compliance questions in seconds with cited CBN regulations, and the Scribe drafts compliance briefs that would take a lawyer 3 hours. The GO/NO-GO verdict engine makes a decision that previously required senior legal review.",
+      "members": [
+        {
+          "name": "Ndubuisi Ekeh",
+          "role": "Software Engineer"
+        },
+        {
+          "name": "Chukwuma Obiagwu",
+          "role": "Technical Developer"
+        }
+      ],
+      "github": [
+        "https://github.com/Nd-Web/Iroko-x-Atlas"
+      ],
+      "brief": "https://docs.google.com/document/d/1R200MbuA_c184Kmn1-nr0F4L3d8njBwr/edit"
+    },
+    {
+      "team": "Voxoapay",
+      "product": "Voxoapay",
+      "track": "Finance",
+      "problem": "A voice-first financial agent for Nigerian merchants. Merchants speak a command in English, Pidgin, or Yoruba-influenced English. The app transcribes the audio via Aethana AI STT, parses the transcript into a structured financial intent using Groq LLM, executes the action (invoice creation via Paystack, balance check via Supabase, or AI-driven negotiation), and confirms back to the user via YarnGPT TTS voice response.",
+      "audience": "Our target user is an informal logistics supplier, like a wholesale beverage or coffee vendor, delivering heavy stock directly to a fast-paced retail hub like Café One Yaba. Currently, after offloading goods, they must halt their operations to manually write a paper invoice or open a standard banking app to type out transaction parameters while handling calls from other drivers. This physical-to-digital friction leads to unrecorded inventory, constant payment disputes, and poor cash-flow tracking.",
+      "built": "A voice-first financial agent as a Next.js PWA. A merchant speaks a command in English, Pidgin, or Yoruba-influenced English. The app transcribes audio via Aethana AI STT with Groq Whisper fallback, parses the transcript into a structured financial intent using Groq LLM, executes the action — invoice creation via Paystack, balance check via Supabase, or AI-driven supplier negotiation — and confirms back to the user via YarnGPT TTS voice response in a Nigerian accent. End-to-end latency is under 1.7 seconds.",
+      "ai": "Without AI a merchant would need to navigate form-based UI to create invoices or check balances,a barrier for traders who are not digitally literate. The STT and LLM pipeline converts natural speech including informal Pidgin into precise financial actions with 90% accuracy across tested cases. The negotiation agent uses AI to analyse cash flow and suggest counter offers in real time. None of this is possible without AI the entire product is the intelligence layer.",
+      "members": [
+        {
+          "name": "Demilade Ayeku",
+          "role": "Full stack engineer"
+        },
+        {
+          "name": "Precious Odutola",
+          "role": "Machine learning engineer"
+        },
+        {
+          "name": "Obembe Eyitayo David",
+          "role": "Full stack engineer"
+        },
+        {
+          "name": "Oluwatosin Similoluwa Adepitan",
+          "role": "Mobile engineer"
+        }
+      ],
+      "github": [
+        "https://github.com/Demiladepy/v2v"
+      ],
+      "brief": "https://docs.google.com/document/d/1rp8-1wpjrmuRg0BdxLxxubq-21in7Y3Z1XeHdNmO_EI/edit"
+    },
+    {
+      "team": "Nitro",
+      "product": "BetaHealth",
+      "track": "Healthcare",
+      "problem": "Informal workers in Lagos including market traders, okada riders, and artisans are effectively excluded from the formal health insurance ecosystem. Existing HMO plans are designed around rigid monthly payroll deductions, which are incompatible with the irregular, daily-wage nature of the informal economy. Consequently, these workers are forced to rely on out-of-pocket payments or delay seeking medical care, often resorting to self-medication.",
+      "audience": "Our core user is the informal earner, exemplified by Aisha: a 29-year-old tomato seller at Mile 12 market in Lagos, earning ₦8,000–₦15,000 weekly. Without access to formal insurance, a single health crisis—even minor—forces her to pay out-of-pocket, which can wipe out her entire working capital and trap her in a cycle of poverty. With Beta Health, Aisha’s experience is transformed from financial anxiety to security.",
+      "built": "We have built and shipped a fully functional digital platform that connects informal workers, hospitals, and licensed HMOs. Today, our live system executes three core workflows. First, our React Native mobile app allows informal workers to register, view their wallet, and access digital ID cards. Second, our payment infrastructure uses live Paystack Dedicated Virtual Accounts (DVAs) so unbanked or cardless users can pay premiums via simple bank transfers. Finally, our Admin/HMO dashboard is fully operational, allowing hospitals to submit NHIA-aligned digital claims and HMOs to review and process those claims instantly.",
+      "ai": "Existing HMO workflows rely on manual, human review, leading to the delayed hospital payouts and administrative bottlenecks that plague the industry. AI makes our solution meaningfully better by solving this at both ends. For the HMOs, an AI adjudicator instantly reviews incoming hospital claims against complex policy and NHIA guidelines, providing a structured recommendation (pass/fail, confidence score) that allows human operators to approve payouts in minutes rather than weeks.",
+      "members": [
+        {
+          "name": "Mercy Nonyelu",
+          "role": "Product & Operations"
+        },
+        {
+          "name": "Timothy Adegbogun",
+          "role": "Mobile / Frontend Developer"
+        },
+        {
+          "name": "David Ariyo",
+          "role": "Backend Developer"
+        }
+      ],
+      "github": [
+        "https://github.com/Dariyo20/Nitro-ypit"
+      ],
+      "brief": "https://docs.google.com/document/d/1DJZay0AjInR58Rxrho3b7Rly_oBdiDyU4hJBvXYYCCY/edit"
+    },
+    {
+      "team": "Vayent Team",
+      "product": "Vayent AI",
+      "track": "Finance",
+      "problem": "Small and medium sized businesses (SMEs), startup founders, and non-technical business owners often struggle to gain actionable insights from their business data because traditional Business Intelligence tools require technical expertise, complex setup processes, and expensive subscriptions. Many businesses have valuable data stored across databases but lack the skills to query, analyze, and interpret it effectively. As a result, critical business decisions are often made without sufficient data driven insight.",
+      "audience": "Our primary users are SME owners, startup founders, operations managers, business teams, software developers, student developers and data analyst.",
+      "built": "Vayent AI is an intelligence copilot that bridges the technical and analytical gap between data and decision-making. It enables users to access valuable insights from their business data without requiring advanced technical or data analysis skills. Users can connect their data sources and interact with their data using natural language, asking questions such as, \"What were my top-selling products last month?\" or \"Which customers generated the highest revenue?\" Vayent AI instantly provides answers, visualizations, and actionable insights to support faster and more informed business decisions.",
+      "ai": "Artificial Intelligence is the core technology that makes Vayent possible. Traditional business intelligence platforms require users to understand dashboards, SQL queries, and data analysis techniques before they can extract value from their data. Vayent uses AI to remove that barrier by translating human questions into structured data queries, retrieving the relevant information, analyzing the results, and explaining insights in simple language.",
+      "members": [
+        {
+          "name": "Owolabi Oluwatumininu Abraham",
+          "role": "Software/AI Engineer"
+        },
+        {
+          "name": "Soyomi Abdullateef Adeyemi",
+          "role": "Project Manager/Creative Director"
+        },
+        {
+          "name": "Olaide Adams Oladimeji",
+          "role": "Frontend Developer"
+        }
+      ],
+      "github": [
+        "https://github.com/tboydev-coder/Vayent-Team"
+      ],
+      "brief": "https://docs.google.com/document/d/19__E2azkV201huVciKhcub-JRcbd4BzWjCIOHQxTuSI/edit"
+    },
+    {
+      "team": "Consolve",
+      "product": "Consolve",
+      "track": "Finance",
+      "problem": "Small traders, market sellers, artisans, and service providers across Nigeria's informal economy rely heavily on trust, referrals, and memory to manage transactions, credit, and business relationships. Because much of their economic activity happens outside formal financial systems, they often struggle to build verifiable reputations, access credit opportunities, identify trustworthy customers, and protect themselves from fraud and payment disputes.",
+      "audience": "We are building for people like Amina, a 38-year-old foodstuff trader in Balogun Market, Lagos, and Tunde, a 29-year-old tailor in Akure. Amina sells goods daily, often allows trusted customers to buy on credit, and keeps track of debts and customer relationships through memory, notebooks, and WhatsApp chats. Tunde relies on referrals to get customers and has no reliable way to showcase his experience, build a verifiable reputation, or prove he is trustworthy to new clients.",
+      "built": "We built Consolve, an AI-powered marketplace and financial trust platform designed for Africa's informal economy. The platform supports three categories of users: customers seeking services or products, service providers such as artisans and freelancers, and traders who sell goods. Users sign up using phone number authentication and OTP verification before entering our AI-powered onboarding experience. A core innovation of Consolve is its conversational onboarding system powered by AethexAI.",
+      "ai": "AI is the foundation of Consolve, not an add-on feature. Today, most informal market participants build trust through word-of-mouth referrals, WhatsApp chats, physical relationships, and personal memory. This makes it difficult for traders, artisans, and service providers to showcase their expertise, build portable reputations, or be discovered by people outside their immediate network. Consolve uses AI to transform natural conversations into structured economic identities.",
+      "members": [
+        {
+          "name": "Soyemi, Obed Chukwuka",
+          "role": "Business Developer x Research"
+        },
+        {
+          "name": "Fasakin Henry",
+          "role": "Software Engineer"
+        }
+      ],
+      "github": [
+        "https://github.com/fasakinhenry/consolve-ypit",
+        "https://github.com/fasakinhenry/consolve-ypit-backend"
+      ],
+      "brief": "https://docs.google.com/document/d/148pnWiWa1LRhFQAiArcMZ6J7sf6f_jT8l5ps7Uw4_TU/edit"
+    },
+    {
+      "team": "Àlààfíà Connect",
+      "product": "Àlààfíà Connect",
+      "track": "Healthcare",
+      "problem": "Uninsured patients in semi-urban and rural Nigerian communities, including market traders, young adults, and mothers in towns like Abeokuta and Kano, often struggle to identify which nearby public hospital or clinic is open and equipped for their condition. With a doctor-to-patient ratio of 1 to 10,000 in many states, most have no one to call when they fall ill, and even getting to some hospitals, the wait aimlessly. As a result, they either delay care, waste money travelling to the wrong facility, or give up entirely.",
+      "audience": "Let’s consider a Grandma, Aduke, who is a 65-year-old in a rural community in Lagos who does not understand English but her local Yoruba language. Her grandchild wakes up with fever and diarrhea. She has a public hospital card but does not know if this is urgent enough to go today or which facility near her handles it within are financial capacity. She currently asks neighbors, guesses, or does nothing. That delay risks a manageable illness becoming an emergency.",
+      "built": "A mobile-first web app where users describe symptoms in their local language (text and voice format), receive an AI-generated triage result based on action contents from conversation, followed by a route to directory of nearby public hospitals and clinics sorted by distance. Users who need immediate help can pay a flat fee via Interswitch to consult an available doctor over text or voice in their desired language. There is also a feature of patient pass that can help reduce waiting time at hospitals and fast track their treatment where possible.",
+      "ai": "Without AI, a health directory is just a list, and English language remains an enemy to a person who cannot speak it.",
+      "members": [
+        {
+          "name": "Yusuf Joseph Adeniji",
+          "role": "AI/ML Engineer"
+        },
+        {
+          "name": "Abiodun Haefez Akindipe",
+          "role": "AI/ML Engineer"
+        },
+        {
+          "name": "Isaac Zachariah",
+          "role": "Frontend Engineer"
+        },
+        {
+          "name": "Frances Iwuanyanwu",
+          "role": "Digital Marketing (Product Research)"
+        }
+      ],
+      "github": [
+        "https://github.com/Usefulmech/alaafia-connect"
+      ],
+      "brief": "https://docs.google.com/document/d/1D-KGY5A058ztsI7BfG_uAzk-IXG7V5j0skXI0kb5PIQ/edit"
+    },
+    {
+      "team": "Mothertongue",
+      "product": "Mothertongue",
+      "track": "Language",
+      "problem": "Nigerian diaspora youth and heritage learners across Nigeria have no voice-first tool for learning Yoruba, Igbo, or Hausa — three languages spoken by a combined 150+ million people that are entirely absent from mainstream language-learning apps. A Yoruba teenager raised in the UK who understands the language at home but cannot reply fluently to her grandparents, or a Hausa-speaking professional in Lagos wanting to hold a conversation in Igbo with business partners, has no practical option today.",
+      "audience": "A Nigerian raised in London who understands Yoruba when his parents speak it at home but freezes when he has to reply — switching to English mid-sentence, which visibly disappoints his grandparents during visits to Lagos. He has tried YouTube videos (no feedback), asking family members (awkward), and generic language apps (no Yoruba support). He wants to hold a real conversation before his next trip but every option either does not exist or does not correct him.",
+      "built": "Mothertongue is an AI-powered application that teaches indigenous languages through personalised lessons, and live conversational AI, making language learning accessible, engaging, and culturally authentic.",
+      "ai": "AI dramatically reduces the initial logistical cost of finding native speakers and linguists that will interact and assess learners’ proficiencies. Our current state relies on a text-to-speech -> LLM -> speech-to-text pipeline. The current landscape focuses on getting the user to cram words, and maybe practice words and phrases, but doesn’t empower them to hold free-flowing, natural sounding conversations. Our approach affords the user a judgement-free space to learn via immersion in uncomfortable practice, guided by an empathetic coach.",
+      "members": [
+        {
+          "name": "Precious Akogun",
+          "role": "Fullstack & AI Engineer"
+        },
+        {
+          "name": "Jesse-Paul Osemeke",
+          "role": "Backend & AI Engineer (Speech focused) - Team Lead"
+        }
+      ],
+      "github": [
+        "https://github.com/floatinggonion/mothertongue-demo"
+      ],
+      "brief": "https://docs.google.com/document/d/1WVGk96Sge-INLasajIMfUi-dPekA1S-sHRVxtwZmaOw/edit"
+    },
+    {
+      "team": "EDU-I001",
+      "product": "SabiCraft",
+      "track": "Education",
+      "problem": "Trade apprentices in Nigeria learn hands-on skills from master craftspersons in informal settings where one master trains up to ten apprentices at a time. Individual attention is impossible in this structure, so each apprentice picks up what they can and fills the gaps on their own. When training ends for the day, there is nothing to turn to. Existing EdTech tools cannot bridge this gap because they are built on a single assumption that the user can read.",
+      "audience": "Amina is a 19-year-old tailoring apprentice in Lagos who left school at JSS 3. She has been learning from a master for two years and has real craft skills but no idea how to price her work, find clients, or grow beyond the workshop. She speaks Nigerian Pidgin more comfortably than formal English, cannot read fluently, and uses a basic Android phone. Every day, she finishes training with questions she has no one to ask.",
+      "built": "SabiCraft is a voice-first AI learning companion built for trade apprentices in Nigeria. Instead of typing, apprentices speak — holding a mic button to talk about what they learned or worked on that day, then releasing to send. Their AI companion, Tunde, responds conversationally in real time: expanding on the topic, answering follow-up questions, and keeping the dialogue going in a way that feels natural for the apprenticeship context.",
+      "ai": "SabiCraft uses AI to do something no existing tool does for this user — hold a real, open-ended conversation about a trade skill in the user's own language, without requiring them to read or type. The apprentice speaks freely about what they worked on that day. AI interprets what they said, identifies the relevant area of the tailoring curriculum, and responds conversationally — the way a knowledgeable friend would, not a fixed lesson system. This means the AI can handle any topic the master taught that day, in any order, without a rigid structure.",
+      "members": [
+        {
+          "name": "Solomon Akuson",
+          "role": "Software Developer"
+        },
+        {
+          "name": "Rukayat Tokosi",
+          "role": "Product Strategist / Pitch & Creative Director"
+        },
+        {
+          "name": "Karl Moses",
+          "role": "Research / Data Analyst"
+        }
+      ],
+      "github": [
+        "https://github.com/heysolomon/sabicraft"
+      ],
+      "brief": "https://docs.google.com/document/d/1hlOOqGeCSKnuq_VEVhW3C1nKusLvslGLJKj_CY6YW0c/edit"
+    },
+    {
+      "team": "EDU-I003",
+      "product": "Lena",
+      "track": "Education",
+      "problem": "We are solving Africa’s learning crisis. Today, 9 out of 10 children in Sub-Saharan Africa cannot read or solve basic math, that’s over 100 million kids, a quarter of them are in Nigeria. The classes are overcrowded with 35+ students to 1 teacher, this makes personalized learning impossible. With Africa set to be home to the majority of the world’s children by 2050, the risk is clear: without the right skills, this generation won’t be able to compete or thrive globally.",
+      "audience": "Schools (B2B): We integrate Lena into schools’ learning plans, charging schools a per-student fee. This gives teachers extra support, parents visibility into progress, and students access to engaging, curriculum-aligned learning. A typical school integration would bring 100 learners at once. Parents and Lesson Teachers (B2C): Parents and Teachers can also subscribe directly to Lena. This is priced to be more affordable than tutoring while still delivering personalized learning and progress tracking.",
+      "built": "Lena is an offline-friendly AI-powered learning game tackling Africa’s education crisis. By combining curriculum-aligned gameplay with a smart tutor that adapts to each child's needs, Lena makes learning fun, effective, and builds the skills for Africa’s future talent pipeline. What makes Lena different is that research shows game-based learning activates the brain more effectively than videos or quizzes. By combining this with a smart AI tutor and offline capability, Lena delivers deeper understanding, stronger engagement, and accessibility in places where other EdTech tools fail.",
+      "ai": "At the heart of Lena is our adaptive AI tutor, trained on national curricula, which adjusts difficulty to each child’s pace, strengths, and weaknesses while explaining concepts in child-friendly ways. This provides the benefits of one-on-one tutoring at scale, something overcrowded classrooms cannot offer. The teachers are also able to generate questions for the students based on their topics, subject, class and curriculum, saving the teachers time.",
+      "members": [
+        {
+          "name": "Farouk Bilesanmi",
+          "role": "Technical/ Product"
+        },
+        {
+          "name": "Abel Duba",
+          "role": "Technical"
+        }
+      ],
+      "github": [],
+      "brief": "https://docs.google.com/document/d/1aAmtuYQY7z0JDbHCU_IeVm8jQOPrV9EG5T1Co7xzE6s/edit"
+    },
+    {
+      "team": "Nurture",
+      "product": "Nurture",
+      "track": "Healthcare",
+      "problem": "Team Nurture is solving the problem of preventable maternal complications caused by delayed risk detection during pregnancy.",
+      "audience": "We are building for mothers and maternal care clinicians and decision-makers in private maternity hospitals and antenatal clinics, particularly a Head of Obstetrics managing pregnant patients at risk of complications.",
+      "built": "Nurture is a two-sided platform, one side for clinicians, one side for mothers that uses AI to catch high-risk pregnancies before they become emergencies. For the clinician: ● The clinician enters a patient's details once: her age, how many weeks pregnant she is, her sickle cell type, HIV status, whether she's had malaria during this pregnancy, how many malaria prevention doses she's received, when she first came for antenatal care, and how many pregnancies she's had before.",
+      "ai": "Without AI, this product is just a form. With AI, three things happen that couldn't happen before: 1. It joins the dots. A clinician seeing 40 patients a day cannot mentally combine blood pressure + malaria history + sickle cell type + late first visit + number of previous pregnancies for every single patient. The AI does this instantly, at every visit, for every patient. 2. It explains itself.",
+      "members": [
+        {
+          "name": "Akolo Bulus",
+          "role": "AI Engineer"
+        },
+        {
+          "name": "Bede Nwankwo",
+          "role": "Growth Specialist and a Digital Marketer"
+        },
+        {
+          "name": "Oluyemi Temitayo",
+          "role": "AI Video Expert"
+        },
+        {
+          "name": "Adepoju Adewale",
+          "role": "Brand strategist and UI/UX"
+        }
+      ],
+      "github": [
+        "https://github.com/akolobulus/Nurture_YPIT_Project"
+      ],
+      "brief": "https://docs.google.com/document/d/1gN1NzHbAv9bBxJoU3rvjqCBivBj_Lh056qmUWPGaeCY/edit"
+    },
+    {
+      "team": "Syntax Terrors",
+      "product": "AreaHustle",
+      "track": "Finance",
+      "problem": "Informal workers (hustlers) in Lagos, Nigeria, who perform everyday tasks like generator servicing and car washing, are financially invisible to banks and digital lenders because they lack formal transaction histories or payslips. Additionally, middle-class residents in Lagos struggle to find and coordinate verified, trusted service providers for these tasks without payment disputes or safety concerns.",
+      "audience": "Our target user is Emeka, an informal worker in Lagos who makes a living washing cars, servicing generators, and running errands. Because he gets paid in cash and has no payslip or employer, he is financially invisible and digital lenders reject him whenever he needs credit to repair his tools or cover emergency expenses.",
+      "built": "We have built and shipped a fully functional MVP (Minimum Viable Product) of the AreaHustle platform, with the live API currently deployed and running on Render and Vercel. Here is exactly what is live and working right now: 1. The Customer Voice Terminal Customers can tap a microphone button, record a task request in plain spoken language (e.g., \"My generator is making a weird noise in Lekki Phase 1, my budget is 8000\"), and submit it. The frontend captures this audio, ships it to our FastAPI backend, handles the speech-to-text pipeline through Aethex, and runs it through Google Gemini Flash.",
+      "ai": "Traditional platforms require users to type details into complex, multi-step forms, which creates an immediate digital literacy barrier for many informal workers. AI completely removes this friction by allowing a customer to simply speak naturally even with local accents and dialects while Large Language Models (LLMs) instantly parse that raw audio into structured data like location, budget, and task category in milliseconds.",
+      "members": [
+        {
+          "name": "Makanjuola Emmanuel",
+          "role": "Backend Engineer"
+        },
+        {
+          "name": "Joshua Onyeka",
+          "role": "Frontend Engineer"
+        },
+        {
+          "name": "Oke Adrien",
+          "role": "AI Engineer"
+        },
+        {
+          "name": "Ituma Chidi",
+          "role": "Frontend Engineer"
+        }
+      ],
+      "github": [
+        "https://github.com/adr1en360/AreaHustle"
+      ],
+      "brief": "https://docs.google.com/document/d/1ldQipDU4bJvyf72EDet__wIHvAFHN8FdZFu7ktdl4bU/edit"
+    },
+    {
+      "team": "Grasp",
+      "product": "Grasp",
+      "track": "Education",
+      "problem": "Teachers in Nigerian primary and secondary schools face overcrowded classrooms, often managing over a hundred students at once. Which makes it impossible to slow down,repeat explanations, or even give individual attention. The student is left to figure it out alone, or not at all.",
+      "audience": "Chidi is a 17-year-old SS2 student at a public secondary school in Lagos. His biology class has 80 students. His teacher is great but has to move fast. There is no time to slow down for anyone who doesn't follow. Chidi always leaves class with gaps he can't fill. He goes home, opens his textbook, rereads the same paragraph three times, and still doesn't understand osmosis. What he currently does: copies notes in class, reads ahead before exams, and occasionally watches YouTube.",
+      "built": "Grasp is an AI-powered, audio-first learning platform that turns any topic into a complete course personalized to the learner, with a live AI tutor. What's built and working: 1. Course Generation: Student enters a topic and goal. AI researches, plans the module syllabus, and writes full slide content in real time, tailored to their level and interests. 2. Audio Classroom: Every module is narrated by an AI teacher. Slides advance automatically. Students can pause, rewind, skip, adjust speed, and go fullscreen. 3. Live AI Tutor: At any point mid-lesson, students can ask a question. The tutor has full context of the current slide and responds in text and voice. 4.",
+      "ai": "Three AI systems work together: 1.⁠ ⁠GPT-4o for lesson generation. Every lesson is created from scratch, on demand, for this specific student's stated goal and level. The model researches the topic, builds a syllabus, writes structured slide content for every module, and generates narration scripts written the way a teacher speaks. 2.⁠ ⁠Aethex AI for voice narration. The slides are read aloud by an AI voice that sounds like a real teacher.",
+      "members": [
+        {
+          "name": "Precious Kayili",
+          "role": "Full Stack Engineer, Team Lead"
+        },
+        {
+          "name": "Michael Olapade ojedeji",
+          "role": "Product Lead"
+        },
+        {
+          "name": "Akachukwu Egboluche",
+          "role": "Frontend Engineer"
+        }
+      ],
+      "github": [
+        "https://github.com/graspdotai/grasp"
+      ],
+      "brief": "https://docs.google.com/document/d/1gUA7eLMzuSPk8yU-hehQb_ctFToWHjhArI2pTmlqDcI/edit"
+    },
+    {
+      "team": "AssetPadi",
+      "product": "AssetPadi",
+      "track": "Finance",
+      "problem": "Informal artisans and small manufacturers in clusters like Aba, Abia State own valuable movable assets, sewing machines, tools, equipment, but cannot access business credit because they are unregistered and unaware that the National Collateral Registry (NCR) allows movable assets to be used as loan collateral. Between 85–92% of Nigerian informal businesses avoid formalization entirely due to fear of taxes and bureaucratic complexity, contributing to a ₦13 trillion credit gap across 40 million MSMEs.",
+      "audience": "Emeka is a shoemaker in Aba who owns ₦600,000 worth of industrial sewing and cutting machines. He has been in business for 6 years but is not registered with CAC. He has tried to get a business loan twice and been turned down both times for lack of collateral. He believes that registering means FIRS will come after him. He uses a smartphone daily but has never heard of the NCR.",
+      "built": "AssetPadi is a conversational AI tool that guides informal artisans through the formalization journey, in plain English and Pidgin. A user describes their business and assets, and AssetPadi explains what CAC registration and NCR registration actually mean for them, corrects common tax fears with accurate information, identifies which of their assets qualify as NCR collateral, and produces a personalized step-by-step registration roadmap with links to the relevant institutions.",
+      "ai": "The core barrier is not information availability, it is comprehension and trust. Government websites have the information but it is dense, legalistic, and intimidating. AI makes this meaningfully better by allowing the user to ask questions in their own words and language, receive answers calibrated to their specific situation, and be guided conversationally rather than confronted with forms and documents. Voice interaction (via AethexAI) makes this accessible to users with lower literacy.",
+      "members": [
+        {
+          "name": "Victor Uchenna Jonah",
+          "role": "Software Engineer"
+        },
+        {
+          "name": "Amarachi Ejimagwa",
+          "role": "Project manager"
+        },
+        {
+          "name": "Esieboma John Dunsi",
+          "role": "UI/UX Designer"
+        },
+        {
+          "name": "Benjamin Folarin",
+          "role": "Frontend Developer"
+        }
+      ],
+      "github": [
+        "https://github.com/Vikrez22/AssetPadi"
+      ],
+      "brief": "https://docs.google.com/document/d/1xqegijbIID3EMvU2QS5eG34h3O1WC3pPAXkHBXbmiwU/edit"
+    },
+    {
+      "team": "FIN-V011",
+      "product": "NairaBook",
+      "track": "Finance",
+      "problem": "Micro-traders and informal merchants in Nigerian open markets lack an integrated, low-friction way to manage their business operations on the go. They have to jump between physical paper ledgers to track daily cash revenue, separate notebooks for customer debts, and manual counts to monitor stock inventory. Because these environments move fast, manual data entry into traditional accounting software is too slow and frustrating.",
+      "audience": "Our target user is Mama Ngozi, a provisions retailer in a busy Lagos market. She is constantly juggling cash sales, customer credit requests, and keeping track of inventory levels while managing a crowded storefront. Her primary pain is the lack of a single, real-time view of her business health, making it hard to know her true daily profit or exactly when to restock, and also lost revenue from forgotten debts and the hours spent manually reconciling pages at night.",
+      "built": "We built NairaBook, an all-in-one voice-driven business management system for informal retailers. Through an already-familiar WhatsApp interface, traders send natural language voice notes (in English, Pidgin, local languages like Igbo, Yoruba etc.) to instantly log cash sales (revenue), expenses, customer debts & repayments, or inventory updates (e.g., “Emeka bought pure water of three thousand Naira on credit” or “Added 5 crates of eggs” or “Sold 2 bags of rice”).",
+      "ai": "AI acts as the zero-friction interface. By combining automated speech recognition optimized for regional accents/phrasing with structured LLM parsing, we eliminate the need for a complex mobile UI. The AI dynamically extracts the customer’s name, transaction type (sale, debt, repayment, expense, or restock), quantity, and numeric decimal amounts from casual, conversational speech, mapping it instantly into well-defined database schemas.",
+      "members": [
+        {
+          "name": "Deborah Okeke",
+          "role": "Backend Engineer / Fullstack"
+        },
+        {
+          "name": "Ifechukwu Anyaefiena",
+          "role": "Designer"
+        }
+      ],
+      "github": [
+        "https://github.com/debeemedia/NairaBook"
+      ],
+      "brief": "https://docs.google.com/document/d/1kyZIXiP6Kb2E6pLBwCpI41GQksBpVbdtNLP7gxGhSv8/edit"
+    },
+    {
+      "team": "Learnify",
+      "product": "Learnify",
+      "track": "Education",
+      "problem": "Many secondary school students across Nigeria and West Africa preparing for high-stakes examinations — including WAEC, NECO, JAMB, BECE, and GCE — lack access to personalised learning support. Students in semi-urban and rural areas rely on generic textbooks and group lessons that do not adapt to their individual learning gaps. They study broadly without knowing which subjects or topics need the most attention, leading to inefficient preparation and underperformance in examinations pivotal to their academic futures.",
+      "audience": "Our primary users are secondary school and early tertiary students in West Africa who need personalised support to learn more effectively. A typical user studies with handwritten notes, textbooks, and past questions but struggles to identify weak areas or structure study time. Many have no access to private tutors. If Learnify works as intended, students gain an intelligent learning companion that helps them understand topics, turn notes into interactive materials, track progress, and receive personalised guidance — whether preparing for exams or improving academically.",
+      "built": "Learnify is an AI-powered web application acting as a personal learning companion. The MVP delivers: Students upload handwritten or typed notes via OCR scanning An AI Tutor aligned to West African curricula (WAEC, NECO, JAMB) answers questions and explains concepts The platform auto-generates personalised quizzes from uploaded notes A Weak Topic Intelligence Engine classifies topics as Weak, At-Risk, or Mastered, producing a personalised study plan Built with React (frontend), Node.js/Express (backend), MongoDB Atlas (database), and the Gemini API. React (frontend), Node.js/Express (backend), MongoDB Atlas (database), and the Gemini API.",
+      "ai": "AI is the core differentiator — not a wrapper around static content. Using the Gemini API, Learnify: Performs OCR on handwritten notes via Gemini Generates curriculum-aware explanations tuned to WAEC, NECO, and JAMB syllabi Dynamically creates unique, personalised quizzes from whatever notes a student uploads Uses RAG (Retrieval-Augmented Generation) to ground answers in verified syllabus material — preventing hallucination Continuously analyses quiz scores and interaction history to classify student understanding at topic level — formative assessment that static platforms cannot replicate",
+      "members": [
+        {
+          "name": "Echanny Emmanuel Idagu",
+          "role": "Full-Stack Developer / AI Integration & Automation"
+        },
+        {
+          "name": "Omini-Olaonipekun Idris Pelumi",
+          "role": "Frontend Developer / UI Design"
+        },
+        {
+          "name": "Peter Akinleye",
+          "role": "Mobile Developer"
+        },
+        {
+          "name": "Zakariya Hassan",
+          "role": "Generative AI / Prompt Engineering"
+        }
+      ],
+      "github": [
+        "https://github.com/EchannyE/learnify"
+      ],
+      "brief": "https://docs.google.com/document/d/19ChinYW_M8688rpwY7E3ExVrDh8NUbPfsFtQJzlk61A/edit"
+    },
+    {
+      "team": "FIN-I006",
+      "product": "VoiceCV",
+      "track": "Education",
+      "problem": "(3–5 sentences) Most recruitment software in Nigeria is built for Western corporate standards. It instantly rejects CVs from talented local artisans and vocational graduates because they don't know how to format their experience to match an ATS parser. We realized that people who are actually brilliant at their jobs are being filtered out simply because they don't know how to \"speak\" to a computer.",
+      "audience": "We're building for students at our faculty and local apprentices in our community. They are technically skilled, hardworking, and ready for work — but they feel like the formal job market is a \"gated community\" they don't have the key for — that key being a standardized, buzzword-heavy CV.",
+      "built": "VoiceCV is an AI-powered voice-to-CV tool. A user speaks naturally about their work experience in their own words and local tone. The system transcribes, processes, and restructures that input into a Harvard-standard, ATS-optimised CV document — delivered as a formatted, downloadable Word file ready for job portals.",
+      "ai": "Generic AI tools like ChatGPT are too \"polite\" and verbose — they add fluff that ATS filters hate. We tuned VoiceCV specifically to be cold and corporate. It ignores the fluff, extracts only the metrics and action verbs, and forces the output into a Harvard-standard structure. It's not just a wrapper; it's a filter that strips away the human language that gets people rejected and replaces it with the language that gets them hired.",
+      "members": [
+        {
+          "name": "Ikeh Emmanuel Chibuzor",
+          "role": "Data Scientist / Backend Engineer"
+        },
+        {
+          "name": "Godwin Evans Chinemerem",
+          "role": "Product Manager / Pitch Strategist"
+        },
+        {
+          "name": "Opeisa Ezekiel",
+          "role": "Motion Designer / Branding"
+        },
+        {
+          "name": "Muhammad-Nabeel Olaoye",
+          "role": "Frontend Engineer / UI-UX"
+        }
+      ],
+      "github": [
+        "https://github.com/emmanuelikeh2993/VoiceCV"
+      ],
+      "brief": "https://docs.google.com/document/d/1EC6MdbBzMuwcq4eq9QNGXDYMSk00MbR1AE0ernj69D8/edit"
+    }
+  ],
+  "withoutBrief": [
+    {
+      "team": "EDU-I002",
+      "track": "Education"
+    },
+    {
+      "team": "EDU-I004",
+      "track": "Education"
+    },
+    {
+      "team": "EDU-V001",
+      "track": "Education"
+    },
+    {
+      "team": "EDU-V002",
+      "track": "Education"
+    },
+    {
+      "team": "EDU-V003",
+      "track": "Education"
+    },
+    {
+      "team": "EDU-V004",
+      "track": "Education"
+    },
+    {
+      "team": "EDU-V005",
+      "track": "Education"
+    },
+    {
+      "team": "EDU-V006",
+      "track": "Education"
+    },
+    {
+      "team": "Tecxha Edu",
+      "track": "Education"
+    },
+    {
+      "team": "FIN-I001",
+      "track": "Finance"
+    },
+    {
+      "team": "FIN-I002",
+      "track": "Finance"
+    },
+    {
+      "team": "FIN-I003",
+      "track": "Finance"
+    },
+    {
+      "team": "FIN-I004",
+      "track": "Finance"
+    },
+    {
+      "team": "FIN-I005",
+      "track": "Finance"
+    },
+    {
+      "team": "FIN-V001",
+      "track": "Finance"
+    },
+    {
+      "team": "FIN-V002",
+      "track": "Finance"
+    },
+    {
+      "team": "FIN-V003",
+      "track": "Finance"
+    },
+    {
+      "team": "FIN-V004",
+      "track": "Finance"
+    },
+    {
+      "team": "FIN-V006",
+      "track": "Finance"
+    },
+    {
+      "team": "FIN-V007",
+      "track": "Finance"
+    },
+    {
+      "team": "FIN-V008",
+      "track": "Finance"
+    },
+    {
+      "team": "FIN-V009",
+      "track": "Finance"
+    },
+    {
+      "team": "FIN-V010",
+      "track": "Finance"
+    },
+    {
+      "team": "FIN-V012",
+      "track": "Finance"
+    },
+    {
+      "team": "Team Suiaah",
+      "track": "Finance"
+    },
+    {
+      "team": "HLT-I001",
+      "track": "Healthcare"
+    },
+    {
+      "team": "HLT-I002",
+      "track": "Healthcare"
+    },
+    {
+      "team": "HLT-V001",
+      "track": "Healthcare"
+    },
+    {
+      "team": "HLT-V002",
+      "track": "Healthcare"
+    },
+    {
+      "team": "HLT-V003",
+      "track": "Healthcare"
+    },
+    {
+      "team": "HLT-V004",
+      "track": "Healthcare"
+    },
+    {
+      "team": "HLT-V005",
+      "track": "Healthcare"
+    },
+    {
+      "team": "HLT-V006",
+      "track": "Healthcare"
+    },
+    {
+      "team": "Hyrox",
+      "track": "Healthcare"
+    },
+    {
+      "team": "solosquard",
+      "track": "Healthcare"
+    },
+    {
+      "team": "LNG-I001",
+      "track": "Language"
+    },
+    {
+      "team": "LNG-I002",
+      "track": "Language"
+    },
+    {
+      "team": "LNG-V001",
+      "track": "Language"
+    },
+    {
+      "team": "LNG-V002",
+      "track": "Language"
+    },
+    {
+      "team": "LNG-V003",
+      "track": "Language"
+    },
+    {
+      "team": "Nexum",
+      "track": "Language"
+    },
+    {
+      "team": "Team E-Sell",
+      "track": ""
+    }
+  ],
+  "unreadable": [
+    "Mafita"
+  ]
+}
